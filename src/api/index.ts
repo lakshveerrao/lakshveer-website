@@ -2,6 +2,7 @@ import { Hono } from 'hono';
 import { cors } from "hono/cors"
 import ogApp from './og-image';
 import universeApi from './universe-api';
+import { mentionRoutes } from './routes/mentions';
 
 interface ContactFormData {
   name: string;
@@ -24,6 +25,9 @@ app.route('/', ogApp);
 
 // Mount Universe API
 app.route('/universe', universeApi);
+
+// Mount Mention Agent
+app.route('/mentions', mentionRoutes);
 
 app.get('/ping', (c) => c.json({ message: `Pong! ${Date.now()}` }));
 
