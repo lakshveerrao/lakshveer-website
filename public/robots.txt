@@ -1,0 +1,8 @@
+# Lakshveer Rao Portfolio
+# https://lakshveer.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://lakshveer.com/sitemap.xml
