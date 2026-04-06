@@ -20,7 +20,9 @@
     "organizations": [
       "South Park Commons"
     ],
-    "rawText": "Lakshveer demoed CircuitHeroes card game and Drishtikon Yantra assistive vision device at South Park Commons in Bangalore."
+    "rawText": "Lakshveer demoed CircuitHeroes card game and Drishtikon Yantra assistive vision device at South Park Commons in Bangalore.",
+    "confidence": "high",
+    "surface": "conference"
   },
   {
     "id": "sig-isro-meeting-2025",
@@ -43,7 +45,9 @@
     "organizations": [
       "ISRO"
     ],
-    "rawText": "Lakshveer demonstrated his electronics and robotics projects to ISRO Chairman Shri S. Somanath. Discussion about student satellite programs."
+    "rawText": "Lakshveer demonstrated his electronics and robotics projects to ISRO Chairman Shri S. Somanath. Discussion about student satellite programs.",
+    "confidence": "high",
+    "surface": "conference"
   },
   {
     "id": "sig-malpani-grant-2025",
@@ -65,7 +69,9 @@
     "organizations": [
       "Malpani Foundation"
     ],
-    "rawText": "Lakshveer received the Malpani Foundation grant for CircuitHeroes \u2014 educational electronics card game with 300+ decks sold."
+    "rawText": "Lakshveer received the Malpani Foundation grant for CircuitHeroes \u2014 educational electronics card game with 300+ decks sold.",
+    "confidence": "high",
+    "surface": "press"
   },
   {
     "id": "sig-yt-170-projects-2025",
@@ -87,7 +93,9 @@
       "content"
     ],
     "organizations": [],
-    "rawText": "Lakshveer's YouTube channel documents 170+ electronics, robotics, and AI projects. Growing audience of young makers."
+    "rawText": "Lakshveer's YouTube channel documents 170+ electronics, robotics, and AI projects. Growing audience of young makers.",
+    "confidence": "high",
+    "surface": "youtube"
   },
   {
     "id": "sig-motionx-launch-2026",
@@ -107,7 +115,9 @@
       "ai-agents"
     ],
     "organizations": [],
-    "rawText": "MotionX uses MediaPipe and computer vision for real-time gesture recognition. First AI-native project in 2026 batch."
+    "rawText": "MotionX uses MediaPipe and computer vision for real-time gesture recognition. First AI-native project in 2026 batch.",
+    "confidence": "high",
+    "surface": "press"
   },
   {
     "id": "sig-drishtikon-2026",
@@ -127,7 +137,9 @@
       "social-impact"
     ],
     "organizations": [],
-    "rawText": "Drishtikon Yantra is a Raspberry Pi-based wearable that describes the world to visually impaired users using computer vision and text-to-speech."
+    "rawText": "Drishtikon Yantra is a Raspberry Pi-based wearable that describes the world to visually impaired users using computer vision and text-to-speech.",
+    "confidence": "high",
+    "surface": "press"
   },
   {
     "id": "sig-param-award-2025",
@@ -148,7 +160,9 @@
     "organizations": [
       "PARAM"
     ],
-    "rawText": "Lakshveer received the PARAM Award, a national recognition for young innovators in STEM and hardware."
+    "rawText": "Lakshveer received the PARAM Award, a national recognition for young innovators in STEM and hardware.",
+    "confidence": "high",
+    "surface": "press"
   },
   {
     "id": "sig-beats-in-brief-2025",
@@ -170,7 +184,9 @@
     "organizations": [
       "Beats in Brief"
     ],
-    "rawText": "Beats in Brief covered Lakshveer's journey as India's youngest hardware builder \u2014 from age 4 to CircuitHeroes entrepreneur."
+    "rawText": "Beats in Brief covered Lakshveer's journey as India's youngest hardware builder \u2014 from age 4 to CircuitHeroes entrepreneur.",
+    "confidence": "medium",
+    "surface": "press"
   },
   {
     "id": "sig-startuppedia-2026",
