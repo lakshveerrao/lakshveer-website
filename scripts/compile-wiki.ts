@@ -1,22 +1,25 @@
 #!/usr/bin/env bun
 // ============================================
-// WIKI COMPILER — v2.0 (parallel)
+// WIKI COMPILER — v3.0 (graph-native)
 // ============================================
-// Reads raw/signals.json → LLM compiles →
+// Reads raw/signals.json → LLM compiles articles →
+// builds graph.json (nodes + edges + communities) →
 // filesystem wiki in public/wiki/
 //
-// Pattern: Karpathy (raw/ → wiki/) + Farza (built for agents)
+// Borrows from graphify:
+//   - EXTRACTED / INFERRED / AMBIGUOUS confidence on edges
+//   - graph.json for BFS traversal in query route
+//   - community detection (simple degree-based clustering)
+//   - god nodes (highest-degree concepts)
+//
 // Input:  src/raw/signals.json  ← human edits here only
 // Output: public/wiki/          ← LLM owns this entirely
-//
-// Usage:
-//   bun scripts/compile-wiki.ts           # full compile
-//   bun scripts/compile-wiki.ts --dry-run # preview, no writes
+//         public/wiki/graph.json ← graph for agent traversal
 // ============================================
 
 import { createOpenAI } from '@ai-sdk/openai';
 import { generateText } from 'ai';
-import { writeFileSync, mkdirSync, existsSync } from 'fs';
+import { writeFileSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import signals from '../src/raw/signals.json';
 
@@ -53,25 +56,226 @@ function slug(s: string) {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
-// ---- System prompt ----
-const SYSTEM = `You are compiling a personal knowledge wiki about Lakshveer Rao — an 8-year-old Indian hardware founder and maker from Hyderabad.
+// ============================================
+// GRAPH BUILDER (graphify-inspired)
+// ============================================
 
-This wiki is built FOR AGENTS to read, not humans. Dense, factual, structured markdown.
-Rules:
-- ## Summary — 2-3 sentences max
-- ## Signals — cite signal IDs as backlinks  
-- ## Related Articles — [[path]] style links
-- Facts only. No marketing. No fluff.
-- Dates matter. Signal IDs are source of truth.`;
+type Confidence = 'EXTRACTED' | 'INFERRED' | 'AMBIGUOUS';
 
-// ---- Entity extraction ----
+interface GraphNode {
+  id: string;           // slug
+  label: string;        // human name
+  type: 'signal' | 'person' | 'org' | 'domain' | 'project' | 'concept';
+  wikiPath?: string;    // path to wiki article e.g. "orgs/lion-circuits.md"
+  signalIds: string[];  // which signals reference this node
+  degree?: number;      // computed after build
+  community?: number;   // computed after clustering
+}
+
+interface GraphEdge {
+  source: string;
+  target: string;
+  relation: string;
+  confidence: Confidence;
+  signalId?: string;    // which signal this was extracted from
+}
+
+interface Graph {
+  nodes: GraphNode[];
+  edges: GraphEdge[];
+  meta: {
+    compiledAt: string;
+    totalSignals: number;
+    godNodes: string[];        // highest-degree node ids
+    communities: number;
+  };
+}
+
+function buildGraph(
+  sigs: any[],
+  orgs: string[],
+  domains: string[],
+  projects: string[],
+  people: string[],
+  concepts: any[]
+): Graph {
+  const nodes = new Map<string, GraphNode>();
+  const edges: GraphEdge[] = [];
+  const edgeSet = new Set<string>(); // dedup
+
+  function addNode(id: string, label: string, type: GraphNode['type'], wikiPath?: string) {
+    if (!nodes.has(id)) {
+      nodes.set(id, { id, label, type, wikiPath, signalIds: [] });
+    }
+  }
+
+  function addEdge(source: string, target: string, relation: string, confidence: Confidence, signalId?: string) {
+    if (source === target) return;
+    const key = `${source}→${target}:${relation}`;
+    const keyRev = `${target}→${source}:${relation}`;
+    if (edgeSet.has(key) || edgeSet.has(keyRev)) return;
+    edgeSet.add(key);
+    edges.push({ source, target, relation, confidence, signalId });
+  }
+
+  // ---- Seed nodes from entity lists ----
+  people.forEach(p => addNode(slug(p), p, 'person', `people/${slug(p)}.md`));
+  orgs.forEach(o => addNode(slug(o), o, 'org', `orgs/${slug(o)}.md`));
+  domains.forEach(d => addNode(slug(d), d, 'domain', `domains/${slug(d)}.md`));
+  projects.forEach(p => addNode(slug(p), p, 'project', `projects/${slug(p)}.md`));
+  concepts.forEach(c => addNode(c.slug, c.name, 'concept', `concepts/${c.slug}.md`));
+
+  // Lakshveer is always the central node
+  addNode('lakshveer', 'Lakshveer Rao', 'person', 'people/lakshveer.md');
+
+  // ---- Extract edges from signals ----
+  for (const sig of sigs) {
+    const sigOrgs = (sig.organizations ?? []).map((o: string) => slug(o));
+    const sigDomains = (sig.domains ?? []).map((d: string) => slug(d));
+    const sigEntities = (sig.entities ?? []);
+
+    // Signal → org: EXTRACTED (directly stated in signal)
+    for (const orgId of sigOrgs) {
+      if (nodes.has(orgId)) {
+        nodes.get(orgId)!.signalIds.push(sig.id);
+        addEdge('lakshveer', orgId, 'associated_with', 'EXTRACTED', sig.id);
+      }
+    }
+
+    // Signal → domain: EXTRACTED
+    for (const domId of sigDomains) {
+      if (nodes.has(domId)) {
+        nodes.get(domId)!.signalIds.push(sig.id);
+        addEdge('lakshveer', domId, 'active_in', 'EXTRACTED', sig.id);
+      }
+    }
+
+    // Org → domain co-occurrence within same signal: INFERRED
+    for (const orgId of sigOrgs) {
+      for (const domId of sigDomains) {
+        if (nodes.has(orgId) && nodes.has(domId)) {
+          addEdge(orgId, domId, 'operates_in', 'INFERRED', sig.id);
+        }
+      }
+    }
+
+    // Org → org co-occurrence within same signal: INFERRED
+    for (let i = 0; i < sigOrgs.length; i++) {
+      for (let j = i + 1; j < sigOrgs.length; j++) {
+        if (nodes.has(sigOrgs[i]) && nodes.has(sigOrgs[j])) {
+          addEdge(sigOrgs[i], sigOrgs[j], 'co_appeared', 'INFERRED', sig.id);
+        }
+      }
+    }
+
+    // Entity mentions: EXTRACTED if org/person, AMBIGUOUS if unclear
+    for (const e of sigEntities) {
+      const eSlug = slug(e);
+      if (nodes.has(eSlug)) {
+        nodes.get(eSlug)!.signalIds.push(sig.id);
+      }
+    }
+
+    // Project → domain: EXTRACTED
+    for (const proj of projects) {
+      if ((sig.title + sig.rawText).includes(proj)) {
+        const projSlug = slug(proj);
+        for (const domId of sigDomains) {
+          if (nodes.has(domId)) {
+            addEdge(projSlug, domId, 'belongs_to', 'EXTRACTED', sig.id);
+          }
+        }
+        addEdge('lakshveer', projSlug, 'built', 'EXTRACTED', sig.id);
+      }
+    }
+
+    // Concept → signal signals: INFERRED
+    for (const c of concepts) {
+      if (c.relatedSignalIds?.includes(sig.id)) {
+        addEdge('lakshveer', c.slug, 'exhibits', 'INFERRED', sig.id);
+        for (const orgId of sigOrgs) {
+          if (nodes.has(orgId)) addEdge(c.slug, orgId, 'manifested_via', 'INFERRED', sig.id);
+        }
+      }
+    }
+  }
+
+  // ---- Compute degree ----
+  const degree = new Map<string, number>();
+  for (const e of edges) {
+    degree.set(e.source, (degree.get(e.source) ?? 0) + 1);
+    degree.set(e.target, (degree.get(e.target) ?? 0) + 1);
+  }
+  for (const [id, node] of nodes) {
+    node.degree = degree.get(id) ?? 0;
+  }
+
+  // ---- Simple community detection (label propagation approximation) ----
+  // Assign community = community of highest-degree neighbor, iterate 3x
+  const communityMap = new Map<string, number>();
+  let communityId = 0;
+  for (const id of nodes.keys()) communityMap.set(id, communityId++);
+
+  const adjacency = new Map<string, string[]>();
+  for (const e of edges) {
+    if (!adjacency.has(e.source)) adjacency.set(e.source, []);
+    if (!adjacency.has(e.target)) adjacency.set(e.target, []);
+    adjacency.get(e.source)!.push(e.target);
+    adjacency.get(e.target)!.push(e.source);
+  }
+
+  // 3 iterations of label propagation
+  for (let iter = 0; iter < 3; iter++) {
+    for (const [id] of nodes) {
+      const neighbors = adjacency.get(id) ?? [];
+      if (neighbors.length === 0) continue;
+      // pick community of highest-degree neighbor
+      const best = neighbors
+        .filter(n => nodes.has(n))
+        .sort((a, b) => (nodes.get(b)?.degree ?? 0) - (nodes.get(a)?.degree ?? 0))[0];
+      if (best) communityMap.set(id, communityMap.get(best) ?? communityMap.get(id)!);
+    }
+  }
+
+  // Renumber communities 0..N
+  const communityRemap = new Map<number, number>();
+  let nextCommunity = 0;
+  for (const [id, node] of nodes) {
+    const old = communityMap.get(id)!;
+    if (!communityRemap.has(old)) communityRemap.set(old, nextCommunity++);
+    node.community = communityRemap.get(old)!;
+  }
+
+  // ---- God nodes (top 8 by degree) ----
+  const godNodes = [...nodes.values()]
+    .filter(n => n.id !== 'lakshveer') // exclude central — it's always #1
+    .sort((a, b) => (b.degree ?? 0) - (a.degree ?? 0))
+    .slice(0, 8)
+    .map(n => n.id);
+
+  return {
+    nodes: [...nodes.values()],
+    edges,
+    meta: {
+      compiledAt: COMPILED_AT,
+      totalSignals: sigs.length,
+      godNodes,
+      communities: nextCommunity,
+    },
+  };
+}
+
+// ============================================
+// ENTITY EXTRACTION
+// ============================================
+
+const PROJECT_KEYWORDS = ['CircuitHeroes', 'Drishtikon Yantra', 'Drishtikon', 'MotionX', 'Beats in Brief', 'StartupPedia'];
+
 function extractEntities(sigs: any[]) {
   const projects = new Set<string>();
   const orgs = new Set<string>();
   const domains = new Set<string>();
   const people = new Set<string>();
-
-  const PROJECT_KEYWORDS = ['CircuitHeroes', 'Drishtikon Yantra', 'Drishtikon', 'MotionX', 'Beats in Brief', 'StartupPedia'];
 
   for (const s of sigs) {
     for (const o of s.organizations ?? []) if (o?.trim()) orgs.add(o.trim());
@@ -98,7 +302,20 @@ function related(sigs: any[], term: string) {
   );
 }
 
-// ---- Article generators ----
+// ============================================
+// ARTICLE GENERATORS
+// ============================================
+
+const SYSTEM = `You are compiling a personal knowledge wiki about Lakshveer Rao — an 8-year-old Indian hardware founder and maker from Hyderabad.
+
+This wiki is built FOR AGENTS to read, not humans. Dense, factual, structured markdown.
+Rules:
+- ## Summary — 2-3 sentences max
+- ## Signals — cite signal IDs as backlinks
+- ## Related Articles — [[path]] style links
+- Facts only. No marketing. No fluff.
+- Dates matter. Signal IDs are source of truth.`;
+
 function articlePrompt(type: string, name: string, sigs: any[], format: string) {
   return `Write a wiki article for this ${type}: "${name}"
 
@@ -119,7 +336,10 @@ const PROJECT_FORMAT = (name: string) => `# ${name}\n*Project*\n\n## Summary\n##
 const ORG_FORMAT = (name: string) => `# ${name}\n*Organization*\n\n## Summary\n## Relationship with Lakshveer\n## Signals\n## Related Articles`;
 const DOMAIN_FORMAT = (name: string) => `# ${name}\n*Domain*\n\n## Summary\n## Evidence\n## Trajectory\n## Signals\n## Related Articles`;
 
-// ---- Parallel compile ----
+// ============================================
+// PARALLEL COMPILE
+// ============================================
+
 async function parallelCompile<T>(
   items: T[],
   fn: (item: T) => Promise<void>,
@@ -135,18 +355,20 @@ async function parallelCompile<T>(
   await Promise.all(workers);
 }
 
-// ---- Main ----
+// ============================================
+// MAIN
+// ============================================
+
 async function main() {
-  console.log(`\n🧠 Wiki Compiler v2 — ${DRY_RUN ? 'DRY RUN' : 'LIVE'}`);
-  console.log(`📦 ${signals.length} signals | ⚡ parallel compilation\n`);
+  console.log(`\n🧠 Wiki Compiler v3 — ${DRY_RUN ? 'DRY RUN' : 'LIVE'}`);
+  console.log(`📦 ${signals.length} signals | ⚡ parallel compilation | 🕸️ graph-native\n`);
 
   const { people, projects, orgs, domains } = extractEntities(signals as any[]);
-
   console.log(`Entities: ${people.length} people, ${projects.length} projects, ${orgs.length} orgs, ${domains.length} domains\n`);
 
   const t0 = Date.now();
 
-  // ---- Parallel: people + projects + orgs + domains ----
+  // ---- Step 1: Compile articles (parallel) ----
   console.log('📝 Compiling articles (parallel)...');
 
   await Promise.all([
@@ -155,19 +377,16 @@ async function main() {
       const content = await llm(articlePrompt('person', name, sigs, PERSON_FORMAT(name)), SYSTEM);
       writeWiki(`people/${slug(name)}.md`, content);
     }),
-
     parallelCompile(projects, async (name) => {
       const sigs = related(signals as any[], name);
       const content = await llm(articlePrompt('project', name, sigs, PROJECT_FORMAT(name)), SYSTEM);
       writeWiki(`projects/${slug(name)}.md`, content);
     }),
-
     parallelCompile(orgs, async (name) => {
       const sigs = related(signals as any[], name);
       const content = await llm(articlePrompt('organization', name, sigs, ORG_FORMAT(name)), SYSTEM);
       writeWiki(`orgs/${slug(name)}.md`, content);
     }),
-
     parallelCompile(domains, async (name) => {
       const sigs = related(signals as any[], name);
       const content = await llm(articlePrompt('domain/area', name, sigs, DOMAIN_FORMAT(name)), SYSTEM);
@@ -175,7 +394,7 @@ async function main() {
     }),
   ]);
 
-  // ---- Concepts (emergent — needs all signals, sequential) ----
+  // ---- Step 2: Emergent concepts ----
   console.log('\n🔍 Identifying emergent concepts...');
   const conceptsRaw = await llm(
     `Analyze ALL signals about Lakshveer. Find 4-5 emergent narrative arcs — non-obvious patterns not stated in any single signal.
@@ -222,9 +441,8 @@ Format:
 
   console.log(`  Found: ${concepts.map((c: any) => c.name).join(', ')}`);
 
-  // ---- Meta articles (parallel) ----
+  // ---- Step 3: Meta articles (parallel) ----
   console.log('\n📊 Compiling meta articles (parallel)...');
-
   const SIGS_CTX = JSON.stringify(signals, null, 2);
 
   await Promise.all([
@@ -299,12 +517,11 @@ Format:
       );
       writeWiki('meta/connections.md', content);
     })(),
-  ]);
 
-  // ---- Central subject article ----
-  (async () => {
-    const content = await llm(
-      `Write the central wiki article for Lakshveer Rao himself. This is the most important article — the subject of this entire wiki.
+    // ---- Central subject article ----
+    (async () => {
+      const content = await llm(
+        `Write the central wiki article for Lakshveer Rao himself. This is the most important article.
 
 All signals:
 ${SIGS_CTX}
@@ -314,38 +531,37 @@ Format:
 *Person — Central Subject*
 
 ## Identity
-(who he is: age, location, role, co-founder of what)
-
 ## What He Builds
-(hardware, software, games — specific products with dates)
-
 ## Key Numbers
-(170+ projects, 300+ decks, ₹1.4L+ grants, etc)
-
 ## Institutional Recognition
-(ISRO, IIT, The Residency, Shark Tank, etc — with signal IDs)
-
 ## Voice of the Ecosystem
-(what others say about him — with signal IDs)
-
 ## Timeline
-(year-by-year milestones, dense)
-
 ## Active Systems
-(Hardvare, OpenClaw, MotionX, etc)
-
 ## Signals
-(list all signal IDs related to him)
 
 ---
 *Compiled: ${COMPILED_AT}*`,
-      SYSTEM
-    );
-    writeWiki('people/lakshveer.md', content);
-    console.log('  ✓ people/lakshveer.md');
-  })();
+        SYSTEM
+      );
+      writeWiki('people/lakshveer.md', content);
+      console.log('  ✓ people/lakshveer.md');
+    })(),
+  ]);
 
-  // ---- Index ----
+  // ---- Step 4: Build graph ----
+  console.log('\n🕸️  Building graph.json...');
+  const graph = buildGraph(signals as any[], orgs, domains, projects, people, concepts);
+
+  // Log god nodes
+  const godNodeLabels = graph.meta.godNodes
+    .map(id => graph.nodes.find(n => n.id === id)?.label ?? id);
+  console.log(`  God nodes: ${godNodeLabels.join(', ')}`);
+  console.log(`  Communities: ${graph.meta.communities}`);
+  console.log(`  Nodes: ${graph.nodes.length} | Edges: ${graph.edges.length}`);
+
+  writeWiki('graph.json', JSON.stringify(graph, null, 2));
+
+  // ---- Step 5: Index ----
   console.log('\n📋 Building index...');
 
   const indexContent = `# Lakshveer Rao — Personal Knowledge Wiki
@@ -358,12 +574,19 @@ Human adds to raw/. LLM owns wiki/. Never the other way around.
 
 Source: \`signals.json\` — ${signals.length} signals — compiled ${COMPILED_AT}
 
+## Graph
+- [[graph.json]] — knowledge graph (BFS/DFS traversal, god nodes, communities)
+- God nodes (highest-degree): ${godNodeLabels.slice(0, 5).join(', ')}
+- Communities detected: ${graph.meta.communities}
+
 ## How to Navigate
 1. Read this index
-2. Follow [[backlinks]] into article directories
-3. /meta/ articles have compiled analysis
+2. Load graph.json for BFS traversal
+3. Follow [[backlinks]] into article directories
+4. /meta/ articles have compiled analysis
 
 ## People
+- [[people/lakshveer]] — Lakshveer Rao (central subject)
 ${people.map(n => `- [[people/${slug(n)}]] — ${n}`).join('\n')}
 
 ## Projects
@@ -385,19 +608,19 @@ ${concepts.map((c: any) => `- [[concepts/${c.slug}]] — ${c.name}`).join('\n')}
 
 ## Stats
 - Signals: ${signals.length}
-- Articles: ${people.length + projects.length + orgs.length + domains.length + concepts.length + 3}
+- Articles: ${people.length + projects.length + orgs.length + domains.length + concepts.length + 4}
+- Graph nodes: ${graph.nodes.length}
+- Graph edges: ${graph.edges.length}
 - Compiled: ${COMPILED_AT}
 
 ---
-*LLM-owned. Do not edit manually.*
-*Update: edit \`src/raw/signals.json\` → \`bun run wiki:compile\`*
-*Query: \`bun run wiki:query "your question"\`*`;
+*LLM-owned. Do not edit manually.*`;
 
   writeWiki('index.md', indexContent);
 
   const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
-  const total = people.length + projects.length + orgs.length + domains.length + concepts.length + 3;
-  console.log(`\n✅ Done in ${elapsed}s — ${total} articles written to public/wiki/`);
+  const total = people.length + projects.length + orgs.length + domains.length + concepts.length + 4;
+  console.log(`\n✅ Done in ${elapsed}s — ${total} articles + graph.json written to public/wiki/`);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });
