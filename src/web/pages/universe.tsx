@@ -174,8 +174,8 @@ function Universe() {
   const [activeCluster, setActiveCluster] = useState<string | null>(null);
   const [timelineDate, setTimelineDate] = useState('2026-02');
   const [showIntelligenceEdges, setShowIntelligenceEdges] = useState(true);
-  const [leftPanelOpen, setLeftPanelOpen] = useState(true);
-  const [rightPanelOpen, setRightPanelOpen] = useState(true);
+  const [leftPanelOpen, setLeftPanelOpen] = useState(false);
+  const [rightPanelOpen, setRightPanelOpen] = useState(false);
   const [linkCopied, setLinkCopied] = useState(false);
   
   // Phase 2: API State
@@ -196,6 +196,17 @@ function Universe() {
   // v4: Right panel mode
   const [rightPanelMode, setRightPanelMode] = useState<RightPanelMode>('insights');
   const [journeyHighlightedNodes, setJourneyHighlightedNodes] = useState<string[]>([]);
+
+  // v5: Ask anything
+  const [askQuery, setAskQuery] = useState('');
+  const [askAnswer, setAskAnswer] = useState<string | null>(null);
+  const [askLoading, setAskLoading] = useState(false);
+  const [askHighlightedNodes, setAskHighlightedNodes] = useState<Set<string>>(new Set());
+  const [askFocused, setAskFocused] = useState(false);
+  const askInputRef = useRef<HTMLInputElement>(null);
+
+  // v5: Quote ticker
+  const [quoteIndex, setQuoteIndex] = useState(0);
   
   // Phase A: Node opportunity counts for visual indicators
   const [nodeOpportunities, setNodeOpportunities] = useState<Record<string, { count: number; types: string[] }>>({});
@@ -512,7 +523,10 @@ function Universe() {
     
     // Highlighted nodes
     const highlightedIds = new Set<string>();
-    if (hoveredNode || selectedNode) {
+    // Ask query highlights take precedence
+    if (askHighlightedNodes.size > 0) {
+      askHighlightedNodes.forEach(id => highlightedIds.add(id));
+    } else if (hoveredNode || selectedNode) {
       const focusNode = hoveredNode || selectedNode;
       if (focusNode) {
         highlightedIds.add(focusNode.id);
@@ -641,13 +655,24 @@ function Universe() {
       ctx.arc(node.x, node.y, size, 0, Math.PI * 2);
       
       if (node.type === 'possibility') {
-        ctx.strokeStyle = `rgba(255,255,255,${alpha * 0.6})`;
+        const t = Date.now() / 1000;
+        const pulse = 0.4 + Math.sin(t * 1.5 + node.x * 0.01) * 0.2;
+        ctx.strokeStyle = `rgba(167,139,250,${alpha * pulse})`;
         ctx.lineWidth = 1.5;
         ctx.setLineDash([3, 3]);
         ctx.stroke();
         ctx.setLineDash([]);
-        ctx.fillStyle = `rgba(255,255,255,${alpha * 0.1})`;
+        ctx.fillStyle = `rgba(139,92,246,${alpha * 0.12})`;
         ctx.fill();
+        if (isHighlighted) {
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, size + 5 + Math.sin(t * 2) * 2, 0, Math.PI * 2);
+          ctx.strokeStyle = `rgba(167,139,250,${pulse * 0.3})`;
+          ctx.lineWidth = 1;
+          ctx.setLineDash([2, 4]);
+          ctx.stroke();
+          ctx.setLineDash([]);
+        }
       } else {
         const color = nodeColors[node.type];
         ctx.fillStyle = toRgba(color, alpha);
@@ -656,11 +681,14 @@ function Universe() {
       
       // Label
       if (isHighlighted && (zoom > 0.6 || isSelected || isHovered || node.type === 'core')) {
-        ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+        ctx.fillStyle = node.type === 'possibility'
+          ? `rgba(167,139,250,${alpha * 0.8})`
+          : `rgba(255,255,255,${alpha})`;
         ctx.font = `${isSelected || isHovered || node.type === 'core' ? 'bold ' : ''}${Math.max(9, 11 / zoom)}px system-ui, sans-serif`;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'top';
-        ctx.fillText(node.label, node.x, node.y + size + 4);
+        const label = node.type === 'possibility' ? '→ ' + node.label : node.label;
+        ctx.fillText(label, node.x, node.y + size + 4);
       }
       
       /* ============================================
@@ -785,7 +813,7 @@ function Universe() {
 
     ctx.restore();
     
-  }, [simNodes, filteredNodes, filteredEdges, dimensions, zoom, pan, selectedNode, hoveredNode, viewMode, activeCluster, showIntelligenceEdges, privateMode, nodeOpportunities, journeyHighlightedNodes]);
+  }, [simNodes, filteredNodes, filteredEdges, dimensions, zoom, pan, selectedNode, hoveredNode, viewMode, activeCluster, showIntelligenceEdges, privateMode, nodeOpportunities, journeyHighlightedNodes, askHighlightedNodes]);
   
   // Mouse handlers
   const getNodeAtPosition = useCallback((clientX: number, clientY: number): SimNode | null => {
@@ -898,672 +926,621 @@ function Universe() {
     });
   };
 
+  // v5: Quote ticker auto-advance
+  const QUOTES = [
+    { text: "An 8-year-old showed up and built. That alone changed what we thought was possible.", author: "Runable HQ" },
+    { text: "Laksh knows more about hardware than I did during my entire engineering.", author: "Shubham Kukreti" },
+    { text: "4 founders I'm really bullish on... Laksh of CircuitHeroes.", author: "Roohi Kirit" },
+    { text: "If there were more kids like Lakshveer...", author: "Dr. Aniruddha Malpani" },
+    { text: "An 8-year-old just schooled us all at Hardware Hackathon.", author: "Lion Circuits" },
+    { text: "Youngest founder ever in our Delta cohort.", author: "The Residency" },
+    { text: "Curiosity doesn't have any age. Whenever I hesitate, I remember how fearless Laksh is.", author: "Besta Prem Sai" },
+    { text: "Laksh shows the mentee interest that makes mentorship work.", author: "Karthik Rangarajan" },
+  ];
+  useEffect(() => {
+    const t = setInterval(() => setQuoteIndex(i => (i + 1) % QUOTES.length), 5000);
+    return () => clearInterval(t);
+  }, []);
+
+  // v5: Ask anything handler
+  const handleAsk = useCallback(async (q: string) => {
+    if (!q.trim()) return;
+    setAskLoading(true);
+    setAskAnswer(null);
+    setAskHighlightedNodes(new Set());
+    setRightPanelMode('insights');
+    setRightPanelOpen(true);
+    try {
+      const res = await fetch('/api/wiki/query', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: q }),
+      });
+      const data = await res.json();
+      setAskAnswer(data.answer ?? null);
+      // Highlight nodes mentioned in answer or files read
+      const mentioned = new Set<string>();
+      const filesRead: string[] = data.filesRead ?? [];
+      for (const fp of filesRead) {
+        const parts = fp.replace('.md', '').split('/');
+        const id = parts[parts.length - 1];
+        if (id) mentioned.add(id);
+      }
+      // Also fuzzy match answer words against node labels
+      const answerLower = (data.answer ?? '').toLowerCase();
+      for (const node of simNodes) {
+        if (answerLower.includes(node.label.toLowerCase())) mentioned.add(node.id);
+      }
+      setAskHighlightedNodes(mentioned);
+    } catch {
+      setAskAnswer('Sorry, could not reach the wiki right now.');
+    } finally {
+      setAskLoading(false);
+    }
+  }, [simNodes]);
+
+  // ── Node hover card content ──────────────────
+  const getNodeCard = (node: SimNode) => {
+    const nodeData_static = allNodes.find(n => n.id === node.id);
+    const cluster = getClusterForNode(node.id);
+    const desc = nodeData_static?.description ?? '';
+
+    // Rich one-liner by type
+    const stat: Record<string, string> = {
+      'circuitheroes':     '300+ decks sold · ₹1,00,000 grant · Trademark registered',
+      'motionx':           'Full-body motion control · RunTogether Special Mention',
+      'drishtikon-yantra': 'Assistive vision device · Youngest Innovator Award',
+      'kyabol':            'Cerebral Valley × Google DeepMind hackathon demo',
+      'grant-agent':       'AI agent for autonomous grant discovery',
+      'hardvare':          'Hardware + AI agent platform',
+      'malpani-grant':     '₹1,00,000 — CircuitHeroes innovation grant',
+      'residency-youngest':'Youngest founder ever in Delta-2 cohort',
+      'isro-demo':         'Demonstrated to ISRO Chairman S. Somanath',
+      'shark-tank-s5-2025':'Shark Tank India Season 5 — Level 2 shortlist',
+    };
+
+    return {
+      label: node.label,
+      type: node.type,
+      desc: desc.length > 80 ? desc.slice(0, 80) + '…' : desc,
+      stat: stat[node.id] ?? '',
+      cluster: cluster?.name ?? '',
+      color: nodeColors[node.type as NodeType] ?? '#6366f1',
+    };
+  };
+
   return (
-    <div className="min-h-screen bg-[#050508] text-white">
-      <SEO 
-        title={selectedNode ? `${selectedNode.label} — Lakshveer's Learning Universe` : "Lakshveer's Learning Universe — Build to Learn"} 
-        description="Explore Lakshveer's interconnected universe of projects, skills, and possibilities. An intelligence engine showing capability compounding and future paths."
+    <div className="h-screen w-screen overflow-hidden bg-[#050508] text-white flex flex-col">
+      <SEO
+        title={selectedNode ? `${selectedNode.label} — Lakshveer's Universe` : "Lakshveer's Universe — 8 · Builder · 170+ projects"}
+        description="An 8-year-old's knowledge graph. Hardware. AI. 170+ builds. 126 signals. Explore the mind of India's youngest hardware founder."
         ogImage="https://lakshveer.com/universe-og.png"
       />
-      
-      {/* Top Bar */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-[#050508]/90 backdrop-blur-sm border-b border-white/10">
-        <div className="flex items-center justify-between px-4 py-3">
-          {/* Left: Back + Title */}
-          <div className="flex items-center gap-4">
-            <a href="/" className="text-white/60 hover:text-white transition-colors">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-            </a>
-            <div>
-              <h1 className="text-lg font-semibold tracking-tight">Lakshveer's Learning Universe</h1>
-              <p className="text-xs text-white/50">Build to Learn</p>
+
+      {/* ── HERO STRIP ───────────────────────────── */}
+      <div className="flex-shrink-0 flex items-center justify-between px-5 py-2.5 border-b border-white/8 bg-[#050508]/95 backdrop-blur-sm z-50" style={{borderColor:'rgba(255,255,255,0.06)'}}>
+
+        {/* Left: back + identity */}
+        <div className="flex items-center gap-4 min-w-0">
+          <a href="/" className="text-zinc-500 hover:text-white transition-colors flex-shrink-0">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+          </a>
+          <div className="flex items-center gap-3 min-w-0">
+            <div className="w-7 h-7 rounded-full bg-gradient-to-br from-cyan-400 to-purple-500 flex-shrink-0 flex items-center justify-center text-xs font-bold text-white">L</div>
+            <div className="min-w-0">
+              <span className="text-sm font-semibold text-white">Lakshveer</span>
+              <span className="text-zinc-500 text-xs ml-2 hidden sm:inline">8 · Hyderabad · Hardware + AI</span>
             </div>
           </div>
-          
-          {/* Center: View Mode Tabs */}
-          <div className="hidden md:flex items-center gap-1 bg-white/5 rounded-lg p-1">
-            {(['explore', 'clusters', 'timeline', 'momentum'] as ViewMode[]).map(mode => (
-              <button
-                key={mode}
-                onClick={() => setViewMode(mode)}
-                className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all ${
-                  viewMode === mode 
-                    ? 'bg-cyan-500/20 text-cyan-400' 
-                    : 'text-white/60 hover:text-white hover:bg-white/5'
-                }`}
-              >
-                {mode.charAt(0).toUpperCase() + mode.slice(1)}
-              </button>
+          {/* Live stats pills */}
+          <div className="hidden md:flex items-center gap-1.5 ml-2">
+            {[
+              { v: '170+', l: 'builds' },
+              { v: '126', l: 'signals' },
+              { v: '39', l: 'endorsers' },
+              { v: '₹1.4L', l: 'grants' },
+              { v: '13', l: 'press' },
+            ].map(s => (
+              <span key={s.l} className="text-[10px] px-2 py-0.5 rounded-full bg-white/5 border border-white/8 text-zinc-400" style={{borderColor:'rgba(255,255,255,0.06)'}}>
+                <span className="text-white font-medium">{s.v}</span> {s.l}
+              </span>
             ))}
           </div>
-          
-          {/* Right: Search + Share */}
-          <div className="flex items-center gap-3">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search nodes..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-40 md:w-56 px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-sm text-white placeholder-white/40 focus:outline-none focus:border-cyan-500/50"
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery('')}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 text-white/40 hover:text-white"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              )}
-            </div>
-            <button
-              onClick={copyShareLink}
-              className={`p-2 rounded-lg transition-colors ${linkCopied ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/5 hover:bg-white/10'}`}
-              title={linkCopied ? "Link copied!" : "Copy share link"}
-            >
-              {linkCopied ? (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              ) : (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-                </svg>
-              )}
-            </button>
+        </div>
+
+        {/* Center: scrolling quote */}
+        <div className="hidden lg:flex flex-1 mx-6 overflow-hidden">
+          <div className="w-full text-center transition-all duration-700">
+            <span className="text-xs text-zinc-400 italic">
+              "{QUOTES[quoteIndex].text}"
+            </span>
+            <span className="text-[10px] text-zinc-600 ml-2">— {QUOTES[quoteIndex].author}</span>
           </div>
         </div>
-        
-        {/* Timeline Slider (when in timeline mode) */}
-        {viewMode === 'timeline' && (
-          <div className="px-4 pb-3">
-            <div className="flex items-center gap-4">
-              <span className="text-xs text-white/50 w-16">Jul 2022</span>
-              <input
-                type="range"
-                min={0}
-                max={timelineDates.length - 1}
-                value={timelineDates.indexOf(timelineDate)}
-                onChange={(e) => setTimelineDate(timelineDates[parseInt(e.target.value)])}
-                className="flex-1 accent-cyan-500"
-              />
-              <span className="text-xs text-white/50 w-16 text-right">Feb 2026</span>
-              <span className="text-sm font-mono text-cyan-400 w-20 text-right">{timelineDate}</span>
-            </div>
+
+        {/* Right: controls */}
+        <div className="flex items-center gap-2 flex-shrink-0">
+          {/* Search */}
+          <div className="relative hidden sm:block">
+            <input
+              type="text"
+              placeholder="Search…"
+              value={searchQuery}
+              onChange={e => setSearchQuery(e.target.value)}
+              className="w-32 px-3 py-1.5 bg-white/5 border border-white/8 rounded-lg text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-cyan-500/50"
+              style={{borderColor: searchQuery ? undefined : 'rgba(255,255,255,0.06)'}}
+            />
+            {searchQuery && (
+              <button onClick={() => setSearchQuery('')} className="absolute right-2 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-white text-xs">✕</button>
+            )}
           </div>
-        )}
+
+          {/* View mode */}
+          <div className="hidden md:flex items-center gap-0.5 bg-white/5 rounded-lg p-0.5">
+            {(['explore','clusters','timeline'] as ViewMode[]).map(m => (
+              <button
+                key={m}
+                onClick={() => setViewMode(m)}
+                className={`px-2 py-1 text-[10px] font-medium rounded-md transition-all ${
+                  viewMode === m ? 'bg-cyan-500/20 text-cyan-400' : 'text-zinc-500 hover:text-white'
+                }`}
+              >{m}</button>
+            ))}
+          </div>
+
+          {/* Private mode */}
+          <button
+            onClick={togglePrivateMode}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border transition-all ${
+              privateMode
+                ? 'bg-purple-500/15 border-purple-500/30 text-purple-300'
+                : 'bg-white/5 border-white/8 text-zinc-500 hover:text-white'
+            }`}
+            style={!privateMode ? {borderColor:'rgba(255,255,255,0.06)'} : {}}
+          >
+            <span className={`w-1.5 h-1.5 rounded-full ${privateMode ? 'bg-purple-400' : 'bg-zinc-600'}`} />
+            {privateMode ? 'Private' : 'Private'}
+          </button>
+        </div>
       </div>
-      
-      {/* Main Layout */}
-      <div className="fixed inset-0 pt-[60px] flex">
-        {/* Left Panel - Clusters & Momentum */}
-        <div className={`${leftPanelOpen ? 'w-72' : 'w-0'} transition-all duration-300 overflow-hidden border-r border-white/10 bg-[#050508]/80 backdrop-blur-sm`}>
-          <div className="h-full overflow-y-auto p-4 space-y-6">
-            {/* Private Mode Toggle */}
-            <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-              <div>
-                <span className="text-sm text-white/70">Private Mode</span>
-                <p className="text-xs text-white/40">Show scores & formulas</p>
-              </div>
-              <button
-                onClick={togglePrivateMode}
-                className={`w-10 h-5 rounded-full transition-colors ${
-                  privateMode ? 'bg-cyan-500' : 'bg-white/20'
-                }`}
-              >
-                <div className={`w-4 h-4 rounded-full bg-white transition-transform ${
-                  privateMode ? 'translate-x-5' : 'translate-x-0.5'
-                }`} />
-              </button>
-            </div>
-            
-            {/* Phase 3: Verification Dashboard Button (Private Mode Only) */}
-            {privateMode && (
-              <button
-                onClick={() => setShowVerificationDashboard(true)}
-                className="w-full p-3 bg-amber-500/10 border border-amber-500/20 rounded-lg text-left hover:bg-amber-500/20 transition-colors"
-              >
-                <div className="flex items-center justify-between">
-                  <div>
-                    <span className="text-sm font-medium text-amber-400">Verification Queue</span>
-                    <p className="text-xs text-white/40">Review pending nodes and edges</p>
-                  </div>
-                  <svg className="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-              </button>
-            )}
-            
-            {/* Phase 4: Gaps & Opportunities Button (Private Mode Only) */}
-            {privateMode && (
-              <button
-                onClick={() => setShowGapsPanel(true)}
-                className="w-full p-3 bg-green-500/10 border border-green-500/20 rounded-lg text-left hover:bg-green-500/20 transition-colors"
-              >
-                <div className="flex items-center justify-between">
-                  <div>
-                    <span className="text-sm font-medium text-green-400">Gaps & Opportunities</span>
-                    <p className="text-xs text-white/40">Auto-detected learning gaps and opportunities</p>
-                  </div>
-                  <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-              </button>
-            )}
-            
-            {/* Phase 5: Weekly OS Button (Week 2 - Mentor Intelligence) */}
-            {privateMode && (
-              <button
-                onClick={() => setShowWeeklyOS(true)}
-                className="w-full p-3 bg-purple-500/10 border border-purple-500/20 rounded-lg text-left hover:bg-purple-500/20 transition-colors"
-              >
-                <div className="flex items-center justify-between">
-                  <div>
-                    <span className="text-sm font-medium text-purple-400">Weekly OS</span>
-                    <p className="text-xs text-white/40">2-4 next moves with mentor reasoning</p>
-                  </div>
-                  <svg className="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                  </svg>
-                </div>
-              </button>
-            )}
-            
-            {/* Capability Clusters - API Powered with Computed Scores */}
+
+      {/* ── MAIN LAYOUT ──────────────────────────── */}
+      <div className="flex flex-1 overflow-hidden relative">
+
+        {/* ── LEFT PANEL (collapsed by default) ── */}
+        <div
+          className={`${leftPanelOpen ? 'w-64' : 'w-0'} flex-shrink-0 transition-all duration-300 overflow-hidden border-r z-30 bg-[#050508]/90`}
+          style={{borderColor:'rgba(255,255,255,0.06)'}}
+        >
+          <div className="w-64 h-full overflow-y-auto p-3 space-y-4">
+
+            {/* Capability clusters */}
             <div>
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-xs font-semibold text-white/50 uppercase tracking-wider">Capability Clusters</h3>
-                {clustersLoading && (
-                  <span className="text-xs text-cyan-400">Loading...</span>
-                )}
-              </div>
-              <div className="space-y-2">
-                {(apiClusters.length > 0 ? apiClusters : capabilityClusters.map(c => ({
-                  id: c.id,
-                  label: c.name,
-                  description: c.description,
-                  color: c.color,
-                  level: c.level,
-                  computedLevel: c.level,
-                  computedScore: 0,
-                  growthVelocity: c.growthRate,
-                  nodeCount: c.nodeIds.length,
-                  growth_rate: c.growthRate,
-                  momentum: 0,
-                  project_count: 0,
-                  skill_count: 0,
-                  core_skills: c.coreSkills || [],
-                } as EnrichedCluster))).map(cluster => (
-                  <ClusterScoreCard
+              <p className="text-[10px] font-semibold text-zinc-600 uppercase tracking-widest mb-2">Clusters</p>
+              <div className="space-y-1.5">
+                {capabilityClusters.map(cluster => (
+                  <button
                     key={cluster.id}
-                    cluster={cluster}
-                    expanded={expandedCluster === cluster.id && privateMode}
                     onClick={() => {
-                      // Toggle cluster filter
                       setActiveCluster(activeCluster === cluster.id ? null : cluster.id);
-                      // Expand/collapse score details in private mode
-                      if (privateMode) {
-                        setExpandedCluster(expandedCluster === cluster.id ? null : cluster.id);
-                      }
+                      setViewMode('clusters');
                     }}
-                  />
-                ))}
-              </div>
-            </div>
-            
-            {/* Momentum Metrics */}
-            <div>
-              <h3 className="text-xs font-semibold text-white/50 uppercase tracking-wider mb-3">Momentum Metrics</h3>
-              <div className="space-y-3">
-                <div className="p-3 bg-white/5 rounded-lg">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-white/70">Overall Momentum</span>
-                    <span className="text-lg font-bold text-cyan-400">{momentum.overallMomentum}</span>
-                  </div>
-                  <div className="h-2 bg-white/10 rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-gradient-to-r from-cyan-500 to-cyan-400 rounded-full" 
-                      style={{ width: `${momentum.overallMomentum}%` }}
-                    />
-                  </div>
-                </div>
-                
-                {[
-                  { label: 'Build Frequency', value: momentum.buildFrequency, color: '#10b981' },
-                  { label: 'Brand Impact', value: momentum.brandImpact, color: '#3b82f6' },
-                  { label: 'Skill Density', value: momentum.skillDensity, color: '#8b5cf6' },
-                  { label: 'Network Growth', value: momentum.networkExpansion, color: '#ec4899' },
-                  { label: 'Recognition', value: momentum.recognitionGrowth, color: '#f59e0b' },
-                ].map(metric => (
-                  <div key={metric.label} className="flex items-center gap-3">
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-1">
-                        <span className="text-xs text-white/50">{metric.label}</span>
-                        <span className="text-xs font-mono" style={{ color: metric.color }}>{metric.value}</span>
-                      </div>
-                      <div className="h-1 bg-white/10 rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full" 
-                          style={{ width: `${Math.min(100, metric.value)}%`, backgroundColor: metric.color }}
-                        />
-                      </div>
+                    className={`w-full flex items-center gap-2 px-2 py-1.5 rounded-lg text-left transition-all ${
+                      activeCluster === cluster.id ? 'bg-white/8' : 'hover:bg-white/5'
+                    }`}
+                  >
+                    <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: cluster.color }} />
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs text-zinc-300 truncate">{cluster.name}</p>
+                      <p className="text-[10px] text-zinc-600">Lv.{cluster.level} · {cluster.growthRate}x growth</p>
                     </div>
-                  </div>
+                  </button>
                 ))}
               </div>
             </div>
-            
-            {/* Quick Stats */}
+
+            {/* Filter by type */}
             <div>
-              <h3 className="text-xs font-semibold text-white/50 uppercase tracking-wider mb-3">Universe Stats</h3>
-              <div className="grid grid-cols-2 gap-2">
-                <div className="p-2 bg-white/5 rounded-lg text-center">
-                  <div className="text-lg font-bold text-white">{stats.totalNodes}</div>
-                  <div className="text-xs text-white/50">Nodes</div>
-                </div>
-                <div className="p-2 bg-white/5 rounded-lg text-center">
-                  <div className="text-lg font-bold text-white">{stats.totalEdges}</div>
-                  <div className="text-xs text-white/50">Connections</div>
-                </div>
-                <div className="p-2 bg-white/5 rounded-lg text-center">
-                  <div className="text-lg font-bold text-cyan-400">{crossPollinations.length}</div>
-                  <div className="text-xs text-white/50">Cross-pollinations</div>
-                </div>
-                <div className="p-2 bg-white/5 rounded-lg text-center">
-                  <div className="text-lg font-bold text-amber-400">{futurePaths.length}</div>
-                  <div className="text-xs text-white/50">Future Paths</div>
-                </div>
+              <p className="text-[10px] font-semibold text-zinc-600 uppercase tracking-widest mb-2">Filter</p>
+              <div className="flex flex-wrap gap-1">
+                {(['project','product','skill','tool','person','company','event','media','achievement','possibility'] as NodeType[]).map(type => (
+                  <button
+                    key={type}
+                    onClick={() => {
+                      setActiveFilters(prev => {
+                        const next = new Set(prev);
+                        next.has(type) ? next.delete(type) : next.add(type);
+                        return next;
+                      });
+                    }}
+                    className="text-[10px] px-2 py-0.5 rounded-full border transition-all capitalize"
+                    style={activeFilters.has(type) ? {
+                      color: nodeColors[type], background: nodeColors[type] + '20', borderColor: nodeColors[type] + '40'
+                    } : { color: '#52525b', borderColor: 'rgba(63,63,70,0.3)' }}
+                  >{type}</button>
+                ))}
               </div>
             </div>
-            
-            {/* Toggle Intelligence Edges */}
-            <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
-              <span className="text-sm text-white/70">Show Intelligence Edges</span>
+
+            {/* Possibilities toggle */}
+            <div className="flex items-center justify-between">
+              <span className="text-xs text-zinc-500">Show possibilities</span>
               <button
-                onClick={() => setShowIntelligenceEdges(!showIntelligenceEdges)}
-                className={`w-10 h-5 rounded-full transition-colors ${
-                  showIntelligenceEdges ? 'bg-cyan-500' : 'bg-white/20'
-                }`}
+                onClick={() => setShowPossibilities(p => !p)}
+                className={`w-8 h-4 rounded-full transition-colors ${showPossibilities ? 'bg-cyan-500/50' : 'bg-zinc-700'}`}
               >
-                <div className={`w-4 h-4 rounded-full bg-white transition-transform ${
-                  showIntelligenceEdges ? 'translate-x-5' : 'translate-x-0.5'
-                }`} />
+                <div className={`w-3 h-3 rounded-full bg-white transition-transform mx-0.5 ${showPossibilities ? 'translate-x-4' : ''}`} />
               </button>
             </div>
+
+            {/* Private mode tools */}
+            {privateMode && (
+              <div className="space-y-1.5 border-t pt-3" style={{borderColor:'rgba(255,255,255,0.06)'}}>
+                <p className="text-[10px] font-semibold text-zinc-600 uppercase tracking-widest mb-2">Intelligence</p>
+                {[
+                  { label: 'Verification Queue', onClick: () => setShowVerificationDashboard(true), color: 'amber' },
+                  { label: 'Gaps & Opportunities', onClick: () => setShowGapsPanel(true), color: 'green' },
+                  { label: 'Weekly OS', onClick: () => setShowWeeklyOS(true), color: 'purple' },
+                ].map(item => (
+                  <button
+                    key={item.label}
+                    onClick={item.onClick}
+                    className={`w-full text-left px-2 py-1.5 rounded-lg text-xs transition-all ${
+                      item.color === 'amber' ? 'text-amber-400 hover:bg-amber-500/10' :
+                      item.color === 'green' ? 'text-green-400 hover:bg-green-500/10' :
+                      'text-purple-400 hover:bg-purple-500/10'
+                    }`}
+                  >{item.label}</button>
+                ))}
+              </div>
+            )}
           </div>
         </div>
-        
-        {/* Toggle Left Panel */}
+
+        {/* ── LEFT PANEL TOGGLE ── */}
         <button
-          onClick={() => setLeftPanelOpen(!leftPanelOpen)}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-1.5 bg-white/10 hover:bg-white/20 rounded-r-lg transition-all"
-          style={{ left: leftPanelOpen ? '288px' : '0' }}
+          onClick={() => setLeftPanelOpen(p => !p)}
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-40 w-5 h-10 flex items-center justify-center bg-zinc-900 border border-white/8 rounded-r-lg text-zinc-500 hover:text-white transition-all"
+          style={{ left: leftPanelOpen ? '256px' : '0', borderColor:'rgba(255,255,255,0.06)' }}
         >
-          <svg className={`w-4 h-4 transition-transform ${leftPanelOpen ? '' : 'rotate-180'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className={`w-3 h-3 transition-transform ${leftPanelOpen ? '' : 'rotate-180'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
-        
-        {/* Canvas Container */}
-        <div 
-          ref={containerRef} 
-          className="flex-1 relative cursor-grab active:cursor-grabbing"
-          style={{ minHeight: 0 }}
+
+        {/* ── CANVAS (the hero) ── */}
+        <div
+          ref={containerRef}
+          className="flex-1 relative overflow-hidden"
+          style={{ cursor: isDragging ? 'grabbing' : hoveredNode ? 'pointer' : isPanning ? 'grabbing' : 'grab' }}
         >
           <canvas
             ref={canvasRef}
             width={dimensions.width}
             height={dimensions.height}
-            onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
+            onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseUp}
+            onMouseLeave={() => { setHoveredNode(null); setIsPanning(false); }}
             onWheel={handleWheel}
+            className="block"
           />
-          
-          {/* Zoom controls */}
-          <div className="absolute bottom-4 left-4 flex flex-col gap-2">
-            <button
-              onClick={() => setZoom(z => Math.min(3, z * 1.2))}
-              className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-              </svg>
-            </button>
-            <button
-              onClick={() => setZoom(z => Math.max(0.2, z / 1.2))}
-              className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
-              </svg>
-            </button>
-            <button
-              onClick={() => { setZoom(1); setPan({ x: 0, y: 0 }); }}
-              className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors text-xs font-mono"
-            >
-              1:1
-            </button>
-          </div>
-          
-          {/* Legend */}
-          <div className="absolute bottom-4 left-20 flex flex-wrap gap-3">
-            {Object.entries(nodeTypeLabels).slice(0, 6).map(([type, label]) => (
-              <button
-                key={type}
-                onClick={() => {
-                  const newFilters = new Set(activeFilters);
-                  if (newFilters.has(type as NodeType)) {
-                    newFilters.delete(type as NodeType);
-                  } else {
-                    newFilters.add(type as NodeType);
-                  }
-                  setActiveFilters(newFilters);
-                }}
-                className={`flex items-center gap-1.5 px-2 py-1 rounded text-xs transition-all ${
-                  activeFilters.has(type as NodeType) 
-                    ? 'bg-white/20' 
-                    : activeFilters.size > 0 ? 'opacity-40' : 'opacity-70 hover:opacity-100'
-                }`}
-              >
-                <div 
-                  className="w-2 h-2 rounded-full" 
-                  style={{ backgroundColor: nodeColors[type as NodeType] }}
+
+          {/* Timeline slider */}
+          {viewMode === 'timeline' && (
+            <div className="absolute bottom-20 left-1/2 -translate-x-1/2 w-80 bg-zinc-900/90 border border-white/8 rounded-xl px-4 py-3" style={{borderColor:'rgba(255,255,255,0.06)'}}>
+              <div className="flex items-center gap-3">
+                <span className="text-[10px] text-zinc-500 w-12">Jul 22</span>
+                <input
+                  type="range" min={0} max={timelineDates.length - 1}
+                  value={timelineDates.indexOf(timelineDate)}
+                  onChange={e => setTimelineDate(timelineDates[parseInt(e.target.value)])}
+                  className="flex-1 accent-cyan-500"
                 />
-                <span>{label}</span>
-              </button>
-            ))}
-            
-            {/* Phase 3: Verification Legend (Private Mode Only) */}
-            {privateMode && (
-              <>
-                <div className="w-px h-4 bg-white/20 self-center mx-1" />
-                <div className="flex items-center gap-1.5 px-2 py-1 rounded text-xs opacity-70">
-                  <div className="w-2 h-2 rounded-full bg-green-500" />
-                  <span>Verified</span>
-                </div>
-                <div className="flex items-center gap-1.5 px-2 py-1 rounded text-xs opacity-70">
-                  <div className="w-2 h-2 rounded-full bg-amber-500" />
-                  <span>Pending</span>
-                </div>
-                <div className="flex items-center gap-1.5 px-2 py-1 rounded text-xs opacity-70">
-                  <div className="w-2 h-2 rounded-full bg-purple-500" />
-                  <span>Inferred</span>
-                </div>
-              </>
-            )}
-          </div>
-        </div>
-        
-        {/* Toggle Right Panel */}
-        <button
-          onClick={() => setRightPanelOpen(!rightPanelOpen)}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-1.5 bg-white/10 hover:bg-white/20 rounded-l-lg transition-all"
-          style={{ right: rightPanelOpen ? '352px' : '0' }}
-        >
-          <svg className={`w-4 h-4 transition-transform ${rightPanelOpen ? '' : 'rotate-180'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-        
-        {/* Right Panel - Details & Insights */}
-        <div className={`${rightPanelOpen ? 'w-88' : 'w-0'} transition-all duration-300 overflow-hidden border-l border-white/10 bg-[#050508]/80 backdrop-blur-sm`} style={{ width: rightPanelOpen ? '352px' : '0' }}>
-          
-          {/* Panel mode switcher (when no node selected) */}
-          {!selectedNode && (
-            <div className="flex flex-col gap-1 px-3 pt-3 pb-1">
-              {/* Row 1 — always visible */}
-              <div className="flex items-center gap-1">
-                {([
-                  { id: 'insights' as RightPanelMode, label: '⚡ Insights' },
-                  { id: 'journey' as RightPanelMode, label: '📖 Journey' },
-                  { id: 'participate' as RightPanelMode, label: '🤝 Join' },
-                  { id: 'signal-timeline' as RightPanelMode, label: '🕐 Timeline' },
-                ]).map(tab => (
-                  <button
-                    key={tab.id}
-                    onClick={() => setRightPanelMode(tab.id)}
-                    className={`flex-1 py-1.5 text-xs font-medium rounded-lg transition-all ${
-                      rightPanelMode === tab.id
-                        ? 'bg-cyan-500/20 text-cyan-400'
-                        : 'text-white/40 hover:text-white hover:bg-white/5'
-                    }`}
-                  >
-                    {tab.label}
-                  </button>
-                ))}
+                <span className="text-[10px] text-zinc-500 w-12 text-right">Feb 26</span>
+                <span className="text-sm font-mono text-cyan-400 w-16 text-right">{timelineDate}</span>
               </div>
-              {/* Row 2 — private mode tabs */}
-              {privateMode && (
-                <div className="flex items-center gap-1">
-                  {([
-                    { id: 'feed' as RightPanelMode, label: '📡 Feed' },
-                    { id: 'surfaces' as RightPanelMode, label: '🌐 Surfaces' },
-                    { id: 'health' as RightPanelMode, label: '🩺 Health' },
-                    { id: 'wiki' as RightPanelMode, label: '🧠 Wiki' },
-                  ]).map(tab => (
-                    <button
-                      key={tab.id}
-                      onClick={() => setRightPanelMode(tab.id)}
-                      className={`flex-1 py-1.5 text-xs font-medium rounded-lg transition-all ${
-                        rightPanelMode === tab.id
-                          ? 'bg-purple-500/20 text-purple-400'
-                          : 'text-white/30 hover:text-white hover:bg-white/5'
-                      }`}
-                    >
-                      {tab.label}
-                    </button>
-                  ))}
-                </div>
-              )}
             </div>
           )}
 
-          <div className="h-full overflow-y-auto p-4 space-y-6">
-            {selectedNode ? (
-              <>
-                {/* Loading State */}
-                {nodeLoading && (
-                  <div className="flex items-center justify-center py-8">
-                    <div className="text-sm text-cyan-400">Loading node data...</div>
+          {/* ── STATS BADGE (top-right of canvas) ── */}
+          <div className="absolute top-3 right-3 flex items-center gap-2">
+            <div className="flex items-center gap-1.5 px-2.5 py-1 bg-zinc-900/80 border border-white/8 rounded-lg text-[10px] text-zinc-500" style={{borderColor:'rgba(255,255,255,0.06)'}}>
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+              <span>{filteredNodes.length} nodes</span>
+              <span className="text-zinc-700">·</span>
+              <span>{filteredEdges.length} edges</span>
+              <span className="text-zinc-700">·</span>
+              <span className="text-cyan-500">centralized</span>
+            </div>
+            <button
+              onClick={copyShareLink}
+              className="px-2 py-1 bg-zinc-900/80 border border-white/8 rounded-lg text-[10px] text-zinc-500 hover:text-white transition-colors"
+              style={{borderColor:'rgba(255,255,255,0.06)'}}
+            >
+              {linkCopied ? '✓ copied' : 'share ↗'}
+            </button>
+          </div>
+
+          {/* ── HOVER CARD ── */}
+          {hoveredNode && !selectedNode && (() => {
+            const card = getNodeCard(hoveredNode);
+            return (
+              <div
+                className="absolute pointer-events-none z-20 max-w-[220px]"
+                style={{
+                  left: Math.min(hoveredNode.x * zoom + pan.x + dimensions.width / 2 * (1 - zoom) + 14, dimensions.width - 240),
+                  top: Math.max(hoveredNode.y * zoom + pan.y + dimensions.height / 2 * (1 - zoom) - 10, 10),
+                }}
+              >
+                <div className="bg-zinc-900/95 border rounded-xl p-3 shadow-xl backdrop-blur-sm" style={{borderColor: card.color + '40'}}>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{background: card.color}} />
+                    <span className="text-sm font-semibold text-white truncate">{card.label}</span>
                   </div>
-                )}
-                
-                {/* NODE=WORLD Panel (API Data Available) */}
-                {!nodeLoading && nodeData?.success && (
-                  <NodeWorldPanel
-                    nodeData={nodeData}
-                    onNodeSelect={(nodeId) => {
-                      const simNode = simNodes.find(n => n.id === nodeId);
-                      if (simNode) setSelectedNode(simNode);
-                    }}
-                    onClose={() => {
-                      setSelectedNode(null);
-                      window.history.pushState({}, '', '/universe');
-                    }}
-                  />
-                )}
-                
-                {/* v4 Fallback: NodeAgentPanel (API Failed or Unavailable) */}
-                {!nodeLoading && (!nodeData?.success || !nodeData) && (
-                  <div className="-m-4 h-full">
-                    <NodeAgentPanel
-                      nodeId={selectedNode.id}
-                      nodeLabel={selectedNode.label}
-                      nodeType={selectedNode.type}
-                      nodeDescription={selectedNode.description}
-                      nodeTimestamp={selectedNode.year ? String(selectedNode.year) : undefined}
-                      privateMode={privateMode}
-                      onNodeSelect={(nodeId) => {
-                        const simNode = simNodes.find(n => n.id === nodeId);
-                        if (simNode) setSelectedNode(simNode);
-                      }}
-                      onClose={() => {
-                        setSelectedNode(null);
-                        window.history.pushState({}, '', '/universe');
-                      }}
-                    />
-                  </div>
-                )}
-              </>
-            ) : (
-              /* v4: Intelligence OS default panel — no node selected */
-              <div className="-m-4 h-full">
-                {rightPanelMode === 'insights' && (
-                  <IntelligenceInsights />
-                )}
-                {rightPanelMode === 'journey' && (
-                  <GuidedJourney
-                    onNodeHighlight={(nodeIds) => {
-                      setJourneyHighlightedNodes(nodeIds);
-                      // Pan to first highlighted node in graph
-                      const first = simNodes.find(n => nodeIds.includes(n.id));
-                      if (first) {
-                        setPan({
-                          x: dimensions.width / 2 - first.x * zoom,
-                          y: dimensions.height / 2 - first.y * zoom,
-                        });
-                      }
-                    }}
-                  />
-                )}
-                {rightPanelMode === 'participate' && (
-                  <ParticipationGateway />
-                )}
-                {rightPanelMode === 'feed' && privateMode && (
-                  <IntelligenceFeed />
-                )}
-                {rightPanelMode === 'signal-timeline' && (
-                  <div className="p-4">
-                    <SignalTimeline privateMode={privateMode} />
-                  </div>
-                )}
-                {rightPanelMode === 'surfaces' && privateMode && (
-                  <SurfaceDashboard />
-                )}
-                {rightPanelMode === 'health' && privateMode && (
-                  <HealthMonitor />
-                )}
-                {rightPanelMode === 'wiki' && privateMode && (
-                  <div>
-                    <div className="px-4 pt-3 pb-1">
-                      <a
-                        href="/wiki/graph"
-                        className="flex items-center gap-2 px-3 py-2 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-300 hover:bg-purple-500/20 transition-colors text-xs font-medium"
-                      >
-                        <span>🕸</span>
-                        <span>Open Graph Visualizer</span>
-                        <span className="ml-auto text-purple-500">↗</span>
-                      </a>
-                    </div>
-                    <WikiPanel />
+                  {card.desc && <p className="text-[11px] text-zinc-400 leading-snug mb-1">{card.desc}</p>}
+                  {card.stat && <p className="text-[10px] text-cyan-400 leading-snug">{card.stat}</p>}
+                  {card.cluster && <p className="text-[10px] text-zinc-600 mt-1">Cluster: {card.cluster}</p>}
+                  <p className="text-[9px] text-zinc-700 mt-1 capitalize">{card.type} · click to explore</p>
+                </div>
+              </div>
+            );
+          })()}
+
+          {/* ── ASK ANYTHING (floating, bottom center) ── */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 w-full max-w-md px-4">
+            <div
+              className={`flex items-center gap-2 bg-zinc-900/95 border rounded-2xl px-4 py-2.5 shadow-2xl backdrop-blur-sm transition-all ${
+                askFocused ? 'border-cyan-500/50 shadow-cyan-500/10' : 'border-white/10'
+              }`}
+            >
+              <span className="text-zinc-500 text-sm flex-shrink-0">✦</span>
+              <input
+                ref={askInputRef}
+                type="text"
+                value={askQuery}
+                onChange={e => setAskQuery(e.target.value)}
+                onFocus={() => setAskFocused(true)}
+                onBlur={() => setAskFocused(false)}
+                onKeyDown={e => { if (e.key === 'Enter' && askQuery.trim()) { handleAsk(askQuery); setRightPanelOpen(true); } }}
+                placeholder="Ask anything about Lakshveer…"
+                className="flex-1 bg-transparent text-sm text-white placeholder-zinc-600 focus:outline-none"
+              />
+              {askLoading ? (
+                <div className="w-4 h-4 border border-cyan-500/30 border-t-cyan-500 rounded-full animate-spin flex-shrink-0" />
+              ) : (
+                <button
+                  onClick={() => { if (askQuery.trim()) { handleAsk(askQuery); setRightPanelOpen(true); } }}
+                  className="text-xs text-zinc-500 hover:text-cyan-400 transition-colors flex-shrink-0 font-medium"
+                >
+                  ask →
+                </button>
+              )}
+            </div>
+            {askHighlightedNodes.size > 0 && (
+              <div className="flex items-center justify-center gap-1 mt-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+                <span className="text-[10px] text-cyan-500">{askHighlightedNodes.size} node{askHighlightedNodes.size !== 1 ? 's' : ''} highlighted</span>
+                <button onClick={() => { setAskHighlightedNodes(new Set()); setAskAnswer(null); setAskQuery(''); }} className="text-[10px] text-zinc-600 hover:text-white ml-2">clear</button>
+              </div>
+            )}
+          </div>
+
+          {/* ── ZOOM CONTROLS ── */}
+          <div className="absolute bottom-6 right-3 flex flex-col gap-1">
+            <button onClick={() => setZoom(z => Math.min(3, z * 1.2))} className="w-7 h-7 rounded-lg bg-zinc-900 border border-white/8 text-white text-sm hover:bg-zinc-800 transition-colors" style={{borderColor:'rgba(255,255,255,0.06)'}}>+</button>
+            <button onClick={() => setZoom(z => Math.max(0.2, z * 0.8))} className="w-7 h-7 rounded-lg bg-zinc-900 border border-white/8 text-white text-sm hover:bg-zinc-800 transition-colors" style={{borderColor:'rgba(255,255,255,0.06)'}}>−</button>
+            <button onClick={() => { setZoom(1); setPan({ x: 0, y: 0 }); }} className="w-7 h-7 rounded-lg bg-zinc-900 border border-white/8 text-zinc-400 text-xs hover:bg-zinc-800 transition-colors" style={{borderColor:'rgba(255,255,255,0.06)'}}>⌂</button>
+          </div>
+        </div>
+
+        {/* ── RIGHT PANEL TOGGLE ── */}
+        <button
+          onClick={() => setRightPanelOpen(p => !p)}
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-40 w-5 h-10 flex items-center justify-center bg-zinc-900 border border-white/8 rounded-l-lg text-zinc-500 hover:text-white transition-all"
+          style={{ right: rightPanelOpen ? '352px' : '0', borderColor:'rgba(255,255,255,0.06)' }}
+        >
+          <svg className={`w-3 h-3 transition-transform ${rightPanelOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        {/* ── RIGHT PANEL ── */}
+        <div
+          className={`flex-shrink-0 transition-all duration-300 overflow-hidden border-l z-30 bg-[#050508]/90`}
+          style={{ width: rightPanelOpen ? '352px' : '0', borderColor:'rgba(255,255,255,0.06)' }}
+        >
+          <div className="w-[352px] h-full flex flex-col overflow-hidden">
+
+            {/* Panel header tabs */}
+            {!selectedNode && (
+              <div className="flex-shrink-0 flex flex-col gap-1 px-3 pt-3 pb-2 border-b" style={{borderColor:'rgba(255,255,255,0.06)'}}>
+                {/* Row 1 — public */}
+                <div className="flex gap-1">
+                  {([
+                    { id: 'insights', label: askAnswer ? '✦ Answer' : '⚡ Insights' },
+                    { id: 'journey', label: '📖 Story' },
+                    { id: 'signal-timeline', label: '🕐 Timeline' },
+                    { id: 'participate', label: '🤝 Connect' },
+                  ] as {id: RightPanelMode, label: string}[]).map(tab => (
+                    <button
+                      key={tab.id}
+                      onClick={() => setRightPanelMode(tab.id)}
+                      className={`flex-1 py-1.5 text-[10px] font-medium rounded-lg transition-all ${
+                        rightPanelMode === tab.id ? 'bg-cyan-500/20 text-cyan-400' : 'text-zinc-500 hover:text-white hover:bg-white/5'
+                      }`}
+                    >{tab.label}</button>
+                  ))}
+                </div>
+                {/* Row 2 — private */}
+                {privateMode && (
+                  <div className="flex gap-1">
+                    {([
+                      { id: 'feed', label: '📡 Feed' },
+                      { id: 'surfaces', label: '🌐 Surfaces' },
+                      { id: 'health', label: '🩺 Health' },
+                      { id: 'wiki', label: '🧠 Wiki' },
+                    ] as {id: RightPanelMode, label: string}[]).map(tab => (
+                      <button
+                        key={tab.id}
+                        onClick={() => setRightPanelMode(tab.id)}
+                        className={`flex-1 py-1.5 text-[10px] font-medium rounded-lg transition-all ${
+                          rightPanelMode === tab.id ? 'bg-purple-500/20 text-purple-400' : 'text-zinc-600 hover:text-white hover:bg-white/5'
+                        }`}
+                      >{tab.label}</button>
+                    ))}
                   </div>
                 )}
               </div>
             )}
+
+            {/* Panel body */}
+            <div className="flex-1 overflow-y-auto">
+              {selectedNode ? (
+                <>
+                  {nodeLoading && (
+                    <div className="flex items-center justify-center py-8">
+                      <div className="text-sm text-cyan-400">Loading…</div>
+                    </div>
+                  )}
+                  {!nodeLoading && nodeData?.success && (
+                    <NodeWorldPanel
+                      nodeData={nodeData}
+                      onNodeSelect={nodeId => {
+                        const sn = simNodes.find(n => n.id === nodeId);
+                        if (sn) setSelectedNode(sn);
+                      }}
+                      onClose={() => { setSelectedNode(null); window.history.pushState({}, '', '/universe'); }}
+                    />
+                  )}
+                  {!nodeLoading && (!nodeData?.success || !nodeData) && (
+                    <div className="-m-0 h-full">
+                      <NodeAgentPanel
+                        nodeId={selectedNode.id}
+                        nodeLabel={selectedNode.label}
+                        nodeType={selectedNode.type}
+                        nodeDescription={selectedNode.description}
+                        nodeTimestamp={selectedNode.year ? String(selectedNode.year) : undefined}
+                        privateMode={privateMode}
+                        onNodeSelect={nodeId => {
+                          const sn = simNodes.find(n => n.id === nodeId);
+                          if (sn) setSelectedNode(sn);
+                        }}
+                        onClose={() => { setSelectedNode(null); window.history.pushState({}, '', '/universe'); }}
+                      />
+                    </div>
+                  )}
+                </>
+              ) : (
+                <div className="h-full">
+                  {/* Ask answer replaces insights when active */}
+                  {rightPanelMode === 'insights' && askAnswer && (
+                    <div className="p-4">
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                        <p className="text-xs font-medium text-cyan-400">Answer</p>
+                        <button
+                          onClick={() => { setAskAnswer(null); setAskHighlightedNodes(new Set()); setAskQuery(''); }}
+                          className="ml-auto text-[10px] text-zinc-600 hover:text-white"
+                        >clear</button>
+                      </div>
+                      <p className="text-xs text-zinc-500 mb-3 italic">"{askQuery}"</p>
+                      <div className="prose prose-invert prose-xs max-w-none">
+                        <pre className="whitespace-pre-wrap text-[12px] text-zinc-300 font-sans leading-relaxed">{askAnswer}</pre>
+                      </div>
+                    </div>
+                  )}
+                  {rightPanelMode === 'insights' && !askAnswer && (
+                    <IntelligenceInsights />
+                  )}
+                  {rightPanelMode === 'journey' && (
+                    <GuidedJourney
+                      onNodeHighlight={nodeIds => {
+                        setJourneyHighlightedNodes(nodeIds);
+                        const first = simNodes.find(n => nodeIds.includes(n.id));
+                        if (first) setPan({ x: dimensions.width / 2 - first.x * zoom, y: dimensions.height / 2 - first.y * zoom });
+                      }}
+                    />
+                  )}
+                  {rightPanelMode === 'participate' && <ParticipationGateway />}
+                  {rightPanelMode === 'signal-timeline' && (
+                    <div className="p-4"><SignalTimeline privateMode={privateMode} /></div>
+                  )}
+                  {rightPanelMode === 'feed' && privateMode && <IntelligenceFeed />}
+                  {rightPanelMode === 'surfaces' && privateMode && <SurfaceDashboard />}
+                  {rightPanelMode === 'health' && privateMode && <HealthMonitor />}
+                  {rightPanelMode === 'wiki' && privateMode && (
+                    <div>
+                      <div className="px-4 pt-3 pb-1">
+                        <a href="/wiki/graph" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-300 hover:bg-purple-500/20 transition-colors text-xs font-medium">
+                          <span>🕸</span><span>Open Graph Visualizer</span><span className="ml-auto text-purple-500">↗</span>
+                        </a>
+                      </div>
+                      <WikiPanel />
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
-      
-      {/* v6: Embedded Participation Gateway — below the graph, public only */}
-      {!privateMode && (
-        <ParticipationGateway embedded />
-      )}
-      
-      {/* Phase 3: Verification Dashboard Modal */}
+
+      {/* ── QUOTE TICKER (bottom strip, mobile) ── */}
+      <div className="lg:hidden flex-shrink-0 border-t px-4 py-2 bg-[#050508]/95 overflow-hidden" style={{borderColor:'rgba(255,255,255,0.06)'}}>
+        <p className="text-xs text-zinc-500 italic truncate">
+          "{QUOTES[quoteIndex].text}" <span className="text-zinc-700">— {QUOTES[quoteIndex].author}</span>
+        </p>
+      </div>
+
+      {/* ── MODALS (private mode) ── */}
       {showVerificationDashboard && privateMode && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center">
-          <div 
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-            onClick={() => setShowVerificationDashboard(false)}
-          />
-          <div className="relative w-full max-w-4xl h-[80vh] max-h-[800px] bg-[#0a0a0f] border border-white/10 rounded-lg overflow-hidden">
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setShowVerificationDashboard(false)} />
+          <div className="relative w-full max-w-4xl h-[80vh] bg-[#0a0a0f] border border-white/10 rounded-lg overflow-hidden">
             <VerificationDashboard onClose={() => setShowVerificationDashboard(false)} />
           </div>
         </div>
       )}
-      
-      {/* Phase 4: Gaps & Opportunities Modal */}
       {showGapsPanel && privateMode && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center">
-          <div 
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-            onClick={() => setShowGapsPanel(false)}
-          />
-          <div className="relative w-full max-w-4xl h-[80vh] max-h-[800px] bg-[#0a0a0f] border border-white/10 rounded-lg overflow-hidden">
-            <GapsOpportunitiesPanel 
-              onClose={() => setShowGapsPanel(false)}
-              onNodeSelect={(nodeId) => {
-                const simNode = simNodes.find(n => n.id === nodeId);
-                if (simNode) {
-                  setSelectedNode(simNode);
-                  setShowGapsPanel(false);
-                }
-              }}
-            />
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setShowGapsPanel(false)} />
+          <div className="relative w-full max-w-2xl h-[80vh] bg-[#0a0a0f] border border-white/10 rounded-lg overflow-hidden">
+            <GapsOpportunitiesPanel onClose={() => setShowGapsPanel(false)} />
           </div>
         </div>
       )}
-      
-      {/* Phase 5: Weekly OS Modal (Week 2 - Mentor Intelligence) */}
       {showWeeklyOS && privateMode && (
-        <WeeklyOSPanel onClose={() => setShowWeeklyOS(false)} />
-      )}
-      
-      {/* Password Modal for Private Mode */}
-      {showPasswordModal && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center">
-          <div 
-            className="absolute inset-0 bg-black/80 backdrop-blur-sm"
-            onClick={() => setShowPasswordModal(false)}
-          />
-          <div className="relative w-full max-w-sm bg-[#0a0a0f] border border-white/10 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-white mb-4">Enter Password</h3>
-            <p className="text-xs text-white/50 mb-4">Private mode requires authentication.</p>
-            
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setShowWeeklyOS(false)} />
+          <div className="relative w-full max-w-2xl h-[80vh] bg-[#0a0a0f] border border-white/10 rounded-lg overflow-hidden">
+            <WeeklyOSPanel onClose={() => setShowWeeklyOS(false)} />
+          </div>
+        </div>
+      )}
+
+      {/* ── PASSWORD MODAL ── */}
+      {showPasswordModal && (
+        <div className="fixed inset-0 z-[200] flex items-center justify-center">
+          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={() => setShowPasswordModal(false)} />
+          <div className="relative w-80 bg-zinc-900 border border-white/10 rounded-2xl p-6 shadow-2xl">
+            <h3 className="text-sm font-semibold text-white mb-1">Private Mode</h3>
+            <p className="text-xs text-zinc-500 mb-4">Enter your access code to unlock intelligence layers.</p>
             <input
               type="password"
               value={passwordInput}
-              onChange={(e) => {
-                setPasswordInput(e.target.value);
-                setPasswordError(false);
-              }}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter') {
-                  handlePasswordSubmit();
-                }
-              }}
-              placeholder="Password"
-              className={`w-full px-4 py-2 bg-white/5 border rounded-lg text-white placeholder:text-white/30 focus:outline-none focus:border-cyan-500 ${
-                passwordError ? 'border-red-500' : 'border-white/10'
-              }`}
+              onChange={e => setPasswordInput(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && handlePasswordSubmit()}
+              placeholder="Access code"
+              className={`w-full px-3 py-2 bg-zinc-800 border rounded-lg text-sm text-white placeholder-zinc-600 focus:outline-none mb-2 ${passwordError ? 'border-red-500/50' : 'border-white/10 focus:border-cyan-500/50'}`}
               autoFocus
             />
-            
-            {passwordError && (
-              <p className="text-xs text-red-400 mt-2">Incorrect password</p>
-            )}
-            
-            <div className="flex gap-3 mt-4">
-              <button
-                onClick={() => setShowPasswordModal(false)}
-                className="flex-1 px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:bg-white/10 transition-colors"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={handlePasswordSubmit}
-                className="flex-1 px-4 py-2 bg-cyan-500/20 border border-cyan-500/30 rounded-lg text-cyan-400 hover:bg-cyan-500/30 transition-colors"
-              >
-                Enter
-              </button>
+            {passwordError && <p className="text-xs text-red-400 mb-3">Incorrect code.</p>}
+            <div className="flex gap-2">
+              <button onClick={() => setShowPasswordModal(false)} className="flex-1 px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 text-sm hover:bg-white/10 transition-colors">Cancel</button>
+              <button onClick={handlePasswordSubmit} className="flex-1 px-4 py-2 bg-cyan-500/20 border border-cyan-500/30 rounded-lg text-cyan-400 text-sm hover:bg-cyan-500/30 transition-colors">Enter</button>
             </div>
           </div>
         </div>
