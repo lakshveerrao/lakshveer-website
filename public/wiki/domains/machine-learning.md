@@ -2,23 +2,28 @@
 *Domain*
 
 ## Summary
-Lakshveer's machine learning work centers on applied computer vision and gesture recognition systems. His first documented ML project, MotionX (2026-01), demonstrates practical implementation of MediaPipe for real-time gesture control. His work is positioned within India's emerging "AI kids" and "vibe-coding" maker movement, indicating accessible, rapid-prototype ML development rather than research-focused contributions.
+Lakshveer applies machine learning to computer vision and conversational AI systems. Active in hackathons (RunTogether, Gemini 3) as builder and demonstrator. Public discourse positions him within India's emerging "AI kids" cohort — builders shipping ML-powered products pre-college.
 
 ## Evidence
-- **MotionX (2026-01)**: AI gesture recognition system using MediaPipe and computer vision for real-time interaction. Classified as "AI-native project" in 2026 batch, suggesting deployment-ready implementation rather than experimental work. [[sig-motionx-launch-2026]]
-- **Community Recognition (2026-03)**: Featured in r/IndiaTech discussion about India's "AI kids and vibe-coding prodigies," positioning him within a cohort of young builders leveraging accessible ML frameworks for rapid prototyping. [[sig-reddit-indiatech-2026]]
+**2026-01**: Built MotionX at RunTogether Hackathon — full-body motion-control gaming using computer vision and gesture recognition ML models. Special Mention Winner. [[sig-motionx-launch-2026]]
+
+**2026-02**: Demoed Kyabol at Gemini 3 Hackathon (Cerebral Valley × Google DeepMind) — AI conversational system leveraging LLMs. [[sig-gemini3-hackathon-2026]]
+
+**2026-03**: Featured in Reddit r/IndiaTech discussion "The rise of AI kids and vibe-coding prodigies in India" — discourse around teenage ML practitioners. [[sig-reddit-indiatech-2026]]
 
 ## Trajectory
-Timeline shows ML engagement beginning 2026-01 with computer vision applications. Two-month gap between project launch and community recognition suggests iterative building pattern. Focus on gesture recognition indicates interest in human-computer interaction via ML rather than pure algorithmic research.
+Progressed from computer vision (gesture recognition, Jan 2026) to conversational AI (LLM-based agents, Feb 2026) within 30 days. Hackathon velocity suggests iterative prototyping model. Media framing ("vibe-coding prodigies") indicates peer recognition but also potential credibility gap with traditional ML community.
 
 ## Signals
-- [[sig-motionx-launch-2026]] — MotionX launch, computer vision, MediaPipe implementation
-- [[sig-reddit-indiatech-2026]] — Community positioning as "AI kid" builder
+- [[sig-motionx-launch-2026]]
+- [[sig-gemini3-hackathon-2026]]
+- [[sig-reddit-indiatech-2026]]
 
 ## Related Articles
-- [[computer-vision]] — Primary technical subdomain
-- [[ai-agents]] — Adjacent domain appearing in both signals
-- [[motionx]] — Flagship ML project
+- [[computer-vision]]
+- [[ai-agents]]
+- [[entrepreneurship]]
+- [[hardware]]
 
 ---
-*Compiled: 2026-04-06T09:48:07.190Z*
+*Compiled: 2026-04-06T10:02:25.632Z*

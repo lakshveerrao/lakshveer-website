@@ -2,26 +2,47 @@
 *Domain*
 
 ## Summary
-Lakshveer Rao operates a YouTube channel documenting 170+ project builds in electronics, robotics, and AI, targeting young makers and students. His content serves as educational material with full build walkthroughs spanning Arduino, Raspberry Pi, and hardware AI agent implementations. The channel demonstrates consistent output as both documentation and teaching resource.
+
+Lakshveer Rao has been teaching electronics, robotics, and hardware publicly since age 14 (2022-07). His teaching spans YouTube documentation (170+ project builds), institutional workshops at IIT Hyderabad (IoT sessions, drone workshops), and tutorial-style content for makers. Teaching medium evolved from simple fix-it videos to technical walkthroughs of AI agent hardware systems.
 
 ## Evidence
-- **YouTube Channel** — 170+ documented project builds across electronics, robotics, and AI domains as of December 2025 [sig-yt-170-projects-2025]
-- **Audience Composition** — Content reaches makers, developers, educators, and students [sig-yt-full-2026]
-- **Content Format** — Full build walkthroughs including hardware and AI agent implementations [sig-yt-full-2026]
-- **Technical Focus Areas** — Arduino, Raspberry Pi, electronics, robotics documented systematically [sig-yt-170-projects-2025]
+
+**YouTube Documentation (2022-07 onwards)**
+- First upload [[sig-first-yt-upload-2022]] — "How to Fix Drill Bits" tutorial format (2022-07, age 14)
+- Channel scaled to 170+ documented project builds [[sig-yt-170-projects-2025]] covering electronics, robotics, Arduino, Raspberry Pi
+- AI agent hardware walkthrough [[sig-yt-full-2026]] — full technical breakdown (2026-03)
+
+**Institutional Workshops (2025)**
+- IoT session at IIT Hyderabad [[sig-iit-hyd-iot-workshop-2025]] via Techobytes program (2025-02)
+- Drone workshop at IIT Hyderabad [[sig-iit-hyd-drone-workshop-2025]] (2025-06)
+
+**Audience**: Young makers, college students at premier institutions
 
 ## Trajectory
-Growing audience of young makers suggests increasing reach. March 2026 featured video indicates continued production and potential platform recognition. Teaching methodology emphasizes hands-on project documentation over traditional instruction format.
+
+2022-07: First tutorial upload (drill bit repair)  
+2025-02: Teaching at IIT Hyderabad (IoT)  
+2025-06: Workshop facilitation (drones)  
+2025-12: 170+ projects documented  
+2026-03: Advanced AI hardware walkthroughs  
+
+**Pattern**: Progressed from beginner fix-it content → large-scale project documentation → institutional teaching → complex technical explanations. Teaching sophistication tracks project complexity.
 
 ## Signals
-- [sig-yt-170-projects-2025] — YouTube Channel, 170+ projects, 2025-12
-- [sig-yt-full-2026] — YouTube Feature Video, full build walkthrough, 2026-03
+
+- [[sig-first-yt-upload-2022]] — First YouTube Upload (2022-07)
+- [[sig-iit-hyd-iot-workshop-2025]] — IoT Session at IIT Hyderabad (2025-02)
+- [[sig-iit-hyd-drone-workshop-2025]] — Drone Workshop at IIT Hyderabad (2025-06)
+- [[sig-yt-170-projects-2025]] — YouTube Channel 170+ projects (2025-12)
+- [[sig-yt-full-2026]] — AI agent hardware walkthrough (2026-03)
 
 ## Related Articles
-- [[electronics]]
-- [[robotics]]
-- [[ai-agents]]
-- [[content]]
+
+- [[content]] — YouTube distribution strategy
+- [[electronics]] — Core teaching subject
+- [[robotics]] — Workshop focus area
+- [[public-speaking]] — Workshop delivery mechanism
+- [[ai-agents]] — Recent teaching topic
 
 ---
-*Compiled: 2026-04-06T09:48:07.190Z*
+*Compiled: 2026-04-06T10:02:25.632Z*

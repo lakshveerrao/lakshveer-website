@@ -3,58 +3,48 @@
 
 ## Summary
 
-Lakshveer Rao's AI agent work centers on building autonomous systems that bridge software intelligence with physical hardware control. His flagship project (March 2026) is an ESP32-based AI agent controllable via Telegram messaging, which generates its own code and executes commands on embedded hardware. This work represents practical agentic AI implementation at the intersection of natural language interfaces, embedded systems, and hardware automation.
+Lakshveer's AI agent work centers on hardware-control systems and conversational AI. Core project (March 2026): Telegram-controlled AI agent managing ESP32 devices—achieved national press coverage across 6+ outlets. Earlier work includes MotionX (computer vision gesture system, January 2026) and Kyabol (conversational AI demo at Google DeepMind × Cerebral Valley hackathon, February 2026). Technical stack spans embedded systems, natural language interfaces, and ML inference at edge.
 
 ## Evidence
 
-**Core Implementation (2026-03)**  
-Built AI agent system controlling ESP32 microcontrollers through Telegram bot interface [[sig-startuppedia-2026]], [[sig-somi-ai-linkedin-2026]]. Agent demonstrates code generation capabilities — writing and executing firmware for connected hardware [[sig-rediminds-linkedin-2026]]. System architecture enables natural language → action translation on resource-constrained devices.
+**Telegram AI Agent (March 2026)**  
+Built AI agent controlling ESP32 hardware via Telegram messaging interface. Featured in Financial Express [[sig-fe-mait-agent-2026]], StartupPedia [[sig-startuppedia-2026]], RediMinds [[sig-rediminds-linkedin-2026]], Somi AI [[sig-somi-ai-linkedin-2026]], and StartupG [[sig-startupg-linkedin-2026]]. Video documentation on YouTube (short [[sig-yt-short-telegram-2026]] + full walkthrough [[sig-yt-full-2026]]). Sparked r/IndiaTech discussion on "vibe-coding prodigies" [[sig-reddit-indiatech-2026]].
 
-**Technical Stack**  
-- ESP32 microcontrollers (embedded platform)
-- Telegram API (control interface)
-- LLM integration for code generation
-- Real-time hardware command execution
+**Kyabol — Gemini 3 Hackathon (February 2026)**  
+Demoed conversational AI system at Cerebral Valley × Google DeepMind Gemini 3 Hackathon [[sig-gemini3-hackathon-2026]]. First documented interaction with Bay Area AI research community.
 
-**Precedent Work**  
-MotionX (2026-01) established computer vision and gesture recognition foundation using MediaPipe [[sig-motionx-launch-2026]]. This earlier work in AI-native interfaces informed agent control paradigms.
-
-**Documentation**  
-Full technical walkthrough published via YouTube [[sig-yt-full-2026]], with demo short [[sig-yt-short-telegram-2026]] showing live Telegram → hardware control flow.
+**MotionX — Computer Vision (January 2026)**  
+Full-body motion-control gaming system using gesture recognition. Built at RunTogether Hackathon (Runable). Received Special Mention award [[sig-motionx-launch-2026]]. Intersection of computer vision, ML, and hardware.
 
 ## Trajectory
 
-**Phase 1: Computer Vision (2026-01)**  
-MotionX deployment — gesture-based AI control systems [[sig-motionx-launch-2026]]
+**Phase 1 (Jan 2026):** Computer vision + hardware integration (MotionX)  
+**Phase 2 (Feb 2026):** Conversational AI experimentation (Kyabol at Google DeepMind event)  
+**Phase 3 (Mar 2026):** Agent-hardware bridging via Telegram—breakthrough media moment
 
-**Phase 2: Agentic Hardware (2026-03)**  
-ESP32 agent with code generation and messaging interface. Multi-platform press coverage: StartupPedia [[sig-startuppedia-2026]], RediMinds [[sig-rediminds-linkedin-2026]], Somi AI [[sig-somi-ai-linkedin-2026]], StartupG [[sig-startupg-linkedin-2026]].
-
-**Community Reception**  
-Reddit r/IndiaTech discussion positions work within broader "vibe-coding prodigies" movement [[sig-reddit-indiatech-2026]]. Framing: age-defying technical execution, democratization of AI tooling.
-
-**Emerging Pattern**  
-Consistent focus on *practical deployment* over theoretical AI. Every agent project connects to physical systems (gestures → MotionX, messages → ESP32). Bias toward tangible, demonstrable automation.
+Pattern: Progressing from vision models → conversational AI → agentic hardware control. Each project compounds prior technical layers. March 2026 Telegram agent represents synthesis: NLP interface + embedded systems + agent reasoning.
 
 ## Signals
 
-- [[sig-motionx-launch-2026]] — MotionX launch (computer vision foundation)
-- [[sig-startuppedia-2026]] — StartupPedia feature article
-- [[sig-startuppedia-instagram-2026]] — StartupPedia Instagram reel
-- [[sig-rediminds-linkedin-2026]] — RediMinds LinkedIn (ESP32 coding agent)
-- [[sig-somi-ai-linkedin-2026]] — Somi AI LinkedIn (hardware control)
-- [[sig-reddit-indiatech-2026]] — Reddit r/IndiaTech discussion
-- [[sig-yt-short-telegram-2026]] — YouTube Short demo
-- [[sig-yt-full-2026]] — YouTube full walkthrough
-- [[sig-startupg-linkedin-2026]] — StartupG LinkedIn feature
+- [[sig-motionx-launch-2026]] — MotionX computer vision system (2026-01)
+- [[sig-gemini3-hackathon-2026]] — Kyabol at Cerebral Valley hackathon (2026-02)
+- [[sig-fe-mait-agent-2026]] — Financial Express coverage (2026-03)
+- [[sig-startuppedia-2026]] — StartupPedia article (2026-03)
+- [[sig-startuppedia-instagram-2026]] — StartupPedia Instagram reel (2026-03)
+- [[sig-rediminds-linkedin-2026]] — RediMinds LinkedIn post (2026-03)
+- [[sig-somi-ai-linkedin-2026]] — Somi AI LinkedIn feature (2026-03)
+- [[sig-reddit-indiatech-2026]] — Reddit r/IndiaTech discussion (2026-03)
+- [[sig-yt-short-telegram-2026]] — YouTube Short demo (2026-03)
+- [[sig-yt-full-2026]] — YouTube full walkthrough (2026-03)
+- [[sig-startupg-linkedin-2026]] — StartupG LinkedIn post (2026-03)
 
 ## Related Articles
 
-- [[electronics]] — ESP32 hardware integration
-- [[computer-vision]] — MotionX gesture recognition
-- [[machine-learning]] — Model deployment strategies
-- [[entrepreneurship]] — Builder narrative and press coverage
-- [[teaching]] — Technical documentation and walkthrough content
+- [[computer-vision]] — MotionX gesture recognition work
+- [[hardware]] — ESP32 integrations, embedded systems
+- [[machine-learning]] — Model deployment, inference optimization
+- [[entrepreneurship]] — Media strategy, hackathon participation
+- [[brand]] — National press moment March 2026
 
 ---
-*Compiled: 2026-04-06T09:48:07.190Z*
+*Compiled: 2026-04-06T10:02:25.632Z*

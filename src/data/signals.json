@@ -1,51 +1,209 @@
 [
   {
-    "id": "sig-spc-demo-2025",
+    "id": "sig-first-yt-upload-2022",
+    "source": "youtube",
+    "url": "https://www.youtube.com/watch?v=17DZ8AXWz1w",
+    "title": "First YouTube Upload — How to Fix Drill Bits",
+    "date": "2022-07",
+    "entities": ["YouTube", "Lakshveer", "Projects by Laksh"],
+    "domains": ["content", "electronics", "teaching"],
+    "organizations": ["Projects by Laksh"],
+    "rawText": "Lakshveer's first YouTube upload at age 4. How to Fix Drill Bits. Marks the start of his public building journey.",
+    "confidence": "high",
+    "surface": "youtube"
+  },
+  {
+    "id": "sig-first-dc-motor-2022",
+    "source": "youtube",
+    "url": "https://www.youtube.com/watch?v=Lq64Ev7hLwc",
+    "title": "First Build — DC Motor Fan",
+    "date": "2022-08",
+    "entities": ["YouTube", "Lakshveer", "DC motor"],
+    "domains": ["electronics", "hardware"],
+    "organizations": ["Projects by Laksh"],
+    "rawText": "First documented hardware build — a DC motor fan. Age 4.",
+    "confidence": "high",
+    "surface": "youtube"
+  },
+  {
+    "id": "sig-first-pitch-2024",
+    "source": "youtube",
+    "url": "https://www.youtube.com/watch?v=YyhfPQ6x77w",
+    "title": "First Business Pitch — DIY Cars",
+    "date": "2024-03",
+    "entities": ["Lakshveer", "DIY Cars", "business pitch"],
+    "domains": ["entrepreneurship", "public-speaking"],
+    "organizations": ["Projects by Laksh"],
+    "rawText": "Lakshveer's first formal business pitch about DIY Cars project.",
+    "confidence": "high",
+    "surface": "conference"
+  },
+  {
+    "id": "sig-circuitheroes-launch-2024",
+    "source": "youtube",
+    "url": "https://www.youtube.com/watch?v=DpL0nZdJ4xo",
+    "title": "CircuitHeroes Card Game — Teaser Launch",
+    "date": "2024-10",
+    "entities": ["CircuitHeroes", "card game", "Lakshveer"],
+    "domains": ["entrepreneurship", "education", "hardware"],
+    "organizations": ["Projects by Laksh"],
+    "rawText": "CircuitHeroes card game teaser launch. Educational electronics card game. India's youngest card game designer.",
+    "confidence": "high",
+    "surface": "youtube"
+  },
+  {
+    "id": "sig-ebook-launch-2024",
+    "source": "youtube",
+    "url": "https://www.youtube.com/watch?v=Wy1cQUijyfA",
+    "title": "DIY eBook Launch — The Kids Book of Creative Ideas",
+    "date": "2024-09",
+    "entities": ["eBook", "CircuitHeroes", "Lakshveer", "ChhotaCreator"],
+    "domains": ["education", "entrepreneurship", "content"],
+    "organizations": ["Projects by Laksh", "ChhotaCreator"],
+    "rawText": "Launch of Lakshveer's DIY eBook — The Kids Book of Creative Ideas. 100+ sales. Available on ChhotaCreator.com.",
+    "confidence": "high",
+    "surface": "youtube"
+  },
+  {
+    "id": "sig-kids-carnival-hitex-2024",
     "source": "event",
-    "url": "https://www.southparkcommons.com",
-    "title": "South Park Commons Pitch Demo \u2014 Lakshveer presented CircuitHeroes and Drishtikon Yantra",
-    "date": "2025-08",
-    "entities": [
-      "South Park Commons",
-      "CircuitHeroes",
-      "Drishtikon Yantra",
-      "Lakshveer"
-    ],
-    "domains": [
-      "entrepreneurship",
-      "public-speaking",
-      "computer-vision",
-      "hardware"
-    ],
-    "organizations": [
-      "South Park Commons"
-    ],
-    "rawText": "Lakshveer demoed CircuitHeroes card game and Drishtikon Yantra assistive vision device at South Park Commons in Bangalore.",
+    "url": "https://www.instagram.com/reel/DEHVEtWJkf1/",
+    "title": "Kids Carnival at Hitex Hyderabad — Demo",
+    "date": "2024-12",
+    "entities": ["Hitex", "Hyderabad", "Lakshveer", "demo"],
+    "domains": ["public-speaking", "hardware"],
+    "organizations": ["Hitex"],
+    "rawText": "Lakshveer participated in Kids Carnival at Hitex, Hyderabad — demoing projects.",
+    "confidence": "high",
+    "surface": "conference"
+  },
+  {
+    "id": "sig-inav-param-endorsement-2024",
+    "source": "article",
+    "url": "https://www.linkedin.com/posts/inavamsi_met-this-8-year-old-lakshveer-in-our-hackathon-activity-7418284045475659776-zoBR/",
+    "title": "Inav Amsi (Param Foundation) LinkedIn — Met Lakshveer at Hackathon",
+    "date": "2024-12",
+    "entities": ["Inav Amsi", "Param Foundation", "Lakshveer", "hackathon"],
+    "domains": ["achievement", "entrepreneurship"],
+    "organizations": ["Param Foundation"],
+    "rawText": "Inav Amsi from Param Foundation posted on LinkedIn: 'Met this 8-year-old Lakshveer in our hackathon.' Recognition from Param Foundation leadership.",
+    "confidence": "high",
+    "surface": "press"
+  },
+  {
+    "id": "sig-ttox-panel-2025",
+    "source": "youtube",
+    "url": "https://www.youtube.com/watch?v=_Uznpm5_KEA",
+    "title": "Panel Discussion at TTOX 2024",
+    "date": "2025-02",
+    "entities": ["TTOX", "panel discussion", "Lakshveer"],
+    "domains": ["public-speaking", "entrepreneurship"],
+    "organizations": [],
+    "rawText": "Lakshveer participated in a panel discussion at TTOX 2024. CircuitHeroes was showcased here — India's youngest card game designer.",
+    "confidence": "high",
+    "surface": "conference"
+  },
+  {
+    "id": "sig-iit-hyd-iot-workshop-2025",
+    "source": "youtube",
+    "url": "https://www.youtube.com/watch?v=NEsjm3l3nq8",
+    "title": "IoT Session at IIT Hyderabad (Techobytes)",
+    "date": "2025-02",
+    "entities": ["IIT Hyderabad", "IoT", "Lakshveer", "Techobytes"],
+    "domains": ["teaching", "electronics", "public-speaking"],
+    "organizations": ["IIT Hyderabad"],
+    "rawText": "Lakshveer conducted an IoT session at IIT Hyderabad as part of Techobytes.",
+    "confidence": "high",
+    "surface": "conference"
+  },
+  {
+    "id": "sig-ramsri-scholarship-2025",
+    "source": "article",
+    "url": "https://x.com/ramsri_goutham/status/1929432690954215762",
+    "title": "Ramsri Goutham Micro Scholarship — 'A 7-year-old builder'",
+    "date": "2025-02",
+    "entities": ["Ramsri Goutham", "scholarship", "Lakshveer"],
+    "domains": ["achievement", "recognition"],
+    "organizations": [],
+    "rawText": "Ramsri Goutham on X: 'Lakshveer - He is a 7 yr old builder working on hands-on tech and robotics projects along with his dad.' Micro scholarship recognition.",
+    "confidence": "high",
+    "surface": "press"
+  },
+  {
+    "id": "sig-sharav-medium-2025",
+    "source": "article",
+    "url": "https://medium.com/@sharavarora80/meet-indias-8-year-old-tech-wunderkind-how-lakshveer-rao-is-redefining-childhood-innovation-9b76c12da34e",
+    "title": "Medium Feature — India's 8-Year-Old Tech Wunderkind",
+    "date": "2025-02",
+    "entities": ["Sharav Arora", "Medium", "Lakshveer"],
+    "domains": ["media", "brand", "recognition"],
+    "organizations": [],
+    "rawText": "In-depth feature by Sharav Arora on Medium: 'Meet India's 8-Year-Old Tech Wunderkind — How Lakshveer Rao is Redefining Childhood Innovation'.",
+    "confidence": "high",
+    "surface": "press"
+  },
+  {
+    "id": "sig-chekodi-telugu-2025",
+    "source": "article",
+    "url": "https://chekodi.com/p/meet-lakshveer-rao-just-8-years-age-lo-hardware-s-96384",
+    "title": "Chekodi Telugu Media — Hardware achievements at age 8",
+    "date": "2025-02",
+    "entities": ["Chekodi", "Telugu media", "Lakshveer"],
+    "domains": ["media", "brand", "regional"],
+    "organizations": ["Chekodi"],
+    "rawText": "Telugu regional media coverage in Chekodi highlighting Lakshveer's hardware achievements at age 8.",
+    "confidence": "high",
+    "surface": "press"
+  },
+  {
+    "id": "sig-thub-intro-2025",
+    "source": "youtube",
+    "url": "https://www.youtube.com/watch?v=u6IeZwbG8uc",
+    "title": "Introduction at T-Hub Hyderabad",
+    "date": "2025-04",
+    "entities": ["T-Hub", "Hyderabad", "Lakshveer"],
+    "domains": ["entrepreneurship", "public-speaking"],
+    "organizations": ["T-Hub"],
+    "rawText": "Lakshveer introduced his projects at T-Hub Hyderabad — one of India's largest startup incubators.",
     "confidence": "high",
     "surface": "conference"
   },
   {
     "id": "sig-isro-meeting-2025",
     "source": "event",
-    "url": "",
-    "title": "ISRO Chairman Demo \u2014 Lakshveer demonstrated electronics projects to Shri S. Somanath",
+    "url": "https://www.youtube.com/watch?v=x9SHIKOnHvY",
+    "title": "ISRO Chairman Demo — Lakshveer demonstrated electronics to Shri S. Somanath",
     "date": "2025-04",
-    "entities": [
-      "ISRO",
-      "S. Somanath",
-      "Lakshveer",
-      "electronics",
-      "robotics"
-    ],
-    "domains": [
-      "electronics",
-      "robotics",
-      "space"
-    ],
-    "organizations": [
-      "ISRO"
-    ],
-    "rawText": "Lakshveer demonstrated his electronics and robotics projects to ISRO Chairman Shri S. Somanath. Discussion about student satellite programs.",
+    "entities": ["ISRO", "S. Somanath", "Lakshveer", "electronics", "robotics"],
+    "domains": ["electronics", "robotics", "space"],
+    "organizations": ["ISRO"],
+    "rawText": "Lakshveer demonstrated his electronics and robotics projects to ISRO Chairman Shri S. Somanath. Discussion about student satellite programs. Video documented.",
+    "confidence": "high",
+    "surface": "conference"
+  },
+  {
+    "id": "sig-iitex-2025",
+    "source": "youtube",
+    "url": "https://www.youtube.com/watch?v=N9Fu9js2Gts",
+    "title": "IITEX 2025 at Hitex Hyderabad — Recognition",
+    "date": "2025-06",
+    "entities": ["IITEX", "Hitex", "Hyderabad", "Lakshveer"],
+    "domains": ["achievement", "public-speaking", "hardware"],
+    "organizations": ["Hitex"],
+    "rawText": "Lakshveer recognized at IITEX 2025, Hitex Hyderabad.",
+    "confidence": "high",
+    "surface": "conference"
+  },
+  {
+    "id": "sig-iit-hyd-drone-workshop-2025",
+    "source": "youtube",
+    "url": "https://www.youtube.com/watch?v=4kF5J9M4WXg",
+    "title": "Drone Workshop at IIT Hyderabad",
+    "date": "2025-06",
+    "entities": ["IIT Hyderabad", "drone", "Lakshveer"],
+    "domains": ["hardware", "robotics", "teaching"],
+    "organizations": ["IIT Hyderabad"],
+    "rawText": "Lakshveer participated in a drone workshop at IIT Hyderabad.",
     "confidence": "high",
     "surface": "conference"
   },
@@ -53,501 +211,533 @@
     "id": "sig-malpani-grant-2025",
     "source": "article",
     "url": "",
-    "title": "Malpani Foundation Grant \u2014 Awarded for CircuitHeroes innovation",
+    "title": "Malpani Foundation Grant — Awarded for CircuitHeroes innovation",
     "date": "2025-06",
-    "entities": [
-      "Malpani Foundation",
-      "CircuitHeroes",
-      "grant",
-      "Lakshveer"
-    ],
-    "domains": [
-      "entrepreneurship",
-      "education",
-      "hardware"
-    ],
-    "organizations": [
-      "Malpani Foundation"
-    ],
-    "rawText": "Lakshveer received the Malpani Foundation grant for CircuitHeroes \u2014 educational electronics card game with 300+ decks sold.",
+    "entities": ["Malpani Foundation", "CircuitHeroes", "grant", "Lakshveer"],
+    "domains": ["entrepreneurship", "education", "hardware"],
+    "organizations": ["Malpani Foundation"],
+    "rawText": "Lakshveer received the Malpani Foundation grant for CircuitHeroes — educational electronics card game with 300+ decks sold. ₹1,00,000 grant.",
     "confidence": "high",
     "surface": "press"
   },
   {
-    "id": "sig-yt-170-projects-2025",
+    "id": "sig-lion-circuits-hw1-2025",
+    "source": "event",
+    "url": "https://x.com/LionCircuits/status/1950132910667026934",
+    "title": "Hardware Hackathon 1.0 — Lion Circuits (youngest participant)",
+    "date": "2025-07",
+    "entities": ["Lion Circuits", "PCB Cupid", "Lakshveer", "hydration assistant", "Glyph board"],
+    "domains": ["hardware", "electronics", "achievement"],
+    "organizations": ["Lion Circuits", "PCB Cupid"],
+    "rawText": "Lion Circuits on X: 'An 8-year-old just schooled us all at Hardware Hackathon 1.0. Lakshveer Rao built a hydration assistant using a Glyph board + sensor.' Youngest participant.",
+    "confidence": "high",
+    "surface": "conference"
+  },
+  {
+    "id": "sig-roohi-builder-spotlight-2025",
+    "source": "article",
+    "url": "https://x.com/roohi_kr/status/1907424206075330926",
+    "title": "Roohi Kirit Builder Spotlight — '4 founders I am bullish on'",
+    "date": "2025-04",
+    "entities": ["Roohi Kirit", "CircuitHeroes", "Lakshveer"],
+    "domains": ["recognition", "brand", "entrepreneurship"],
+    "organizations": [],
+    "rawText": "Roohi Kirit on X: '4 folks/founders I am really bullish on... Laksh of Circuit Heroes. Each of these people has been building in public and documenting their journey.'",
+    "confidence": "high",
+    "surface": "press"
+  },
+  {
+    "id": "sig-august-fest-speaker-2025",
+    "source": "event",
+    "url": "https://theaugustfest.com/speaker/r-lakshveer-rao/",
+    "title": "August Fest 2025 — Official Speaker",
+    "date": "2025-08",
+    "entities": ["August Fest", "Lakshveer", "panel discussion"],
+    "domains": ["public-speaking", "entrepreneurship", "brand"],
+    "organizations": ["August Fest"],
+    "rawText": "Lakshveer was an official speaker at August Fest 2025. Profile live at theaugustfest.com/speaker/r-lakshveer-rao/. Panel discussion documented on YouTube.",
+    "confidence": "high",
+    "surface": "conference"
+  },
+  {
+    "id": "sig-august-fest-panel-yt-2025",
     "source": "youtube",
-    "url": "https://www.youtube.com/@lakshveer",
-    "title": "YouTube Channel \u2014 170+ project builds documented",
-    "date": "2025-12",
-    "entities": [
-      "YouTube",
-      "electronics",
-      "robotics",
-      "Arduino",
-      "Raspberry Pi"
-    ],
-    "domains": [
-      "electronics",
-      "robotics",
-      "teaching",
-      "content"
-    ],
-    "organizations": [],
-    "rawText": "Lakshveer's YouTube channel documents 170+ electronics, robotics, and AI projects. Growing audience of young makers.",
+    "url": "https://www.youtube.com/watch?v=ZDq-IEbFCXc",
+    "title": "Panel Discussion at August Fest 2025 — Video",
+    "date": "2025-08",
+    "entities": ["August Fest", "Lakshveer", "panel"],
+    "domains": ["public-speaking", "brand"],
+    "organizations": ["August Fest"],
+    "rawText": "Video of Lakshveer's panel discussion at August Fest 2025.",
     "confidence": "high",
-    "surface": "youtube"
+    "surface": "conference"
   },
   {
-    "id": "sig-motionx-launch-2026",
-    "source": "website",
-    "url": "",
-    "title": "MotionX \u2014 AI gesture recognition system launched",
-    "date": "2026-01",
-    "entities": [
-      "MotionX",
-      "computer-vision",
-      "AI",
-      "gesture recognition"
-    ],
-    "domains": [
-      "computer-vision",
-      "machine-learning",
-      "ai-agents"
-    ],
-    "organizations": [],
-    "rawText": "MotionX uses MediaPipe and computer vision for real-time gesture recognition. First AI-native project in 2026 batch.",
+    "id": "sig-spc-demo-2025",
+    "source": "event",
+    "url": "https://www.youtube.com/watch?v=Oxw5T8ZU1RI",
+    "title": "South Park Commons Pitch Demo — Lakshveer presented CircuitHeroes and Drishtikon Yantra",
+    "date": "2025-08",
+    "entities": ["South Park Commons", "CircuitHeroes", "Drishtikon Yantra", "Lakshveer"],
+    "domains": ["entrepreneurship", "public-speaking", "computer-vision", "hardware"],
+    "organizations": ["South Park Commons"],
+    "rawText": "Lakshveer demoed CircuitHeroes card game and Drishtikon Yantra assistive vision device at South Park Commons in Bangalore. Video on YouTube.",
+    "confidence": "high",
+    "surface": "conference"
+  },
+  {
+    "id": "sig-vibehack-emergent-2025",
+    "source": "event",
+    "url": "https://x.com/CaptVenk/status/2000206808917623033",
+    "title": "VibeHack — Emergent (Finalist)",
+    "date": "2025-08",
+    "entities": ["VibeHack", "Emergent", "Lakshveer"],
+    "domains": ["entrepreneurship", "achievement"],
+    "organizations": ["Emergent"],
+    "rawText": "Lakshveer was a finalist at VibeHack by Emergent. Also pitched at the event.",
+    "confidence": "high",
+    "surface": "conference"
+  },
+  {
+    "id": "sig-polaris-vibehack-2025",
+    "source": "event",
+    "url": "https://www.linkedin.com/posts/polaris-school-of-technology_",
+    "title": "VibeHack at Polaris School of Technology",
+    "date": "2025-08",
+    "entities": ["Polaris School of Technology", "Lakshveer", "VibeHack", "hackathon"],
+    "domains": ["entrepreneurship", "electronics", "achievement", "public-speaking"],
+    "organizations": ["Polaris School of Technology"],
+    "rawText": "Lakshveer participated in VibeHack hackathon at Polaris School of Technology. Featured as young participant.",
+    "confidence": "high",
+    "surface": "conference"
+  },
+  {
+    "id": "sig-beats-in-brief-2025",
+    "source": "article",
+    "url": "https://beatsinbrief.com/2026/01/11/lakshveer-rao-8-year-old-hardware-startup-founder-india/",
+    "title": "Beats in Brief — India's youngest hardware startup founder",
+    "date": "2025-09",
+    "entities": ["Beats in Brief", "Lakshveer", "hardware", "startup founder"],
+    "domains": ["media", "public-speaking", "brand"],
+    "organizations": ["Beats in Brief"],
+    "rawText": "Beats in Brief article: 'Eight-year-old Lakshveer Rao is India's youngest hardware startup founder, building and shipping real products through Projects by Laksh.' Also on X: @beatsinbrief/status/2010345060362301515",
     "confidence": "high",
     "surface": "press"
   },
   {
-    "id": "sig-drishtikon-2026",
-    "source": "website",
-    "url": "",
-    "title": "Drishtikon Yantra \u2014 Assistive vision device for visually impaired",
-    "date": "2026-01",
-    "entities": [
-      "Drishtikon Yantra",
-      "computer-vision",
-      "Raspberry Pi",
-      "accessibility"
-    ],
-    "domains": [
-      "computer-vision",
-      "hardware",
-      "social-impact"
-    ],
+    "id": "sig-scaler-hackathon-2025",
+    "source": "event",
+    "url": "https://www.linkedin.com/posts/scaler-innovation-lab_200-teams",
+    "title": "Scaler Innovation Lab Hackathon — Top 8 of 200 teams",
+    "date": "2025-09",
+    "entities": ["Scaler", "Lakshveer", "hackathon", "innovation"],
+    "domains": ["entrepreneurship", "electronics", "achievement"],
+    "organizations": ["Scaler Innovation Lab"],
+    "rawText": "Lakshveer reached top 8 of 200 teams at Scaler Innovation Lab hackathon.",
+    "confidence": "high",
+    "surface": "conference"
+  },
+  {
+    "id": "sig-jagran-josh-yugaantar-2025",
+    "source": "article",
+    "url": "https://www.jagranjosh.com/articles/yugaantar-2025-student-led-festival-at-sst-blends-technology-competition-and-culture-1800007602-1",
+    "title": "Jagran Josh — Yugaantar 2025 Coverage (Scaler SST)",
+    "date": "2025-09",
+    "entities": ["Jagran Josh", "Yugaantar 2025", "Scaler SST", "Lakshveer"],
+    "domains": ["media", "achievement"],
+    "organizations": ["Jagran Josh", "Scaler Innovation Lab"],
+    "rawText": "Jagran Josh covered Yugaantar 2025, the student-led tech festival at Scaler School of Technology where Lakshveer participated.",
+    "confidence": "high",
+    "surface": "press"
+  },
+  {
+    "id": "sig-fe-scaler-2025",
+    "source": "article",
+    "url": "https://www.financialexpress.com/jobs-career/education-scaler-school-of-technology-hosts-student-led-tech-fest-draws-massive-crowd-4114508/",
+    "title": "Financial Express — Scaler School Tech Fest Coverage",
+    "date": "2025-09",
+    "entities": ["Financial Express", "Scaler SST", "tech fest", "Lakshveer"],
+    "domains": ["media", "achievement"],
+    "organizations": ["Financial Express", "Scaler Innovation Lab"],
+    "rawText": "Financial Express covered Scaler School of Technology's student-led tech fest where Lakshveer participated.",
+    "confidence": "high",
+    "surface": "press"
+  },
+  {
+    "id": "sig-delta2-residency-2025",
+    "source": "event",
+    "url": "https://www.linkedin.com/posts/live-the-residency_meet-the-youngest-founder-ever-currently-activity-7386778374008057857-S8Wm",
+    "title": "The Residency Delta-2 — Youngest Founder Selected",
+    "date": "2025-09",
+    "entities": ["The Residency", "Delta-2 cohort", "Lakshveer", "youngest founder"],
+    "domains": ["entrepreneurship", "achievement", "brand"],
+    "organizations": ["The Residency"],
+    "rawText": "The Residency LinkedIn: 'Meet the youngest founder ever currently in our Delta Chapter II cohort: Lakshveer Rao.' Selected for Delta-2 accelerator cohort.",
+    "confidence": "high",
+    "surface": "press"
+  },
+  {
+    "id": "sig-shubham-kukreti-localhost-2025",
+    "source": "article",
+    "url": "https://x.com/ShubhamKukretii/status/1932415998965239900",
+    "title": "Shubham Kukreti — Localhost Meetup Testimonial",
+    "date": "2025-06",
+    "entities": ["Shubham Kukreti", "Localhost", "Lakshveer"],
+    "domains": ["recognition", "hardware"],
     "organizations": [],
-    "rawText": "Drishtikon Yantra is a Raspberry Pi-based wearable that describes the world to visually impaired users using computer vision and text-to-speech.",
+    "rawText": "Shubham Kukreti on X: 'We had special guests @CaptVenk and Laksh today. Laksh knows more about hardware than I did during my entire engineering.'",
     "confidence": "high",
     "surface": "press"
   },
   {
     "id": "sig-param-award-2025",
     "source": "event",
-    "url": "",
-    "title": "PARAM Award \u2014 National recognition for young innovation",
+    "url": "https://www.youtube.com/watch?v=ORPQW1_M-v8",
+    "title": "Param Foundation × Vedanta Makeathon — Youngest Innovator & Special Mention",
     "date": "2025-10",
-    "entities": [
-      "PARAM Award",
-      "innovation",
-      "national recognition"
-    ],
-    "domains": [
-      "achievement",
-      "electronics",
-      "entrepreneurship"
-    ],
-    "organizations": [
-      "PARAM"
-    ],
-    "rawText": "Lakshveer received the PARAM Award, a national recognition for young innovators in STEM and hardware.",
+    "entities": ["PARAM Award", "Param Foundation", "Vedanta", "Drishtikon Yantra", "Lakshveer"],
+    "domains": ["achievement", "electronics", "entrepreneurship", "social-impact"],
+    "organizations": ["Param Foundation", "Vedanta"],
+    "rawText": "Lakshveer won Youngest Innovator & Special Mention at Param Foundation × Vedanta Makeathon. Presented Drishtikon Yantra. Video on YouTube.",
+    "confidence": "high",
+    "surface": "conference"
+  },
+  {
+    "id": "sig-think-tac-feature-2025",
+    "source": "article",
+    "url": "https://x.com/think_tac/status/1933343571039400104",
+    "title": "ThinkTac Feature — 'Grade 2 student who loves exploring'",
+    "date": "2025-06",
+    "entities": ["ThinkTac", "Lakshveer"],
+    "domains": ["media", "recognition", "education"],
+    "organizations": ["ThinkTac"],
+    "rawText": "ThinkTac on X: 'Meet Lakshveer Rao at ThinkTac! A bright and curious Grade 2 student who loves exploring how things work!'",
     "confidence": "high",
     "surface": "press"
   },
   {
-    "id": "sig-beats-in-brief-2025",
+    "id": "sig-youngest-founder-room-yt-2025",
+    "source": "youtube",
+    "url": "https://www.youtube.com/watch?v=ZVk1cisMLrg",
+    "title": "YouTube — The Youngest Founder in the Room",
+    "date": "2025-11",
+    "entities": ["Lakshveer", "founder", "YouTube"],
+    "domains": ["brand", "entrepreneurship", "content"],
+    "organizations": ["Projects by Laksh"],
+    "rawText": "YouTube video: 'The Youngest Founder in the Room' — documenting Lakshveer's journey.",
+    "confidence": "high",
+    "surface": "youtube"
+  },
+  {
+    "id": "sig-lion-circuits-hw2-2025",
+    "source": "event",
+    "url": "https://www.youtube.com/watch?v=bparB1aC_Wk",
+    "title": "Hardware Hackathon 2.0 — Lion Circuits (Top-5 Finalist, Youngest)",
+    "date": "2025-07",
+    "entities": ["Lion Circuits", "PCB Cupid", "Hardware Hackathon 2.0", "Lakshveer"],
+    "domains": ["hardware", "electronics", "achievement"],
+    "organizations": ["Lion Circuits", "PCB Cupid"],
+    "rawText": "Lakshveer was Top-5 Finalist (youngest participant) at Hardware Hackathon 2.0 by Lion Circuits × PCB Cupid.",
+    "confidence": "high",
+    "surface": "conference"
+  },
+  {
+    "id": "sig-yt-170-projects-2025",
+    "source": "youtube",
+    "url": "https://www.youtube.com/@ProjectsByLaksh",
+    "title": "YouTube Channel — 170+ project builds documented",
+    "date": "2025-12",
+    "entities": ["YouTube", "electronics", "robotics", "Arduino", "Raspberry Pi", "ProjectsByLaksh"],
+    "domains": ["electronics", "robotics", "teaching", "content"],
+    "organizations": ["Projects by Laksh"],
+    "rawText": "Lakshveer's YouTube channel @ProjectsByLaksh documents 170+ electronics, robotics, and AI projects. Growing audience of young makers. Channel: youtube.com/@ProjectsByLaksh",
+    "confidence": "high",
+    "surface": "youtube"
+  },
+  {
+    "id": "sig-drishtikon-2026",
+    "source": "youtube",
+    "url": "https://www.youtube.com/watch?v=ORPQW1_M-v8",
+    "title": "Drishtikon Yantra — Raspberry Pi wearable assistive vision device",
+    "date": "2026-01",
+    "entities": ["Drishtikon Yantra", "computer-vision", "Raspberry Pi", "accessibility", "Param Foundation"],
+    "domains": ["computer-vision", "hardware", "social-impact"],
+    "organizations": ["Param Foundation"],
+    "rawText": "Drishtikon Yantra: Raspberry Pi-based wearable assistive vision device for visually impaired users. Special Mention at Param × Vedanta Makeathon.",
+    "confidence": "high",
+    "surface": "conference"
+  },
+  {
+    "id": "sig-motionx-launch-2026",
+    "source": "youtube",
+    "url": "https://www.youtube.com/watch?v=kGENI_zK7kk",
+    "title": "MotionX — Full-body motion-control gaming (RunTogether Hackathon)",
+    "date": "2026-01",
+    "entities": ["MotionX", "computer-vision", "AI", "gesture recognition", "Runable", "RunTogether"],
+    "domains": ["computer-vision", "machine-learning", "ai-agents", "hardware"],
+    "organizations": ["Runable"],
+    "rawText": "MotionX — Full-body motion-control gaming system built at RunTogether Hackathon by Runable. Special Mention Winner. @runable_hq and @scaletogether featured on X.",
+    "confidence": "high",
+    "surface": "conference"
+  },
+  {
+    "id": "sig-runable-runhq-tweet-2026",
     "source": "article",
-    "url": "",
-    "title": "Beats in Brief media feature \u2014 Coverage of maker journey",
-    "date": "2025-09",
-    "entities": [
-      "Beats in Brief",
-      "media",
-      "maker",
-      "young innovator"
-    ],
-    "domains": [
-      "media",
-      "public-speaking",
-      "brand"
-    ],
-    "organizations": [
-      "Beats in Brief"
-    ],
-    "rawText": "Beats in Brief covered Lakshveer's journey as India's youngest hardware builder \u2014 from age 4 to CircuitHeroes entrepreneur.",
-    "confidence": "medium",
+    "url": "https://x.com/runable_hq/status/2018337544975646832",
+    "title": "Runable HQ Tweet — 'An 8-year-old showed up and built'",
+    "date": "2026-01",
+    "entities": ["Runable", "Lakshveer", "RunTogether", "MotionX"],
+    "domains": ["recognition", "brand", "hardware"],
+    "organizations": ["Runable"],
+    "rawText": "Runable on X: 'An 8-year-old showed up and built. That alone changed what we thought was possible.' — RunTogether Hackathon feature.",
+    "confidence": "high",
+    "surface": "press"
+  },
+  {
+    "id": "sig-scaletogether-tweet-2026",
+    "source": "article",
+    "url": "https://x.com/scaletogether/status/2018556342282453396",
+    "title": "ScaleTogether Tweet — MotionX at RunTogether Hackathon",
+    "date": "2026-01",
+    "entities": ["ScaleTogether", "Lakshveer", "MotionX", "RunTogether"],
+    "domains": ["recognition", "brand"],
+    "organizations": ["ScaleTogether"],
+    "rawText": "ScaleTogether on X: 'Full body Motion Gaming built by Laksh (our youngest builder, all of 8yrs old) at #RunTogether Hackathon.'",
+    "confidence": "high",
+    "surface": "press"
+  },
+  {
+    "id": "sig-heyacpk-science-expo-2026",
+    "source": "article",
+    "url": "https://x.com/heyaCPK/status/2017974440412459105",
+    "title": "CPK Tweet — Science Expo testimonial",
+    "date": "2026-01",
+    "entities": ["CPK", "Science Expo", "Lakshveer"],
+    "domains": ["recognition", "public-speaking"],
+    "organizations": [],
+    "rawText": "CPK on X: 'Met young Laksh today. In the 2-3 hours I spent with him, I saw him give demos of his app to hundreds of visitors and promptly...' — Science Expo.",
+    "confidence": "high",
+    "surface": "press"
+  },
+  {
+    "id": "sig-aadityayuvraj-residency-2026",
+    "source": "article",
+    "url": "https://x.com/AadityaYuvraj/status/1987573704013058361",
+    "title": "Yuvraj Aaditya Tweet — The Residency Delta-2",
+    "date": "2026-01",
+    "entities": ["Yuvraj Aaditya", "The Residency", "Lakshveer"],
+    "domains": ["recognition", "entrepreneurship"],
+    "organizations": ["The Residency"],
+    "rawText": "Yuvraj Aaditya on X: 'Met Laksh today, an 8 yr old builder and the youngest in @theresidency delta cohort. He's already built projects across hardware, software, games...'",
+    "confidence": "high",
+    "surface": "press"
+  },
+  {
+    "id": "sig-gemini3-hackathon-2026",
+    "source": "youtube",
+    "url": "https://www.youtube.com/watch?v=AgvJWdYLMUI",
+    "title": "Gemini 3 Hackathon — Kyabol demo (Cerebral Valley × Google DeepMind)",
+    "date": "2026-02",
+    "entities": ["Gemini 3", "Kyabol", "Cerebral Valley", "Google DeepMind", "Lakshveer"],
+    "domains": ["ai-agents", "machine-learning", "entrepreneurship"],
+    "organizations": ["Cerebral Valley", "Google DeepMind"],
+    "rawText": "Lakshveer participated in Gemini 3 Hackathon by Cerebral Valley × Google DeepMind. Demoed Kyabol — an AI conversational system.",
+    "confidence": "high",
+    "surface": "conference"
+  },
+  {
+    "id": "sig-isro-somanath-yt-2026",
+    "source": "youtube",
+    "url": "https://www.youtube.com/watch?v=x9SHIKOnHvY",
+    "title": "Demo to Shri S. Somanath (Former ISRO Chief) — Video",
+    "date": "2026-02",
+    "entities": ["S. Somanath", "ISRO", "Lakshveer"],
+    "domains": ["electronics", "robotics", "space", "recognition"],
+    "organizations": ["ISRO"],
+    "rawText": "Video of Lakshveer demonstrating projects to Shri S. Somanath, former ISRO Chairman.",
+    "confidence": "high",
+    "surface": "conference"
+  },
+  {
+    "id": "sig-sravya-interview-2026",
+    "source": "event",
+    "url": "https://www.facebook.com/watch/?v=911725544741111",
+    "title": "Sravya Interview — Facebook Video",
+    "date": "2026-02",
+    "entities": ["Sravya", "Lakshveer", "interview"],
+    "domains": ["media", "brand", "public-speaking"],
+    "organizations": [],
+    "rawText": "Video interview with Sravya on Facebook covering Lakshveer's journey and projects.",
+    "confidence": "high",
+    "surface": "press"
+  },
+  {
+    "id": "sig-fe-mait-agent-2026",
+    "source": "article",
+    "url": "https://www.financialexpress.com/life/technology-meet-lakshveer-the-8-year-old-who-created-an-ai-agent-to-control-devices-via-telegram-messaging-4159964/",
+    "title": "Financial Express — 'Meet Lakshveer: 8-year-old who created AI agent to control devices via Telegram'",
+    "date": "2026-03",
+    "entities": ["Financial Express", "Lakshveer", "AI agent", "Telegram", "ESP32"],
+    "domains": ["media", "ai-agents", "brand"],
+    "organizations": ["Financial Express"],
+    "rawText": "Financial Express (national) feature: 'Meet Lakshveer, the 8-year-old who created an AI agent to control devices via Telegram messaging.' National technology media coverage.",
+    "confidence": "high",
     "surface": "press"
   },
   {
     "id": "sig-startuppedia-2026",
     "source": "article",
-    "url": "https://startuppedia.in/trending/meet-8-year-old-lakshveer-who-created-an-ai-agent-to-control-devices-via-telegram-messaging-11212926",
-    "title": "StartupPedia \u2014 Meet 8-year-old Lakshveer who created an AI agent to control devices via Telegram messaging",
+    "url": "https://startuppedia.in/trending/meet-8-year-old-lakshveer-who-created-an-ai-agent-to-control-devices-via-telegram-messaging/",
+    "title": "StartupPedia — Meet 8-year-old Lakshveer who created AI agent to control devices via Telegram",
     "date": "2026-03",
-    "entities": [
-      "StartupPedia",
-      "Lakshveer",
-      "AI agent",
-      "Telegram"
-    ],
-    "domains": [
-      "ai-agents",
-      "media",
-      "entrepreneurship",
-      "brand"
-    ],
-    "organizations": [
-      "StartupPedia"
-    ],
-    "rawText": "StartupPedia published a feature article on Lakshveer Rao, the 8-year-old who built an AI agent that controls ESP32 hardware devices via Telegram messaging.",
+    "entities": ["StartupPedia", "Lakshveer", "AI agent", "Telegram"],
+    "domains": ["ai-agents", "media", "entrepreneurship", "brand"],
+    "organizations": ["StartupPedia"],
+    "rawText": "StartupPedia feature article on Lakshveer's AI agent controlling ESP32 hardware via Telegram messaging.",
     "confidence": "high",
-    "surface": "press",
-    "audience": [
-      "general_public",
-      "founders",
-      "educators"
-    ],
-    "reach": "high"
+    "surface": "press"
   },
   {
     "id": "sig-startuppedia-instagram-2026",
-    "source": "website",
+    "source": "article",
     "url": "https://www.instagram.com/startup.pedia/reel/DV8FhcWCUgf/",
-    "title": "StartupPedia Instagram Reel \u2014 Lakshveer AI agent Telegram feature",
+    "title": "StartupPedia Instagram Reel — Lakshveer AI agent feature",
     "date": "2026-03",
-    "entities": [
-      "StartupPedia",
-      "Lakshveer",
-      "Instagram"
-    ],
-    "domains": [
-      "media",
-      "brand",
-      "ai-agents"
-    ],
-    "organizations": [
-      "StartupPedia"
-    ],
-    "rawText": "StartupPedia Instagram reel featuring Lakshveer Rao and his AI agent that controls devices via Telegram.",
+    "entities": ["StartupPedia", "Lakshveer", "Instagram", "AI agent"],
+    "domains": ["media", "brand", "ai-agents"],
+    "organizations": ["StartupPedia"],
+    "rawText": "StartupPedia Instagram reel featuring Lakshveer's AI agent project.",
     "confidence": "high",
-    "surface": "social",
-    "audience": [
-      "general_public",
-      "founders",
-      "students"
-    ],
-    "reach": "medium"
+    "surface": "press"
+  },
+  {
+    "id": "sig-startupnewsfyi-ig-2026",
+    "source": "article",
+    "url": "https://www.instagram.com/reel/DTPcKnvEany/",
+    "title": "StartupNews.fyi Instagram — India's Youngest Hardware Founder",
+    "date": "2026-03",
+    "entities": ["StartupNews.fyi", "Lakshveer", "hardware", "Instagram"],
+    "domains": ["media", "brand"],
+    "organizations": ["StartupNews.fyi"],
+    "rawText": "StartupNews.fyi on Instagram: 'India's Youngest Hardware Founder Is Only 8 Years Old. Lakshveer Rao built Marcy, a wrist companion for astronauts.'",
+    "confidence": "high",
+    "surface": "press"
   },
   {
     "id": "sig-rediminds-linkedin-2026",
     "source": "article",
-    "url": "https://www.linkedin.com/posts/rediminds_8-year-old-built-an-esp32-agent-that-codes-activity-7434258624761446400-gHOS/",
-    "title": "RediMinds LinkedIn \u2014 8-year-old built an ESP32 agent that codes",
+    "url": "https://www.linkedin.com/posts/rediminds_8-year-old-built-an-ai-agent",
+    "title": "RediMinds LinkedIn — '8-year-old built an AI agent'",
     "date": "2026-03",
-    "entities": [
-      "RediMinds",
-      "Lakshveer",
-      "ESP32",
-      "AI agent"
-    ],
-    "domains": [
-      "electronics",
-      "ai-agents",
-      "media",
-      "brand"
-    ],
-    "organizations": [
-      "RediMinds"
-    ],
-    "rawText": "RediMinds featured Lakshveer Rao on LinkedIn highlighting the ESP32 AI agent that codes and controls hardware.",
+    "entities": ["RediMinds", "Lakshveer", "LinkedIn", "AI agent", "ESP32"],
+    "domains": ["ai-agents", "media", "brand"],
+    "organizations": ["RediMinds"],
+    "rawText": "RediMinds LinkedIn post featuring Lakshveer's AI agent controlling ESP32 hardware.",
     "confidence": "high",
-    "surface": "press",
-    "audience": [
-      "developers",
-      "founders",
-      "makers"
-    ],
-    "reach": "high"
+    "surface": "press"
   },
   {
     "id": "sig-somi-ai-linkedin-2026",
     "source": "article",
-    "url": "https://www.linkedin.com/posts/somi-ai_an-8-year-old-just-built-an-ai-agent-that-activity-7434205969292914688-fRzB/",
-    "title": "Somi AI LinkedIn \u2014 An 8-year-old built an AI agent that controls real hardware",
+    "url": "https://www.linkedin.com/posts/somi-ai_an-8-year-old-just-built",
+    "title": "Somi AI LinkedIn — 'An 8-year-old just built an AI agent'",
     "date": "2026-03",
-    "entities": [
-      "Somi AI",
-      "Lakshveer",
-      "AI agent",
-      "hardware"
-    ],
-    "domains": [
-      "ai-agents",
-      "electronics",
-      "media",
-      "brand"
-    ],
-    "organizations": [
-      "Somi AI"
-    ],
-    "rawText": "Somi AI featured Lakshveer Rao on LinkedIn: an 8-year-old built an AI agent that controls real hardware via Telegram.",
+    "entities": ["Somi AI", "Lakshveer", "LinkedIn", "AI agent", "hardware"],
+    "domains": ["ai-agents", "media", "brand"],
+    "organizations": ["Somi AI"],
+    "rawText": "Somi AI LinkedIn: 'An 8-year-old just built an AI agent that controls real hardware.'",
     "confidence": "high",
-    "surface": "press",
-    "audience": [
-      "developers",
-      "researchers",
-      "founders"
-    ],
-    "reach": "high"
+    "surface": "press"
+  },
+  {
+    "id": "sig-dileep-gupta-linkedin-2026",
+    "source": "article",
+    "url": "https://www.linkedin.com/posts/dileep-gupta-aa19a133_india-hardware-activity-7416424030334791681-TXVf",
+    "title": "Dileep Gupta LinkedIn — 'India's youngest hardware startup founder'",
+    "date": "2026-03",
+    "entities": ["Dileep Gupta", "Lakshveer", "LinkedIn", "hardware", "startup founder"],
+    "domains": ["recognition", "brand", "hardware"],
+    "organizations": [],
+    "rawText": "Dileep Gupta on LinkedIn: '8-year-old Lakshveer Rao is India's youngest hardware startup founder. He is the co-founder of Projects by Laksh and the creator of Circuit Heroes.'",
+    "confidence": "high",
+    "surface": "press"
   },
   {
     "id": "sig-reddit-indiatech-2026",
     "source": "article",
-    "url": "https://www.reddit.com/r/IndiaTech/comments/1rpvm71/the_rise_of_ai_kids_and_vibecoding_prodigies_in/",
-    "title": "Reddit r/IndiaTech \u2014 The rise of AI kids and vibe-coding prodigies in India",
+    "url": "https://www.reddit.com/r/IndiaTech/comments/1rpvm71/the_rise_of_ai_kids",
+    "title": "Reddit r/IndiaTech — 'The rise of AI kids and vibe-coding prodigies in India'",
     "date": "2026-03",
-    "entities": [
-      "Reddit",
-      "IndiaTech",
-      "Lakshveer",
-      "AI"
-    ],
-    "domains": [
-      "media",
-      "brand",
-      "ai-agents",
-      "machine-learning"
-    ],
-    "organizations": [
-      "Reddit"
-    ],
-    "rawText": "Reddit r/IndiaTech community post discussing the rise of AI kids and vibe-coding prodigies in India, featuring Lakshveer Rao.",
-    "confidence": "medium",
-    "surface": "community",
-    "audience": [
-      "developers",
-      "makers",
-      "students"
-    ],
-    "reach": "medium"
+    "entities": ["Reddit", "IndiaTech", "Lakshveer", "AI"],
+    "domains": ["media", "brand", "ai-agents", "machine-learning"],
+    "organizations": ["Reddit"],
+    "rawText": "Reddit r/IndiaTech discussion: 'The rise of AI kids and vibe-coding prodigies in India' — featuring Lakshveer.",
+    "confidence": "high",
+    "surface": "press"
   },
   {
     "id": "sig-reddit-india-2026",
     "source": "article",
-    "url": "https://www.reddit.com/r/india/comments/1ru8mqz/most_indian_builders_go_through_these_3_ph/",
-    "title": "Reddit r/india \u2014 Most Indian builders go through these 3 phases",
+    "url": "https://www.reddit.com/r/india/comments/1ru8mqz/most_indian_builders",
+    "title": "Reddit r/india — Most Indian Builders thread",
     "date": "2026-03",
-    "entities": [
-      "Reddit",
-      "India",
-      "Lakshveer",
-      "builders"
-    ],
-    "domains": [
-      "media",
-      "brand",
-      "entrepreneurship"
-    ],
-    "organizations": [
-      "Reddit"
-    ],
-    "rawText": "Reddit r/india community discussion on Indian builder journeys, featuring Lakshveer Rao as an example.",
-    "confidence": "medium",
-    "surface": "community",
-    "audience": [
-      "developers",
-      "founders",
-      "general_public"
-    ],
-    "reach": "medium"
+    "entities": ["Reddit", "India", "Lakshveer", "builders"],
+    "domains": ["media", "brand", "entrepreneurship"],
+    "organizations": ["Reddit"],
+    "rawText": "Reddit r/india thread featuring Lakshveer among most notable Indian builders.",
+    "confidence": "high",
+    "surface": "press"
   },
   {
     "id": "sig-yt-short-telegram-2026",
     "source": "youtube",
     "url": "https://m.youtube.com/shorts/tMkS4K1L5I4",
-    "title": "YouTube Short \u2014 Lakshveer AI Telegram agent demo",
+    "title": "YouTube Short — AI agent controlling hardware via Telegram",
     "date": "2026-03",
-    "entities": [
-      "YouTube",
-      "Lakshveer",
-      "AI agent",
-      "Telegram",
-      "ESP32"
-    ],
-    "domains": [
-      "ai-agents",
-      "electronics",
-      "computer-vision",
-      "content"
-    ],
-    "organizations": [],
-    "rawText": "YouTube Short showing Lakshveer demonstrating his AI agent that controls ESP32 hardware via Telegram messaging.",
-    "confidence": "medium",
-    "surface": "youtube",
-    "audience": [
-      "makers",
-      "developers",
-      "students"
-    ],
-    "reach": "medium"
+    "entities": ["YouTube", "Lakshveer", "AI agent", "Telegram", "ESP32"],
+    "domains": ["ai-agents", "electronics", "computer-vision", "content"],
+    "organizations": ["Projects by Laksh"],
+    "rawText": "YouTube Short showing Lakshveer's AI agent that controls ESP32 hardware via Telegram messaging.",
+    "confidence": "high",
+    "surface": "youtube"
   },
   {
     "id": "sig-yt-short-2-2026",
     "source": "youtube",
     "url": "https://www.youtube.com/shorts/CMLBWDSIxlY",
-    "title": "YouTube Short \u2014 Lakshveer latest build demo",
+    "title": "YouTube Short — Hardware + AI build",
     "date": "2026-03",
-    "entities": [
-      "YouTube",
-      "Lakshveer",
-      "hardware",
-      "AI"
-    ],
-    "domains": [
-      "electronics",
-      "robotics",
-      "content"
-    ],
-    "organizations": [],
-    "rawText": "YouTube Short featuring Lakshveer Rao demonstrating his latest hardware and AI build.",
-    "confidence": "medium",
-    "surface": "youtube",
-    "audience": [
-      "makers",
-      "developers",
-      "students"
-    ],
-    "reach": "medium"
+    "entities": ["YouTube", "Lakshveer", "hardware", "AI"],
+    "domains": ["electronics", "robotics", "content"],
+    "organizations": ["Projects by Laksh"],
+    "rawText": "YouTube Short — hardware and AI build documentation.",
+    "confidence": "high",
+    "surface": "youtube"
   },
   {
     "id": "sig-yt-full-2026",
     "source": "youtube",
     "url": "https://www.youtube.com/watch?v=l6gvC81Ql10",
-    "title": "YouTube Feature Video \u2014 Lakshveer Rao full build walkthrough",
+    "title": "YouTube Full Video — AI agent hardware walkthrough",
     "date": "2026-03",
-    "entities": [
-      "YouTube",
-      "Lakshveer",
-      "hardware",
-      "AI agent"
-    ],
-    "domains": [
-      "electronics",
-      "ai-agents",
-      "content",
-      "teaching"
-    ],
-    "organizations": [],
-    "rawText": "Full YouTube video featuring Lakshveer Rao walking through his hardware and AI agent builds.",
-    "confidence": "medium",
-    "surface": "youtube",
-    "audience": [
-      "makers",
-      "developers",
-      "educators",
-      "students"
-    ],
-    "reach": "medium"
-  },
-  {
-    "id": "sig-scaler-hackathon-2025",
-    "source": "event",
-    "url": "https://www.linkedin.com/posts/scaler-innovation-lab_200-teams-signed-up-only-8-made-it-to-the-activity-7409521660606722048-wGu0/",
-    "title": "Scaler Innovation Lab \u2014 200 teams, only 8 made finals. Lakshveer was one of them.",
-    "date": "2025-09",
-    "entities": [
-      "Scaler",
-      "Lakshveer",
-      "hackathon",
-      "innovation"
-    ],
-    "domains": [
-      "entrepreneurship",
-      "electronics",
-      "achievement"
-    ],
-    "organizations": [
-      "Scaler Innovation Lab"
-    ],
-    "rawText": "Scaler Innovation Lab posted on LinkedIn: 200 teams signed up, only 8 made it to the finals. Lakshveer Rao was among the 8 finalists.",
+    "entities": ["YouTube", "Lakshveer", "hardware", "AI agent"],
+    "domains": ["electronics", "ai-agents", "content", "teaching"],
+    "organizations": ["Projects by Laksh"],
+    "rawText": "Full YouTube walkthrough of Lakshveer's AI agent hardware project.",
     "confidence": "high",
-    "surface": "conference",
-    "audience": [
-      "developers",
-      "founders",
-      "students"
-    ],
-    "reach": "medium"
-  },
-  {
-    "id": "sig-polaris-vibehack-2025",
-    "source": "event",
-    "url": "https://www.linkedin.com/posts/polaris-school-of-technology_hackathon-7yearsoldhacker-vibehack-activity-7406303087159726080-ial5/",
-    "title": "Polaris School of Technology \u2014 VibeHack, 7-year-old hacker Lakshveer",
-    "date": "2025-08",
-    "entities": [
-      "Polaris School of Technology",
-      "Lakshveer",
-      "VibeHack",
-      "hackathon"
-    ],
-    "domains": [
-      "electronics",
-      "entrepreneurship",
-      "achievement",
-      "public-speaking"
-    ],
-    "organizations": [
-      "Polaris School of Technology"
-    ],
-    "rawText": "Polaris School of Technology featured Lakshveer on LinkedIn as a 7-year-old hacker at VibeHack hackathon.",
-    "confidence": "high",
-    "surface": "conference",
-    "audience": [
-      "developers",
-      "students",
-      "educators"
-    ],
-    "reach": "medium"
+    "surface": "youtube"
   },
   {
     "id": "sig-startupg-linkedin-2026",
     "source": "article",
-    "url": "https://www.linkedin.com/posts/startup-g_startupg-ai-activity-7439599135026130944-_H9l/",
-    "title": "StartupG LinkedIn \u2014 Lakshveer AI builder feature",
+    "url": "https://www.linkedin.com/posts/startup-g_startupg-ai-activity",
+    "title": "StartupG LinkedIn — AI activity feature",
     "date": "2026-03",
-    "entities": [
-      "StartupG",
-      "Lakshveer",
-      "AI"
-    ],
-    "domains": [
-      "ai-agents",
-      "media",
-      "brand",
-      "entrepreneurship"
-    ],
-    "organizations": [
-      "StartupG"
-    ],
-    "rawText": "StartupG featured Lakshveer Rao in their AI builder roundup on LinkedIn.",
+    "entities": ["StartupG", "Lakshveer", "AI"],
+    "domains": ["ai-agents", "media", "brand", "entrepreneurship"],
+    "organizations": ["StartupG"],
+    "rawText": "StartupG LinkedIn featuring Lakshveer's AI agent project.",
     "confidence": "high",
-    "surface": "press",
-    "audience": [
-      "founders",
-      "developers",
-      "general_public"
-    ],
-    "reach": "medium"
+    "surface": "press"
   }
 ]

@@ -3,126 +3,130 @@
 
 ## Information Gaps
 
-### **Personal Background**
-- **Birth date unknown** — Age references conflict (7-year-old in 2025-08, 8-year-old in 2026-03, but also 16-year-old stated in system context)
-- **School/education** — No mention of formal education, homeschooling, or institution affiliation
-- **Family context** — No parent, sibling, or household data
-- **Geographic roots** — "Hyderabad" mentioned in system prompt but ZERO signals reference location
-- **Start date** — Beats in Brief mentions "age 4 to CircuitHeroes" [[sig-beats-in-brief-2025]] but no specifics
+### Missing Technical Details
+- **CircuitHeroes specifications**: Card count, mechanics, pricing, distribution channels
+- **Drishtikon Yantra**: Technical architecture, hardware components, computer vision models used
+- **MotionX**: Tech stack, gesture recognition algorithms, deployment details
+- **YouTube metrics**: Subscriber count, view counts, audience demographics
+- **Projects by Laksh**: Business model, revenue, team structure, incorporation status
 
-### **Project Lifecycle Data**
-- **CircuitHeroes** — 300+ decks sold [[sig-malpani-grant-2025]], grant awarded, but NO: launch date, pricing, distribution channel, manufacturing details, customer testimonials
-- **Drishtikon Yantra** — Tech stack clear (Raspberry Pi, CV, TTS) [[sig-drishtikon-2026]], but NO: beta testers, iteration count, user feedback, deployment status
-- **MotionX** — "First AI-native project in 2026 batch" [[sig-motionx-launch-2026]] — What batch? What organization? MediaPipe implementation but NO code repos, demos, or technical depth
+### Incomplete Timeline Data
+- Birth year confirmation needed (signals show age 4 in 2022-07, age 8 in multiple 2025/2026 signals — math doesn't align)
+- **Age inconsistency**: First upload "age 4" in 2022-07, but described as "8 years old" in 2025-2026 signals
+- Missing: School name, formal education path
+- Gap between 2022-08 and 2024-03 (20 months of early building)
+- No signals from 2023 at all
 
-### **Technical Depth**
-- **Code artifacts** — NO GitHub links, repos, or technical specs despite 170+ YouTube projects [[sig-yt-170-projects-2025]]
-- **Stack evolution** — Arduino/Raspberry Pi mentioned, but NO progression timeline or skill acquisition map
-- **Failures** — Zero documentation of failed builds, pivots, or dead projects
+### Product Milestones Missing
+- **eBook**: Sales numbers beyond "100+ sales", platform details, pricing
+- **CircuitHeroes**: Launch date, sales beyond "300+ decks sold"
+- **Malpani Grant**: Application process, use of ₹1,00,000, deliverables
+- **The Residency Delta-2**: Cohort dates, program structure, other founders in cohort
 
-### **Network & Influence**
-- **Mentors** — ISRO meeting [[sig-isro-meeting-2025]] suggests adult guidance, but NO mentor names, advisors, or support network
-- **Collaborators** — All signals are solo work; NO team projects or co-founders
-- **Investors/Sponsors** — Malpani Foundation grant [[sig-malpani-grant-2025]] is ONLY funding signal
+### Family & Background
+- Father's name/role mentioned implicitly ([[sig-ramsri-scholarship-2025]]: "working...along with his dad") but no formal signal
+- Mother's involvement unclear
+- Hyderabad context: Which part of city, maker community involvement
+- Schooling: Homeschooled? Alternative education?
 
----
+### Financial Data
+- Revenue from CircuitHeroes, eBook, YouTube
+- Funding beyond Malpani grant
+- Hardware costs, sustainability model
 
 ## Inconsistencies
 
-### **Age Paradox (CRITICAL)**
-- System context: "16-year-old Indian maker"
-- [[sig-polaris-vibehack-2025]]: "7-year-old hacker" (Aug 2025)
-- [[sig-startuppedia-2026]]: "8-year-old Lakshveer" (Mar 2026)
-- **Resolution needed** — Either system context is wrong OR media coverage uses outdated/incorrect data
+### Age Calculation Issue
+- [[sig-first-yt-upload-2022]]: Age 4 in July 2022
+- [[sig-ramsri-scholarship-2025]]: Age 7 in Feb 2025
+- [[sig-sharav-medium-2025]]: Age 8 in Feb 2025
+- [[sig-lion-circuits-hw1-2025]]: Age 8 in July 2025
+- **Conflict**: If 4 in mid-2022, should be 7 in mid-2025, not 8
 
-### **Project Naming Conflicts**
-- [[sig-startuppedia-2026]] & [[sig-somi-ai-linkedin-2026]] describe "AI agent to control devices via Telegram" but NO project name given
-- Is this MotionX? Drishtikon Yantra? Or unnamed third project?
+### Organization Naming
+- "Projects by Laksh" vs "ProjectsByLaksh" — unclear if distinct entities
+- ChhotaCreator role unclear — platform or Lakshveer's brand?
 
-### **YouTube Channel Stats**
-- [[sig-yt-170-projects-2025]] claims "170+ projects" as of Dec 2025
-- BUT [[sig-yt-short-telegram-2026]], [[sig-yt-short-2-2026]], [[sig-yt-full-2026]] from Mar 2026 have NO view counts, subscriber data, or engagement metrics
+### Event Date Precision
+- [[sig-ttox-panel-2025]]: Listed as "2025-02" but titled "TTOX 2024"
+- [[sig-august-fest-speaker-2025]]: Date listed as "2025-08" but likely August 2025 (past) or 2026 (future)
 
----
+### Title Claims
+- "India's youngest hardware startup founder" — unverified
+- "India's youngest card game designer" — unverified against national records
 
 ## Underrepresented Domains
 
-### **Business & Revenue**
-- **Entrepreneurship domain** mentioned in 8 signals but ZERO financials
-- CircuitHeroes: 300+ decks sold — What's the revenue? Unit economics? Margins?
-- NO mention of business entity (sole proprietor, LLP, Pvt Ltd?)
+### Weak Coverage
+1. **AI/ML depth** (7 signals) — Kyabol, MotionX, Telegram agent underexplored
+2. **Space/ISRO** (2 signals) — High-profile but thin documentation
+3. **Computer vision** (3 signals) — Drishtikon, MotionX need technical depth
+4. **Teaching/workshops** (4 signals) — Content delivery methodology unclear
+5. **Regional media** (1 signal Telugu) — Likely more vernacular coverage exists
 
-### **Education & Teaching**
-- YouTube "teaching" domain [[sig-yt-170-projects-2025]] but NO curriculum, viewer testimonials, or educational impact data
-- Public speaking at SPC and Scaler [[sig-spc-demo-2025]], [[sig-scaler-hackathon-2025]] but NO talk recordings or presentation materials
-
-### **AI/ML Technical Depth**
-- "AI agent" mentioned in 7 signals (2026 cluster) but ZERO:
-  - Model architecture (GPT-4? Claude? Local LLM?)
-  - Prompt engineering details
-  - Token usage or cost structure
-  - Agentic framework (LangChain? AutoGPT?)
-
-### **Community & Open Source**
-- NO mentions of: GitHub stars, forks, contributions to open-source, or community building
-- Reddit discussions [[sig-reddit-indiatech-2026]], [[sig-reddit-india-2026]] are ABOUT him, not BY him
-
----
+### Missing Domains
+- **Manufacturing**: How CircuitHeroes cards are produced
+- **Supply chain**: Hardware sourcing, vendor relationships
+- **Community**: Peer network, mentors beyond event organizers
+- **Failures**: No documented failed projects or pivots
+- **Daily routine**: Learning process, time allocation
 
 ## Suggested Articles
 
-### **Priority 1 — Core Identity**
-1. **[[Lakshveer Rao — Timeline]]** — Resolve age paradox, map year-by-year milestones from age 4 to present
-2. **[[Lakshveer Rao — Technical Stack]]** — Arduino → Raspberry Pi → ESP32 → AI agents progression
-3. **[[CircuitHeroes — Product]]** — Launch date, sales data, manufacturing, distribution, customer stories
+### High Priority
+1. **[[age-timeline]]** — Resolve birth year, create definitive age-date mapping
+2. **[[circuitheroes]]** — Full product wiki: specs, sales data, design process
+3. **[[drishtikon-yantra]]** — Technical architecture, accessibility impact
+4. **[[projects-by-laksh-organization]]** — Business structure, revenue, team
+5. **[[youtube-channel-analytics]]** — Growth metrics, content strategy
+6. **[[father-collaboration]]** — Role in Lakshveer's projects, background
 
-### **Priority 2 — Domain Deep-Dives**
-4. **[[Drishtikon Yantra — Technical Spec]]** — Architecture, hardware BOM, CV model, deployment case studies
-5. **[[AI Agent Projects — 2026 Cluster]]** — Unified article covering Telegram ESP32 agent, MotionX, and related builds
-6. **[[YouTube Strategy]]** — 170+ projects, audience growth, content themes, maker education philosophy
+### Medium Priority
+7. **[[malpani-foundation-grant]]** — Application, deliverables, impact
+8. **[[the-residency-delta-2]]** — Cohort experience, outcomes
+9. **[[motionx-technical]]** — Computer vision stack, gaming mechanics
+10. **[[hardware-hackathons]]** — Lion Circuits 1.0/2.0 detailed comparison
+11. **[[iit-hyderabad-workshops]]** — IoT + Drone workshop curricula
+12. **[[public-speaking-evolution]]** — From first pitch to panel discussions
 
-### **Priority 3 — Network & Context**
-7. **[[South Park Commons — Demo Day 2025]]** — Event context, other presenters, feedback received
-8. **[[ISRO Chairman Meeting — 2025-04]]** — Discussion details, student satellite programs, follow-up actions
-9. **[[Media Coverage Analysis]]** — StartupPedia, RediMinds, Somi AI: reach, messaging, audience overlap
-
-### **Priority 4 — Meta**
-10. **[[Indian Maker Ecosystem — 2025-2026]]** — Lakshveer as case study in youth innovation infrastructure
-
----
+### Low Priority (Nice to Have)
+13. **[[hyderabad-maker-scene]]** — Local ecosystem, spaces, communities
+14. **[[education-approach]]** — Learning methodology, school vs self-taught
+15. **[[arduino-raspberry-pi-projects]]** — Technical project catalog
+16. **[[media-coverage-timeline]]** — Press evolution, narrative shifts
+17. **[[kyabol-ai-agent]]** — Gemini 3 hackathon project details
 
 ## Questions to Answer
 
-### **Identity & Background**
-- **What is Lakshveer's actual birth date?** (Age inconsistency must be resolved)
-- Where in Hyderabad is he based? (Home lab photos in YouTube videos?)
-- What's his formal education status? (School? Homeschool? Unschool?)
+### Identity & Background
+1. What is Lakshveer's exact birth date (month/year)?
+2. What school does he attend? Homeschooled? Alternative education?
+3. Who is his father? What's his professional background?
+4. What is his daily schedule (school, building, content)?
 
-### **Project Economics**
-- CircuitHeroes revenue from 300 decks sold at what price point?
-- Malpani Foundation grant amount and disbursement terms?
-- How is Drishtikon Yantra funded? (Grant? Self-funded? Angel?)
+### Products & Impact
+5. How many CircuitHeroes decks sold to date? Revenue?
+6. What was the Malpani ₹1,00,000 grant used for?
+7. How many people have used Drishtikon Yantra?
+8. What is Projects by Laksh's legal structure? Incorporated?
 
-### **Technical Artifacts**
-- **Where is the code?** GitHub? GitLab? Private repos?
-- What AI models power the Telegram agent? (GPT-4-turbo? Claude-3.5?)
-- How does MotionX differ from existing gesture recognition systems?
+### Technical Depth
+9. What computer vision models power Drishtikon?
+10. What AI framework does the Telegram agent use?
+11. What's the full parts list for MotionX?
+12. How many Arduino/Raspberry Pi projects documented?
 
-### **Network & Influence**
-- Who are Lakshveer's mentors? (Names, backgrounds, engagement frequency)
-- Which organizations support him beyond Malpani Foundation?
-- Has he received venture funding? Angel investment? Incubator acceptance?
+### Network & Influence
+13. Who are his key mentors beyond event organizers?
+14. What maker communities is he actively part of?
+15. Has he collaborated with other young builders?
+16. What's his relationship with ChhotaCreator platform?
 
-### **Impact & Reach**
-- YouTube subscriber count and view metrics?
-- How many students have learned from his tutorials?
-- Drishtikon Yantra: How many blind users have tested it?
-
-### **Future Direction**
-- What is the "2026 batch" referenced in [[sig-motionx-launch-2026]]?
-- Is he building a company or focused on education/content?
-- Plans for CircuitHeroes v2 or scale-up?
+### Verification
+17. Can "youngest hardware founder" claim be verified?
+18. Can "youngest card game designer" claim be verified?
+19. Are there failed projects not documented?
+20. What projects did he build in the 2023 gap year?
 
 ---
-
-*Compiled: 2026-04-06T09:48:07.190Z*
+*Compiled: 2026-04-06T10:02:25.632Z*

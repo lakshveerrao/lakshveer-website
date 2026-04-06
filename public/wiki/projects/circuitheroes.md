@@ -2,29 +2,35 @@
 *Project*
 
 ## Summary
-Educational electronics card game designed to teach circuit design and hardware fundamentals through gameplay. Launched commercially with 300+ decks sold as of 2025-06. Recognized by Malpani Foundation with grant funding for innovation in hardware education.
+CircuitHeroes is an educational electronics card game designed by Lakshveer Rao, launched in October 2024. The game teaches electronics concepts through gameplay and has sold 300+ decks as of June 2025. Lakshveer became recognized as India's youngest card game designer through this project, which earned him a ₹1,00,000 grant from Malpani Foundation.
 
 ## Status & Timeline
-- **2025-06** — Awarded Malpani Foundation grant for innovation [[sig-malpani-grant-2025]]
-- **2025-08** — Pitched at South Park Commons Demo Day, Bangalore [[sig-spc-demo-2025]]
-- **2025-09** — Featured in Beats in Brief media coverage [[sig-beats-in-brief-2025]]
-- **Commercial traction** — 300+ decks sold by mid-2025
+- **2024-10**: Initial teaser launch via YouTube [[sig-circuitheroes-launch-2024]]
+- **2025-02**: Showcased at TTOX 2024 panel discussion [[sig-ttox-panel-2025]]
+- **2025-04**: Featured in Roohi Kirit's builder spotlight as one of "4 founders I am bullish on" [[sig-roohi-builder-spotlight-2025]]
+- **2025-06**: Awarded Malpani Foundation grant for innovation (₹1,00,000) [[sig-malpani-grant-2025]]
+- **2025-08**: Demoed at South Park Commons pitch event in Bangalore [[sig-spc-demo-2025]]
 
 ## Impact
-- **Educational reach** — 300+ students/makers acquired physical product
-- **Grant recognition** — Malpani Foundation backing validates educational innovation approach
-- **Public platform** — Presented to South Park Commons community alongside [[Drishtikon Yantra]]
-- **Media visibility** — Coverage positions Lakshveer as "India's youngest hardware builder" narrative
+- **Sales**: 300+ decks sold by June 2025
+- **Recognition**: India's youngest card game designer designation
+- **Funding**: ₹1,00,000 grant from Malpani Foundation
+- **Distribution**: Marketed through Projects by Laksh brand
+- **Public exposure**: Featured in conferences (TTOX, South Park Commons) and builder spotlights
 
 ## Signals
-- [[sig-malpani-grant-2025]] — Malpani Foundation Grant (2025-06)
-- [[sig-spc-demo-2025]] — South Park Commons Pitch Demo (2025-08)
-- [[sig-beats-in-brief-2025]] — Beats in Brief media feature (2025-09)
+- [[sig-circuitheroes-launch-2024]] — YouTube teaser launch
+- [[sig-ttox-panel-2025]] — TTOX 2024 panel showcase
+- [[sig-roohi-builder-spotlight-2025]] — Builder spotlight feature
+- [[sig-malpani-grant-2025]] — Foundation grant award
+- [[sig-spc-demo-2025]] — South Park Commons demo
 
 ## Related Articles
-- [[Drishtikon Yantra]] — Co-presented project at SPC Demo
+- [[Projects by Laksh]] — Parent brand/organization
+- [[DIY eBook]] — Related educational product launch [[sig-ebook-launch-2024]]
+- [[Drishtikon Yantra]] — Co-presented project at South Park Commons
 - [[Malpani Foundation]] — Funding organization
 - [[South Park Commons]] — Demo venue
 
 ---
-*Compiled: 2026-04-06T09:48:07.190Z*
+*Compiled: 2026-04-06T10:02:25.632Z*

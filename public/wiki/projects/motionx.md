@@ -2,27 +2,32 @@
 *Project*
 
 ## Summary
-AI-powered gesture recognition system built by Lakshveer Rao using MediaPipe and computer vision for real-time hand gesture detection. Launched January 2026 as his first AI-native project of the year, focusing on human-computer interaction through visual recognition rather than traditional input methods.
+Full-body motion-control gaming system built by Lakshveer Rao (age 8 at time of build) at RunTogether Hackathon in January 2026. Awarded Special Mention. Uses computer vision and gesture recognition for gameplay control. Featured by Runable HQ and ScaleTogether as example of youth capability in technical building.
 
 ## Status & Timeline
-- **Launched**: January 2026
-- **Status**: Active (as of launch)
+- **2026-01**: Built at RunTogether Hackathon; won Special Mention award [sig-motionx-launch-2026]
+- **2026-01**: Featured in Runable HQ tweet as transformative example [sig-runable-runhq-tweet-2026]
+- **2026-01**: Highlighted by ScaleTogether as youngest builder achievement [sig-scaletogether-tweet-2026]
 
 ## Technical Stack
-- **Core**: MediaPipe (Google's ML framework)
-- **Domain**: Computer vision, machine learning, AI agents
-- **Capability**: Real-time gesture recognition and interpretation
+- Computer vision [sig-motionx-launch-2026]
+- AI/machine learning [sig-motionx-launch-2026]
+- Gesture recognition [sig-motionx-launch-2026]
 
 ## Impact
-First documented AI-native project in Lakshveer's 2026 portfolio, marking expansion from pure maker/hardware work into computer vision and gesture-based interfaces. Demonstrates capability in implementing production ML frameworks for practical human-computer interaction use cases.
+- Runable HQ: "An 8-year-old showed up and built. That alone changed what we thought was possible." [sig-runable-runhq-tweet-2026]
+- Recognized as youngest builder at RunTogether Hackathon [sig-scaletogether-tweet-2026]
+- Demonstrated feasibility of complex CV/ML systems built by children in hackathon timeframes
 
 ## Signals
-- [[sig-motionx-launch-2026]] — Launch announcement (2026-01)
+- [sig-motionx-launch-2026] — YouTube demo, project overview
+- [sig-runable-runhq-tweet-2026] — Runable organizational recognition
+- [sig-scaletogether-tweet-2026] — ScaleTogether feature
 
 ## Related Articles
-- [[computer-vision]] — Parent technology domain
-- [[projects]] — Full project portfolio
-- [[timeline-2026]] — Context within 2026 activities
+- [[lakshveer-rao]] — Builder profile
+- [[runable]] — Host organization
+- [[hackathons]] — Event context
 
 ---
-*Compiled: 2026-04-06T09:48:07.190Z*
+*Compiled: 2026-04-06T10:02:25.632Z*

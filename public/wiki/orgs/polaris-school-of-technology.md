@@ -2,17 +2,17 @@
 *Organization*
 
 ## Summary
-Polaris School of Technology is an educational institution that hosts and promotes technology events including hackathons. In August 2025, they featured a 7-year-old Lakshveer as a participant ("hacker") at their VibeHack hackathon event, publicly recognizing him on LinkedIn.
+Polaris School of Technology is an educational institution that hosted VibeHack, a hackathon event in August 2025. The organization operates in Hyderabad's tech and entrepreneurship ecosystem and has featured young makers like Lakshveer Rao in their events.
 
 ## Relationship with Lakshveer
-Polaris School of Technology provided early platform visibility for Lakshveer when he was 7 years old (2025). They featured him on their LinkedIn profile as a participant at VibeHack, a hackathon they organized. This represents one of Lakshveer's earliest documented public engagements in the maker/hacker community, occurring approximately 9 years before his current age of 16.
+Lakshveer participated in VibeHack hackathon at Polaris School of Technology in August 2025. He was featured as a young participant at the event, indicating recognition of his maker and entrepreneurship work. This represents one of his public-facing engagements in the Hyderabad tech community.
 
 ## Signals
-- [[sig-polaris-vibehack-2025]] — Featured 7-year-old Lakshveer at VibeHack hackathon (2025-08)
+- [[sig-polaris-vibehack-2025]] — VibeHack hackathon participation (2025-08)
 
 ## Related Articles
-- [[VibeHack]] — Hackathon event organized by Polaris
-- [[Lakshveer Early Timeline]] — Context for 2025 activities
+- [[lakshveer-rao]] — Main profile
+- [[vibehack]] — Event details
 
 ---
-*Compiled: 2026-04-06T09:48:07.190Z*
+*Compiled: 2026-04-06T10:02:25.632Z*

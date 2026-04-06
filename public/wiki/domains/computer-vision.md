@@ -2,33 +2,35 @@
 *Domain*
 
 ## Summary
-Lakshveer has shipped multiple computer vision projects spanning assistive technology and gesture recognition systems. Primary focus areas: accessibility hardware (Drishtikon Yantra) and real-time AI gesture interfaces (MotionX). Core stack includes MediaPipe, Raspberry Pi, and ESP32 integration.
+Lakshveer builds applied computer vision systems, primarily focused on accessibility and embodied interaction. His work spans assistive devices for the visually impaired, full-body gesture recognition, and vision-enabled AI agents controlling physical hardware.
 
 ## Evidence
-**Drishtikon Yantra** — Raspberry Pi-based wearable device using CV + TTS to describe environments for visually impaired users. Publicly demoed at South Park Commons (2025-08) [[sig-spc-demo-2025]] and documented as production system (2026-01) [[sig-drishtikon-2026]].
+**Drishtikon Yantra** (2026-01) — Raspberry Pi-based wearable assistive vision device for visually impaired users. Earned Special Mention at Param × Vedanta Makeathon. Device integrates vision processing on embedded hardware for real-time accessibility applications. [[sig-drishtikon-2026]]
 
-**MotionX** — Real-time gesture recognition system built on MediaPipe. Launched 2026-01 as "first AI-native project in 2026 batch" [[sig-motionx-launch-2026]]. Core capability: real-time hand/body tracking for interface control.
+**MotionX** (2026-01) — Full-body motion-control gaming system using gesture recognition. Built at RunTogether Hackathon (Runable). Special Mention Winner. System processes real-time body tracking for game control without traditional input devices. [[sig-motionx-launch-2026]]
 
-**ESP32 Vision Integration** — YouTube Short (2026-03) demonstrates CV-capable AI agent controlling ESP32 hardware via Telegram [[sig-yt-short-telegram-2026]]. Suggests multimodal vision + messaging stack.
+**AI Agent Hardware Control** (2026-03) — Demonstrated vision-enabled AI agent controlling ESP32 hardware via Telegram messaging. Published as YouTube Short showcasing integration of computer vision, messaging interfaces, and embedded systems. [[sig-yt-short-telegram-2026]]
+
+**South Park Commons Demo** (2025-08) — Presented Drishtikon Yantra alongside CircuitHeroes at SPC Bangalore. Early public validation of assistive vision work. [[sig-spc-demo-2025]]
 
 ## Trajectory
-**2025-08** → Public demo of assistive CV device  
-**2026-01** → Two parallel launches: accessibility (Drishtikon) + gesture control (MotionX)  
-**2026-03** → Integration of CV with IoT messaging systems
+2025-08: Initial assistive vision prototype (Drishtikon) presented publicly  
+2026-01: Two parallel CV projects — accessibility (Drishtikon) and gaming (MotionX) — both win recognition at hackathons  
+2026-03: Expanded to vision-enabled AI agents with hardware control interfaces
 
-Pattern: Moving from single-purpose CV applications toward multimodal agent architectures that combine vision, messaging, and hardware control.
+Pattern: Consistent focus on **applied CV** (not research). Projects emphasize real-world interfaces — wearables, full-body tracking, remote hardware control. Strong preference for edge/embedded deployment (Raspberry Pi, ESP32) over cloud-based solutions.
 
 ## Signals
-- [[sig-drishtikon-2026]] — Assistive vision device (2026-01)
-- [[sig-motionx-launch-2026]] — Gesture recognition launch (2026-01)
-- [[sig-spc-demo-2025]] — South Park Commons pitch (2025-08)
-- [[sig-yt-short-telegram-2026]] — CV + IoT agent demo (2026-03)
+- [[sig-spc-demo-2025]] — South Park Commons Pitch Demo
+- [[sig-drishtikon-2026]] — Drishtikon Yantra wearable device
+- [[sig-motionx-launch-2026]] — MotionX motion-control gaming
+- [[sig-yt-short-telegram-2026]] — AI agent hardware control demo
 
 ## Related Articles
-- [[hardware]] — Raspberry Pi and ESP32 implementations
-- [[ai-agents]] — Multimodal agent architectures
-- [[social-impact]] — Accessibility applications
-- [[machine-learning]] — MediaPipe and CV model deployment
+- [[hardware]] — CV work consistently deployed on embedded systems
+- [[social-impact]] — Drishtikon targets accessibility use cases
+- [[ai-agents]] — Recent integration of vision systems with agent architectures
+- [[hackathons]] — CV projects debuted at Param and RunTogether events
 
 ---
-*Compiled: 2026-04-06T09:48:07.190Z*
+*Compiled: 2026-04-06T10:02:25.632Z*

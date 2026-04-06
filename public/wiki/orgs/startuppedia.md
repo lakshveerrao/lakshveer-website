@@ -2,20 +2,19 @@
 *Organization*
 
 ## Summary
-StartupPedia is an Indian digital media publication covering startups, entrepreneurship, and innovation. The platform operates across web and social media (Instagram), producing feature articles and video content targeting founders, students, and the general public interested in startup ecosystems.
+Indian digital media platform covering startup and entrepreneurship news. Featured Lakshveer Rao's AI agent project in March 2026 across article and social media formats when he was described as 8 years old (likely editorial error; see [[age-discrepancy]]).
 
 ## Relationship with Lakshveer
-StartupPedia featured Lakshveer Rao in March 2026, publishing both a written article and Instagram Reel about his AI agent project that controls ESP32 hardware devices via Telegram messaging. The coverage identified Lakshveer as 8 years old at the time of publication — a factual discrepancy that conflicts with his actual age of 16 in 2026. The feature reached high audience penetration through StartupPedia's general public and founder-focused distribution channels [[sig-startuppedia-2026]], [[sig-startuppedia-instagram-2026]].
+Published feature coverage of Lakshveer's Telegram-controlled AI agent project targeting ESP32 hardware [[sig-startuppedia-2026]]. Distributed content via both web article and Instagram Reel format [[sig-startuppedia-instagram-2026]]. Represents press validation of Lakshveer's AI agent work and hardware integration capabilities.
 
 ## Signals
-- [[sig-startuppedia-2026]] — Feature article on Lakshveer's Telegram-controlled AI agent (2026-03)
-- [[sig-startuppedia-instagram-2026]] — Instagram Reel featuring Lakshveer's project (2026-03)
+- [[sig-startuppedia-2026]] — Feature article on AI agent project (2026-03)
+- [[sig-startuppedia-instagram-2026]] — Instagram Reel coverage (2026-03)
 
 ## Related Articles
-- [[Lakshveer Rao]]
-- [[AI Agents]]
-- [[Telegram Projects]]
-- [[Press Coverage]]
+- [[press-coverage]] — Media appearances and features
+- [[ai-agent-telegram-project]] — Project featured by StartupPedia
+- [[esp32-hardware]] — Hardware platform in featured project
 
 ---
-*Compiled: 2026-04-06T09:48:07.190Z*
+*Compiled: 2026-04-06T10:02:25.632Z*
