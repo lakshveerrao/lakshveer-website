@@ -43,6 +43,7 @@ import { SignalTimeline } from "@/components/universe/SignalTimeline";
 import { HealthMonitor } from "@/components/universe/HealthMonitor";
 import { SurfaceDashboard } from "@/components/universe/SurfaceDashboard";
 import { NodeAgentPanel } from "@/components/universe/NodeAgentPanel";
+import { WikiPanel } from "@/components/universe/WikiPanel";
 import { WeeklyOSPanel } from "@/components/WeeklyOSPanel";
 
 // ============================================
@@ -81,7 +82,7 @@ interface SimEdge {
 }
 
 type ViewMode = 'explore' | 'clusters' | 'timeline' | 'momentum';
-type RightPanelMode = 'node' | 'insights' | 'journey' | 'participate' | 'feed' | 'signal-timeline' | 'health' | 'surfaces';
+type RightPanelMode = 'node' | 'insights' | 'journey' | 'participate' | 'feed' | 'signal-timeline' | 'health' | 'surfaces' | 'wiki';
 
 // ============================================
 // COLORS & STYLES
@@ -1346,6 +1347,7 @@ function Universe() {
                     { id: 'feed' as RightPanelMode, label: '📡 Feed' },
                     { id: 'surfaces' as RightPanelMode, label: '🌐 Surfaces' },
                     { id: 'health' as RightPanelMode, label: '🩺 Health' },
+                    { id: 'wiki' as RightPanelMode, label: '🧠 Wiki' },
                   ]).map(tab => (
                     <button
                       key={tab.id}
@@ -1448,6 +1450,9 @@ function Universe() {
                 )}
                 {rightPanelMode === 'health' && privateMode && (
                   <HealthMonitor />
+                )}
+                {rightPanelMode === 'wiki' && privateMode && (
+                  <WikiPanel />
                 )}
               </div>
             )}

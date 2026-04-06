@@ -57,7 +57,10 @@
     "preview": "bun run build && vite preview",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "wrangler d1 migrations apply DB --local",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "wiki:compile": "bun scripts/compile-wiki.ts",
+    "wiki:query": "bun scripts/query-wiki.ts",
+    "wiki:health": "bun scripts/health-wiki.ts"
   },
   "type": "module"
 }
