@@ -253,9 +253,29 @@ function buildGraph(
     .slice(0, 8)
     .map(n => n.id);
 
+  // ---- Build community index (id → community) for the graph ----
+  const communityIndex: Record<string, number> = {};
+  for (const [id, node] of nodes) {
+    communityIndex[id] = node.community ?? 0;
+  }
+
+  // ---- Build community list: [{ id, nodeIds }] ----
+  const communityGroups = new Map<number, string[]>();
+  for (const [id, node] of nodes) {
+    const c = node.community ?? 0;
+    if (!communityGroups.has(c)) communityGroups.set(c, []);
+    communityGroups.get(c)!.push(id);
+  }
+  const communities = [...communityGroups.entries()].map(([id, nodeIds]) => ({
+    id,
+    nodeIds,
+    size: nodeIds.length,
+  }));
+
   return {
     nodes: [...nodes.values()],
     edges,
+    communities,
     meta: {
       compiledAt: COMPILED_AT,
       totalSignals: sigs.length,

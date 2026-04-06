@@ -46,9 +46,16 @@ interface GraphEdge {
   signalId?: string;
 }
 
+interface GraphCommunity {
+  id: number;
+  nodeIds: string[];
+  size: number;
+}
+
 interface Graph {
   nodes: GraphNode[];
   edges: GraphEdge[];
+  communities?: GraphCommunity[];
   meta: {
     compiledAt: string;
     totalSignals: number;
@@ -222,6 +229,9 @@ wikiRoutes.post('/query', async (c) => {
     filePaths = relevantIds
       .map(id => graph.nodes.find(n => n.id === id)?.wikiPath)
       .filter((p): p is string => !!p);
+
+    // Deduplicate file paths (BFS can return same path via multiple nodes)
+    filePaths = [...new Set(filePaths)];
 
     // Always include narrative for context
     if (!filePaths.includes('meta/narrative.md')) {

@@ -1452,7 +1452,19 @@ function Universe() {
                   <HealthMonitor />
                 )}
                 {rightPanelMode === 'wiki' && privateMode && (
-                  <WikiPanel />
+                  <div>
+                    <div className="px-4 pt-3 pb-1">
+                      <a
+                        href="/wiki/graph"
+                        className="flex items-center gap-2 px-3 py-2 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-300 hover:bg-purple-500/20 transition-colors text-xs font-medium"
+                      >
+                        <span>🕸</span>
+                        <span>Open Graph Visualizer</span>
+                        <span className="ml-auto text-purple-500">↗</span>
+                      </a>
+                    </div>
+                    <WikiPanel />
+                  </div>
                 )}
               </div>
             )}

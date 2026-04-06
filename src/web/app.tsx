@@ -14,6 +14,7 @@ import Press from "./pages/press";
 import Endorse from "./pages/endorse";
 import EndorsePublic from "./pages/endorse-public";
 import Universe from "./pages/universe";
+import WikiGraph from "./pages/wiki-graph";
 import MentionScanner from "./pages/mention-scanner";
 import { Provider } from "./components/provider";
 
@@ -36,6 +37,7 @@ function App() {
                                 <Route path="/endorse" component={EndorsePublic} />
                                 <Route path="/endorse/:token" component={Endorse} />
                                 <Route path="/universe" component={Universe} />
+                                <Route path="/wiki/graph" component={WikiGraph} />
                         <Route path="/mention-scanner" component={MentionScanner} />
                         </Switch>
                 </Provider>
