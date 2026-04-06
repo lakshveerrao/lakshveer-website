@@ -6,7 +6,7 @@ This wiki is LLM-compiled from `src/raw/signals.json`.
 Built for agents to navigate — not for humans to read.
 Human adds to raw/. LLM owns wiki/. Never the other way around.
 
-Source: `signals.json` — 57 signals — compiled 2026-04-06T10:02:25.632Z
+Source: `signals.json` — 74 signals — compiled 2026-04-06T10:45:12.892Z
 
 ## How to Navigate
 1. Read this index
@@ -57,6 +57,20 @@ Source: `signals.json` — 57 signals — compiled 2026-04-06T10:02:25.632Z
 - [[orgs/somi-ai]] — Somi AI
 - [[orgs/reddit]] — Reddit
 - [[orgs/startupg]] — StartupG
+- [[orgs/ai-collective-hyderabad]] — AI Collective Hyderabad
+- [[orgs/shark-tank-india]] — Shark Tank India
+- [[orgs/sony-liv]] — Sony LIV
+- [[orgs/india-startup-festival]] — India Startup Festival
+- [[orgs/junicorns]] — Junicorns
+- [[orgs/ai-grants-india]] — AI Grants India
+- [[orgs/runtime-magazine]] — Runtime Magazine
+- [[orgs/maverick-news]] — Maverick News
+- [[orgs/yugantar]] — Yugantar
+- [[orgs/robu-in]] — Robu.in
+- [[orgs/aerolyte]] — Aerolyte
+- [[orgs/hardvare]] — Hardvare
+- [[orgs/openclaw]] — OpenClaw
+- [[orgs/claw]] — Claw
 
 ## Domains
 - [[domains/content]] — content
@@ -77,13 +91,14 @@ Source: `signals.json` — 57 signals — compiled 2026-04-06T10:02:25.632Z
 - [[domains/social-impact]] — social-impact
 - [[domains/machine-learning]] — machine-learning
 - [[domains/ai-agents]] — ai-agents
+- [[domains/funding]] — funding
 
 ## Concepts (Emergent Patterns)
-- [[concepts/toy-to-production]] — From Toy Builds to Production Hardware
-- [[concepts/institutional-validation]] — Legitimacy Through Institutional Validation
-- [[concepts/hardware-to-ai]] — Hardware-First to AI-Augmented
-- [[concepts/youngest-ever-engine]] — The 'Youngest Ever' Narrative Engine
-- [[concepts/documentation-strategy]] — Documentation as Distribution Strategy
+- [[concepts/tinkerer-to-teacher]] — The Tinkerer-to-Teacher Pipeline
+- [[concepts/hardware-first-ai]] — Hardware-First AI Agent Architecture
+- [[concepts/institutional-validation]] — Institutional Validation Cascade
+- [[concepts/product-media-flywheel]] — Product-Media Flywheel
+- [[concepts/grant-momentum]] — The Grant-to-Grant Momentum Engine
 
 ## Meta
 - [[meta/narrative]] — Full narrative + timeline
@@ -91,9 +106,9 @@ Source: `signals.json` — 57 signals — compiled 2026-04-06T10:02:25.632Z
 - [[meta/connections]] — Non-obvious connections + predictions
 
 ## Stats
-- Signals: 57
-- Articles: 65
-- Compiled: 2026-04-06T10:02:25.632Z
+- Signals: 74
+- Articles: 80
+- Compiled: 2026-04-06T10:45:12.892Z
 
 ---
 *LLM-owned. Do not edit manually.*

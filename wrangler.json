@@ -20,5 +20,8 @@
       "database_name": "lakshveer-db",
       "database_id": "ecb5ab05-a1d5-4ddb-8c7b-4d4256268aea"
     }
-  ]
+  ],
+  "vars": {
+    "AI_GATEWAY_BASE_URL": "https://api.runable.com/api/gateway/v1"
+  }
 }

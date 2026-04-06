@@ -15,6 +15,9 @@ interface ContactFormData {
 
 interface Env {
   DB: D1Database;
+  ASSETS: Fetcher;
+  AI_GATEWAY_BASE_URL: string;
+  AI_GATEWAY_API_KEY: string;
 }
 
 const app = new Hono<{ Bindings: Env }>().basePath('api');

@@ -3,48 +3,66 @@
 
 ## Summary
 
-Lakshveer's AI agent work centers on hardware-control systems and conversational AI. Core project (March 2026): Telegram-controlled AI agent managing ESP32 devices—achieved national press coverage across 6+ outlets. Earlier work includes MotionX (computer vision gesture system, January 2026) and Kyabol (conversational AI demo at Google DeepMind × Cerebral Valley hackathon, February 2026). Technical stack spans embedded systems, natural language interfaces, and ML inference at edge.
+Lakshveer has established himself as a builder of practical AI agent systems, with work spanning hardware control, autonomous grant discovery, and conversational interfaces. His flagship achievement is a Telegram-controlled hardware agent using ESP32 microcontrollers, which gained national media attention in India. He has progressed from single-purpose agents (2025) to multi-agent systems like Claw (OpenClaw/ZeroClaw) for autonomous grant applications (2026).
 
 ## Evidence
 
-**Telegram AI Agent (March 2026)**  
-Built AI agent controlling ESP32 hardware via Telegram messaging interface. Featured in Financial Express [[sig-fe-mait-agent-2026]], StartupPedia [[sig-startuppedia-2026]], RediMinds [[sig-rediminds-linkedin-2026]], Somi AI [[sig-somi-ai-linkedin-2026]], and StartupG [[sig-startupg-linkedin-2026]]. Video documentation on YouTube (short [[sig-yt-short-telegram-2026]] + full walkthrough [[sig-yt-full-2026]]). Sparked r/IndiaTech discussion on "vibe-coding prodigies" [[sig-reddit-indiatech-2026]].
+**Hardware-Control Agents (2026-03)**  
+Built AI agent controlling ESP32 hardware via Telegram messaging interface. Featured in Financial Express, StartupPedia, and multiple LinkedIn/social posts. [[sig-fe-mait-agent-2026]] [[sig-startuppedia-2026]] [[sig-yt-short-telegram-2026]] [[sig-yt-full-2026]]
 
-**Kyabol — Gemini 3 Hackathon (February 2026)**  
-Demoed conversational AI system at Cerebral Valley × Google DeepMind Gemini 3 Hackathon [[sig-gemini3-hackathon-2026]]. First documented interaction with Bay Area AI research community.
+**Claw Multi-Agent System (2026-02–2026-06)**  
+Developed Claw AI system comprising OpenClaw (autonomous grant discovery) and ZeroClaw agents. CaptVenk documented the system on X/Twitter. [[sig-autoclaw-system-2026]] [[sig-openclaw-agent-2026]]
 
-**MotionX — Computer Vision (January 2026)**  
-Full-body motion-control gaming system using gesture recognition. Built at RunTogether Hackathon (Runable). Received Special Mention award [[sig-motionx-launch-2026]]. Intersection of computer vision, ML, and hardware.
+**Hardvare Platform (2026-01)**  
+Built Hardvare — hardware intelligence platform combining physical devices with AI agents. [[sig-hardvare-system-2026]]
+
+**Conversational Agent: Kyabol (2026-02)**  
+Demoed Kyabol conversational AI system at Gemini 3 Hackathon (Cerebral Valley × Google DeepMind). [[sig-gemini3-hackathon-2026]]
+
+**MotionX Computer Vision Agent (2026-01)**  
+Built MotionX — full-body motion-control gaming system using gesture recognition and computer vision at RunTogether Hackathon. Special Mention Winner. [[sig-motionx-launch-2026]]
+
+**Institutional Recognition (2025-07–2025-09)**  
+Pitched at AI Collective Hyderabad. Received AI Grants India grant. [[sig-ai-collective-pitch-2025]] [[sig-ai-grants-india-2025]]
 
 ## Trajectory
 
-**Phase 1 (Jan 2026):** Computer vision + hardware integration (MotionX)  
-**Phase 2 (Feb 2026):** Conversational AI experimentation (Kyabol at Google DeepMind event)  
-**Phase 3 (Mar 2026):** Agent-hardware bridging via Telegram—breakthrough media moment
+- **2025-07**: First documented agent pitch (AI Collective Hyderabad)
+- **2025-09**: AI Grants India funding secured
+- **2026-01**: MotionX computer vision agent, Hardvare platform, Runtime Magazine coverage (2×)
+- **2026-02**: Kyabol conversational agent demo, Claw multi-agent system development
+- **2026-03**: National media breakout (Financial Express, StartupPedia, multiple social features) for Telegram hardware agent
+- **2026-06**: OpenClaw autonomous grant agent documented publicly
 
-Pattern: Progressing from vision models → conversational AI → agentic hardware control. Each project compounds prior technical layers. March 2026 Telegram agent represents synthesis: NLP interface + embedded systems + agent reasoning.
+Pattern: Single-purpose hardware/interface agents → Multi-agent autonomous systems → National media recognition for practical agent implementations.
 
 ## Signals
 
-- [[sig-motionx-launch-2026]] — MotionX computer vision system (2026-01)
-- [[sig-gemini3-hackathon-2026]] — Kyabol at Cerebral Valley hackathon (2026-02)
-- [[sig-fe-mait-agent-2026]] — Financial Express coverage (2026-03)
-- [[sig-startuppedia-2026]] — StartupPedia article (2026-03)
-- [[sig-startuppedia-instagram-2026]] — StartupPedia Instagram reel (2026-03)
+- [[sig-motionx-launch-2026]] — MotionX motion-control agent (2026-01)
+- [[sig-gemini3-hackathon-2026]] — Kyabol conversational agent demo (2026-02)
+- [[sig-fe-mait-agent-2026]] — Financial Express national feature (2026-03)
+- [[sig-startuppedia-2026]] — StartupPedia coverage (2026-03)
+- [[sig-startuppedia-instagram-2026]] — StartupPedia Instagram feature (2026-03)
 - [[sig-rediminds-linkedin-2026]] — RediMinds LinkedIn post (2026-03)
 - [[sig-somi-ai-linkedin-2026]] — Somi AI LinkedIn feature (2026-03)
 - [[sig-reddit-indiatech-2026]] — Reddit r/IndiaTech discussion (2026-03)
-- [[sig-yt-short-telegram-2026]] — YouTube Short demo (2026-03)
+- [[sig-yt-short-telegram-2026]] — YouTube Short hardware agent demo (2026-03)
 - [[sig-yt-full-2026]] — YouTube full walkthrough (2026-03)
-- [[sig-startupg-linkedin-2026]] — StartupG LinkedIn post (2026-03)
+- [[sig-startupg-linkedin-2026]] — StartupG LinkedIn feature (2026-03)
+- [[sig-ai-collective-pitch-2025]] — AI Collective pitch (2025-07)
+- [[sig-ai-grants-india-2025]] — AI Grants India recipient (2025-09)
+- [[sig-runtime-magazine-2026]] — Runtime Magazine coverage ×2 (2026-01)
+- [[sig-hardvare-system-2026]] — Hardvare platform launch (2026-01)
+- [[sig-openclaw-agent-2026]] — OpenClaw autonomous agent (2026-06)
+- [[sig-autoclaw-system-2026]] — Claw multi-agent system (2026-02)
 
 ## Related Articles
 
-- [[computer-vision]] — MotionX gesture recognition work
-- [[hardware]] — ESP32 integrations, embedded systems
-- [[machine-learning]] — Model deployment, inference optimization
-- [[entrepreneurship]] — Media strategy, hackathon participation
-- [[brand]] — National press moment March 2026
+- [[computer-vision]] — MotionX gesture recognition system
+- [[hardware]] — ESP32-based agent implementations
+- [[entrepreneurship]] — AI Grants funding, pitch events
+- [[media]] — National press coverage trajectory
+- [[machine-learning]] — Underlying ML implementations
 
 ---
-*Compiled: 2026-04-06T10:02:25.632Z*
+*Compiled: 2026-04-06T10:45:12.892Z*

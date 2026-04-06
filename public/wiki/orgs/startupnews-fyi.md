@@ -2,13 +2,13 @@
 *Organization*
 
 ## Summary
-StartupNews.fyi is an Indian media platform covering startup and entrepreneurship news. In March 2026, they featured Lakshveer Rao on Instagram, describing him as "India's Youngest Hardware Founder" and highlighting his astronaut wrist companion device, Marcy.
+StartupNews.fyi is an Indian digital media platform covering startup and entrepreneurship news. In March 2026, the platform featured Lakshveer Rao on their Instagram channel, identifying him as "India's Youngest Hardware Founder" at age 8 and highlighting his work on Marcy, a wrist companion device for astronauts.
 
 ## Relationship with Lakshveer
-Featured Lakshveer Rao in March 2026 Instagram content, positioning him as India's youngest hardware founder at age 16 (though their post incorrectly stated "8 Years Old"). The feature focused on his [[Marcy]] project, a wrist companion device designed for astronauts [[sig-startupnewsfyi-ig-2026]].
+StartupNews.fyi published press coverage of Lakshveer Rao in March 2026, positioning him as India's youngest hardware founder and documenting his work on the Marcy project [sig-startupnewsfyi-ig-2026]. The feature appeared on their Instagram social media channel as a video reel.
 
 ## Signals
-- [[sig-startupnewsfyi-ig-2026]] — Instagram feature describing Lakshveer as India's youngest hardware founder (2026-03)
+- [sig-startupnewsfyi-ig-2026] — Instagram feature identifying Lakshveer as India's youngest hardware founder (2026-03)
 
 ## Related Articles
 - [[Lakshveer Rao]]
@@ -16,4 +16,4 @@ Featured Lakshveer Rao in March 2026 Instagram content, positioning him as India
 - [[Press Coverage]]
 
 ---
-*Compiled: 2026-04-06T10:02:25.632Z*
+*Compiled: 2026-04-06T10:45:12.892Z*

@@ -2,19 +2,20 @@
 *Organization*
 
 ## Summary
-Hitex is a convention and exhibition center in Hyderabad, India that hosts technology exhibitions, trade shows, and public events. Lakshveer has participated in at least two significant events at this venue between 2024-2025, using it as a platform for hardware demonstrations and receiving recognition for his work.
+Hitex (Hyderabad International Trade Expositions Limited) is a major exhibition and convention center in Hyderabad, India. Lakshveer has participated in multiple events at this venue, including youth-focused technology exhibitions where he demonstrated hardware projects and received recognition.
 
 ## Relationship with Lakshveer
-Lakshveer has engaged with Hitex as a venue for showcasing his maker projects and receiving industry recognition. In December 2024, he participated in Kids Carnival at Hitex, where he demonstrated his hardware projects [[sig-kids-carnival-hitex-2024]]. Six months later in June 2025, he was recognized at IITEX 2025 (India International Trade Exhibition), also held at Hitex [[sig-iitex-2025]]. Both events positioned him in front of public and industry audiences, indicating Hitex serves as a recurring venue for his public-facing technical work.
+Lakshveer has engaged with Hitex as an exhibitor and participant across at least two documented events between December 2024 and June 2025. At the Kids Carnival (December 2024), he demonstrated hardware projects to attendees. Six months later at IITEX 2025 (June 2025), he received recognition for his work, indicating progression from participant to recognized contributor in the technology exhibition space.
 
 ## Signals
-- [[sig-kids-carnival-hitex-2024]] — Kids Carnival at Hitex Hyderabad — Demo (2024-12)
-- [[sig-iitex-2025]] — IITEX 2025 at Hitex Hyderabad — Recognition (2025-06)
+- [[sig-kids-carnival-hitex-2024]] — Demoed hardware projects at Kids Carnival (2024-12)
+- [[sig-iitex-2025]] — Recognized at IITEX 2025 exhibition (2025-06)
 
 ## Related Articles
 - [[Hyderabad]] — City location
-- [[Hardware]] — Technical domain demonstrated at venue
-- [[Public Speaking]] — Activity domain at events
+- [[IITEX]] — Specific event series hosted at venue
+- [[Public Speaking]] — Domain activity at venue
+- [[Hardware]] — Primary focus of demonstrations
 
 ---
-*Compiled: 2026-04-06T10:02:25.632Z*
+*Compiled: 2026-04-06T10:45:12.892Z*

@@ -2,35 +2,41 @@
 *Organization*
 
 ## Summary
-**Projects by Laksh** is Lakshveer Rao's hardware startup and content brand, founded when he was ~4 years old. The organization produces educational electronics content (170+ documented builds as of 2025-12), ships physical products (CircuitHeroes card game, DIY eBooks), and operates as India's youngest hardware startup. Primary distribution channels: YouTube (@ProjectsByLaksh), ChhotaCreator.com, and live event pitches.
+**Projects by Laksh** is Lakshveer Rao's YouTube channel and hardware startup brand, launched July 2022 when he was 4 years old. The channel documents 170+ electronics, robotics, and AI builds [[sig-yt-170-projects-2025]], serving as both education platform and product launch vehicle. Recognized as India's youngest hardware startup founder operation [[sig-beats-in-brief-2025]][[sig-dileep-gupta-linkedin-2026]].
 
 ## Relationship with Lakshveer
-Lakshveer is co-founder and primary operator of Projects by Laksh. All documented builds, products, and content creation flow through this organizational brand. The entity serves as both:
-- **Content platform**: YouTube channel documenting electronics/robotics/AI projects since 2022-07 [[sig-first-yt-upload-2022]]
-- **Commercial entity**: Shipping CircuitHeroes card game [[sig-circuitheroes-launch-2024]], DIY eBooks (100+ sales) [[sig-ebook-launch-2024]], and hardware products
+Primary public brand and distribution channel for Lakshveer's work. Handles:
+- **Content**: YouTube channel @ProjectsByLaksh with 170+ documented builds [[sig-yt-170-projects-2025]]
+- **Products**: CircuitHeroes card game [[sig-circuitheroes-launch-2024]], DIY eBook (100+ sales) [[sig-ebook-launch-2024]]
+- **Brand**: "India's youngest hardware startup founder" positioning [[sig-beats-in-brief-2025]][[sig-dileep-gupta-linkedin-2026]]
 
-Recognition as "India's youngest hardware startup founder" explicitly ties to Projects by Laksh as the operating vehicle [[sig-beats-in-brief-2025]] [[sig-dileep-gupta-linkedin-2026]].
+## Timeline
+- **2022-07**: First YouTube upload (drill bit repair tutorial, age 4) [[sig-first-yt-upload-2022]]
+- **2022-08**: First documented hardware build (DC motor fan) [[sig-first-dc-motor-2022]]
+- **2024-03**: First business pitch (DIY Cars project) [[sig-first-pitch-2024]]
+- **2024-09**: DIY eBook launch via ChhotaCreator.com [[sig-ebook-launch-2024]]
+- **2024-10**: CircuitHeroes card game teaser [[sig-circuitheroes-launch-2024]]
+- **2025-09**: "India's youngest hardware startup founder" press coverage [[sig-beats-in-brief-2025]]
+- **2025-11**: "The Youngest Founder in the Room" video [[sig-youngest-founder-room-yt-2025]]
+- **2025-12**: Channel reaches 170+ documented projects [[sig-yt-170-projects-2025]]
+- **2026-03**: AI agent + hardware demos (Telegram-controlled ESP32) [[sig-yt-short-telegram-2026]][[sig-yt-full-2026]]
+
+## Products Shipped
+- **CircuitHeroes**: Educational electronics card game [[sig-circuitheroes-launch-2024]]
+- **The Kids Book of Creative Ideas**: DIY eBook, 100+ sales [[sig-ebook-launch-2024]]
+- **170+ documented builds**: Arduino, Raspberry Pi, robotics, AI agents [[sig-yt-170-projects-2025]]
+
+## Technical Focus
+- Electronics & robotics (Arduino, Raspberry Pi, ESP32)
+- AI agents controlling physical hardware [[sig-yt-short-telegram-2026]][[sig-yt-full-2026]]
+- Computer vision integration [[sig-yt-short-telegram-2026]]
+- DIY education content for young makers
 
 ## Signals
-- [[sig-first-yt-upload-2022]] — First YouTube upload (2022-07): "How to Fix Drill Bits" marks public launch
-- [[sig-first-dc-motor-2022]] — First documented hardware build: DC motor fan (2022-08)
-- [[sig-first-pitch-2024]] — First business pitch for DIY Cars project (2024-03)
-- [[sig-ebook-launch-2024]] — DIY eBook launch: *The Kids Book of Creative Ideas* via ChhotaCreator.com (2024-09)
-- [[sig-circuitheroes-launch-2024]] — CircuitHeroes card game teaser (2024-10)
-- [[sig-youngest-founder-room-yt-2025]] — YouTube documentary: "The Youngest Founder in the Room" (2025-11)
-- [[sig-yt-170-projects-2025]] — YouTube channel milestone: 170+ projects documented (2025-12)
-- [[sig-beats-in-brief-2025]] — Press: Beats in Brief article on "India's youngest hardware startup founder" (2025-09)
-- [[sig-dileep-gupta-linkedin-2026]] — LinkedIn recognition by Dileep Gupta: Projects by Laksh as hardware startup (2026-03)
-- [[sig-yt-short-telegram-2026]] — AI agent controlling ESP32 via Telegram (2026-03)
-- [[sig-yt-short-2-2026]] — Hardware + AI build short (2026-03)
-- [[sig-yt-full-2026]] — Full AI agent hardware walkthrough (2026-03)
+[[sig-first-yt-upload-2022]] [[sig-first-dc-motor-2022]] [[sig-first-pitch-2024]] [[sig-circuitheroes-launch-2024]] [[sig-ebook-launch-2024]] [[sig-beats-in-brief-2025]] [[sig-youngest-founder-room-yt-2025]] [[sig-yt-170-projects-2025]] [[sig-dileep-gupta-linkedin-2026]] [[sig-yt-short-telegram-2026]] [[sig-yt-short-2-2026]] [[sig-yt-full-2026]]
 
 ## Related Articles
-- [[Lakshveer Rao]] — Founder profile
-- [[CircuitHeroes]] — Flagship product (educational card game)
-- [[ChhotaCreator]] — Distribution partner for eBooks
-- [[YouTube Strategy]] — Content distribution model
-- [[Hardware Builds]] — Technical project archive
+[[Lakshveer Rao]] [[CircuitHeroes]] [[ChhotaCreator]]
 
 ---
-*Compiled: 2026-04-06T10:02:25.632Z*
+*Compiled: 2026-04-06T10:45:12.892Z*

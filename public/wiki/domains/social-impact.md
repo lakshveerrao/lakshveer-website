@@ -2,33 +2,29 @@
 *Domain*
 
 ## Summary
-
-Lakshveer Rao builds assistive technology for accessibility, focusing on computer vision solutions for visually impaired users. His flagship project, Drishtikon Yantra, is a Raspberry Pi-based wearable device that earned recognition at the 2025 Param Foundation × Vedanta Makeathon, where he received awards for Youngest Innovator and Special Mention at age 14-15.
+Lakshveer Rao's social impact work centers on assistive technology for accessibility. His flagship project, Drishtikon Yantra, is a Raspberry Pi-based wearable vision device for visually impaired users. Recognition includes Youngest Innovator and Special Mention at the Param Foundation × Vedanta Makeathon (October 2025).
 
 ## Evidence
+**Drishtikon Yantra (2026-01)**  
+Raspberry Pi wearable assistive vision device targeting visually impaired users. Combines computer vision with accessible hardware design. Presented at national-level makeathon. [[sig-drishtikon-2026]]
 
-**Drishtikon Yantra (2025-2026)** — Raspberry Pi wearable assistive vision device for visually impaired users. Combines computer vision with accessibility hardware. Presented at Param Foundation × Vedanta Makeathon (October 2025), earning Youngest Innovator and Special Mention awards. [sig-drishtikon-2026] [sig-param-award-2025]
-
-**Recognition** — Param Foundation × Vedanta Makeathon (October 2025): Youngest Innovator + Special Mention. Video documentation exists. [sig-param-award-2025]
+**Param Foundation Recognition (2025-10)**  
+Awarded Youngest Innovator and Special Mention at Param Foundation × Vedanta Makeathon for Drishtikon Yantra. Recognition from established social impact organizations validates technical execution and accessibility focus. [[sig-param-award-2025]]
 
 ## Trajectory
-
-**2025-10** — Public debut of Drishtikon Yantra at national-level makeathon  
-**2026-01** — Continued development/documentation of assistive vision device
-
-Pattern: Accessibility-first hardware. Single sustained project with institutional validation. Not exploratory — direct application of computer vision to social need.
+- **2025-10**: First documented assistive tech project wins dual recognition at national makeathon
+- **2026-01**: Drishtikon Yantra surfaces as documented project with video evidence
+- Pattern: Single high-impact project with sustained development rather than breadth of initiatives
 
 ## Signals
-
-- [sig-param-award-2025] — Award recognition at Param × Vedanta Makeathon
-- [sig-drishtikon-2026] — Technical documentation of Drishtikon Yantra device
+- [[sig-drishtikon-2026]] — Drishtikon Yantra wearable assistive vision device
+- [[sig-param-award-2025]] — Param Foundation × Vedanta Makeathon awards
 
 ## Related Articles
-
-- [[computer-vision]] — Core technology domain
-- [[hardware]] — Device development methodology
-- [[achievement]] — Award recognition context
-- [[organizations/param-foundation]] — Supporting institution
+- [[domains/computer-vision]] — Technical foundation for assistive vision
+- [[domains/hardware]] — Raspberry Pi implementation details
+- [[domains/achievement]] — Recognition and awards context
+- [[projects/drishtikon-yantra]] — Detailed project documentation
 
 ---
-*Compiled: 2026-04-06T10:02:25.632Z*
+*Compiled: 2026-04-06T10:45:12.892Z*

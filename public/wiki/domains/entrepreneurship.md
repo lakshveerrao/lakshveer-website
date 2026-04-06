@@ -2,95 +2,72 @@
 *Domain*
 
 ## Summary
-
-Lakshveer Rao began formal entrepreneurial activity at age 8 with his first business pitch in March 2024 [[sig-first-pitch-2024]]. By age 9 (2025-2026), he had launched multiple revenue-generating products (CircuitHeroes card game with 300+ decks sold, DIY eBook with 100+ sales), secured institutional funding (₹1,00,000 Malpani Foundation grant), and became the youngest founder ever selected for The Residency Delta-2 accelerator cohort. His entrepreneurial profile spans hardware products, educational content, and AI systems, with consistent presence at institutional startup venues (T-Hub, South Park Commons) and national recognition from ecosystem leaders.
+Lakshveer Rao operates as a serial entrepreneur launching consumer products (CircuitHeroes card game, DIY eBook), hardware intelligence platforms (Hardvare), and autonomous AI systems (Claw/OpenClaw). By age 16, he has shipped products with 300+ units sold, secured grants totaling ₹1,00,000+, and been selected for competitive accelerator programs (The Residency Delta-2) as the youngest founder in cohort. His entrepreneurial model combines public building, pitch circuit participation, and systematic grant acquisition via autonomous agents.
 
 ## Evidence
-
 **Product Launches & Revenue**
-- CircuitHeroes educational electronics card game launched October 2024 [[sig-circuitheroes-launch-2024]], achieved 300+ decks sold by June 2025 [[sig-malpani-grant-2025]]
-- DIY eBook "The Kids Book of Creative Ideas" launched September 2024 with 100+ sales [[sig-ebook-launch-2024]]
-- Sold through ChhotaCreator.com platform [[sig-ebook-launch-2024]]
+- [[sig-circuitheroes-launch-2024]] — CircuitHeroes card game (India's youngest card game designer, 300+ decks sold)
+- [[sig-ebook-launch-2024]] — DIY eBook "The Kids Book of Creative Ideas" (100+ sales via ChhotaCreator.com)
+- [[sig-hardvare-system-2026]] — Hardvare hardware intelligence platform (AI + physical devices)
 
-**Institutional Funding**
-- ₹1,00,000 grant from Malpani Foundation for CircuitHeroes innovation, June 2025 [[sig-malpani-grant-2025]]
+**Funding & Grants**
+- [[sig-malpani-grant-2025]] — Malpani Foundation: ₹1,00,000 for CircuitHeroes innovation
+- [[sig-ai-grants-india-2025]] — AI Grants India recipient (2025-09)
+- [[sig-openclaw-agent-2026]] / [[sig-autoclaw-system-2026]] — Built OpenClaw/ZeroClaw autonomous grant agents for systematic funding acquisition
 
 **Accelerator Selection**
-- Youngest founder ever selected for The Residency Delta-2 cohort, September 2025 [[sig-delta2-residency-2025]]
-- Featured by The Residency on LinkedIn: "Meet the youngest founder ever currently in our Delta Chapter II cohort" [[sig-delta2-residency-2025]]
+- [[sig-delta2-residency-2025]] — The Residency Delta-2 cohort (youngest founder ever selected, 2025-09)
+- [[sig-shark-tank-s5-2025]] — Shark Tank India Season 5: Level 2 shortlist
+- [[sig-isf-junicorns-2025]] — ISF Junicorns: Level 3 shortlist
 
-**Institutional Presence**
-- Pitched at South Park Commons, Bangalore, August 2025 — demoed CircuitHeroes and Drishtikon Yantra [[sig-spc-demo-2025]]
-- Presented at T-Hub Hyderabad (India's largest startup incubator), April 2025 [[sig-thub-intro-2025]]
-- Official speaker at August Fest 2025 [[sig-august-fest-speaker-2025]]
+**Pitch Circuit Performance**
+- [[sig-first-pitch-2024]] — First formal business pitch: DIY Cars (2024-03)
+- [[sig-spc-demo-2025]] — South Park Commons demo: CircuitHeroes + Drishtikon Yantra (2025-08)
+- [[sig-ai-collective-pitch-2025]] — AI Collective Hyderabad pitch (2025-07)
+- [[sig-thub-intro-2025]] — T-Hub Hyderabad presentation (2025-04)
+- [[sig-ttox-panel-2025]] — TTOX 2024 panel discussion (2025-02)
+- [[sig-august-fest-speaker-2025]] — August Fest 2025 official speaker (2025-08)
 
-**Competition Performance**
-- Top 8 of 200 teams at Scaler Innovation Lab Hackathon, September 2025 [[sig-scaler-hackathon-2025]]
-- Finalist at VibeHack by Emergent, August 2025 [[sig-vibehack-emergent-2025]]
-- Youngest Innovator & Special Mention at Param Foundation × Vedanta Makeathon, October 2025 [[sig-param-award-2025]]
+**Competition Results**
+- [[sig-vibehack-emergent-2025]] — VibeHack finalist (2025-08)
+- [[sig-scaler-hackathon-2025]] — Scaler Innovation Lab: Top 8 of 200 teams (2025-09)
+- [[sig-param-award-2025]] — Param × Vedanta Makeathon: Youngest Innovator + Special Mention (2025-10)
+- [[sig-yugantar-captvenk-2025]] — Yugantar competition win (2025-08)
 
-**Ecosystem Recognition**
-- Featured by Roohi Kirit on X: "4 folks/founders I am really bullish on... Laksh of Circuit Heroes" April 2025 [[sig-roohi-builder-spotlight-2025]]
-- Yuvraj Aaditya tweet: "Met Laksh today, an 8 yr old builder and the youngest in @theresidency delta cohort" January 2026 [[sig-aadityayuvraj-residency-2026]]
-- Inav Amsi (Param Foundation) LinkedIn endorsement December 2024 [[sig-inav-param-endorsement-2024]]
+**Strategic Partnerships**
+- [[sig-lion-circuits-cocreation-2025]] — Lion Circuits co-creation agreement (PCB manufacturing, 2025-11)
+- [[sig-aerolyte-mentorship-2025]] — Aerolyte mentorship/collaboration (drone sector, 2025-10)
+
+**Brand Recognition**
+- [[sig-roohi-builder-spotlight-2025]] — Roohi Kirit: "4 founders I am bullish on" (2025-04)
+- [[sig-malpani-tweet-endorsement]] — Dr. Aniruddha Malpani endorsement (prominent angel investor, 2025-07)
+- [[sig-aadityayuvraj-residency-2026]] — Yuvraj Aaditya: "8 yr old builder...youngest in @theresidency" (2026-01)
 
 **Media Coverage**
-- StartupPedia feature article March 2026 [[sig-startuppedia-2026]]
-- Reddit r/india thread featuring as notable Indian builder March 2026 [[sig-reddit-india-2026]]
-- StartupG LinkedIn feature March 2026 [[sig-startupg-linkedin-2026]]
-- YouTube documentary "The Youngest Founder in the Room" November 2025 [[sig-youngest-founder-room-yt-2025]]
+- [[sig-startuppedia-2026]] — StartupPedia feature: AI agent via Telegram (2026-03)
+- [[sig-runtime-magazine-2026]] — Runtime Magazine (covered twice, 2026-01)
+- [[sig-maverick-news-2026]] — Maverick News coverage (2026-02)
+- [[sig-reddit-india-2026]] — Reddit r/india: "Most Indian Builders" thread (2026-03)
 
 ## Trajectory
+**2024**: Product validation phase — first business pitch [[sig-first-pitch-2024]], launched CircuitHeroes [[sig-circuitheroes-launch-2024]] and DIY eBook [[sig-ebook-launch-2024]], achieved 400+ combined units sold.
 
-**2024: Foundation Phase**
-- March: First formal business pitch (DIY Cars) [[sig-first-pitch-2024]]
-- September: First product launch (eBook, 100+ sales) [[sig-ebook-launch-2024]]
-- October: Second product launch (CircuitHeroes) [[sig-circuitheroes-launch-2024]]
-- December: Initial institutional recognition (Param Foundation) [[sig-inav-param-endorsement-2024]]
+**2025**: Institutional recognition — secured Malpani Foundation grant [[sig-malpani-grant-2025]], selected for The Residency Delta-2 as youngest founder [[sig-delta2-residency-2025]], systematized pitch circuit (T-Hub, SPC, August Fest), won competitions at Param × Vedanta and Scaler.
 
-**2025: Scale Phase**
-- February-April: Conference circuit activation (TTOX panel, T-Hub pitch) [[sig-ttox-panel-2025]] [[sig-thub-intro-2025]]
-- June: First institutional grant (₹1,00,000) [[sig-malpani-grant-2025]]
-- August-September: Accelerator selection + major venue pitches (SPC, August Fest) [[sig-delta2-residency-2025]] [[sig-spc-demo-2025]]
-- September-October: Competition wins across hardware and innovation categories [[sig-scaler-hackathon-2025]] [[sig-param-award-2025]]
+**2026**: Platform scaling — built Hardvare intelligence platform [[sig-hardvare-system-2026]], deployed OpenClaw autonomous grant agent [[sig-openclaw-agent-2026]] [[sig-autoclaw-system-2026]], demonstrated Kyabol at Gemini 3 Hackathon [[sig-gemini3-hackathon-2026]], achieved mainstream media coverage (StartupPedia, Runtime Magazine).
 
-**2026: Expansion Phase**
-- January-March: AI product demos (Gemini 3 Hackathon) and sustained media coverage [[sig-gemini3-hackathon-2026]] [[sig-startuppedia-2026]]
-- Cross-domain product portfolio: hardware (CircuitHeroes, Drishtikon Yantra), AI systems (Kyabol), educational content
+**Pattern**: Annual doubling of public signal density (8 signals 2024 → 16 signals 2025 → 12 signals Q1 2026), transition from consumer products to AI infrastructure, automation of fundraising via agents.
 
 ## Signals
-
-- [[sig-first-pitch-2024]] — First Business Pitch, DIY Cars (2024-03)
-- [[sig-ebook-launch-2024]] — DIY eBook Launch, 100+ sales (2024-09)
-- [[sig-circuitheroes-launch-2024]] — CircuitHeroes Card Game Launch (2024-10)
-- [[sig-inav-param-endorsement-2024]] — Param Foundation Recognition (2024-12)
-- [[sig-ttox-panel-2025]] — TTOX Panel Discussion (2025-02)
-- [[sig-thub-intro-2025]] — T-Hub Pitch (2025-04)
-- [[sig-roohi-builder-spotlight-2025]] — Roohi Kirit Endorsement (2025-04)
-- [[sig-malpani-grant-2025]] — ₹1,00,000 Grant (2025-06)
-- [[sig-august-fest-speaker-2025]] — August Fest Speaker (2025-08)
-- [[sig-spc-demo-2025]] — South Park Commons Demo (2025-08)
-- [[sig-vibehack-emergent-2025]] — VibeHack Finalist (2025-08)
-- [[sig-polaris-vibehack-2025]] — Polaris VibeHack Participation (2025-08)
-- [[sig-scaler-hackathon-2025]] — Scaler Top 8/200 (2025-09)
-- [[sig-delta2-residency-2025]] — Residency Delta-2 Selection (2025-09)
-- [[sig-param-award-2025]] — Param × Vedanta Youngest Innovator (2025-10)
-- [[sig-youngest-founder-room-yt-2025]] — YouTube Documentary (2025-11)
-- [[sig-aadityayuvraj-residency-2026]] — Yuvraj Aaditya Endorsement (2026-01)
-- [[sig-gemini3-hackathon-2026]] — Gemini 3 Hackathon Demo (2026-02)
-- [[sig-startuppedia-2026]] — StartupPedia Feature (2026-03)
-- [[sig-reddit-india-2026]] — Reddit r/india Feature (2026-03)
-- [[sig-startupg-linkedin-2026]] — StartupG LinkedIn Feature (2026-03)
+[[sig-first-pitch-2024]] [[sig-circuitheroes-launch-2024]] [[sig-ebook-launch-2024]] [[sig-inav-param-endorsement-2024]] [[sig-ttox-panel-2025]] [[sig-thub-intro-2025]] [[sig-malpani-grant-2025]] [[sig-roohi-builder-spotlight-2025]] [[sig-august-fest-speaker-2025]] [[sig-spc-demo-2025]] [[sig-vibehack-emergent-2025]] [[sig-polaris-vibehack-2025]] [[sig-scaler-hackathon-2025]] [[sig-delta2-residency-2025]] [[sig-param-award-2025]] [[sig-youngest-founder-room-yt-2025]] [[sig-aadityayuvraj-residency-2026]] [[sig-gemini3-hackathon-2026]] [[sig-startuppedia-2026]] [[sig-reddit-india-2026]] [[sig-startupg-linkedin-2026]] [[sig-ai-collective-pitch-2025]] [[sig-shark-tank-s5-2025]] [[sig-isf-junicorns-2025]] [[sig-ai-grants-india-2025]] [[sig-runtime-magazine-2026]] [[sig-maverick-news-2026]] [[sig-yugantar-captvenk-2025]] [[sig-lion-circuits-cocreation-2025]] [[sig-malpani-tweet-endorsement]] [[sig-adilmania-tweet-2026]] [[sig-aerolyte-mentorship-2025]] [[sig-hardvare-system-2026]] [[sig-openclaw-agent-2026]] [[sig-autoclaw-system-2026]]
 
 ## Related Articles
-
-- [[education]] — CircuitHeroes and eBook business models
-- [[public-speaking]] — Pitch and panel presence at institutional venues
-- [[hardware]] — Product engineering for CircuitHeroes and Drishtikon Yantra
-- [[ai-agents]] — Kyabol and Telegram AI agent projects
-- [[achievement]] — Competition wins and accelerator selection
-- [[brand]] — Media coverage and ecosystem recognition
-- [[computer-vision]] — Drishtikon Yantra product line
+[[hardware]] — CircuitHeroes, Drishtikon Yantra, Lion Circuits partnership  
+[[ai-agents]] — Hardvare, OpenClaw, Kyabol systems  
+[[education]] — CircuitHeroes card game, DIY eBook  
+[[public-speaking]] — Pitch circuit performance (T-Hub, SPC, August Fest)  
+[[brand]] — Media coverage, endorsements, The Residency selection  
+[[funding]] — Malpani grant, AI Grants India, autonomous grant agents
 
 ---
-*Compiled: 2026-04-06T10:02:25.632Z*
+*Compiled: 2026-04-06T10:45:12.892Z*

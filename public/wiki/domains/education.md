@@ -2,30 +2,41 @@
 *Domain*
 
 ## Summary
-Lakshveer Rao builds educational products that make STEM and electronics accessible to young learners. Primary outputs: CircuitHeroes card game (300+ decks sold, ₹1,00,000 Malpani grant winner) and "The Kids Book of Creative Ideas" eBook (100+ sales). Educational approach centers on learn-by-making and gamification of technical concepts for children.
+
+Lakshveer Rao creates educational products for peer learning — primarily STEM-focused tools that teach electronics, circuits, and creative thinking to children. His approach centers on hands-on, playful learning through physical products (card games, eBooks) rather than traditional curriculum. As of 2025-06, his flagship product CircuitHeroes had sold 300+ decks and earned recognition from Malpani Foundation.
 
 ## Evidence
-**CircuitHeroes Card Game** — Educational electronics card game launched October 2024 [[sig-circuitheroes-launch-2024]]. Positioned as product from "India's youngest card game designer." Achieved 300+ deck sales and won ₹1,00,000 Malpani Foundation grant in June 2025 for innovation in educational electronics [[sig-malpani-grant-2025]].
 
-**DIY eBook** — "The Kids Book of Creative Ideas" launched September 2024 via ChhotaCreator.com platform [[sig-ebook-launch-2024]]. Achieved 100+ sales. Content focuses on creative DIY projects for young makers.
+**CircuitHeroes** — Educational electronics card game designed to teach circuit concepts through gameplay. Launched 2024-10 as teaser [[sig-circuitheroes-launch-2024]], sold 300+ decks by 2025-06 [[sig-malpani-grant-2025]]. Positioned as product by "India's youngest card game designer."
 
-**Grade Level** — As of June 2025, Lakshveer identified as Grade 2 student (approximately age 7-8) by ThinkTac feature [[sig-think-tac-feature-2025]]. Age-domain mismatch indicates accelerated learning trajectory or home/alternative education path.
+**The Kids Book of Creative Ideas** — DIY eBook launched 2024-09 via ChhotaCreator platform [[sig-ebook-launch-2024]]. 100+ sales reported at launch. Content focus: creative/maker projects for children.
+
+**Grant validation** — Malpani Foundation awarded ₹1,00,000 grant for CircuitHeroes innovation 2025-06 [[sig-malpani-grant-2025]]. Grant specifically cited educational impact of electronics card game.
+
+**Age context** — ThinkTac featured Lakshveer as "Grade 2 student who loves exploring how things work" in 2025-06 [[sig-think-tac-feature-2025]]. Suggests he creates educational content while still in early primary education himself.
 
 ## Trajectory
-Educational product development began September 2024 with eBook launch, followed by CircuitHeroes card game (October 2024). Grant recognition (June 2025) validates educational impact. Products distributed through Projects by Laksh and ChhotaCreator platforms. Revenue model combines direct sales (eBook: 100+ units) with physical product distribution (card game: 300+ decks).
+
+2024-09 — eBook launch establishes digital educational content
+2024-10 — CircuitHeroes launch marks shift to physical educational games
+2025-06 — Grant recognition validates educational impact; 300+ deck sales demonstrate market traction
+
+Pattern: peer-to-peer educational products (child creating for children), electronics/STEM focus, physical+digital distribution mix.
 
 ## Signals
-- [[sig-ebook-launch-2024]] — DIY eBook Launch, 2024-09
-- [[sig-circuitheroes-launch-2024]] — CircuitHeroes Card Game Launch, 2024-10
-- [[sig-malpani-grant-2025]] — Malpani Foundation Grant Award, 2025-06
-- [[sig-think-tac-feature-2025]] — ThinkTac Media Feature, 2025-06
+
+- [[sig-circuitheroes-launch-2024]] — CircuitHeroes card game teaser (2024-10)
+- [[sig-ebook-launch-2024]] — DIY eBook launch (2024-09)
+- [[sig-malpani-grant-2025]] — ₹1L grant for educational innovation (2025-06)
+- [[sig-think-tac-feature-2025]] — Media feature as Grade 2 explorer (2025-06)
 
 ## Related Articles
-- [[entrepreneurship]] — Business model and revenue generation
-- [[hardware]] — Electronics focus in CircuitHeroes
-- [[content]] — eBook production and distribution
-- [[circuitheroes]] — Primary educational product
-- [[projects-by-laksh]] — Distribution organization
+
+- [[entrepreneurship]] — CircuitHeroes as commercial product
+- [[hardware]] — Electronics focus of educational content
+- [[content]] — eBook publishing
+- [[organizations/projects-by-laksh]] — Publishing entity
+- [[organizations/chhotacreator]] — Distribution platform for eBook
 
 ---
-*Compiled: 2026-04-06T10:02:25.632Z*
+*Compiled: 2026-04-06T10:45:12.892Z*

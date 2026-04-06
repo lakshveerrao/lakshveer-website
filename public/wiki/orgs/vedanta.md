@@ -2,10 +2,10 @@
 *Organization*
 
 ## Summary
-Vedanta is a corporate partner of Param Foundation that co-sponsored the Param Foundation × Vedanta Makeathon in October 2025. The organization collaborates with Param Foundation to support young innovators and makers in India through competition sponsorship and awards.
+Vedanta is a corporate sponsor and partner organization that co-hosted a makeathon with Param Foundation in October 2025. The event focused on maker innovation and social impact technology, where Lakshveer won two awards.
 
 ## Relationship with Lakshveer
-Lakshveer won two awards at the Param Foundation × Vedanta Makeathon in October 2025: Youngest Innovator and Special Mention. He presented [[Drishtikon Yantra]], a Raspberry Pi-based wearable assistive vision device for visually impaired users, at this event [[sig-param-award-2025]].
+Lakshveer participated in the Param Foundation × Vedanta Makeathon (October 2025), where he presented [[Drishtikon Yantra]], a Raspberry Pi-based wearable assistive vision device. He received two recognitions: **Youngest Innovator** and **Special Mention** awards at the event [[sig-param-award-2025]].
 
 ## Signals
 - [[sig-param-award-2025]] — Param Foundation × Vedanta Makeathon awards (2025-10)
@@ -17,4 +17,4 @@ Lakshveer won two awards at the Param Foundation × Vedanta Makeathon in October
 - [[Awards and Recognition]]
 
 ---
-*Compiled: 2026-04-06T10:02:25.632Z*
+*Compiled: 2026-04-06T10:45:12.892Z*

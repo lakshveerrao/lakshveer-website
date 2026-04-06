@@ -2,25 +2,26 @@
 *Domain*
 
 ## Summary
-Lakshveer demonstrated electronics and robotics projects to ISRO Chairman Shri S. Somanath in April 2025, including discussions about student satellite programs. This interaction represents direct engagement with India's space establishment at age 16, indicating interest in aerospace applications of his technical work.
+Lakshveer has documented engagement with India's space sector through direct demonstration to ISRO leadership and collaboration with aerospace startups. His electronics and robotics work intersects with satellite and drone technology applications.
 
 ## Evidence
-- **2025-04**: Direct demonstration to Shri S. Somanath (ISRO Chairman) of electronics/robotics projects at conference event [[sig-isro-meeting-2025]]
-- **2026-02**: Video documentation of the Somanath demonstration published [[sig-isro-somanath-yt-2026]]
-- Discussion topics included student satellite programs, suggesting potential aerospace project direction [[sig-isro-meeting-2025]]
+- **2025-04**: Demonstrated electronics and robotics projects to Shri S. Somanath, ISRO Chairman, including discussion of student satellite programs [[sig-isro-meeting-2025]]
+- **2025-10**: Collaboration/mentorship engagement with Aerolyte, a drone/aerospace startup [[sig-aerolyte-mentorship-2025]]
+- **2026-02**: Video documentation of demo to S. Somanath (by then former ISRO Chief) published [[sig-isro-somanath-yt-2026]]
 
 ## Trajectory
-Single documented interaction with ISRO leadership. No evidence yet of satellite hardware development, launch participation, or ongoing ISRO collaboration. The student satellite discussion suggests aspirational direction but no confirmed projects. Signal gap: 10 months between event and video publication may indicate retrospective documentation rather than active space program involvement.
+Activity concentrated in 2025 with recognition from highest level of Indian space authority (ISRO Chairman). Aerolyte connection indicates parallel engagement with commercial aerospace/drone sector. Student satellite program discussions suggest potential trajectory toward CubeSat or similar smallsat development.
 
 ## Signals
-- [[sig-isro-meeting-2025]] — ISRO Chairman Demo (2025-04)
-- [[sig-isro-somanath-yt-2026]] — Demo Video Publication (2026-02)
+- [[sig-isro-meeting-2025]] — ISRO Chairman demo (2025-04)
+- [[sig-aerolyte-mentorship-2025]] — Aerolyte collaboration (2025-10)
+- [[sig-isro-somanath-yt-2026]] — Published video of ISRO demo (2026-02)
 
 ## Related Articles
-- [[electronics]] — Primary technical domain demonstrated
-- [[robotics]] — Secondary technical domain demonstrated
-- [[recognition]] — High-profile meeting context
-- [[ISRO]] — Organization profile
+- [[electronics]] — Technical foundation for space applications
+- [[robotics]] — Core competency demonstrated to ISRO
+- [[recognition]] — High-profile validation from space sector leadership
+- [[entrepreneurship]] — Aerolyte collaboration model
 
 ---
-*Compiled: 2026-04-06T10:02:25.632Z*
+*Compiled: 2026-04-06T10:45:12.892Z*

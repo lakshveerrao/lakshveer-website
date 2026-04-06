@@ -3,46 +3,53 @@
 
 ## Summary
 
-Lakshveer Rao has been teaching electronics, robotics, and hardware publicly since age 14 (2022-07). His teaching spans YouTube documentation (170+ project builds), institutional workshops at IIT Hyderabad (IoT sessions, drone workshops), and tutorial-style content for makers. Teaching medium evolved from simple fix-it videos to technical walkthroughs of AI agent hardware systems.
+Lakshveer Rao has been teaching electronics, robotics, and IoT concepts publicly since age 14, primarily through YouTube (170+ documented project builds) and in-person workshops at IIT Hyderabad. His teaching model combines asynchronous video documentation with live technical sessions, recently recognized through a ₹40,000 creator micro-scholarship from Ramsri Goutham.
 
 ## Evidence
 
-**YouTube Documentation (2022-07 onwards)**
-- First upload [[sig-first-yt-upload-2022]] — "How to Fix Drill Bits" tutorial format (2022-07, age 14)
-- Channel scaled to 170+ documented project builds [[sig-yt-170-projects-2025]] covering electronics, robotics, Arduino, Raspberry Pi
-- AI agent hardware walkthrough [[sig-yt-full-2026]] — full technical breakdown (2026-03)
+**YouTube Content Creation**
+- First upload: drill bit repair tutorial (2022-07) [[sig-first-yt-upload-2022]]
+- Channel scaled to 170+ documented projects by 2025-12 [[sig-yt-170-projects-2025]]
+- Content spans Arduino, Raspberry Pi, robotics, AI hardware [[sig-yt-170-projects-2025]]
+- Full technical walkthrough: AI agent hardware (2026-03) [[sig-yt-full-2026]]
 
-**Institutional Workshops (2025)**
-- IoT session at IIT Hyderabad [[sig-iit-hyd-iot-workshop-2025]] via Techobytes program (2025-02)
-- Drone workshop at IIT Hyderabad [[sig-iit-hyd-drone-workshop-2025]] (2025-06)
+**Workshop Facilitation**
+- IoT session at IIT Hyderabad Techobytes event (2025-02) [[sig-iit-hyd-iot-workshop-2025]]
+- Drone workshop at IIT Hyderabad (2025-06) [[sig-iit-hyd-drone-workshop-2025]]
 
-**Audience**: Young makers, college students at premier institutions
+**External Recognition**
+- ₹40,000 creator micro-scholarship from Ramsri Goutham (2025-06) [[sig-ramsri-microscholarship-2025]]
+- Feature on ThinkTac YouTube (science/maker platform) (2025-10) [[sig-thinktac-yt-2025]]
 
 ## Trajectory
 
-2022-07: First tutorial upload (drill bit repair)  
-2025-02: Teaching at IIT Hyderabad (IoT)  
-2025-06: Workshop facilitation (drones)  
+2022-07: First teaching content (age 14)  
+2025-02: First institutional workshop (IIT Hyderabad)  
+2025-06: Workshop facilitation + scholarship recognition  
+2025-10: Platform feature (ThinkTac)  
 2025-12: 170+ projects documented  
-2026-03: Advanced AI hardware walkthroughs  
+2026-03: Advanced AI hardware tutorials
 
-**Pattern**: Progressed from beginner fix-it content → large-scale project documentation → institutional teaching → complex technical explanations. Teaching sophistication tracks project complexity.
+Pattern: Transition from basic project documentation → institutional teaching roles → recognized creator status. Teaching method: build-in-public + structured workshops.
 
 ## Signals
 
-- [[sig-first-yt-upload-2022]] — First YouTube Upload (2022-07)
-- [[sig-iit-hyd-iot-workshop-2025]] — IoT Session at IIT Hyderabad (2025-02)
+- [[sig-first-yt-upload-2022]] — First YouTube Upload — How to Fix Drill Bits (2022-07)
+- [[sig-iit-hyd-iot-workshop-2025]] — IoT Session at IIT Hyderabad (Techobytes) (2025-02)
 - [[sig-iit-hyd-drone-workshop-2025]] — Drone Workshop at IIT Hyderabad (2025-06)
-- [[sig-yt-170-projects-2025]] — YouTube Channel 170+ projects (2025-12)
-- [[sig-yt-full-2026]] — AI agent hardware walkthrough (2026-03)
+- [[sig-yt-170-projects-2025]] — YouTube Channel — 170+ project builds documented (2025-12)
+- [[sig-yt-full-2026]] — YouTube Full Video — AI agent hardware walkthrough (2026-03)
+- [[sig-ramsri-microscholarship-2025]] — Ramsri Goutham — ₹40,000 Creator Micro-Scholarship (2025-06)
+- [[sig-thinktac-yt-2025]] — ThinkTac YouTube Feature (2025-10)
 
 ## Related Articles
 
-- [[content]] — YouTube distribution strategy
-- [[electronics]] — Core teaching subject
+- [[content]] — Primary medium for teaching
+- [[electronics]] — Core subject matter
 - [[robotics]] — Workshop focus area
-- [[public-speaking]] — Workshop delivery mechanism
-- [[ai-agents]] — Recent teaching topic
+- [[public-speaking]] — In-person teaching modality
+- [[brand]] — Recognition/scholarship signals
+- [[Projects by Laksh]] — Teaching platform/organization
 
 ---
-*Compiled: 2026-04-06T10:02:25.632Z*
+*Compiled: 2026-04-06T10:45:12.892Z*

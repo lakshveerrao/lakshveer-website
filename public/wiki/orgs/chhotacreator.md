@@ -2,18 +2,18 @@
 *Organization*
 
 ## Summary
-ChhotaCreator is a digital platform operated by Lakshveer Rao that serves as a distribution channel for educational content and creative resources targeted at young makers. The platform hosts digital products including eBooks and DIY project materials. As of September 2024, it facilitated the sale of "The Kids Book of Creative Ideas" eBook, which achieved over 100 sales.
+ChhotaCreator is a digital publishing platform operated by Lakshveer Rao for distributing educational content and creative resources. The platform serves as the primary distribution channel for Lakshveer's self-published works, including DIY project guides and educational materials targeted at young makers and creators.
 
 ## Relationship with Lakshveer
-ChhotaCreator functions as one of Lakshveer's organizational entities, operating alongside [[Projects by Laksh]]. The platform represents his focus on education and content creation within the entrepreneurship domain. ChhotaCreator.com serves as the primary distribution infrastructure for his digital educational products.
+ChhotaCreator functions as Lakshveer's content distribution arm under the [[Projects by Laksh]] umbrella. Lakshveer uses ChhotaCreator.com as the e-commerce storefront for his digital products, maintaining direct control over pricing, distribution, and customer relationships. The platform enables him to bypass traditional publishing intermediaries and capture full margins on his educational content sales.
 
 ## Signals
-- [[sig-ebook-launch-2024]] — DIY eBook launch achieving 100+ sales (2024-09)
+- [[sig-ebook-launch-2024]] — Platform hosted "The Kids Book of Creative Ideas" eBook launch (2024-09), generating 100+ sales
 
 ## Related Articles
 - [[Projects by Laksh]]
 - [[The Kids Book of Creative Ideas]]
-- [[Lakshveer Rao]]
+- [[CircuitHeroes]]
 
 ---
-*Compiled: 2026-04-06T10:02:25.632Z*
+*Compiled: 2026-04-06T10:45:12.892Z*

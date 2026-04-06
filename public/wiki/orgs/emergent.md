@@ -2,17 +2,17 @@
 *Organization*
 
 ## Summary
-Emergent is an organization that hosts VibeHack, a startup/maker competition where participants pitch their projects. The organization operates in the Indian entrepreneurship ecosystem, providing platforms for young founders to showcase their work.
+Emergent is an organization that hosted VibeHack, a hackathon/pitch event, in August 2025. The organization facilitates entrepreneurship competitions where participants present their projects and compete for finalist positions.
 
 ## Relationship with Lakshveer
-Lakshveer competed at VibeHack hosted by Emergent in August 2025, reaching finalist status. He pitched his project at the event, demonstrating his work to judges and attendees. This marked a recognized achievement in his entrepreneurship journey at age 16. [[sig-vibehack-emergent-2025]]
+Lakshveer Rao participated in VibeHack hosted by Emergent in August 2025, where he achieved finalist status and presented a pitch at the event [[sig-vibehack-emergent-2025]].
 
 ## Signals
-- [[sig-vibehack-emergent-2025]] — VibeHack finalist placement (2025-08)
+- [[sig-vibehack-emergent-2025]] — VibeHack hackathon (2025-08)
 
 ## Related Articles
-- [[VibeHack]] — Competition/event hosted by Emergent
-- [[Lakshveer Rao]] — Finalist at Emergent's VibeHack
+- [[lakshveer-rao]] — Main profile
+- [[vibehack]] — Event details
 
 ---
-*Compiled: 2026-04-06T10:02:25.632Z*
+*Compiled: 2026-04-06T10:45:12.892Z*

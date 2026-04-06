@@ -2,23 +2,19 @@
 *Organization*
 
 ## Summary
-
-ScaleTogether is an organization or community focused on supporting young builders and makers. The organization publicly recognized and promoted Lakshveer Rao's work on MotionX during the RunTogether Hackathon in January 2026, referring to him as "our youngest builder" and claiming he was 8 years old at the time (contradicting other biographical data indicating he was born in 2008, making him ~17-18 in 2026).
+ScaleTogether is an organization that supported Lakshveer Rao's participation in the RunTogether Hackathon in January 2026. The organization publicly promoted his work on MotionX, a full-body motion-control gaming system, via their social media channels.
 
 ## Relationship with Lakshveer
-
-ScaleTogether maintains a direct relationship with Lakshveer Rao, describing him as part of their builder community. The organization actively promoted his MotionX project on social media platforms, specifically highlighting his participation in the RunTogether Hackathon [[sig-scaletogether-tweet-2026]]. The nature of the relationship (whether membership, mentorship, sponsorship, or partnership) remains unclear from available signals, though the possessive "our youngest builder" suggests formal affiliation.
+ScaleTogether referred to Lakshveer as "our youngest builder" in their January 2026 social media post about the RunTogether Hackathon [[sig-scaletogether-tweet-2026]]. This language suggests an official affiliation — possibly as a member, participant in a program, or community builder within the organization. The organization actively promoted his hackathon project MotionX through their official X (Twitter) account.
 
 ## Signals
-
-- [[sig-scaletogether-tweet-2026]] — ScaleTogether X post promoting Lakshveer's MotionX project (2026-01)
-- [[sig-motionx-launch-2026]] — MotionX project featured by ScaleTogether (2026-01)
+- [[sig-scaletogether-tweet-2026]] — ScaleTogether's X post promoting Lakshveer's MotionX project at RunTogether Hackathon (2026-01)
+- [[sig-motionx-launch-2026]] — MotionX project mention noting @scaletogether feature (2026-01)
 
 ## Related Articles
-
-- [[MotionX]] — Full-body motion-control gaming system
-- [[Runable]] — Organization also associated with MotionX project
-- [[RunTogether]] — Hackathon where ScaleTogether promoted Lakshveer's work
+- [[MotionX]] — Full-body motion-control gaming system built at RunTogether Hackathon
+- [[RunTogether]] — Hackathon event where Lakshveer participated under ScaleTogether
+- [[Runable]] — Organization associated with MotionX project
 
 ---
-*Compiled: 2026-04-06T10:02:25.632Z*
+*Compiled: 2026-04-06T10:45:12.892Z*
