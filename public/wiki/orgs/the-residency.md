@@ -2,25 +2,19 @@
 *Organization*
 
 ## Summary
-
-The Residency is a startup accelerator program operating cohort-based programs for early-stage founders. Their Delta Chapter II (Delta-2) cohort launched in 2025. In September 2025, they selected Lakshveer Rao as the youngest founder ever admitted to their program at age 8.
+The Residency is an entrepreneurship accelerator program that operates cohort-based programs for early-stage founders. Their Delta Chapter program accepts founders into structured cohorts. In September 2025, Lakshveer Rao was selected for Delta Chapter II (Delta-2), making him the youngest founder ever accepted into the program at age 8.
 
 ## Relationship with Lakshveer
-
-Lakshveer was accepted into The Residency's Delta Chapter II cohort in September 2025, becoming the youngest founder in the program's history. The organization publicly announced his selection via LinkedIn, highlighting his age milestone. As of January 2026, he remained active in the cohort, confirmed when Yuvraj Aaditya met him and referenced his membership [sig-aadityayuvraj-residency-2026].
-
-## Program Structure
-
-**Delta Chapter:** Multi-cohort accelerator program. Delta-2 ran in 2025-2026 timeframe. Selection process competitive enough that youngest-ever admission was considered newsworthy.
+Lakshveer was accepted into The Residency's Delta Chapter II cohort in September 2025 [[sig-delta2-residency-2025]]. The organization publicly announced him as "the youngest founder ever currently in our Delta Chapter II cohort" via their official LinkedIn channel. By January 2026, Lakshveer was still participating in the delta cohort when Yuvraj Aaditya met him and noted his status as "the youngest in @theresidency delta cohort" [[sig-aadityayuvraj-residency-2026]].
 
 ## Signals
-
-- [sig-delta2-residency-2025] — Official LinkedIn announcement naming Lakshveer youngest Delta-2 founder (2025-09)
-- [sig-aadityayuvraj-residency-2026] — External validation of Lakshveer's Delta cohort participation (2026-01)
+- [[sig-delta2-residency-2025]] — Official LinkedIn announcement of Lakshveer's selection (2025-09)
+- [[sig-aadityayuvraj-residency-2026]] — Yuvraj Aaditya confirms ongoing participation (2026-01)
 
 ## Related Articles
-
-*[To be linked as wiki expands]*
+- [[lakshveer-rao]] — Primary subject
+- [[delta-chapter-ii]] — Specific cohort program
+- [[timeline-2025]] — Selection announcement period
 
 ---
-*Compiled: 2026-04-06T17:22:56.072Z*
+*Compiled: 2026-04-06T17:47:20.585Z*

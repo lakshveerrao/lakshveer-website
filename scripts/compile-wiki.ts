@@ -33,14 +33,24 @@ const openai = createOpenAI({
   apiKey: process.env.AI_GATEWAY_API_KEY ?? process.env.OPENAI_API_KEY ?? '',
 });
 
-async function llm(prompt: string, system: string): Promise<string> {
-  const { text } = await generateText({
-    model: openai.chat('anthropic/claude-sonnet-4-5'),
-    system,
-    prompt,
-    maxTokens: 2000,
-  });
-  return text.trim();
+async function llm(prompt: string, system: string, retries = 3): Promise<string> {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const { text } = await generateText({
+        model: openai.chat('anthropic/claude-sonnet-4-5'),
+        system,
+        prompt,
+        maxTokens: 2000,
+      });
+      return text.trim();
+    } catch (e: any) {
+      if (attempt === retries) throw e;
+      const wait = attempt * 4000;
+      console.warn(`  ⚠ LLM timeout (attempt ${attempt}/${retries}), retrying in ${wait/1000}s...`);
+      await new Promise(r => setTimeout(r, wait));
+    }
+  }
+  return '';
 }
 
 // ---- File helpers ----

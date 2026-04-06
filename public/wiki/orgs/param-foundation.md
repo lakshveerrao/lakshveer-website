@@ -3,35 +3,28 @@
 
 ## Summary
 
-Param Foundation is an Indian science and innovation organization based in Hyderabad that runs hackathons, makeathons, and youth STEM programs. The foundation has recognized and mentored Lakshveer Rao since December 2024, awarding him Youngest Innovator and Special Mention at their Vedanta Makeathon in October 2025 for [[Drishtikon Yantra]].
+Param Foundation is a Hyderabad-based science and innovation organization that runs maker programs, hackathons, and awards recognizing young innovators. The foundation partners with corporate sponsors like Vedanta to host makeathons and provides mentorship to young hardware builders. Lakshveer Rao has been recognized by Param Foundation leadership since age 8.
 
 ## Relationship with Lakshveer
 
-**First Contact (2024-12):** Inav Amsi (Param Foundation leadership) met Lakshveer at a Param-hosted hackathon when he was 8 years old [[sig-inav-param-endorsement-2024]].
+First contact occurred in December 2024 when Inav Amsi (Param Foundation leadership) met 8-year-old Lakshveer at a Param-hosted hackathon [[sig-inav-param-endorsement-2024]]. 
 
-**Recognition (2025-06):** Inavamsi B Enaganti, working in science & innovation at Param, publicly endorsed Lakshveer [[sig-inav65-endorsement]].
+In October 2025, Lakshveer won **Youngest Innovator** and **Special Mention** awards at the Param Foundation × Vedanta Makeathon, where he presented Drishtikon Yantra — a Raspberry Pi-based wearable assistive vision device [[sig-param-award-2025]]. 
 
-**Major Award (2025-10):** Param Foundation co-hosted the Vedanta Makeathon where Lakshveer won two honors: **Youngest Innovator** and **Special Mention** for his Raspberry Pi-based assistive vision device [[sig-param-award-2025]]. This event was documented on YouTube and represents Lakshveer's first major institutional recognition.
-
-**Ongoing Platform (2026-01):** Param Foundation continued showcasing [[Drishtikon Yantra]] as a featured project from their makeathon series [[sig-drishtikon-2026]].
-
-## Key Personnel
-
-- **Inav Amsi** — Foundation representative who first identified Lakshveer's potential
-- **Inavamsi B Enaganti** — Science & innovation lead who provided endorsement
+Inavamsi B Enaganti, affiliated with Param's science programs, publicly endorsed Lakshveer in June 2025 [[sig-inav65-endorsement]].
 
 ## Signals
 
-- [[sig-inav-param-endorsement-2024]] — Initial hackathon meeting
-- [[sig-param-award-2025]] — Vedanta Makeathon awards
-- [[sig-drishtikon-2026]] — Project showcase
-- [[sig-inav65-endorsement]] — Institutional endorsement
+- [[sig-inav-param-endorsement-2024]] — First meeting at Param hackathon (2024-12)
+- [[sig-param-award-2025]] — Youngest Innovator & Special Mention at Param × Vedanta Makeathon (2025-10)
+- [[sig-drishtikon-2026]] — Drishtikon Yantra project showcased at Param event (2026-01)
+- [[sig-inav65-endorsement]] — Endorsement from Param science leadership (2025-06)
 
 ## Related Articles
 
-- [[Drishtikon Yantra]]
-- [[Vedanta]]
-- [[Timeline-2024-2025]]
+- [[Drishtikon Yantra]] — Award-winning project presented at Param × Vedanta Makeathon
+- [[Inav Amsi]] — Param Foundation representative who recognized Lakshveer
+- [[Vedanta]] — Corporate partner for 2025 makeathon
 
 ---
-*Compiled: 2026-04-06T17:22:56.072Z*
+*Compiled: 2026-04-06T17:47:20.585Z*

@@ -2,61 +2,52 @@
 *Domain*
 
 ## Summary
-
-Lakshveer Rao established a consistent public speaking presence from age 6 to 8, spanning formal conferences, academic institutions, startup ecosystems, and media interviews. Venues include T-Hub Hyderabad, IIT Hyderabad, South Park Commons (Bangalore), and August Fest 2025. He demonstrates repeatable ability to demo hardware projects, participate in panel discussions, and deliver business pitches across technical and general audiences.
+Lakshveer Rao has delivered 13+ documented public presentations between March 2024 and February 2026, spanning business pitches, panel discussions, product demos, and technical workshops. His speaking venues include IIT Hyderabad, T-Hub, South Park Commons, Hitex exhibition centers, and August Fest 2025. He conducts live product demonstrations to large audiences and participates in panel discussions alongside adult founders and technologists.
 
 ## Evidence
+**First pitch (2024-03)**: [[sig-first-pitch-2024]] — first formal business pitch about DIY Cars project
 
-**First documented pitch:** March 2024 — DIY Cars business pitch at age 6 [[sig-first-pitch-2024]].
+**Exhibition demos (2024-12 to 2026-01)**: [[sig-kids-carnival-hitex-2024]] demoing projects at Hitex Kids Carnival; [[sig-iitex-2025]] recognition at IITEX 2025 Hitex; [[sig-heyacpk-science-expo-2026]] CPK testimonial noting "2-3 hours I spent with him, I saw him give demos of his app to hundreds of visitors"
 
-**Academic institutions:** Conducted IoT session at IIT Hyderabad (Techobytes, Feb 2025) [[sig-iit-hyd-iot-workshop-2025]].
+**Panel discussions (2025-02 to 2025-08)**: [[sig-ttox-panel-2025]] panel at TTOX 2024 showcasing CircuitHeroes as "India's youngest card game designer"; [[sig-august-fest-speaker-2025]] and [[sig-august-fest-panel-yt-2025]] official speaker at August Fest 2025 with archived video
 
-**Startup ecosystem:** Presented at T-Hub Hyderabad (April 2025) [[sig-thub-intro-2025]], South Park Commons Bangalore (Aug 2025, demoed CircuitHeroes + Drishtikon Yantra) [[sig-spc-demo-2025]].
+**Technical workshops (2025-02)**: [[sig-iit-hyd-iot-workshop-2025]] conducted IoT session at IIT Hyderabad Techobytes program
 
-**Panel discussions:** TTOX 2024 (Feb 2025) [[sig-ttox-panel-2025]], August Fest 2025 (official speaker with profile page, video documented) [[sig-august-fest-speaker-2025]] [[sig-august-fest-panel-yt-2025]].
+**Startup ecosystem (2025-04 to 2025-08)**: [[sig-thub-intro-2025]] introduction at T-Hub Hyderabad; [[sig-spc-demo-2025]] pitch demo at South Park Commons Bangalore presenting CircuitHeroes and Drishtikon Yantra; [[sig-polaris-vibehack-2025]] VibeHack at Polaris School of Technology
 
-**Public demos:** Kids Carnival at Hitex Hyderabad (Dec 2024) [[sig-kids-carnival-hitex-2024]], VibeHack at Polaris School of Technology (Aug 2025) [[sig-polaris-vibehack-2025]], Science Expo (Jan 2026, CPK testimonial: "gave demos to hundreds of visitors") [[sig-heyacpk-science-expo-2026]].
-
-**Recognition events:** IITEX 2025 at Hitex Hyderabad (June 2025) [[sig-iitex-2025]].
-
-**Media interviews:** Sravya interview (Facebook video, Feb 2026) [[sig-sravya-interview-2026]], Beats in Brief feature (Sept 2025) [[sig-beats-in-brief-2025]].
+**Media appearances (2025-09 to 2026-02)**: [[sig-beats-in-brief-2025]] profile coverage; [[sig-sravya-interview-2026]] video interview on Facebook
 
 ## Trajectory
+**Phase 1 (2024-03 to 2024-12)**: Initial pitch and demo experience at small-scale events
 
-**2024-03 to 2024-12:** Initial phase — first business pitch, public demos at Hitex Kids Carnival.
+**Phase 2 (2025-02 to 2025-08)**: Expansion to institutional venues (IIT Hyderabad, T-Hub) and major conferences (August Fest, South Park Commons). Transition from product demos to panel discussions and technical teaching sessions
 
-**2025-02 to 2025-06:** Institutional expansion — IIT Hyderabad session, TTOX panel, T-Hub presentation, IITEX recognition.
+**Phase 3 (2025-09 to 2026-02)**: Media interview circuit and sustained demo presence at science expos with high visitor throughput
 
-**2025-08:** Peak activity — August Fest official speaker slot, South Park Commons pitch, VibeHack participation. Three major events in single month.
-
-**2026-01 to 2026-02:** Media consolidation — Science Expo with documented high-volume demos, formal interview coverage.
-
-Pattern: Escalation from informal demos → academic/institutional talks → startup ecosystem pitches → formalized speaker roles with archived media.
+Lakshveer's speaking evolved from solo product pitches to participation in adult-level panel discussions and technical instruction within 24 months.
 
 ## Signals
-
-- [[sig-first-pitch-2024]] — First Business Pitch — DIY Cars (2024-03)
-- [[sig-kids-carnival-hitex-2024]] — Kids Carnival at Hitex Hyderabad — Demo (2024-12)
-- [[sig-ttox-panel-2025]] — Panel Discussion at TTOX 2024 (2025-02)
-- [[sig-iit-hyd-iot-workshop-2025]] — IoT Session at IIT Hyderabad (Techobytes) (2025-02)
-- [[sig-thub-intro-2025]] — Introduction at T-Hub Hyderabad (2025-04)
-- [[sig-iitex-2025]] — IITEX 2025 at Hitex Hyderabad — Recognition (2025-06)
-- [[sig-august-fest-speaker-2025]] — August Fest 2025 — Official Speaker (2025-08)
-- [[sig-august-fest-panel-yt-2025]] — Panel Discussion at August Fest 2025 — Video (2025-08)
-- [[sig-spc-demo-2025]] — South Park Commons Pitch Demo — CircuitHeroes + Drishtikon Yantra (2025-08)
-- [[sig-polaris-vibehack-2025]] — VibeHack at Polaris School of Technology (2025-08)
-- [[sig-beats-in-brief-2025]] — Beats in Brief — India's youngest hardware startup founder (2025-09)
-- [[sig-heyacpk-science-expo-2026]] — CPK Tweet — Science Expo testimonial (2026-01)
-- [[sig-sravya-interview-2026]] — Sravya Interview — Facebook Video (2026-02)
+- [[sig-first-pitch-2024]]
+- [[sig-kids-carnival-hitex-2024]]
+- [[sig-ttox-panel-2025]]
+- [[sig-iit-hyd-iot-workshop-2025]]
+- [[sig-thub-intro-2025]]
+- [[sig-iitex-2025]]
+- [[sig-august-fest-speaker-2025]]
+- [[sig-august-fest-panel-yt-2025]]
+- [[sig-spc-demo-2025]]
+- [[sig-polaris-vibehack-2025]]
+- [[sig-beats-in-brief-2025]]
+- [[sig-heyacpk-science-expo-2026]]
+- [[sig-sravya-interview-2026]]
 
 ## Related Articles
-
-- [[entrepreneurship]] — Business pitches (T-Hub, South Park Commons, August Fest)
-- [[teaching]] — IoT session at IIT Hyderabad
-- [[hardware]] — Project demos at public events (Hitex, Science Expo)
-- [[computer-vision]] — Drishtikon Yantra demo at South Park Commons
-- [[brand]] — Media interviews, official speaker profiles
-- [[achievement]] — Recognition events (IITEX 2025)
+- [[entrepreneurship]]
+- [[brand]]
+- [[teaching]]
+- [[hardware]]
+- [[circuitheroes]]
+- [[drishtikon-yantra]]
 
 ---
-*Compiled: 2026-04-06T17:22:56.072Z*
+*Compiled: 2026-04-06T17:47:20.585Z*

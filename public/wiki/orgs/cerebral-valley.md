@@ -2,18 +2,18 @@
 *Organization*
 
 ## Summary
-Cerebral Valley is a San Francisco-based AI community and event organizer focused on AI startups, builders, and emerging technologies. The organization hosts hackathons and technical events, partnering with major AI labs to facilitate hands-on development experiences for founders and engineers.
+Cerebral Valley is a technology organization that hosts AI/ML hackathons and developer events, primarily focused on cutting-edge AI model releases and applications. They collaborate with major AI research labs to organize competitive technical showcases.
 
 ## Relationship with Lakshveer
-Lakshveer participated in Cerebral Valley's Gemini 3 Hackathon (co-hosted with Google DeepMind) in February 2026, where he demonstrated Kyabol, an AI conversational system [[sig-gemini3-hackathon-2026]].
+Lakshveer participated in a Cerebral Valley event in February 2026, presenting his AI conversational system Kyabol at the Gemini 3 Hackathon co-hosted with Google DeepMind [[sig-gemini3-hackathon-2026]].
 
 ## Signals
-- [[sig-gemini3-hackathon-2026]] — Gemini 3 Hackathon event (2026-02)
+- [[sig-gemini3-hackathon-2026]] — Co-hosted Gemini 3 Hackathon with Google DeepMind (2026-02)
 
 ## Related Articles
-- [[google-deepmind]]
-- [[kyabol]]
-- [[gemini-3]]
+- [[Google DeepMind]]
+- [[Kyabol]]
+- [[Gemini 3]]
 
 ---
-*Compiled: 2026-04-06T17:22:56.072Z*
+*Compiled: 2026-04-06T17:47:20.585Z*

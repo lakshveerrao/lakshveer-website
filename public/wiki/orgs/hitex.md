@@ -2,20 +2,20 @@
 *Organization*
 
 ## Summary
-Hitex is a venue/exhibition center in Hyderabad, India that hosts technology and innovation events. Lakshveer has participated in at least two public events at Hitex: a Kids Carnival demo in December 2024 and recognition at IITEX 2025 in June 2025.
+Hitex is a convention and exhibition center in Hyderabad, India that has hosted multiple events where Lakshveer Rao demonstrated hardware projects and received recognition. It serves as a recurring venue for technology exhibitions, industry events, and youth-focused showcases in the region.
 
 ## Relationship with Lakshveer
-Lakshveer has used Hitex as a platform for public demonstration and recognition of his hardware projects. At the Kids Carnival (December 2024), he demoed hardware projects [[sig-kids-carnival-hitex-2024]]. Six months later at IITEX 2025, he received recognition for his work [[sig-iitex-2025]]. Both events positioned him in front of broader audiences in Hyderabad's tech/maker community.
+Lakshveer has participated in at least two significant events at Hitex between December 2024 and June 2025. First engagement occurred at Kids Carnival (December 2024) where he demoed hardware projects [[sig-kids-carnival-hitex-2024]]. Six months later, he received recognition at IITEX 2025, an industry/innovation exhibition at the same venue [[sig-iitex-2025]]. Both appearances involved public demonstration of hardware work and speaking engagements.
 
 ## Signals
-- [[sig-kids-carnival-hitex-2024]] — Kids Carnival at Hitex Hyderabad — Demo (2024-12)
-- [[sig-iitex-2025]] — IITEX 2025 at Hitex Hyderabad — Recognition (2025-06)
+- [[sig-kids-carnival-hitex-2024]] — Kids Carnival demo, December 2024
+- [[sig-iitex-2025]] — IITEX 2025 recognition, June 2025
 
 ## Related Articles
-- [[Hyderabad]]
-- [[IITEX]]
-- [[Public Speaking]]
-- [[Hardware]]
+- [[Hyderabad]] — Location context
+- [[Public Speaking]] — Activity domain
+- [[Hardware]] — Technical domain
+- [[Conferences and Events]] — Surface type
 
 ---
-*Compiled: 2026-04-06T17:22:56.072Z*
+*Compiled: 2026-04-06T17:47:20.585Z*

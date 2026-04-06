@@ -3,51 +3,43 @@
 
 ## Summary
 
-Lakshveer Rao's teaching practice began at age 4 with YouTube tutorial uploads and evolved into formal institutional workshops by age 7. By 2025-2026, he has documented 170+ project builds, conducted IoT and drone workshops at IIT Hyderabad, and built a growing audience of young makers through systematic knowledge-sharing across video platforms.
+Lakshveer Rao has been teaching electronics and hardware through YouTube since age 4 (2022), scaling from basic tool repair tutorials to conducting IoT and drone workshops at IIT Hyderabad by age 7-8 (2025). His teaching spans peer-to-peer maker education (170+ documented project builds) and institutional workshops at India's premier technical university. Teaching method: build-in-public documentation, not formal curriculum.
 
 ## Evidence
 
-**Public Documentation (2022-present)**
-- First tutorial upload July 2022 (age 4): "How to Fix Drill Bits" [[sig-first-yt-upload-2022]]
-- YouTube channel "Projects by Laksh" archives 170+ electronics, robotics, and AI project builds with step-by-step documentation [[sig-yt-170-projects-2025]]
-- March 2026: Full hardware walkthrough of AI agent build published [[sig-yt-full-2026]]
+**YouTube as primary teaching platform** — Started documenting builds at age 4 [[sig-first-yt-upload-2022]], scaling to 170+ projects by 2025 [[sig-yt-170-projects-2025]]. Channel serves as asynchronous maker curriculum covering Arduino, Raspberry Pi, robotics, AI agents [[sig-yt-full-2026]].
 
-**Institutional Teaching (2025)**
-- February 2025: IoT session at IIT Hyderabad (Techobytes program) [[sig-iit-hyd-iot-workshop-2025]]
-- June 2025: Drone workshop at IIT Hyderabad [[sig-iit-hyd-drone-workshop-2025]]
+**Workshop facilitation at IIT Hyderabad** — Conducted IoT session (Techobytes program, Feb 2025) [[sig-iit-hyd-iot-workshop-2025]] and drone workshop (Jun 2025) [[sig-iit-hyd-drone-workshop-2025]]. Rare profile: child teaching undergraduate/graduate students at Tier-1 institution.
 
-**Recognition**
-- June 2025: ₹40,000 creator micro-scholarship from Ramsri Goutham for educational content [[sig-ramsri-microscholarship-2025]]
-- October 2025: Featured by ThinkTac science/maker community platform [[sig-thinktac-yt-2025]]
+**Recognition as creator-educator** — ₹40,000 micro-scholarship from Ramsri Goutham (Jun 2025) explicitly credits "creator" work [[sig-ramsri-microscholarship-2025]]. ThinkTac feature (Oct 2025) positions him within science/maker education community [[sig-thinktac-yt-2025]].
 
 ## Trajectory
 
-**2022-2024: Self-Directed Documentation**
-Ages 4-6. YouTube as primary teaching medium. Focus: hands-on repair and basic electronics.
+**2022** — Age 4, first upload: tool repair basics [[sig-first-yt-upload-2022]]  
+**2025** — Age 7-8, 170+ projects documented, IIT workshops, creator scholarship [[sig-yt-170-projects-2025]] [[sig-iit-hyd-iot-workshop-2025]] [[sig-ramsri-microscholarship-2025]]  
+**2026** — Age 8, full AI agent hardware walkthroughs [[sig-yt-full-2026]]
 
-**2025: Institutional Validation**
-Age 7. Transition from online tutorials to in-person workshops at research institutions. IIT Hyderabad engagement signals credibility with academic institutions.
-
-**2025-2026: Systematic Knowledge Transfer**
-Age 7-8. 170+ project library indicates structured curriculum development. Topics span electronics fundamentals → robotics → AI agents. Creator scholarship suggests economic validation of educational model.
+Teaching complexity accelerating faster than age: tools → electronics → IoT → drones → AI agents in 4 years.
 
 ## Signals
 
 - [[sig-first-yt-upload-2022]] — First YouTube Upload — How to Fix Drill Bits (2022-07)
+- [[sig-yt-170-projects-2025]] — YouTube Channel — 170+ project builds documented (2025-12)
 - [[sig-iit-hyd-iot-workshop-2025]] — IoT Session at IIT Hyderabad (Techobytes) (2025-02)
 - [[sig-iit-hyd-drone-workshop-2025]] — Drone Workshop at IIT Hyderabad (2025-06)
-- [[sig-yt-170-projects-2025]] — YouTube Channel — 170+ project builds documented (2025-12)
 - [[sig-yt-full-2026]] — YouTube Full Video — AI agent hardware walkthrough (2026-03)
 - [[sig-ramsri-microscholarship-2025]] — Ramsri Goutham — ₹40,000 Creator Micro-Scholarship (2025-06)
 - [[sig-thinktac-yt-2025]] — ThinkTac YouTube Feature (2025-10)
 
 ## Related Articles
 
-- [[content]] — Video production and documentation methods
-- [[electronics]] — Technical domain of primary teaching focus
-- [[robotics]] — Workshop curriculum area
-- [[public-speaking]] — In-person workshop delivery
-- [[brand]] — Media recognition and platform partnerships
+- [[content]] — Primary distribution channel for teaching
+- [[electronics]] — Core subject matter
+- [[robotics]] — Workshop and project focus area
+- [[ai-agents]] — Recent teaching frontier (2026)
+- [[brand]] — Teaching as brand-building mechanism
+- [[public-speaking]] — IIT workshops as formal pedagogy
+- [[iit-hyderabad]] — Institutional teaching venue
 
 ---
-*Compiled: 2026-04-06T17:22:56.072Z*
+*Compiled: 2026-04-06T17:47:20.585Z*
