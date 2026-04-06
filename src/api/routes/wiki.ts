@@ -16,17 +16,17 @@ import { generateText } from 'ai';
 interface Env {
   AI_GATEWAY_BASE_URL: string;
   AI_GATEWAY_API_KEY: string;
-  ASSETS: { fetch: (req: Request) => Promise<Response> };
+  ASSETS: Fetcher;
 }
 
 export const wikiRoutes = new Hono<{ Bindings: Env }>();
 
-// ---- Read a wiki file from static assets ----
-async function readWikiFile(path: string, env: Env): Promise<string | null> {
+// ---- Read a wiki file via ASSETS fetcher or public URL ----
+async function readWikiFile(path: string, env: Env, requestUrl: string): Promise<string | null> {
   try {
-    const url = new URL(`https://placeholder/wiki/${path}`);
-    const req = new Request(url.toString());
-    const res = await env.ASSETS.fetch(req);
+    const base = new URL(requestUrl);
+    const wikiUrl = `${base.protocol}//${base.host}/wiki/${path}`;
+    const res = await env.ASSETS.fetch(new Request(wikiUrl));
     if (!res.ok) return null;
     return await res.text();
   } catch {
@@ -46,8 +46,10 @@ wikiRoutes.post('/query', async (c) => {
     apiKey: c.env.AI_GATEWAY_API_KEY,
   });
 
+  const reqUrl = c.req.url;
+
   // Step 1: Read index
-  const indexContent = await readWikiFile('index.md', c.env);
+  const indexContent = await readWikiFile('index.md', c.env, reqUrl);
   if (!indexContent) {
     return c.json({ error: 'Wiki not compiled. Run: bun run wiki:compile' }, 404);
   }
@@ -70,7 +72,7 @@ wikiRoutes.post('/query', async (c) => {
   // Step 3: Read files
   const fileContents: string[] = [];
   for (const fp of filePaths.slice(0, 8)) {
-    const content = await readWikiFile(fp, c.env);
+    const content = await readWikiFile(fp, c.env, reqUrl);
     if (content) fileContents.push(`\n---\n## FILE: ${fp}\n${content}`);
   }
 
