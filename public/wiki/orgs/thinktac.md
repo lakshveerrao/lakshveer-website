@@ -2,17 +2,17 @@
 *Organization*
 
 ## Summary
-ThinkTac is an Indian science and maker community platform that operates educational content through social media and YouTube. The organization features young makers and science enthusiasts, positioning itself in the education and STEM learning space.
+ThinkTac is an Indian science and maker community platform with a YouTube presence. The organization features young makers and students exploring STEM concepts. Based on available signals, ThinkTac engaged with Lakshveer Rao during his early maker years (Grade 2, approximately 2016-2017 based on his current age of 16 in 2025).
 
 ## Relationship with Lakshveer
-ThinkTac featured Lakshveer Rao multiple times in 2025, first in June when he was in Grade 2 [sig-think-tac-feature-2025], describing him as "a bright and curious Grade 2 student who loves exploring how things work." They later featured him on their YouTube channel in October 2025 [sig-thinktac-yt-2025]. These features suggest ThinkTac recognized Lakshveer as a notable young maker in India's STEM education community.
+ThinkTac featured Lakshveer Rao as a young maker when he was in Grade 2, describing him as "a bright and curious Grade 2 student who loves exploring how things work" [sig-think-tac-feature-2025]. The organization highlighted him on social media (X/Twitter) in June 2025 and on their YouTube channel in October 2025, positioning him within their community of science enthusiasts and electronics learners [sig-thinktac-yt-2025].
 
 ## Signals
-- [sig-think-tac-feature-2025] — ThinkTac X post featuring Lakshveer as Grade 2 student (2025-06)
-- [sig-thinktac-yt-2025] — YouTube channel feature (2025-10)
+- [sig-think-tac-feature-2025] — Twitter/X feature (2025-06)
+- [sig-thinktac-yt-2025] — YouTube feature (2025-10)
 
 ## Related Articles
-*None yet*
+*No related articles compiled yet*
 
 ---
-*Compiled: 2026-04-06T10:45:12.892Z*
+*Compiled: 2026-04-06T15:38:05.617Z*

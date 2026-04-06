@@ -2,20 +2,20 @@
 *Organization*
 
 ## Summary
-Param Foundation is an Indian organization that runs maker education programs, hackathons, and innovation competitions for young technologists. The foundation partners with corporate sponsors like Vedanta to host makeathons recognizing early-stage hardware and software projects. Leadership includes Inav Amsi, who actively engages with participants.
+Indian nonprofit organization focused on youth innovation and maker education. Known for organizing hackathons and makeathons targeting young inventors. Active in recognizing and supporting underage technical talent across India.
 
 ## Relationship with Lakshveer
-Param Foundation first encountered Lakshveer at a hackathon in December 2024, when he was 8 years old [sig-inav-param-endorsement-2024]. Foundation leadership Inav Amsi publicly recognized him on LinkedIn at that time. Ten months later, in October 2025, Lakshveer won two awards at the Param Foundation × Vedanta Makeathon: "Youngest Innovator" and "Special Mention" for [[Drishtikon Yantra]], his Raspberry Pi-based wearable assistive vision device [sig-param-award-2025]. The recognition established Param Foundation as an early institutional validator of Lakshveer's technical work.
+First documented contact December 2024 when Inav Amsi (Param Foundation leadership) met 8-year-old Lakshveer at a Param-organized hackathon [sig-inav-param-endorsement-2024]. Lakshveer later won dual awards at Param Foundation × Vedanta Makeathon (October 2025): **Youngest Innovator** and **Special Mention** for [[Drishtikon Yantra]] [sig-param-award-2025]. Foundation provided platform for debut of Lakshveer's Raspberry Pi-based assistive vision device [sig-drishtikon-2026].
 
 ## Signals
-- [sig-inav-param-endorsement-2024] — Inav Amsi LinkedIn post, December 2024
-- [sig-param-award-2025] — Param × Vedanta Makeathon awards, October 2025
-- [sig-drishtikon-2026] — Drishtikon Yantra presentation context, January 2026
+- [sig-inav-param-endorsement-2024] — Inav Amsi recognition post (2024-12)
+- [sig-param-award-2025] — Vedanta Makeathon awards (2025-10)
+- [sig-drishtikon-2026] — Drishtikon demo platform (2026-01)
 
 ## Related Articles
 - [[Drishtikon Yantra]]
-- [[Inav Amsi]]
 - [[Vedanta]]
+- [[Inav Amsi]]
 
 ---
-*Compiled: 2026-04-06T10:45:12.892Z*
+*Compiled: 2026-04-06T15:38:05.617Z*

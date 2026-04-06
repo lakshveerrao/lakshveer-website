@@ -2,17 +2,17 @@
 *Organization*
 
 ## Summary
-Yugantar is a competition or event organization based in India. Lakshveer Rao participated in and won a Yugantar competition in August 2025, as publicly acknowledged by CaptVenk on social media.
+Yugantar is a competition or event organization where Lakshveer Rao achieved a win in August 2025. The organization appears to operate in the entrepreneurship or brand development space, though specific details about its structure, mission, or scope remain limited from available signals.
 
 ## Relationship with Lakshveer
-Lakshveer competed in a Yugantar event and secured a win in August 2025. The achievement was significant enough to warrant public recognition from CaptVenk, suggesting the competition had notable visibility or prestige within entrepreneurship or maker communities [[sig-yugantar-captvenk-2025]].
+Lakshveer Rao participated in and won a Yugantar competition or event in August 2025. The win was publicly acknowledged by CaptVenk on social media, indicating the achievement had notable recognition within entrepreneurship circles. The exact nature of the competition (pitch competition, hackathon, brand challenge, etc.) is not specified in available signals [[sig-yugantar-captvenk-2025]].
 
 ## Signals
-- [[sig-yugantar-captvenk-2025]] — CaptVenk tweet acknowledging Lakshveer's win (2025-08)
+- [[sig-yugantar-captvenk-2025]] — CaptVenk publicly acknowledged Lakshveer's win at Yugantar event (2025-08)
 
 ## Related Articles
-- [[Lakshveer Rao]] — Main profile
-- [[CaptVenk]] — Individual who publicly recognized the achievement
+- [[Lakshveer Rao]] — Primary subject, competition winner
+- [[CaptVenk]] — Individual who publicly acknowledged the win
 
 ---
-*Compiled: 2026-04-06T10:45:12.892Z*
+*Compiled: 2026-04-06T15:38:05.617Z*

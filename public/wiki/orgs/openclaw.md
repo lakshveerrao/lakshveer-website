@@ -2,20 +2,19 @@
 *Organization*
 
 ## Summary
-OpenClaw is an autonomous AI agent system developed by Lakshveer Rao for grant discovery and application. Part of the broader "Claw AI System" alongside ZeroClaw, it automates the grant-seeking process for makers and entrepreneurs. The system gained public visibility through social validation from CaptVenk in June 2026.
+OpenClaw is an autonomous AI agent system built by Lakshveer Rao for grant discovery and application. Part of the broader "Claw" AI agent system (alongside ZeroClaw), OpenClaw automates the process of finding and applying for grants. System operational as of February 2026.
 
 ## Relationship with Lakshveer
-Lakshveer Rao is the creator and builder of OpenClaw. He developed the system in February 2026 as part of a dual-agent architecture (OpenClaw/ZeroClaw) designed to automate grant workflows [[sig-autoclaw-system-2026]].
+Lakshveer is the creator/builder of OpenClaw. He developed it as part of the Claw AI agent ecosystem in early 2026. The system gained visibility through CaptVenk's social media coverage in June 2026.
 
 ## Signals
-- [[sig-autoclaw-system-2026]] — Claw AI System launched with OpenClaw and ZeroClaw components (2026-02)
-- [[sig-openclaw-agent-2026]] — CaptVenk public mention validates OpenClaw's autonomous grant capabilities (2026-06)
+- [[sig-autoclaw-system-2026]] — Claw AI System built, comprising OpenClaw and ZeroClaw (2026-02)
+- [[sig-openclaw-agent-2026]] — CaptVenk tweet about OpenClaw as autonomous grant agent (2026-06)
 
 ## Related Articles
 - [[Lakshveer Rao]]
 - [[ZeroClaw]]
-- [[Claw AI System]]
-- [[AI Agents (Domain)]]
+- [[Claw]]
 
 ---
-*Compiled: 2026-04-06T10:45:12.892Z*
+*Compiled: 2026-04-06T15:38:05.617Z*

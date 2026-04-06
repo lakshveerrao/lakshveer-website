@@ -2,19 +2,18 @@
 *Organization*
 
 ## Summary
-August Fest is a conference or event series that features entrepreneurship and technology speakers. Lakshveer Rao participated as an official speaker at the 2025 edition, appearing on a panel discussion documented on YouTube.
+August Fest is a conference or festival that featured Lakshveer Rao as an official speaker in August 2025. The organization maintains a public website at theaugustfest.com where speaker profiles are hosted.
 
 ## Relationship with Lakshveer
-Lakshveer was an official speaker at August Fest 2025 (August 2025). His speaker profile was published at theaugustfest.com/speaker/r-lakshveer-rao/. He participated in a panel discussion, which was recorded and published on YouTube. This represents a public-facing brand engagement in the conference circuit, marking his presence as a recognized voice in entrepreneurship at age 16.
+Lakshveer served as an official speaker at August Fest 2025 (August 2025). He participated in a panel discussion that was recorded and published on YouTube. His speaker profile was publicly listed at theaugustfest.com/speaker/r-lakshveer-rao/ [[sig-august-fest-speaker-2025]].
 
 ## Signals
-- [[sig-august-fest-speaker-2025]] — Official speaker designation and profile page (2025-08)
-- [[sig-august-fest-panel-yt-2025]] — Panel discussion video documentation (2025-08)
+- [[sig-august-fest-speaker-2025]] — Official Speaker designation (2025-08)
+- [[sig-august-fest-panel-yt-2025]] — Panel Discussion video (2025-08)
 
 ## Related Articles
-- [[Lakshveer Rao]] — Primary subject
-- [[Public Speaking]] — Domain category
-- [[Entrepreneurship]] — Topical domain
+- [[public-speaking]] — domain tag
+- [[entrepreneurship]] — domain tag
 
 ---
-*Compiled: 2026-04-06T10:45:12.892Z*
+*Compiled: 2026-04-06T15:38:05.617Z*

@@ -2,20 +2,19 @@
 *Organization*
 
 ## Summary
-Hitex (Hyderabad International Trade Expositions Limited) is a major exhibition and convention center in Hyderabad, India. Lakshveer has participated in multiple events at this venue, including youth-focused technology exhibitions where he demonstrated hardware projects and received recognition.
+Hitex is an exhibition and convention center in Hyderabad, India where Lakshveer has participated in multiple events. It serves as a venue for technology exhibitions, trade shows, and public events including youth-focused innovation showcases.
 
 ## Relationship with Lakshveer
-Lakshveer has engaged with Hitex as an exhibitor and participant across at least two documented events between December 2024 and June 2025. At the Kids Carnival (December 2024), he demonstrated hardware projects to attendees. Six months later at IITEX 2025 (June 2025), he received recognition for his work, indicating progression from participant to recognized contributor in the technology exhibition space.
+Lakshveer has demonstrated projects and received recognition at Hitex-hosted events on at least two occasions between 2024-2025. In December 2024, he participated in Kids Carnival at Hitex, demoing hardware projects [[sig-kids-carnival-hitex-2024]]. In June 2025, he was recognized at IITEX 2025 held at the same venue [[sig-iitex-2025]]. Both events positioned him as a young maker in public-facing technical demonstrations.
 
 ## Signals
-- [[sig-kids-carnival-hitex-2024]] — Demoed hardware projects at Kids Carnival (2024-12)
-- [[sig-iitex-2025]] — Recognized at IITEX 2025 exhibition (2025-06)
+- [[sig-kids-carnival-hitex-2024]] — Kids Carnival demo (2024-12)
+- [[sig-iitex-2025]] — IITEX 2025 recognition (2025-06)
 
 ## Related Articles
-- [[Hyderabad]] — City location
-- [[IITEX]] — Specific event series hosted at venue
-- [[Public Speaking]] — Domain activity at venue
-- [[Hardware]] — Primary focus of demonstrations
+- [[hyderabad]] — Home city, event location
+- [[public-speaking]] — Domain demonstrated at Hitex events
+- [[hardware]] — Technical focus of demonstrations
 
 ---
-*Compiled: 2026-04-06T10:45:12.892Z*
+*Compiled: 2026-04-06T15:38:05.617Z*

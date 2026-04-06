@@ -2,18 +2,16 @@
 *Organization*
 
 ## Summary
-AI Grants India is a grant program that provides funding to Indian AI builders and entrepreneurs. The organization supports developers working on AI applications and agents. Lakshveer Rao received a grant from this program in September 2025.
+AI Grants India is a grant program supporting Indian AI builders and entrepreneurs. The organization provides funding to developers working on artificial intelligence projects, with a focus on fostering the domestic AI ecosystem.
 
 ## Relationship with Lakshveer
-Lakshveer was selected as a grant recipient in September 2025 [[sig-ai-grants-india-2025]]. This represents his first documented institutional funding for AI development work. The grant specifically supports his work in the AI agents domain.
+Lakshveer received a grant from AI Grants India in September 2025 [[sig-ai-grants-india-2025]]. This funding supported his work in AI agents and entrepreneurship, marking recognition of his technical capabilities at age 16.
 
 ## Signals
-- [[sig-ai-grants-india-2025]] — Grant Recipient (2025-09)
+- [[sig-ai-grants-india-2025]] — Grant recipient (2025-09)
 
 ## Related Articles
-- [[lakshveer-rao]] — Main profile
-- [[funding-history]] — Complete funding timeline
-- [[ai-agents-work]] — AI agents projects and development
+*[No related articles compiled yet]*
 
 ---
-*Compiled: 2026-04-06T10:45:12.892Z*
+*Compiled: 2026-04-06T15:38:05.617Z*

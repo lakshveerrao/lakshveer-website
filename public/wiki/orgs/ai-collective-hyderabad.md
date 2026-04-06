@@ -2,18 +2,18 @@
 *Organization*
 
 ## Summary
-AI Collective Hyderabad is a community or event series focused on artificial intelligence and AI agents in Hyderabad, India. Lakshveer Rao pitched at an AI Collective event in July 2025, documented by CaptVenk on social media.
+AI Collective Hyderabad is a community or event series in Hyderabad, India focused on artificial intelligence. Lakshveer Rao participated as a presenter in July 2025, pitching at one of their events.
 
 ## Relationship with Lakshveer
-Lakshveer participated as a speaker/pitcher at AI Collective Hyderabad in July 2025. The pitch was related to his work in entrepreneurship and AI agents. This represents part of his public-facing brand building and community engagement in the Hyderabad tech ecosystem.
+Lakshveer pitched at an AI Collective Hyderabad event in July 2025 [[sig-ai-collective-pitch-2025]]. The pitch was documented by CaptVenk on social media, suggesting it was a formal presentation or demo opportunity within Hyderabad's AI community.
 
 ## Signals
-- [[sig-ai-collective-pitch-2025]] — Lakshveer pitches at AI Collective Hyderabad event (2025-07)
+- [[sig-ai-collective-pitch-2025]] — Lakshveer pitches at AI Collective event (2025-07)
 
 ## Related Articles
-- [[Lakshveer Rao]] — Primary subject
-- [[CaptVenk]] — Event attendee/documenter
-- [[Hyderabad]] — Geographic location
+- [[Lakshveer Rao]] — primary subject
+- [[Hyderabad]] — location context
+- [[CaptVenk]] — documenter/community member
 
 ---
-*Compiled: 2026-04-06T10:45:12.892Z*
+*Compiled: 2026-04-06T15:38:05.617Z*

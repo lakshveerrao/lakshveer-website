@@ -2,35 +2,41 @@
 *Project*
 
 ## Summary
-Full-body motion-control gaming system built by Lakshveer Rao at the RunTogether Hackathon in January 2026. Uses computer vision and gesture recognition to enable controller-free gaming. Received Special Mention Winner award and generated significant attention for being built by an 8-year-old participant.
+
+Full-body motion-control gaming system built by Lakshveer Rao at the RunTogether Hackathon in January 2026. Won Special Mention award. Uses computer vision and gesture recognition to enable controller-free gaming through body movements.
 
 ## Status & Timeline
-- **2026-01**: Built and demoed at RunTogether Hackathon [sig-motionx-launch-2026]
-- **2026-01**: Won Special Mention at hackathon [sig-motionx-launch-2026]
-- **2026-01**: Featured by Runable HQ and ScaleTogether on X [sig-runable-runhq-tweet-2026] [sig-scaletogether-tweet-2026]
 
-## Technical Stack
-- Computer vision
-- AI/machine learning for gesture recognition
-- Full-body motion tracking
-- Controller-free gaming interface
+- **2026-01**: Built and demoed at RunTogether Hackathon hosted by Runable
+- **2026-01**: Won Special Mention at RunTogether Hackathon
+- **Status**: Demo/prototype phase
+
+## Technical Architecture
+
+- **Core Technology**: Computer vision, AI-powered gesture recognition
+- **Input Method**: Full-body motion tracking (no controllers)
+- **Domains**: Computer vision, machine learning, AI agents, hardware integration
 
 ## Impact
-First documented project where Lakshveer's age (8 years old at time) became a public talking point. Runable HQ stated: "An 8-year-old showed up and built. That alone changed what we thought was possible." [sig-runable-runhq-tweet-2026] 
 
-ScaleTogether referred to him as "our youngest builder" [sig-scaletogether-tweet-2026], suggesting organizational affiliation or community involvement beyond single event participation.
+- Featured in social media posts by both Runable HQ [[sig-runable-runhq-tweet-2026]] and ScaleTogether [[sig-scaletogether-tweet-2026]]
+- Runable HQ quote: "An 8-year-old showed up and built. That alone changed what we thought was possible"
+- ScaleTogether identified Lakshveer as "our youngest builder, all of 8yrs old" at the hackathon
+- Special Mention winner among hackathon submissions
 
-Won recognition at competitive hackathon environment among likely older participants.
+**Note**: Social posts reference Lakshveer as 8 years old during the January 2026 event. This conflicts with established birth year (2008, making him ~17-18 in 2026). Age discrepancy requires verification.
 
 ## Signals
-- [sig-motionx-launch-2026] — Primary project documentation (YouTube demo)
-- [sig-runable-runhq-tweet-2026] — Runable HQ social recognition
-- [sig-scaletogether-tweet-2026] — ScaleTogether social recognition
+
+- [[sig-motionx-launch-2026]] — Primary project documentation and demo video
+- [[sig-runable-runhq-tweet-2026]] — Runable HQ recognition post
+- [[sig-scaletogether-tweet-2026]] — ScaleTogether feature post
 
 ## Related Articles
-- [[RunTogether Hackathon]]
-- [[Runable]]
-- [[ScaleTogether]]
+
+- [[Runable]] — Host organization
+- [[RunTogether Hackathon]] — Event context
+- [[Projects]] — Project portfolio overview
 
 ---
-*Compiled: 2026-04-06T10:45:12.892Z*
+*Compiled: 2026-04-06T15:38:05.617Z*

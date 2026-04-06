@@ -6,7 +6,7 @@ This wiki is LLM-compiled from `src/raw/signals.json`.
 Built for agents to navigate — not for humans to read.
 Human adds to raw/. LLM owns wiki/. Never the other way around.
 
-Source: `signals.json` — 74 signals — compiled 2026-04-06T10:45:12.892Z
+Source: `signals.json` — 87 signals — compiled 2026-04-06T15:38:05.617Z
 
 ## How to Navigate
 1. Read this index
@@ -71,6 +71,8 @@ Source: `signals.json` — 74 signals — compiled 2026-04-06T10:45:12.892Z
 - [[orgs/hardvare]] — Hardvare
 - [[orgs/openclaw]] — OpenClaw
 - [[orgs/claw]] — Claw
+- [[orgs/circuit-heroes]] — Circuit Heroes
+- [[orgs/manchester-international-school]] — Manchester International School
 
 ## Domains
 - [[domains/content]] — content
@@ -94,11 +96,11 @@ Source: `signals.json` — 74 signals — compiled 2026-04-06T10:45:12.892Z
 - [[domains/funding]] — funding
 
 ## Concepts (Emergent Patterns)
-- [[concepts/tinkerer-to-teacher]] — The Tinkerer-to-Teacher Pipeline
-- [[concepts/hardware-first-ai]] — Hardware-First AI Agent Architecture
-- [[concepts/institutional-validation]] — Institutional Validation Cascade
-- [[concepts/product-media-flywheel]] — Product-Media Flywheel
-- [[concepts/grant-momentum]] — The Grant-to-Grant Momentum Engine
+- [[concepts/hardware-ai-convergence]] — Hardware-AI Convergence Arc
+- [[concepts/institutional-legitimacy-ladder]] — Institutional Legitimacy Ladder
+- [[concepts/product-market-validation]] — Product-Market Validation Engine
+- [[concepts/media-amplification-cascade]] — Media Narrative Amplification Cascade
+- [[concepts/competitive-achievement-velocity]] — Competitive Achievement Velocity
 
 ## Meta
 - [[meta/narrative]] — Full narrative + timeline
@@ -106,9 +108,9 @@ Source: `signals.json` — 74 signals — compiled 2026-04-06T10:45:12.892Z
 - [[meta/connections]] — Non-obvious connections + predictions
 
 ## Stats
-- Signals: 74
-- Articles: 80
-- Compiled: 2026-04-06T10:45:12.892Z
+- Signals: 87
+- Articles: 82
+- Compiled: 2026-04-06T15:38:05.617Z
 
 ---
 *LLM-owned. Do not edit manually.*

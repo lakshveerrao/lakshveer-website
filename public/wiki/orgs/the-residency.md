@@ -2,23 +2,18 @@
 *Organization*
 
 ## Summary
-
-The Residency is an entrepreneurship accelerator program operating cohort-based fellowships for young founders. Known for the "Delta" chapter series, it provides mentorship and community infrastructure for early-stage builders. The organization maintains selection criteria that historically skews older, making younger admissions notable.
+The Residency is a startup accelerator/incubator program that runs cohort-based programs for young founders. Notable for selecting exceptionally young entrepreneurs into their Delta chapter cohorts. Operates primarily in India with focus on technical builder community.
 
 ## Relationship with Lakshveer
-
-Lakshveer Rao was accepted into The Residency's Delta-2 cohort in September 2025, recognized as the youngest founder ever selected for the program at age 8 [[sig-delta2-residency-2025]]. This marked a significant age deviation from typical cohort demographics. By January 2026, he was actively participating in cohort activities, including in-person meetings with fellow members and mentors [[sig-aadityayuvraj-residency-2026]].
+Lakshveer Rao accepted into Delta-2 cohort (September 2025) as youngest founder ever selected by the organization [sig-delta2-residency-2025]. At time of selection, he was 8 years old with portfolio spanning hardware, software, and games [sig-aadityayuvraj-residency-2026]. The Residency publicly highlighted this achievement via LinkedIn announcing him as youngest founder in Delta Chapter II cohort [sig-delta2-residency-2025].
 
 ## Signals
-
-- [[sig-delta2-residency-2025]] — Official LinkedIn announcement of Lakshveer as youngest Delta-2 participant (2025-09)
-- [[sig-aadityayuvraj-residency-2026]] — Yuvraj Aaditya documents meeting Lakshveer during Delta cohort (2026-01)
+- [sig-delta2-residency-2025] — Official announcement of Lakshveer as youngest Delta-2 founder (2025-09)
+- [sig-aadityayuvraj-residency-2026] — Yuvraj Aaditya confirmation of youngest status in delta cohort (2026-01)
 
 ## Related Articles
-
 - [[lakshveer-rao]] — Primary subject
-- [[delta-2-cohort]] — Specific program cohort
-- [[yuvraj-aaditya]] — Cohort member and connection
+- [[timeline-2025]] — Delta-2 selection event
 
 ---
-*Compiled: 2026-04-06T10:45:12.892Z*
+*Compiled: 2026-04-06T15:38:05.617Z*

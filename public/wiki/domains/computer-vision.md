@@ -2,33 +2,33 @@
 *Domain*
 
 ## Summary
-Lakshveer has built multiple computer vision projects focused on real-world hardware integration, spanning assistive technology, gaming, and AI-controlled systems. His work emphasizes practical deployment on edge devices (Raspberry Pi, ESP32) rather than purely software implementations. Active development period: 2025-08 through 2026-03.
+Lakshveer has shipped multiple computer vision projects between 2025-2026, focusing on real-world applications: assistive technology for visually impaired users and full-body gesture recognition for gaming. His work spans embedded hardware integration (Raspberry Pi, ESP32) and AI-driven image processing, deployed at hackathons and demo events.
 
 ## Evidence
-**Drishtikon Yantra** (2026-01) — Raspberry Pi-based wearable assistive vision device for visually impaired users. Awarded Special Mention at Param × Vedanta Makeathon. Presented at South Park Commons demo (2025-08). Device combines computer vision with accessibility hardware. [sig-drishtikon-2026] [sig-spc-demo-2025]
+**Drishtikon Yantra** (2026-01) — Raspberry Pi-based wearable assistive vision device for visually impaired users. Earned Special Mention at Param × Vedanta Makeathon. Presented at South Park Commons (2025-08). [[sig-drishtikon-2026]] [[sig-spc-demo-2025]]
 
-**MotionX** (2026-01) — Full-body motion-control gaming system using gesture recognition. Built at RunTogether Hackathon (Runable). Special Mention Winner. Demonstrates real-time pose estimation and control mapping. [sig-motionx-launch-2026]
+**MotionX** (2026-01) — Full-body motion-control gaming system using gesture recognition. Built at RunTogether Hackathon by Runable. Special Mention Winner. Demonstrates real-time pose estimation and control mapping. [[sig-motionx-launch-2026]]
 
-**AI Agent Hardware Control** (2026-03) — YouTube Short showcasing AI agent controlling ESP32 hardware via Telegram messaging. Suggests integration of vision/multimodal AI with physical actuation. [sig-yt-short-telegram-2026]
+**AI Agent Hardware Control** (2026-03) — YouTube Short showcasing vision-based AI agent controlling ESP32 hardware via Telegram messaging. Indicates integration of vision pipelines with embedded systems and messaging protocols. [[sig-yt-short-telegram-2026]]
 
 ## Trajectory
-**2025-08** — Public presentation of Drishtikon Yantra at South Park Commons pitch event  
-**2026-01** — Two concurrent CV projects: assistive tech (Drishtikon) and gaming (MotionX), both winning hackathon recognition  
-**2026-03** — Integration of CV/AI agents with hardware control systems
+2025-08: Public demo of assistive vision tech at South Park Commons  
+2026-01: Two concurrent CV projects — accessibility (Drishtikon) and gaming (MotionX)  
+2026-03: Integration of CV with AI agents and remote hardware control  
 
-Pattern: Moving from single-purpose vision devices → multi-modal agent-driven systems. Consistent focus on embedded/edge deployment over cloud-based solutions.
+Pattern: Moving from standalone vision devices toward multi-modal systems (vision + messaging, vision + AI reasoning). Focus on edge deployment (Raspberry Pi, ESP32) rather than cloud-only solutions.
 
 ## Signals
-- [sig-spc-demo-2025] — South Park Commons Pitch Demo
-- [sig-drishtikon-2026] — Drishtikon Yantra project
-- [sig-motionx-launch-2026] — MotionX gaming system
-- [sig-yt-short-telegram-2026] — Telegram-controlled hardware agent
+- [[sig-spc-demo-2025]]
+- [[sig-drishtikon-2026]]
+- [[sig-motionx-launch-2026]]
+- [[sig-yt-short-telegram-2026]]
 
 ## Related Articles
-- [[hardware]] — Physical implementation of CV systems
-- [[social-impact]] — Assistive technology applications
-- [[ai-agents]] — Integration with autonomous systems
-- [[hackathons]] — Competition context for CV projects
+- [[hardware]] — CV projects consistently deployed on embedded systems
+- [[social-impact]] — Drishtikon Yantra targets accessibility
+- [[ai-agents]] — Recent work integrates vision with agent reasoning
+- [[hackathons]] — Primary validation surface for CV prototypes
 
 ---
-*Compiled: 2026-04-06T10:45:12.892Z*
+*Compiled: 2026-04-06T15:38:05.617Z*

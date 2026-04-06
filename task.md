@@ -1,65 +1,35 @@
-# Universe v7 — Brand Surface Intelligence — COMPLETE ✅
+# Lakshveer Website — Current Status
 
-## All Items Done
+## Signals + Wiki — COMPLETE ✅
 
-1. ✅ `src/intelligence/brand-surface-engine.ts`
-   - SurfaceSignal type: signalId, surface, audienceTypes, estimatedReach, date
-   - Surface types: youtube | press | hackathon | conference | community | social | website | event
-   - Audience types: makers | developers | researchers | founders | students | educators | general_public
-   - Reach: low | medium | high
-   - mapSignalToSurface() — keyword overrides + source fallback
-   - getAudienceTypes() — surface base + domain boosts
-   - estimateReach() — press=high, event/conference=medium, social=low, youtube=medium (compounding)
-   - BrandSurfaceEngine.processSurfaceSignal(), getSurfaceSummary(), getOpportunityAttribution(), getHighLeverageSurfaces()
-   - Auto-seeds all existing signals on module load
+### Signals
+- 57 → 74 signals (added 17 missing ones)
+- All from impact/text.md and lakshveercom/text.md incorporated
+- src/raw/signals.json = src/data/signals.json (synced)
 
-2. ✅ `signal-engine.ts` — addSignal() now calls BrandSurfaceEngine.processSurfaceSignal() after store
+### Wiki
+- 80 articles compiled (was ~65 before)
+- New articles: concepts/, orgs for new signals, domains/funding
+- public/wiki/ fully updated
 
-3. ✅ `opportunity-engine.ts`
-   - OpportunityMatch gets `triggerSurface?: Surface`
-   - Attribution lookup via BrandSurfaceEngine.getSurfaceForSignal()
+### Wiki API (/api/wiki/query)
+- Root cause found: AI_GATEWAY_BASE_URL and AI_GATEWAY_API_KEY not passed to Worker
+- Fix: Added `vars.AI_GATEWAY_BASE_URL` to wrangler.json
+- Fix: Added `secret put AI_GATEWAY_API_KEY` step to deploy.yml
+- GitHub secret `AI_GATEWAY_API_KEY` set via API
+- Deploying via commit 897e00a — ETA ~4 min
 
-4. ✅ `pattern-engine.ts` — 3 brand surface patterns added:
-   - event-demos-unlock-collabs (strength 82)
-   - youtube-engineering-credibility (strength 78)
-   - press-coverage-sponsor-magnet (strength 75)
+## What's Next
+1. ✅ Signal audit complete
+2. ⏳ Verify /api/wiki/query works live (after deploy)
+3. 📝 Write the article (user confirmed this is next)
 
-5. ✅ `weekly-brief.ts`
-   - New `audienceReach` section: audiencesReached[], mostEffectiveSurface, surfaceSummary, reachItems[]
-   - WeeklyBrief type updated
+## Article Brief (from prior sessions)
+- Writing about Lakshveer for some external publication/pitch
+- Need to know: Which publication? What angle? What length?
+- Ask user before starting
 
-6. ✅ `SignalTimeline.tsx` — each signal card now shows:
-   - Surface badge (purple)
-   - Reach badge (green/blue/grey)
-   - Audience types reached
-   - Confidence (private mode only)
-
-7. ✅ `SurfaceDashboard.tsx` — new component:
-   - Top surfaces by count + reach bars
-   - All audience types reached
-   - Surface intelligence insights (narrative per surface)
-   - Opportunity attribution (which signal → which opp → which surface)
-   - Signal distribution strip (emoji tiles, color = reach level)
-
-8. ✅ `universe.tsx` — new tab "📡 Surfaces" (private mode only)
-
-9. ✅ Build: ZERO errors
-
-## New Files
-- src/intelligence/brand-surface-engine.ts
-- src/web/components/universe/SurfaceDashboard.tsx
-
-## Modified Files
-- src/intelligence/signal-engine.ts
-- src/intelligence/opportunity-engine.ts
-- src/intelligence/pattern-engine.ts
-- src/intelligence/weekly-brief.ts
-- src/web/components/universe/SignalTimeline.tsx
-- src/web/pages/universe.tsx (new Surfaces tab)
-
-## What v7 achieves
-The Universe now answers: "Where does the work appear? Who sees it? What surfaces generate opportunities?"
-- Every signal is automatically mapped to a surface + audience + reach level
-- New brand surface patterns appear in Insights panel
-- Weekly brief includes audience reach section
-- SurfaceDashboard gives a full attribution map: signal → surface → opportunity
+## Key Commits
+- b0fdd8a — wiki API ASSETS fix
+- 2f070af — 17 new signals, 80 wiki articles, Env type fix
+- 897e00a — workflow fix for AI_GATEWAY secret

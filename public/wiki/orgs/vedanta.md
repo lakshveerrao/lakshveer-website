@@ -2,14 +2,14 @@
 *Organization*
 
 ## Summary
-Vedanta is a corporate sponsor and partner organization that co-hosted a makeathon with Param Foundation in October 2025. The event focused on maker innovation and social impact technology, where Lakshveer won two awards.
+Vedanta is a corporate partner organization that co-hosted the Param Foundation × Vedanta Makeathon in October 2025, where Lakshveer Rao received dual recognition. The organization appears connected to spiritual and educational initiatives in India, evidenced by Lakshveer's February 2026 demonstration to Sri Sri Brahmananda Bharati Swamiji under Vedanta's context.
 
 ## Relationship with Lakshveer
-Lakshveer participated in the Param Foundation × Vedanta Makeathon (October 2025), where he presented [[Drishtikon Yantra]], a Raspberry Pi-based wearable assistive vision device. He received two recognitions: **Youngest Innovator** and **Special Mention** awards at the event [[sig-param-award-2025]].
+Lakshveer presented [[Drishtikon Yantra]] at the Param Foundation × Vedanta Makeathon (October 2025), winning "Youngest Innovator" and "Special Mention" awards [sig-param-award-2025]. This marked his first documented interaction with Vedanta as an institutional entity. Four months later (February 2026), Lakshveer demonstrated projects to His Holiness Sri Sri Brahmananda Bharati Swamiji in a context associated with Vedanta [sig-brahmananda-swamiji-demo-2026], suggesting ongoing organizational relationship beyond the initial competition.
 
 ## Signals
-- [[sig-param-award-2025]] — Param Foundation × Vedanta Makeathon awards (2025-10)
-- [[sig-drishtikon-2026]] — Drishtikon Yantra presentation context (2026-01)
+- [sig-param-award-2025] — Co-hosted makeathon with Param Foundation (2025-10)
+- [sig-brahmananda-swamiji-demo-2026] — Context for spiritual leader demonstration (2026-02)
 
 ## Related Articles
 - [[Param Foundation]]
@@ -17,4 +17,4 @@ Lakshveer participated in the Param Foundation × Vedanta Makeathon (October 202
 - [[Awards and Recognition]]
 
 ---
-*Compiled: 2026-04-06T10:45:12.892Z*
+*Compiled: 2026-04-06T15:38:05.617Z*

@@ -1,27 +1,25 @@
 # StartupPedia
-*Press Coverage*
+*Media Coverage — Press Feature*
 
 ## Summary
-Indian startup media platform that featured Lakshveer's AI agent project in March 2026. Published both article and Instagram reel content highlighting his Telegram-controlled device system. Represents first major media coverage of Lakshveer's technical work.
+Indian startup media publication that featured Lakshveer's AI agent project in March 2026. Published both written article and Instagram reel showcasing his Telegram-controlled ESP32 device system. Notably mislabeled Lakshveer as 8 years old when he was actually 16 at time of publication.
 
 ## Status & Timeline
-- **2026-03** — Published feature article on Lakshveer's AI agent [[sig-startuppedia-2026]]
-- **2026-03** — Released Instagram reel featuring the project [[sig-startuppedia-instagram-2026]]
+- **2026-03**: Published feature article and Instagram reel about Lakshveer's AI agent [[sig-startuppedia-2026]], [[sig-startuppedia-instagram-2026]]
 
 ## Impact
-- First documented press coverage for Lakshveer's maker projects
-- Multi-platform distribution (web article + Instagram)
-- Focused on technical achievement (ESP32 hardware control via Telegram messaging)
-- Age discrepancy in coverage: article states "8-year-old" while Lakshveer was 16 in 2026
+- **Media reach**: Article + Instagram distribution via @startup.pedia account
+- **Age error**: Publication stated "8-year-old Lakshveer" (factually incorrect — Lakshveer born 2009/2010, making him 16 in 2026)
+- **Technical focus**: Highlighted AI agent + Telegram messaging + ESP32 hardware control integration
 
 ## Signals
-- [[sig-startuppedia-2026]] — Feature article on AI agent project
-- [[sig-startuppedia-instagram-2026]] — Instagram reel coverage
+- [[sig-startuppedia-2026]] — Primary feature article (March 2026)
+- [[sig-startuppedia-instagram-2026]] — Instagram reel distribution (March 2026)
 
 ## Related Articles
-- [[ai-agent-telegram]] — The featured project
-- [[press-coverage]] — Media appearances
-- [[brand]] — Public presence building
+- [[Press Coverage]] — Other media features
+- [[AI Agents]] — Technical domain of featured project
+- [[Telegram Bot Projects]] — Related work
 
 ---
-*Compiled: 2026-04-06T10:45:12.892Z*
+*Compiled: 2026-04-06T15:38:05.617Z*
