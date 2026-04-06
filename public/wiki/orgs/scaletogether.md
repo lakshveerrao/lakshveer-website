@@ -2,19 +2,24 @@
 *Organization*
 
 ## Summary
-ScaleTogether is an organization or collective that supports young builders and makers. Active as of January 2026, they publicly recognize and promote work by youth creators including Lakshveer Rao. The organization maintains social media presence on X (formerly Twitter) where they share builder achievements.
+
+ScaleTogether is an organization that supports and showcases young builders and makers. In January 2026, they publicly featured Lakshveer Rao's MotionX project at the RunTogether Hackathon, identifying him as "our youngest builder, all of 8yrs old."
 
 ## Relationship with Lakshveer
-ScaleTogether identifies Lakshveer Rao as "our youngest builder, all of 8yrs old" in their January 2026 communications [[sig-scaletogether-tweet-2026]]. This suggests an official affiliation or membership relationship. They publicly promoted his MotionX project built at the RunTogether Hackathon, indicating they support and amplify work by their affiliated builders.
+
+ScaleTogether refers to Lakshveer as "our youngest builder" [[sig-scaletogether-tweet-2026]], indicating an organizational affiliation or mentorship relationship. They promoted his MotionX project through their official social media channels during the RunTogether Hackathon (January 2026).
 
 ## Signals
-- [[sig-scaletogether-tweet-2026]] — ScaleTogether's X post promoting Lakshveer's MotionX project (2026-01)
-- [[sig-motionx-launch-2026]] — MotionX project context, referenced in ScaleTogether communications (2026-01)
+
+- [[sig-scaletogether-tweet-2026]] — ScaleTogether social media post featuring Lakshveer's MotionX project at RunTogether Hackathon
+- [[sig-motionx-launch-2026]] — MotionX project context (Special Mention Winner, built by Runable)
 
 ## Related Articles
+
 - [[Lakshveer Rao]]
 - [[MotionX]]
 - [[RunTogether Hackathon]]
+- [[Runable]]
 
 ---
-*Compiled: 2026-04-06T17:08:40.657Z*
+*Compiled: 2026-04-06T17:22:56.072Z*

@@ -2,40 +2,30 @@
 *Domain*
 
 ## Summary
-Lakshveer secured grant funding from AI Grants India (2025-09) and built OpenClaw, an autonomous AI agent system for discovering and applying to grants (2026-06). Received endorsements from funding ecosystem players including Bhasker Kode (AI Grants India) and M S Mihir (VC/founder community) in mid-2025.
+Lakshveer secured grant funding from AI Grants India (2025-09) for AI agent development, establishing early credibility in the Indian AI ecosystem. By 2026-06, he built OpenClaw — an autonomous AI agent that applies for grants on behalf of founders, demonstrating meta-level innovation in funding infrastructure itself.
 
 ## Evidence
-**Grant Recipient**
-- AI Grants India grant awarded 2025-09 [[sig-ai-grants-india-2025]]
-- Program supports AI builders in India
+**Grant Achievement**: AI Grants India recipient (2025-09) — first documented external funding for AI agent work [[sig-ai-grants-india-2025]].
 
-**Autonomous Funding Infrastructure**
-- OpenClaw: AI agent system for grant discovery/application [[sig-openclaw-agent-2026]]
-- Announced 2026-06 via CaptVenk
-- Meta-layer: building tools to automate funding acquisition
+**Community Validation**: Endorsed by Bhasker Kode (AI Grants India, distributed systems) [[sig-0xbosky-endorsement]] and M S Mihir (VC/founder community) [[sig-msmihir-endorsement]] in 2025-06, indicating investor/operator network access before formal fundraising.
 
-**Ecosystem Validation**
-- Bhasker Kode endorsement 2025-06 [[sig-0xbosky-endorsement]] — AI Grants India ecosystem
-- M S Mihir endorsement 2025-06 [[sig-msmihir-endorsement]] — VC/founder network
-- Signals early investor/funder awareness
+**Product-Market Fit Signal**: OpenClaw (2026-06) — autonomous grant application agent [[sig-openclaw-agent-2026]]. CaptVenk's public acknowledgment suggests product traction in funding automation vertical.
 
 ## Trajectory
-2025-06: Endorsements from funding gatekeepers (Kode, Mihir)  
-2025-09: AI Grants India recipient  
-2026-06: OpenClaw launch — recursive funding automation
+**2025-06**: Community endorsements from VC/grant ecosystem actors → **2025-09**: AI Grants India award → **2026-06**: OpenClaw launch (automating grant discovery/application).
 
-Pattern: Grant recipient → grant infrastructure builder. Self-sustaining funding loop via agent tooling.
+Evolution from **grant recipient** → **grant infrastructure builder**. Timeline shows 9-month cycle from funding to shipping funding tooling. OpenClaw represents "eating own dog food" — solving the problem he experienced as founder.
 
 ## Signals
-- [[sig-ai-grants-india-2025]] — Grant recipient
-- [[sig-openclaw-agent-2026]] — Autonomous grant agent
-- [[sig-msmihir-endorsement]] — VC network endorsement
-- [[sig-0xbosky-endorsement]] — AI Grants India endorsement
+- [[sig-ai-grants-india-2025]] — AI Grants India recipient (2025-09)
+- [[sig-openclaw-agent-2026]] — OpenClaw autonomous grant agent (2026-06)
+- [[sig-msmihir-endorsement]] — M S Mihir endorsement (2025-06)
+- [[sig-0xbosky-endorsement]] — Bhasker Kode endorsement (2025-06)
 
 ## Related Articles
-- [[entrepreneurship]] — Venture building context
-- [[ai-agents]] — OpenClaw technical domain
-- [[brand]] — Funder endorsements impact
+- [[entrepreneurship]] — Startup trajectory & product development
+- [[ai-agents]] — Technical foundation for OpenClaw
+- [[brand]] — Community capital & endorsement network
 
 ---
-*Compiled: 2026-04-06T17:08:40.657Z*
+*Compiled: 2026-04-06T17:22:56.072Z*

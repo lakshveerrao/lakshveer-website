@@ -2,17 +2,17 @@
 *Organization*
 
 ## Summary
-Indian foundation that provides grants to young innovators and entrepreneurs. Awarded ₹1,00,000 grant to Lakshveer Rao in June 2025 for CircuitHeroes educational electronics card game.
+The Malpani Foundation is an Indian grant-making organization that supports innovation and entrepreneurship in education and technology. In June 2025, they awarded Lakshveer Rao a ₹1,00,000 grant for his educational electronics card game, CircuitHeroes.
 
 ## Relationship with Lakshveer
-Granted ₹1,00,000 to Lakshveer in June 2025 recognizing CircuitHeroes innovation — an educational electronics card game that had sold 300+ decks at time of award. [[sig-malpani-grant-2025]]
+The Foundation recognized Lakshveer's work in educational hardware through a substantial grant award. At the time of the grant, CircuitHeroes had achieved 300+ deck sales, demonstrating market validation for educational electronics products. The ₹1,00,000 grant represented institutional support for an 8-year-old founder's entrepreneurial venture in the hardware education space.
 
 ## Signals
-- [[sig-malpani-grant-2025]] — Malpani Foundation Grant awarded for CircuitHeroes (2025-06)
+- [[sig-malpani-grant-2025]] — Grant award for CircuitHeroes (2025-06)
 
 ## Related Articles
 - [[CircuitHeroes]]
-- [[Lakshveer-Timeline]]
+- [[Lakshveer Rao]]
 
 ---
-*Compiled: 2026-04-06T17:08:40.657Z*
+*Compiled: 2026-04-06T17:22:56.072Z*

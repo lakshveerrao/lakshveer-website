@@ -2,20 +2,19 @@
 *Organization*
 
 ## Summary
-StartupPedia is an Indian media platform covering startup and entrepreneurship stories. In March 2026, they featured Lakshveer Rao's AI agent project that controls ESP32 hardware via Telegram messaging across both their website and Instagram channel.
+StartupPedia is an Indian digital media publication covering startup ecosystems, entrepreneurship, and emerging technology. In March 2026, the outlet featured Lakshveer Rao's AI agent project across both article and Instagram formats, marking documented press coverage of his work.
 
 ## Relationship with Lakshveer
-StartupPedia published a feature article about Lakshveer's AI agent system in March 2026, highlighting his work as an 8-year-old hardware founder. The story was distributed through their main website and amplified via an Instagram reel on their @startup.pedia account. This represents early press coverage of Lakshveer's work in Indian entrepreneurship media.
+StartupPedia published feature coverage of Lakshveer's AI agent system in March 2026 [sig-startuppedia-2026]. The coverage focused on his ESP32-based device control system using Telegram messaging interface. StartupPedia amplified the story through their Instagram account (@startup.pedia) via dedicated reel content [sig-startuppedia-instagram-2026]. This represents early mainstream press recognition of Lakshveer's technical work at age 8.
 
 ## Signals
-- [[sig-startuppedia-2026]] — Feature article on Lakshveer's Telegram-controlled AI agent (2026-03)
-- [[sig-startuppedia-instagram-2026]] — Instagram reel featuring Lakshveer's project (2026-03)
+- [sig-startuppedia-2026] — Feature article on AI agent project (2026-03)
+- [sig-startuppedia-instagram-2026] — Instagram reel coverage (2026-03)
 
 ## Related Articles
-- [[Lakshveer Rao]]
-- [[AI Agent Projects]]
-- [[Press Coverage]]
-- [[Telegram Bot]]
+- [[lakshveer-rao]] — Primary subject
+- [[ai-agent-telegram-project]] — Featured project
+- [[press-coverage]] — Media timeline
 
 ---
-*Compiled: 2026-04-06T17:08:40.657Z*
+*Compiled: 2026-04-06T17:22:56.072Z*

@@ -6,14 +6,21 @@ This wiki is LLM-compiled from `src/raw/signals.json`.
 Built for agents to navigate — not for humans to read.
 Human adds to raw/. LLM owns wiki/. Never the other way around.
 
-Source: `signals.json` — 126 signals — compiled 2026-04-06T17:08:40.657Z
+Source: `signals.json` — 126 signals — compiled 2026-04-06T17:22:56.072Z
+
+## Graph
+- [[graph.json]] — knowledge graph (BFS/DFS traversal, god nodes, communities)
+- God nodes (highest-degree): entrepreneurship, brand, ai-agents, electronics, Projects by Laksh
+- Communities detected: 2
 
 ## How to Navigate
 1. Read this index
-2. Follow [[backlinks]] into article directories
-3. /meta/ articles have compiled analysis
+2. Load graph.json for BFS traversal
+3. Follow [[backlinks]] into article directories
+4. /meta/ articles have compiled analysis
 
 ## People
+- [[people/lakshveer]] — Lakshveer Rao (central subject)
 - [[people/lakshveer]] — Lakshveer
 - [[people/s-somanath]] — S. Somanath
 
@@ -97,11 +104,11 @@ Source: `signals.json` — 126 signals — compiled 2026-04-06T17:08:40.657Z
 - [[domains/funding]] — funding
 
 ## Concepts (Emergent Patterns)
-- [[concepts/hardware-maturation-arc]] — From Tiny Hands to Technical Depth: The Hardware Maturation Arc
-- [[concepts/institutional-legitimacy-snowball]] — The Legitimacy Snowball: From 'Cute Kid' to Institutional Peer
-- [[concepts/social-product-hypothesis]] — The Social Product Hypothesis: Learning to Build for Others, Not Just Build
-- [[concepts/father-son-public-learning-strategy]] — The 'Father-Architect, Son-Face' Dynamic and Public Learning Strategy
-- [[concepts/ai-native-builder-emergence]] — The AI-Native Builder Emergence: From Hardware Tinkerer to Agentic Systems Designer
+- [[concepts/intentional-visibility-architecture]] — The Intentional Visibility Architecture
+- [[concepts/legitimacy-ladder-institutions]] — The Legitimacy Ladder: From DIY to Institutions
+- [[concepts/testimonial-network-infrastructure]] — The Testimonial Network as Social Proof Infrastructure
+- [[concepts/hardware-ai-strategic-pivot]] — Hardware-to-AI Pivot as Strategic Repositioning
+- [[concepts/circuitheroes-linchpin-asset]] — The Minimum Viable Legitimacy Product: CircuitHeroes as Linchpin
 
 ## Meta
 - [[meta/narrative]] — Full narrative + timeline
@@ -110,10 +117,10 @@ Source: `signals.json` — 126 signals — compiled 2026-04-06T17:08:40.657Z
 
 ## Stats
 - Signals: 126
-- Articles: 83
-- Compiled: 2026-04-06T17:08:40.657Z
+- Articles: 84
+- Graph nodes: 78
+- Graph edges: 334
+- Compiled: 2026-04-06T17:22:56.072Z
 
 ---
 *LLM-owned. Do not edit manually.*
-*Update: edit `src/raw/signals.json` → `bun run wiki:compile`*
-*Query: `bun run wiki:query "your question"`*

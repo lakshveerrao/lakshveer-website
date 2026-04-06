@@ -2,28 +2,38 @@
 *Domain*
 
 ## Summary
-Lakshveer Rao operates at the intersection of education and entrepreneurship, creating learning products that teach electronics and creativity through play. By age 8, he has designed educational tools including CircuitHeroes (electronics card game, 300+ decks sold) and a DIY eBook (100+ sales), earning recognition from STEM educators and a ₹1,00,000 grant from Malpani Foundation. His approach demonstrates early-stage product-market fit in informal STEM education for children.
+
+Lakshveer Rao operates at the intersection of electronics education and product design, creating learning tools for children. His primary educational contributions are CircuitHeroes (electronics card game) and a DIY eBook, both designed to teach hardware concepts through play-based and experiential learning. At 8 years old and in Grade 2, he builds products that democratize STEM knowledge while simultaneously learning through making.
 
 ## Evidence
-**Educational Products Shipped:**
-- **CircuitHeroes Card Game** — Educational electronics card game launched 2024-10 [[sig-circuitheroes-launch-2024]]. Described as work of "India's youngest card game designer." 300+ decks sold by 2025-06 [[sig-malpani-grant-2025]].
-- **The Kids Book of Creative Ideas** — DIY eBook launched 2024-09 via ChhotaCreator.com. 100+ sales [[sig-ebook-launch-2024]].
 
-**Grant Recognition:**
-- **Malpani Foundation Grant** — ₹1,00,000 awarded 2025-06 for CircuitHeroes innovation in educational electronics [[sig-malpani-grant-2025]].
+**Product Portfolio**
+- CircuitHeroes card game launched 2024-10 [[sig-circuitheroes-launch-2024]] — educational electronics card game, 300+ decks sold by 2025-06 [[sig-malpani-grant-2025]]
+- "The Kids Book of Creative Ideas" DIY eBook launched 2024-09 [[sig-ebook-launch-2024]] — 100+ sales via ChhotaCreator.com
 
-**Institutional Visibility:**
-- **ThinkTac Feature** — 2025-06, described as "Grade 2 student who loves exploring how things work" [[sig-think-tac-feature-2025]].
+**Educational Recognition**
+- Malpani Foundation grant (₹1,00,000) awarded 2025-06 for CircuitHeroes innovation [[sig-malpani-grant-2025]]
+- Featured by ThinkTac 2025-06 as "Grade 2 student who loves exploring how things work" [[sig-think-tac-feature-2025]]
 
-**Endorsements from Education Practitioners:**
-- **Ravi Rangan** — STEM education & experiential learning practitioner [[sig-ravirangan-endorsement]]
-- **Reddy2Go** — Play-based learning & creativity advocate [[sig-reddy2go-endorsement]]
-- **Ankur Pandey** — Noted Lakshveer's "journey since a few years" as evidence of "how powerful early experiments are" and "parenthood that maximizes creativity over comfort" [[sig-ankurpandey-endorsement]]
+**Endorsement Network**
+- Ravi Rangan (STEM education & experiential learning) [[sig-ravirangan-endorsement]]
+- Reddy2Go (play-based learning & creativity) [[sig-reddy2go-endorsement]]
+- Ankur Pandey: "showed me how powerful early experiments are...parenthood that maximizes creativity over comfort" [[sig-ankurpandey-endorsement]]
+
+**Educational Philosophy Markers**
+- Described as "India's youngest card game designer" [[sig-circuitheroes-launch-2024]]
+- Products emphasize learning-through-making and peer education (child teaching children)
 
 ## Trajectory
-2024-09: First educational product (eBook) ships → 2024-10: CircuitHeroes card game launches → 2025-06: Grant award + educator endorsements cluster. Shift from content (eBook) to physical product (card game) suggests refinement toward tactile, play-based learning tools. Sales velocity (300+ decks in ~8 months) indicates traction in niche market.
+
+**2024-09**: Content creator phase — launched eBook targeting kid audience, establishing digital distribution channel  
+**2024-10**: Product design phase — CircuitHeroes launch, shift from content to physical educational tools  
+**2025-06**: Institutional validation — Malpani grant + STEM educator endorsements signal credibility in education innovation space
+
+Lakshveer's education domain work evolved from personal learning documentation (eBook) to systematic knowledge transfer tools (card game). His trajectory suggests increasing sophistication in pedagogy design while maintaining peer-to-peer learning model.
 
 ## Signals
+
 - [[sig-circuitheroes-launch-2024]]
 - [[sig-ebook-launch-2024]]
 - [[sig-malpani-grant-2025]]
@@ -33,10 +43,11 @@ Lakshveer Rao operates at the intersection of education and entrepreneurship, cr
 - [[sig-ankurpandey-endorsement]]
 
 ## Related Articles
-- [[entrepreneurship]] — Education products = revenue-generating ventures
-- [[hardware]] — CircuitHeroes teaches electronics components
-- [[CircuitHeroes]] — Primary educational product
-- [[Projects by Laksh]] — Operating entity for educational products
+
+- [[circuitheroes]] — flagship educational product
+- [[entrepreneurship]] — business model behind educational tools
+- [[hardware]] — technical foundation of electronics education
+- [[brand]] — personal positioning in STEM education space
 
 ---
-*Compiled: 2026-04-06T17:08:40.657Z*
+*Compiled: 2026-04-06T17:22:56.072Z*

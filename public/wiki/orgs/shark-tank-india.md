@@ -2,16 +2,17 @@
 *Organization*
 
 ## Summary
-Shark Tank India is a business reality television show where entrepreneurs pitch their ventures to a panel of investor "sharks" for funding. The show is broadcast on Sony LIV and provides a platform for Indian founders to secure investment and national visibility. Season 5 ran its selection process in mid-2025.
+Shark Tank India is a reality television show where entrepreneurs pitch their business ideas to a panel of investors ("Sharks") for funding. The show is broadcast on Sony LIV and follows the format of the American series Shark Tank. Season 5 aired in 2025.
 
 ## Relationship with Lakshveer
-Lakshveer was shortlisted to Level 2 of the Shark Tank India Season 5 selection process in June 2025 [[sig-shark-tank-s5-2025]]. This marked his entry into the entrepreneurship and brand-building domain at age 8, representing a significant milestone in his journey as a hardware founder.
+In June 2025, Lakshveer was shortlisted to Level 2 of the Shark Tank India Season 5 selection process [[sig-shark-tank-s5-2025]]. This represented a significant milestone in his entrepreneurship journey at age 8, making him one of the youngest founders to reach this stage of the competitive selection process.
 
 ## Signals
-- [[sig-shark-tank-s5-2025]] — Level 2 shortlist for Season 5 (2025-06)
+- [[sig-shark-tank-s5-2025]] — Level 2 shortlist achievement (2025-06)
 
 ## Related Articles
-*No related wiki articles compiled yet.*
+- [[Lakshveer]] — Main profile
+- [[Entrepreneurship]] — Domain context
 
 ---
-*Compiled: 2026-04-06T17:08:40.657Z*
+*Compiled: 2026-04-06T17:22:56.072Z*

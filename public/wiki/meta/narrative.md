@@ -3,157 +3,116 @@
 
 ## Summary
 
-Lakshveer Rao (born 2018, Hyderabad) is an 8-year-old hardware founder, maker, and AI builder. At age 4, he began documenting electronics projects on YouTube; by 6, he launched CircuitHeroes, India's first electronics education card game (300+ decks sold, Malpani Foundation grant recipient). At 8, he became India's youngest hardware startup founder through Projects by Laksh, shipping real products including Drishtikon Yantra (assistive vision device), MotionX (motion-control gaming), and AI agents controlling ESP32 hardware via Telegram. He has pitched at T-Hub, demoed to ISRO Chairman S. Somanath, spoken at IIT Hyderabad twice, won recognition at Param Foundation × Vedanta Makeathon, reached Top-5 at Lion Circuits Hardware Hackathon 2.0, and been featured in Financial Express, Medium, Jagran Josh, and 40+ media outlets. Selected for The Residency Delta-2 cohort (youngest ever), recipient of Ramsri Goutham micro-scholarship (₹40,000), AI Grants India, and co-creation partner with Lion Circuits. 170+ documented builds spanning Arduino, Raspberry Pi, computer vision, robotics, and agentic systems.
+Lakshveer Rao (born 2018) is an 8-year-old hardware founder and maker from Hyderabad, India. At age 4, he began documenting electronics builds on YouTube ([[sig-first-yt-upload-2022]], [[sig-first-dc-motor-2022]]). By age 8, he had shipped commercial products (CircuitHeroes card game, DIY eBook), founded Projects by Laksh, demonstrated hardware to ISRO Chairman S. Somanath ([[sig-isro-meeting-2025]]), and placed in top-5 at two Lion Circuits hardware hackathons ([[sig-lion-circuits-hw1-2025]], [[sig-lion-circuits-hw2-2025]]). He operates at the intersection of hardware, AI agents, and computer vision — building assistive devices (Drishtikon Yantra), motion-control systems (MotionX), and autonomous agents (OpenClaw/ZeroClaw). National media coverage includes Financial Express ([[sig-fe-mait-agent-2026]]) and recognition from Param Foundation ([[sig-param-award-2025]]), Malpani Foundation ([[sig-malpani-grant-2025]]), and The Residency Delta-2 cohort ([[sig-delta2-residency-2025]]).
 
 ## Timeline
 
-**2018** — Born, Hyderabad, India  
-**2022-07** — [[sig-first-yt-upload-2022]] First YouTube upload (age 4): "How to Fix Drill Bits"  
-**2022-08** — [[sig-first-dc-motor-2022]] First hardware build: DC motor fan  
-**2024-03** — [[sig-first-pitch-2024]] First business pitch (DIY Cars)  
-**2024-09** — [[sig-ebook-launch-2024]] Published "The Kids Book of Creative Ideas" (100+ sales via ChhotaCreator)  
-**2024-10** — [[sig-circuitheroes-launch-2024]] CircuitHeroes card game teaser launched  
-**2024-12** — [[sig-kids-carnival-hitex-2024]] Demoed at Kids Carnival, Hitex Hyderabad  
-**2025-02** — [[sig-iit-hyd-iot-workshop-2025]] Conducted IoT session at IIT Hyderabad (Techobytes)  
-**2025-02** — [[sig-ramsri-scholarship-2025]] Ramsri Goutham micro-scholarship (₹40,000) awarded  
-**2025-02** — [[sig-sharav-medium-2025]] Featured in Medium: "India's 8-Year-Old Tech Wunderkind"  
-**2025-04** — [[sig-thub-intro-2025]] Introduced projects at T-Hub Hyderabad  
-**2025-04** — [[sig-isro-meeting-2025]] Demonstrated electronics to ISRO Chairman Shri S. Somanath  
-**2025-06** — [[sig-shark-tank-s5-2025]] Shortlisted to Level 2, Shark Tank India Season 5  
-**2025-06** — [[sig-malpani-grant-2025]] Malpani Foundation grant (₹1,00,000) for CircuitHeroes  
-**2025-06** — [[sig-iitex-2025]] Recognized at IITEX 2025, Hitex Hyderabad  
-**2025-07** — [[sig-lion-circuits-hw1-2025]] Youngest participant, Hardware Hackathon 1.0 (Lion Circuits × PCB Cupid)  
-**2025-07** — [[sig-lion-circuits-hw2-2025]] Top-5 Finalist (youngest), Hardware Hackathon 2.0  
-**2025-08** — [[sig-august-fest-speaker-2025]] Official speaker, August Fest 2025  
-**2025-08** — [[sig-spc-demo-2025]] Pitched CircuitHeroes + Drishtikon Yantra at South Park Commons, Bangalore  
-**2025-08** — [[sig-vibehack-emergent-2025]] Finalist, VibeHack by Emergent  
-**2025-08** — [[sig-isf-junicorns-2025]] Shortlisted Level 3, ISF Junicorns  
-**2025-09** — [[sig-scaler-hackathon-2025]] Top 8 of 200 teams, Scaler Innovation Lab hackathon  
-**2025-09** — [[sig-delta2-residency-2025]] Selected for The Residency Delta-2 cohort (youngest founder ever)  
-**2025-09** — [[sig-ai-grants-india-2025]] AI Grants India recipient  
-**2025-10** — [[sig-param-award-2025]] Youngest Innovator & Special Mention, Param Foundation × Vedanta Makeathon (Drishtikon Yantra)  
-**2025-11** — [[sig-lion-circuits-cocreation-2025]] Co-creation agreement signed with Lion Circuits  
-**2026-01** — [[sig-motionx-launch-2026]] MotionX (full-body motion gaming) — Special Mention, RunTogether Hackathon by Runable  
-**2026-01** — [[sig-drishtikon-2026]] Drishtikon Yantra: Raspberry Pi assistive vision device launched  
-**2026-01** — [[sig-hardvare-system-2026]] Hardvare platform — hardware intelligence system combining physical devices + AI agents  
-**2026-02** — [[sig-gemini3-hackathon-2026]] Participated Gemini 3 Hackathon (Cerebral Valley × Google DeepMind) — demoed Kyabol AI conversational system  
-**2026-02** — [[sig-autoclaw-system-2026]] Built Claw AI system (OpenClaw + ZeroClaw autonomous grant agents)  
-**2026-03** — [[sig-fe-mait-agent-2026]] Financial Express national feature: "8-year-old created AI agent to control devices via Telegram"  
+**2022 (Age 4)**
+- July: First YouTube upload — "How to Fix Drill Bits" ([[sig-first-yt-upload-2022]])
+- August: First documented build — DC motor fan ([[sig-first-dc-motor-2022]])
+
+**2024 (Age 6)**
+- March: First business pitch on DIY Cars ([[sig-first-pitch-2024]])
+- September: Published *The Kids Book of Creative Ideas* eBook (100+ sales) ([[sig-ebook-launch-2024]])
+- October: Launched CircuitHeroes card game teaser ([[sig-circuitheroes-launch-2024]])
+- December: Demoed at Kids Carnival, Hitex Hyderabad ([[sig-kids-carnival-hitex-2024]])
+- December: Met by Inav Amsi (Param Foundation) at hackathon ([[sig-inav-param-endorsement-2024]])
+
+**2025 (Age 7)**
+- February: Panel discussion at TTOX 2024 ([[sig-ttox-panel-2025]])
+- February: Conducted IoT session at IIT Hyderabad (Techobytes) ([[sig-iit-hyd-iot-workshop-2025]])
+- February: Ramsri Goutham micro scholarship ([[sig-ramsri-scholarship-2025]])
+- February: Featured in Medium — "India's 8-Year-Old Tech Wunderkind" ([[sig-sharav-medium-2025]])
+- February: Chekodi Telugu media coverage ([[sig-chekodi-telugu-2025]])
+- April: Introduced projects at T-Hub Hyderabad ([[sig-thub-intro-2025]])
+- April: Demonstrated to ISRO Chairman Shri S. Somanath ([[sig-isro-meeting-2025]])
+- June: Received Malpani Foundation grant (₹1,00,000) for CircuitHeroes ([[sig-malpani-grant-2025]])
+- June: IITEX 2025 recognition, Hitex Hyderabad ([[sig-iitex-2025]])
+- June: Drone workshop at IIT Hyderabad ([[sig-iit-hyd-drone-workshop-2025]])
+- June: Shark Tank India S5 — Level 2 shortlist ([[sig-shark-tank-s5-2025]])
+- June: Ramsri Goutham ₹40,000 creator scholarship ([[sig-ramsri-microscholarship-2025]])
+- July: Hardware Hackathon 1.0 (Lion Circuits × PCB Cupid) — youngest participant, hydration assistant demo ([[sig-lion-circuits-hw1-2025]])
+- July: Hardware Hackathon 2.0 — Top-5 finalist, youngest participant ([[sig-lion-circuits-hw2-2025]])
+- August: Official speaker at August Fest 2025 ([[sig-august-fest-speaker-2025]], [[sig-august-fest-panel-yt-2025]])
+- August: Demoed CircuitHeroes and Drishtikon Yantra at South Park Commons, Bangalore ([[sig-spc-demo-2025]])
+- August: VibeHack by Emergent — Finalist ([[sig-vibehack-emergent-2025]])
+- August: ISF Junicorns — Level 3 shortlist ([[sig-isf-junicorns-2025]])
+- September: Top 8 of 200 teams at Scaler Innovation Lab hackathon ([[sig-scaler-hackathon-2025]])
+- September: Beats in Brief feature — "India's youngest hardware startup founder" ([[sig-beats-in-brief-2025]])
+- September: Selected for The Residency Delta-2 cohort — youngest founder ever ([[sig-delta2-residency-2025]])
+- September: AI Grants India — grant recipient ([[sig-ai-grants-india-2025]])
+- November: Lion Circuits co-creation agreement signed ([[sig-lion-circuits-cocreation-2025]])
+- December: YouTube channel reaches 170+ documented projects ([[sig-yt-170-projects-2025]])
+
+**2026 (Age 8)**
+- January: Built Drishtikon Yantra (Raspberry Pi wearable assistive vision device) — Special Mention at Param × Vedanta Makeathon ([[sig-param-award-2025]], [[sig-drishtikon-2026]])
+- January: Built MotionX (full-body motion-control gaming) at RunTogether Hackathon — Special Mention ([[sig-motionx-launch-2026]])
+- January: Runable HQ tweet: "An 8-year-old showed up and built" ([[sig-runable-runhq-tweet-2026]])
+- February: Gemini 3 Hackathon (Cerebral Valley × Google DeepMind) — demoed Kyabol AI system ([[sig-gemini3-hackathon-2026]])
+- February: Demonstrated projects to Shri S. Somanath (former ISRO Chief) on video ([[sig-isro-somanath-yt-2026]])
+- February: Sravya interview on Facebook ([[sig-sravya-interview-2026]])
+- February: Demonstrated to His Holiness Sri Sri Brahmananda Bharati Swamiji ([[sig-brahmananda-swamiji-demo-2026]])
+- February: Received blessings from His Holiness Sri Sri Shankara Bharathi Mahaswamiji ([[sig-shankara-bharathi-blessings-2026]])
+- March: Financial Express national feature — "8-year-old who created AI agent to control devices via Telegram" ([[sig-fe-mait-agent-2026]])
+- March: StartupPedia feature — AI agent controlling ESP32 hardware ([[sig-startuppedia-2026]])
+- March: Multiple YouTube shorts documenting AI agent + hardware builds ([[sig-yt-short-telegram-2026]], [[sig-yt-short-2-2026]], [[sig-yt-full-2026]])
 
 ## The Arc
 
-**Phase 1: Curiosity (2022, Age 4)**  
-Lakshveer's public journey began with mechanical fixes — drill bits, DC motors. His father documented these on YouTube (@ProjectsByLaksh), establishing early "build in public" muscle. No formal products. Pure tinkering.
+**Phase 1: Building in Public (2022–2024)**  
+Age 4–6. Lakshveer began as a YouTube documenter of simple electronics builds — drill bits, DC motors, fans. Channel: Projects by Laksh. Father Venkatesh (CaptVenk) documented early journey. Transitioned from viewer to maker. No formal schooling constraints mentioned. First public pitch at age 6 ([[sig-first-pitch-2024]]).
 
-**Phase 2: Teaching (2024–2025, Age 6–7)**  
-Shift from maker to educator. CircuitHeroes card game conceptualized as learning tool for electronics components. eBook published. IoT sessions at IIT Hyderabad. Youngest to teach at premier institutions. Revenue generation begins (300+ CircuitHeroes decks, 100+ eBooks).
+**Phase 2: Product Shipping (2024–2025)**  
+Age 6–7. Shipped two commercial products: *The Kids Book of Creative Ideas* eBook (100+ sales, ChhotaCreator.com) and CircuitHeroes card game (300+ decks sold, India's youngest card game designer). First institutional recognition: Param Foundation hackathon ([[sig-inav-param-endorsement-2024]]). Media begins: Medium, Chekodi Telugu press. Public speaking expands: IIT Hyderabad (IoT session), T-Hub, TTOX panel. ISRO Chairman S. Somanath meeting marks institutional validation ([[sig-isro-meeting-2025]]).
 
-**Phase 3: Building Products (2025–2026, Age 7–8)**  
-Hardware startups formalized. Drishtikon Yantra (assistive tech), MotionX (computer vision gaming), Hardvare (AI + hardware platform) launched. Co-creation agreement with Lion Circuits. Grant funding secured (Malpani ₹1L, AI Grants India, Ramsri ₹40k). Media coverage escalates (Financial Express, Medium, Jagran Josh, 40+ outlets). Selected for institutional accelerators (The Residency Delta-2, South Park Commons demo day).
+**Phase 3: Hardware Acceleration (2025)**  
+Age 7. Entered competitive hardware: Lion Circuits Hardware Hackathon 1.0 (youngest participant, hydration assistant) and 2.0 (Top-5 finalist). Signed Lion Circuits co-creation agreement. Malpani Foundation ₹1,00,000 grant ([[sig-malpani-grant-2025]]). Ramsri Goutham ₹40,000 creator scholarship ([[sig-ramsri-microscholarship-2025]]). Selected for The Residency Delta-2 — youngest founder in cohort history ([[sig-delta2-residency-2025]]). Shark Tank India S5 Level 2, ISF Junicorns Level 3. National press: Beats in Brief, Jagran Josh, Financial Express (Scaler fest coverage).
 
-**Phase 4: AI Agents (2026, Age 8)**  
-Pivot to agentic systems. Claw (OpenClaw/ZeroClaw) autonomous grant agents. Telegram-based AI controlling ESP32 hardware. Kyabol conversational AI. Reddit discussions label him part of "AI kids and vibe-coding prodigies" wave. 170+ documented projects spanning Arduino, Raspberry Pi, computer vision, robotics, ML.
+**Phase 4: AI + Vision Systems (2025–2026)**  
+Age 7–8. Shifted to computer vision and AI agents. Built Drishtikon Yantra (Raspberry Pi wearable assistive vision for visually impaired, Param × Vedanta Makeathon Special Mention). Built MotionX (full-body motion-control gaming, RunTogether Hackathon Special Mention). Built Hardvare (hardware intelligence platform). Built OpenClaw/ZeroClaw (autonomous grant agent system). Gemini 3 Hackathon entry with Kyabol AI conversational system. AI Grants India recipient. Financial Express national feature on AI agent controlling ESP32 via Telegram ([[sig-fe-mait-agent-2026]]). Reddit discussions on r/IndiaTech and r/india ([[sig-reddit-indiatech-2026]], [[sig-reddit-india-2026]]). YouTube channel: 170+ documented projects.
 
-**Signal Density:** Age 4–6 = exploration. Age 6–7 = validation (grants, hackathons). Age 8 = institutional recognition (ISRO, IIT, T-Hub, national press). Trajectory = maker → educator → founder → AI infrastructure builder.
+**Current State (2026)**  
+Age 8. National media presence: Financial Express, StartupPedia, Runtime Magazine (2× coverage), Maverick News. Social proof: 40+ builder endorsements (documented in signals). Hardware co-creation deal with Lion Circuits. Multiple grant/scholarship wins. Active in Bangalore (South Park Commons), Hyderabad (T-Hub, IIT-H, Hitex), and national hackathon circuit. Building at intersection of hardware, AI agents, computer vision. Recognized by ISRO Chairman, Param Foundation leadership, Malpani Foundation, angel investors (Ramsri Goutham, Dr. Aniruddha Malpani).
 
 ## By the Numbers
 
-- **Age:** 8 years old (as of 2026)  
-- **YouTube:** 170+ documented projects (@ProjectsByLaksh)  
-- **Products Shipped:** CircuitHeroes (300+ decks), eBook (100+ sales), Drishtikon Yantra, MotionX, Hardvare platform  
-- **Grants/Funding:** ₹1,40,000+ (Malpani ₹1L, Ramsri ₹40k, AI Grants India)  
-- **Hackathons:** Top-5 Finalist (HW Hackathon 2.0), Top-8 of 200 teams (Scaler), VibeHack Finalist, RunTogether Special Mention  
-- **Media Outlets:** 40+ (Financial Express, Medium, Jagran Josh, Beats in Brief, StartupPedia, Chekodi, Runtime Magazine, Maverick News)  
-- **Institutional Demos:** ISRO Chairman S. Somanath, IIT Hyderabad (2x), T-Hub, South Park Commons, Param Foundation  
-- **Accelerators:** The Residency Delta-2 (youngest ever), ISF Junicorns Level 3  
-- **Endorsements:** 50+ documented (investors, founders, educators, engineers)  
-- **Speaking Engagements:** August Fest 2025, TTOX 2024 panel, IIT Hyderabad Techobytes, Hitex conferences (3x)  
-- **Co-Creation Agreements:** Lion Circuits (PCB manufacturing)  
-- **First YouTube Upload:** 2022-07 (age 4)  
-- **First Business Pitch:** 2024-03 (age 6)  
-- **First Grant:** 2025-06 (Malpani Foundation, age 7)  
+- **Age started:** 4 years old (2022)
+- **Current age:** 8 years old (2026)
+- **YouTube projects documented:** 170+ ([[sig-yt-170-projects-2025]])
+- **Products shipped:** 2 commercial (CircuitHeroes card game, DIY eBook)
+- **Card game decks sold:** 300+ ([[sig-malpani-grant-2025]])
+- **Ebook sales:** 100+ ([[sig-ebook-launch-2024]])
+- **Grants/scholarships received:** 3 (Malpani ₹1,00,000, Ramsri ₹40,000, AI Grants India)
+- **Hackathon placements:** 4 documented (Lion Circuits HW1 youngest, HW2 Top-5, Param Special Mention, RunTogether Special Mention)
+- **IIT sessions delivered:** 2 (IIT Hyderabad IoT, IIT Hyderabad drones)
+- **National press features:** 6+ (Financial Express 2×, Jagran Josh, Beats in Brief, StartupPedia, Chekodi)
+- **Conference talks:** 10+ (TTOX, August Fest, T-Hub, South Park Commons, IITEX, Scaler, VibeHack, Gemini 3)
+- **Builder endorsements:** 40+ (documented in signals)
+- **Youngest records:** Card game designer (India), Hardware Hackathon participant (Lion Circuits 1.0/2.0), The Residency founder (Delta-2 cohort)
 
 ## Signals
 
-### **Core Identity Signals**
-[[sig-first-yt-upload-2022]] [[sig-first-dc-motor-2022]] [[sig-first-pitch-2024]] [[sig-circuitheroes-launch-2024]] [[sig-ebook-launch-2024]] [[sig-yt-170-projects-2025]] [[sig-youngest-founder-room-yt-2025]]
+### Early (2022–2023)
+[[sig-first-yt-upload-2022]] · [[sig-first-dc-motor-2022]]
 
-### **Product Launches**
-[[sig-circuitheroes-launch-2024]] [[sig-ebook-launch-2024]] [[sig-drishtikon-2026]] [[sig-motionx-launch-2026]] [[sig-hardvare-system-2026]] [[sig-autoclaw-system-2026]]
+### Product Era (2024)
+[[sig-first-pitch-2024]] · [[sig-circuitheroes-launch-2024]] · [[sig-ebook-launch-2024]] · [[sig-kids-carnival-hitex-2024]] · [[sig-inav-param-endorsement-2024]]
 
-### **Institutional Recognition**
-[[sig-isro-meeting-2025]] [[sig-iit-hyd-iot-workshop-2025]] [[sig-iit-hyd-drone-workshop-2025]] [[sig-thub-intro-2025]] [[sig-spc-demo-2025]]
+### Institutional Validation (2025)
+[[sig-ttox-panel-2025]] · [[sig-iit-hyd-iot-workshop-2025]] · [[sig-ramsri-scholarship-2025]] · [[sig-sharav-medium-2025]] · [[sig-chekodi-telugu-2025]] · [[sig-thub-intro-2025]] · [[sig-isro-meeting-2025]] · [[sig-malpani-grant-2025]] · [[sig-iitex-2025]] · [[sig-iit-hyd-drone-workshop-2025]] · [[sig-lion-circuits-hw1-2025]] · [[sig-lion-circuits-hw2-2025]] · [[sig-august-fest-speaker-2025]] · [[sig-august-fest-panel-yt-2025]] · [[sig-spc-demo-2025]] · [[sig-vibehack-emergent-2025]] · [[sig-polaris-vibehack-2025]] · [[sig-scaler-hackathon-2025]] · [[sig-jagran-josh-yugaantar-2025]] · [[sig-fe-scaler-2025]] · [[sig-delta2-residency-2025]] · [[sig-shark-tank-s5-2025]] · [[sig-isf-junicorns-2025]] · [[sig-ai-grants-india-2025]] · [[sig-ramsri-microscholarship-2025]] · [[sig-beats-in-brief-2025]] · [[sig-youngest-founder-room-yt-2025]] · [[sig-lion-circuits-cocreation-2025]] · [[sig-yt-170-projects-2025]]
 
-### **Grants & Funding**
-[[sig-malpani-grant-2025]] [[sig-ramsri-scholarship-2025]] [[sig-ai-grants-india-2025]] [[sig-ramsri-microscholarship-2025]]
+### AI + Vision Systems (2025–2026)
+[[sig-param-award-2025]] · [[sig-drishtikon-2026]] · [[sig-motionx-launch-2026]] · [[sig-runable-runhq-tweet-2026]] · [[sig-scaletogether-tweet-2026]] · [[sig-gemini3-hackathon-2026]] · [[sig-isro-somanath-yt-2026]] · [[sig-sravya-interview-2026]] · [[sig-fe-mait-agent-2026]] · [[sig-startuppedia-2026]] · [[sig-startuppedia-instagram-2026]] · [[sig-startupnewsfyi-ig-2026]] · [[sig-reddit-indiatech-2026]] · [[sig-reddit-india-2026]] · [[sig-yt-short-telegram-2026]] · [[sig-yt-short-2-2026]] · [[sig-yt-full-2026]] · [[sig-runtime-magazine-2026]] · [[sig-maverick-news-2026]] · [[sig-hardvare-system-2026]] · [[sig-openclaw-agent-2026]] · [[sig-autoclaw-system-2026]]
 
-### **Hackathons & Competitions**
-[[sig-lion-circuits-hw1-2025]] [[sig-lion-circuits-hw2-2025]] [[sig-scaler-hackathon-2025]] [[sig-vibehack-emergent-2025]] [[sig-param-award-2025]] [[sig-motionx-launch-2026]] [[sig-gemini3-hackathon-2026]]
+### Media & Brand (2025–2026)
+[[sig-roohi-builder-spotlight-2025]] · [[sig-shubham-kukreti-localhost-2025]] · [[sig-think-tac-feature-2025]] · [[sig-thinktac-yt-2025]] · [[sig-heyacpk-science-expo-2026]] · [[sig-aadityayuvraj-residency-2026]] · [[sig-rediminds-linkedin-2026]] · [[sig-somi-ai-linkedin-2026]] · [[sig-dileep-gupta-linkedin-2026]] · [[sig-startupg-linkedin-2026]] · [[sig-ai-collective-pitch-2025]] · [[sig-malpani-tweet-endorsement]] · [[sig-adilmania-tweet-2026]] · [[sig-brahmananda-swamiji-demo-2026]] · [[sig-shankara-bharathi-blessings-2026]] · [[sig-film-crew-interview-2025]] · [[sig-manchester-school-principal-2025]] · [[sig-beatsinbrief-tweet-2026]]
 
-### **Media Coverage (National)**
-[[sig-fe-mait-agent-2026]] [[sig-sharav-medium-2025]] [[sig-jagran-josh-yugaantar-2025]] [[sig-fe-scaler-2025]] [[sig-chekodi-telugu-2025]] [[sig-beats-in-brief-2025]] [[sig-startuppedia-2026]]
-
-### **Media Coverage (Regional/Niche)**
-[[sig-runtime-magazine-2026]] [[sig-maverick-news-2026]] [[sig-startupnewsfyi-ig-2026]] [[sig-reddit-indiatech-2026]] [[sig-reddit-india-2026]]
-
-### **Accelerators & Programs**
-[[sig-delta2-residency-2025]] [[sig-shark-tank-s5-2025]] [[sig-isf-junicorns-2025]]
-
-### **Speaking Engagements**
-[[sig-august-fest-speaker-2025]] [[sig-august-fest-panel-yt-2025]] [[sig-ttox-panel-2025]] [[sig-iitex-2025]] [[sig-ai-collective-pitch-2025]]
-
-### **Partnerships**
-[[sig-lion-circuits-cocreation-2025]]
-
-### **Endorsements (High-Profile)**
-[[sig-inav-param-endorsement-2024]] [[sig-roohi-builder-spotlight-2025]] [[sig-runable-runhq-tweet-2026]] [[sig-scaletogether-tweet-2026]] [[sig-malpani-tweet-endorsement]] [[sig-dileep-gupta-linkedin-2026]]
-
-### **YouTube Content**
-[[sig-thinktac-yt-2025]] [[sig-robu-founder-testimonial-2025]] [[sig-aerolyte-mentorship-2025]] [[sig-yt-short-telegram-2026]] [[sig-yt-full-2026]] [[sig-isro-somanath-yt-2026]] [[sig-brahmananda-swamiji-demo-2026]] [[sig-shankara-bharathi-blessings-2026]] [[sig-film-crew-interview-2025]] [[sig-manchester-school-principal-2025]]
-
-### **Social Proof (Builders)**
-[[sig-shantanugoel-circuitheroes-buy-2025]] [[sig-karthikranga-mentorship-2025]] [[sig-itsumeshk-runtogether-2026]] [[sig-eshaanpawan-runtogether-2026]] [[sig-muralisrinivasa-hwhackathon-2025]] [[sig-muaddibayasser-hwhackathon-2025]] [[sig-harishashok-hacker-house-2025]]
-
-### **Social Proof (Educators/Investors)**
-[[sig-codidactic-weekly-feature-2025]] [[sig-nandinichilkam-educator-voice-2025]] [[sig-premmirth-ebook-review-2025]] [[sig-bestaprem-endorsement]] [[sig-ankurpandey-endorsement]]
-
-### **Social Proof (Industry)**
-[[sig-abhishekr-endorsement]] [[sig-ganeshsonawane-endorsement]] [[sig-aakash-dudechillkar-endorsement]] [[sig-darshanSavaliya-endorsement]] [[sig-ravirangan-endorsement]] [[sig-hanumaditya-endorsement]] [[sig-msmihir-endorsement]] [[sig-arnavbansal-endorsement]] [[sig-alyshal-endorsement]] [[sig-vishaltejwani-endorsement]] [[sig-nimishac-endorsement]] [[sig-adityag-endorsement]] [[sig-kunal-gupta-endorsement]] [[sig-kirankumar-endorsement]] [[sig-ramavenu-endorsement]] [[sig-phpandya-endorsement]] [[sig-0xbosky-endorsement]]
-
-### **Social Proof (Media/Content)**
-[[sig-raunakmahajan-endorsement]] [[sig-mehulfanawala-endorsement]] [[sig-fahdtumbi-endorsement]] [[sig-akashbnsal-endorsement]] [[sig-harshalm-endorsement]] [[sig-narrativenest-endorsement]]
-
-### **Conferences/Events**
-[[sig-kids-carnival-hitex-2024]] [[sig-polaris-vibehack-2025]] [[sig-yugantar-captvenk-2025]] [[sig-heyacpk-science-expo-2026]]
-
-### **LinkedIn Features**
-[[sig-rediminds-linkedin-2026]] [[sig-somi-ai-linkedin-2026]] [[sig-startupg-linkedin-2026]]
-
-### **Twitter/X Activity**
-[[sig-captvenk-yugantar-isf-tweets]] [[sig-openclaw-agent-2026]] [[sig-adilmania-tweet-2026]] [[sig-aadityayuvraj-residency-2026]] [[sig-beatsinbrief-tweet-2026]]
-
-### **Instagram Coverage**
-[[sig-startuppedia-instagram-2026]] [[sig-sravya-interview-2026]]
+### Community Endorsements (2025–2026)
+[[sig-robu-founder-testimonial-2025]] · [[sig-aerolyte-mentorship-2025]] · [[sig-shantanugoel-circuitheroes-buy-2025]] · [[sig-karthikranga-mentorship-2025]] · [[sig-itsumeshk-runtogether-2026]] · [[sig-eshaanpawan-runtogether-2026]] · [[sig-muralisrinivasa-hwhackathon-2025]] · [[sig-muaddibayasser-hwhackathon-2025]] · [[sig-codidactic-weekly-feature-2025]] · [[sig-nandinichilkam-educator-voice-2025]] · [[sig-premmirth-ebook-review-2025]] · [[sig-bestaprem-endorsement]] · [[sig-abhishekr-endorsement]] · [[sig-ganeshsonawane-endorsement]] · [[sig-aakash-dudechillkar-endorsement]] · [[sig-darshanSavaliya-endorsement]] · [[sig-ravirangan-endorsement]] · [[sig-hanumaditya-endorsement]] · [[sig-msmihir-endorsement]] · [[sig-harishashok-hacker-house-2025]] · [[sig-arnavbansal-endorsement]] · [[sig-joedaniel-endorsement]] · [[sig-namanc-endorsement]] · [[sig-alyshal-endorsement]] · [[sig-vishaltejwani-endorsement]] · [[sig-nimishac-endorsement]] · [[sig-adityag-endorsement]] · [[sig-reddy2go-endorsement]] · [[sig-rohitawasthi-endorsement]] · [[sig-raunakmahajan-endorsement]] · [[sig-vivekshukla-endorsement]] · [[sig-mehulfanawala-endorsement]] · [[sig-fahdtumbi-endorsement]] · [[sig-ankurpandey-endorsement]] · [[sig-amitsethi-endorsement]] · [[sig-kunalgupta-endorsement]] · [[sig-kirankumar-endorsement]] · [[sig-ramavenu-endorsement]] · [[sig-adityavellanki-endorsement]] · [[sig-phpandya-endorsement]] · [[sig-0xbosky-endorsement]] · [[sig-dotslash-tx-endorsement]] · [[sig-ronaldwilson-endorsement]] · [[sig-akashbnsal-endorsement]] · [[sig-khushhi-endorsement]] · [[sig-harshalm-endorsement]] · [[sig-inav65-endorsement]] · [[sig-narrativenest-endorsement]] · [[sig-captvenk-yugantar-isf-tweets]] · [[sig-yugantar-captvenk-2025]]
 
 ## Related Articles
 
-[[Projects by Laksh]] — Parent organization  
-[[CircuitHeroes]] — Educational card game product  
-[[Drishtikon Yantra]] — Assistive vision device  
-[[MotionX]] — Motion-control gaming system  
-[[Hardvare]] — Hardware intelligence platform  
-[[Claw AI]] — Autonomous grant agent system (OpenClaw/ZeroClaw)  
-[[The Residency Delta-2]] — Accelerator cohort  
-[[Malpani Foundation]] — Grant provider  
-[[Lion Circuits]] — PCB manufacturing partner  
-[[ISRO]] — S. Somanath demo  
-[[IIT Hyderabad]] — Teaching engagements  
-[[T-Hub]] — Startup incubator presentation  
-[[Param Foundation]] — Award & recognition  
-[[AI Grants India]] — Grant program  
-[[South Park Commons]] — Demo day participant  
+[[Projects by Laksh]] · [[CircuitHeroes]] · [[Drishtikon Yantra]] · [[MotionX]] · [[OpenClaw]] · [[Hardvare]] · [[CaptVenk]] · [[The Residency]] · [[Lion Circuits]] · [[Param Foundation]] · [[Malpani Foundation]] · [[IIT Hyderabad]] · [[T-Hub]] · [[ISRO]] · [[South Park Commons]] · [[AI Grants India]]
 
 ---
-
-*Compiled: 2026-04-06T17:08:40.657Z*  
-*Agent Note: This is a master chronological record. All claims cite signal IDs. Update as new signals emerge.*
+*Compiled: 2026-04-06T17:22:56.072Z*

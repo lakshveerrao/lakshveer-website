@@ -1,0 +1,3779 @@
+{
+  "nodes": [
+    {
+      "id": "lakshveer",
+      "label": "Lakshveer",
+      "type": "person",
+      "wikiPath": "people/lakshveer.md",
+      "signalIds": [
+        "sig-first-yt-upload-2022",
+        "sig-first-dc-motor-2022",
+        "sig-first-pitch-2024",
+        "sig-circuitheroes-launch-2024",
+        "sig-ebook-launch-2024",
+        "sig-kids-carnival-hitex-2024",
+        "sig-inav-param-endorsement-2024",
+        "sig-ttox-panel-2025",
+        "sig-iit-hyd-iot-workshop-2025",
+        "sig-ramsri-scholarship-2025",
+        "sig-sharav-medium-2025",
+        "sig-chekodi-telugu-2025",
+        "sig-thub-intro-2025",
+        "sig-isro-meeting-2025",
+        "sig-iitex-2025",
+        "sig-iit-hyd-drone-workshop-2025",
+        "sig-malpani-grant-2025",
+        "sig-lion-circuits-hw1-2025",
+        "sig-roohi-builder-spotlight-2025",
+        "sig-august-fest-speaker-2025",
+        "sig-august-fest-panel-yt-2025",
+        "sig-spc-demo-2025",
+        "sig-vibehack-emergent-2025",
+        "sig-polaris-vibehack-2025",
+        "sig-beats-in-brief-2025",
+        "sig-scaler-hackathon-2025",
+        "sig-jagran-josh-yugaantar-2025",
+        "sig-fe-scaler-2025",
+        "sig-delta2-residency-2025",
+        "sig-shubham-kukreti-localhost-2025",
+        "sig-param-award-2025",
+        "sig-think-tac-feature-2025",
+        "sig-youngest-founder-room-yt-2025",
+        "sig-lion-circuits-hw2-2025",
+        "sig-runable-runhq-tweet-2026",
+        "sig-scaletogether-tweet-2026",
+        "sig-heyacpk-science-expo-2026",
+        "sig-aadityayuvraj-residency-2026",
+        "sig-gemini3-hackathon-2026",
+        "sig-isro-somanath-yt-2026",
+        "sig-sravya-interview-2026",
+        "sig-fe-mait-agent-2026",
+        "sig-startuppedia-2026",
+        "sig-startuppedia-instagram-2026",
+        "sig-startupnewsfyi-ig-2026",
+        "sig-rediminds-linkedin-2026",
+        "sig-somi-ai-linkedin-2026",
+        "sig-dileep-gupta-linkedin-2026",
+        "sig-reddit-indiatech-2026",
+        "sig-reddit-india-2026",
+        "sig-yt-short-telegram-2026",
+        "sig-yt-short-2-2026",
+        "sig-yt-full-2026",
+        "sig-startupg-linkedin-2026",
+        "sig-ai-collective-pitch-2025",
+        "sig-shark-tank-s5-2025",
+        "sig-isf-junicorns-2025",
+        "sig-ai-grants-india-2025",
+        "sig-ramsri-microscholarship-2025",
+        "sig-runtime-magazine-2026",
+        "sig-maverick-news-2026",
+        "sig-thinktac-yt-2025",
+        "sig-yugantar-captvenk-2025",
+        "sig-lion-circuits-cocreation-2025",
+        "sig-malpani-tweet-endorsement",
+        "sig-adilmania-tweet-2026",
+        "sig-robu-founder-testimonial-2025",
+        "sig-aerolyte-mentorship-2025",
+        "sig-hardvare-system-2026",
+        "sig-openclaw-agent-2026",
+        "sig-autoclaw-system-2026",
+        "sig-shantanugoel-circuitheroes-buy-2025",
+        "sig-karthikranga-mentorship-2025",
+        "sig-itsumeshk-runtogether-2026",
+        "sig-eshaanpawan-runtogether-2026",
+        "sig-muralisrinivasa-hwhackathon-2025",
+        "sig-muaddibayasser-hwhackathon-2025",
+        "sig-codidactic-weekly-feature-2025",
+        "sig-nandinichilkam-educator-voice-2025",
+        "sig-premmirth-ebook-review-2025",
+        "sig-brahmananda-swamiji-demo-2026",
+        "sig-shankara-bharathi-blessings-2026",
+        "sig-film-crew-interview-2025",
+        "sig-manchester-school-principal-2025",
+        "sig-beatsinbrief-tweet-2026",
+        "sig-bestaprem-endorsement",
+        "sig-abhishekr-endorsement",
+        "sig-ganeshsonawane-endorsement",
+        "sig-aakash-dudechillkar-endorsement",
+        "sig-darshanSavaliya-endorsement",
+        "sig-ravirangan-endorsement",
+        "sig-hanumaditya-endorsement",
+        "sig-msmihir-endorsement",
+        "sig-harishashok-hacker-house-2025",
+        "sig-arnavbansal-endorsement",
+        "sig-joedaniel-endorsement",
+        "sig-namanc-endorsement",
+        "sig-alyshal-endorsement",
+        "sig-vishaltejwani-endorsement",
+        "sig-nimishac-endorsement",
+        "sig-adityag-endorsement",
+        "sig-reddy2go-endorsement",
+        "sig-rohitawasthi-endorsement",
+        "sig-raunakmahajan-endorsement",
+        "sig-vivekshukla-endorsement",
+        "sig-mehulfanawala-endorsement",
+        "sig-fahdtumbi-endorsement",
+        "sig-ankurpandey-endorsement",
+        "sig-amitsethi-endorsement",
+        "sig-kunalgupta-endorsement",
+        "sig-kirankumar-endorsement",
+        "sig-ramavenu-endorsement",
+        "sig-adityavellanki-endorsement",
+        "sig-phpandya-endorsement",
+        "sig-0xbosky-endorsement",
+        "sig-dotslash-tx-endorsement",
+        "sig-ronaldwilson-endorsement",
+        "sig-akashbnsal-endorsement",
+        "sig-khushhi-endorsement",
+        "sig-harshalm-endorsement",
+        "sig-inav65-endorsement",
+        "sig-narrativenest-endorsement",
+        "sig-captvenk-yugantar-isf-tweets"
+      ],
+      "degree": 78,
+      "community": 0
+    },
+    {
+      "id": "s-somanath",
+      "label": "S. Somanath",
+      "type": "person",
+      "wikiPath": "people/s-somanath.md",
+      "signalIds": [
+        "sig-isro-meeting-2025",
+        "sig-isro-somanath-yt-2026"
+      ],
+      "degree": 0,
+      "community": 1
+    },
+    {
+      "id": "projects-by-laksh",
+      "label": "Projects by Laksh",
+      "type": "org",
+      "wikiPath": "orgs/projects-by-laksh.md",
+      "signalIds": [
+        "sig-first-yt-upload-2022",
+        "sig-first-yt-upload-2022",
+        "sig-first-dc-motor-2022",
+        "sig-first-pitch-2024",
+        "sig-circuitheroes-launch-2024",
+        "sig-ebook-launch-2024",
+        "sig-youngest-founder-room-yt-2025",
+        "sig-yt-170-projects-2025",
+        "sig-yt-short-telegram-2026",
+        "sig-yt-short-2-2026",
+        "sig-yt-full-2026"
+      ],
+      "degree": 17,
+      "community": 0
+    },
+    {
+      "id": "chhotacreator",
+      "label": "ChhotaCreator",
+      "type": "org",
+      "wikiPath": "orgs/chhotacreator.md",
+      "signalIds": [
+        "sig-ebook-launch-2024",
+        "sig-ebook-launch-2024"
+      ],
+      "degree": 6,
+      "community": 0
+    },
+    {
+      "id": "hitex",
+      "label": "Hitex",
+      "type": "org",
+      "wikiPath": "orgs/hitex.md",
+      "signalIds": [
+        "sig-kids-carnival-hitex-2024",
+        "sig-kids-carnival-hitex-2024",
+        "sig-iitex-2025",
+        "sig-iitex-2025"
+      ],
+      "degree": 5,
+      "community": 0
+    },
+    {
+      "id": "param-foundation",
+      "label": "Param Foundation",
+      "type": "org",
+      "wikiPath": "orgs/param-foundation.md",
+      "signalIds": [
+        "sig-inav-param-endorsement-2024",
+        "sig-inav-param-endorsement-2024",
+        "sig-param-award-2025",
+        "sig-param-award-2025",
+        "sig-drishtikon-2026",
+        "sig-drishtikon-2026",
+        "sig-inav65-endorsement",
+        "sig-inav65-endorsement"
+      ],
+      "degree": 11,
+      "community": 0
+    },
+    {
+      "id": "iit-hyderabad",
+      "label": "IIT Hyderabad",
+      "type": "org",
+      "wikiPath": "orgs/iit-hyderabad.md",
+      "signalIds": [
+        "sig-iit-hyd-iot-workshop-2025",
+        "sig-iit-hyd-iot-workshop-2025",
+        "sig-iit-hyd-drone-workshop-2025",
+        "sig-iit-hyd-drone-workshop-2025"
+      ],
+      "degree": 7,
+      "community": 0
+    },
+    {
+      "id": "chekodi",
+      "label": "Chekodi",
+      "type": "org",
+      "wikiPath": "orgs/chekodi.md",
+      "signalIds": [
+        "sig-chekodi-telugu-2025",
+        "sig-chekodi-telugu-2025"
+      ],
+      "degree": 4,
+      "community": 0
+    },
+    {
+      "id": "t-hub",
+      "label": "T-Hub",
+      "type": "org",
+      "wikiPath": "orgs/t-hub.md",
+      "signalIds": [
+        "sig-thub-intro-2025",
+        "sig-thub-intro-2025"
+      ],
+      "degree": 3,
+      "community": 0
+    },
+    {
+      "id": "isro",
+      "label": "ISRO",
+      "type": "org",
+      "wikiPath": "orgs/isro.md",
+      "signalIds": [
+        "sig-isro-meeting-2025",
+        "sig-isro-meeting-2025",
+        "sig-isro-somanath-yt-2026",
+        "sig-isro-somanath-yt-2026"
+      ],
+      "degree": 6,
+      "community": 0
+    },
+    {
+      "id": "malpani-foundation",
+      "label": "Malpani Foundation",
+      "type": "org",
+      "wikiPath": "orgs/malpani-foundation.md",
+      "signalIds": [
+        "sig-malpani-grant-2025",
+        "sig-malpani-grant-2025"
+      ],
+      "degree": 6,
+      "community": 0
+    },
+    {
+      "id": "lion-circuits",
+      "label": "Lion Circuits",
+      "type": "org",
+      "wikiPath": "orgs/lion-circuits.md",
+      "signalIds": [
+        "sig-lion-circuits-hw1-2025",
+        "sig-lion-circuits-hw1-2025",
+        "sig-lion-circuits-hw2-2025",
+        "sig-lion-circuits-hw2-2025",
+        "sig-lion-circuits-cocreation-2025",
+        "sig-lion-circuits-cocreation-2025",
+        "sig-muralisrinivasa-hwhackathon-2025",
+        "sig-muralisrinivasa-hwhackathon-2025",
+        "sig-muaddibayasser-hwhackathon-2025",
+        "sig-muaddibayasser-hwhackathon-2025"
+      ],
+      "degree": 9,
+      "community": 0
+    },
+    {
+      "id": "pcb-cupid",
+      "label": "PCB Cupid",
+      "type": "org",
+      "wikiPath": "orgs/pcb-cupid.md",
+      "signalIds": [
+        "sig-lion-circuits-hw1-2025",
+        "sig-lion-circuits-hw1-2025",
+        "sig-lion-circuits-hw2-2025",
+        "sig-lion-circuits-hw2-2025"
+      ],
+      "degree": 5,
+      "community": 0
+    },
+    {
+      "id": "august-fest",
+      "label": "August Fest",
+      "type": "org",
+      "wikiPath": "orgs/august-fest.md",
+      "signalIds": [
+        "sig-august-fest-speaker-2025",
+        "sig-august-fest-speaker-2025",
+        "sig-august-fest-panel-yt-2025",
+        "sig-august-fest-panel-yt-2025"
+      ],
+      "degree": 5,
+      "community": 0
+    },
+    {
+      "id": "south-park-commons",
+      "label": "South Park Commons",
+      "type": "org",
+      "wikiPath": "orgs/south-park-commons.md",
+      "signalIds": [
+        "sig-spc-demo-2025",
+        "sig-spc-demo-2025"
+      ],
+      "degree": 6,
+      "community": 0
+    },
+    {
+      "id": "emergent",
+      "label": "Emergent",
+      "type": "org",
+      "wikiPath": "orgs/emergent.md",
+      "signalIds": [
+        "sig-vibehack-emergent-2025",
+        "sig-vibehack-emergent-2025"
+      ],
+      "degree": 3,
+      "community": 0
+    },
+    {
+      "id": "polaris-school-of-technology",
+      "label": "Polaris School of Technology",
+      "type": "org",
+      "wikiPath": "orgs/polaris-school-of-technology.md",
+      "signalIds": [
+        "sig-polaris-vibehack-2025",
+        "sig-polaris-vibehack-2025"
+      ],
+      "degree": 5,
+      "community": 0
+    },
+    {
+      "id": "beats-in-brief",
+      "label": "Beats in Brief",
+      "type": "org",
+      "wikiPath": "orgs/beats-in-brief.md",
+      "signalIds": [
+        "sig-beats-in-brief-2025",
+        "sig-beats-in-brief-2025",
+        "sig-beatsinbrief-tweet-2026",
+        "sig-beatsinbrief-tweet-2026"
+      ],
+      "degree": 8,
+      "community": 0
+    },
+    {
+      "id": "scaler-innovation-lab",
+      "label": "Scaler Innovation Lab",
+      "type": "org",
+      "wikiPath": "orgs/scaler-innovation-lab.md",
+      "signalIds": [
+        "sig-scaler-hackathon-2025",
+        "sig-jagran-josh-yugaantar-2025",
+        "sig-fe-scaler-2025"
+      ],
+      "degree": 7,
+      "community": 0
+    },
+    {
+      "id": "jagran-josh",
+      "label": "Jagran Josh",
+      "type": "org",
+      "wikiPath": "orgs/jagran-josh.md",
+      "signalIds": [
+        "sig-jagran-josh-yugaantar-2025",
+        "sig-jagran-josh-yugaantar-2025"
+      ],
+      "degree": 4,
+      "community": 0
+    },
+    {
+      "id": "financial-express",
+      "label": "Financial Express",
+      "type": "org",
+      "wikiPath": "orgs/financial-express.md",
+      "signalIds": [
+        "sig-fe-scaler-2025",
+        "sig-fe-scaler-2025",
+        "sig-fe-mait-agent-2026",
+        "sig-fe-mait-agent-2026"
+      ],
+      "degree": 8,
+      "community": 0
+    },
+    {
+      "id": "the-residency",
+      "label": "The Residency",
+      "type": "org",
+      "wikiPath": "orgs/the-residency.md",
+      "signalIds": [
+        "sig-delta2-residency-2025",
+        "sig-delta2-residency-2025",
+        "sig-aadityayuvraj-residency-2026",
+        "sig-aadityayuvraj-residency-2026"
+      ],
+      "degree": 6,
+      "community": 0
+    },
+    {
+      "id": "vedanta",
+      "label": "Vedanta",
+      "type": "org",
+      "wikiPath": "orgs/vedanta.md",
+      "signalIds": [
+        "sig-param-award-2025",
+        "sig-param-award-2025",
+        "sig-brahmananda-swamiji-demo-2026"
+      ],
+      "degree": 6,
+      "community": 0
+    },
+    {
+      "id": "thinktac",
+      "label": "ThinkTac",
+      "type": "org",
+      "wikiPath": "orgs/thinktac.md",
+      "signalIds": [
+        "sig-think-tac-feature-2025",
+        "sig-think-tac-feature-2025",
+        "sig-thinktac-yt-2025",
+        "sig-thinktac-yt-2025"
+      ],
+      "degree": 7,
+      "community": 0
+    },
+    {
+      "id": "runable",
+      "label": "Runable",
+      "type": "org",
+      "wikiPath": "orgs/runable.md",
+      "signalIds": [
+        "sig-motionx-launch-2026",
+        "sig-motionx-launch-2026",
+        "sig-runable-runhq-tweet-2026",
+        "sig-runable-runhq-tweet-2026",
+        "sig-itsumeshk-runtogether-2026",
+        "sig-itsumeshk-runtogether-2026",
+        "sig-eshaanpawan-runtogether-2026",
+        "sig-eshaanpawan-runtogether-2026"
+      ],
+      "degree": 11,
+      "community": 0
+    },
+    {
+      "id": "scaletogether",
+      "label": "ScaleTogether",
+      "type": "org",
+      "wikiPath": "orgs/scaletogether.md",
+      "signalIds": [
+        "sig-scaletogether-tweet-2026",
+        "sig-scaletogether-tweet-2026"
+      ],
+      "degree": 4,
+      "community": 0
+    },
+    {
+      "id": "cerebral-valley",
+      "label": "Cerebral Valley",
+      "type": "org",
+      "wikiPath": "orgs/cerebral-valley.md",
+      "signalIds": [
+        "sig-gemini3-hackathon-2026",
+        "sig-gemini3-hackathon-2026"
+      ],
+      "degree": 6,
+      "community": 0
+    },
+    {
+      "id": "google-deepmind",
+      "label": "Google DeepMind",
+      "type": "org",
+      "wikiPath": "orgs/google-deepmind.md",
+      "signalIds": [
+        "sig-gemini3-hackathon-2026",
+        "sig-gemini3-hackathon-2026"
+      ],
+      "degree": 6,
+      "community": 0
+    },
+    {
+      "id": "startuppedia",
+      "label": "StartupPedia",
+      "type": "org",
+      "wikiPath": "orgs/startuppedia.md",
+      "signalIds": [
+        "sig-startuppedia-2026",
+        "sig-startuppedia-2026",
+        "sig-startuppedia-instagram-2026",
+        "sig-startuppedia-instagram-2026"
+      ],
+      "degree": 11,
+      "community": 0
+    },
+    {
+      "id": "startupnews-fyi",
+      "label": "StartupNews.fyi",
+      "type": "org",
+      "wikiPath": "orgs/startupnews-fyi.md",
+      "signalIds": [
+        "sig-startupnewsfyi-ig-2026",
+        "sig-startupnewsfyi-ig-2026"
+      ],
+      "degree": 4,
+      "community": 0
+    },
+    {
+      "id": "rediminds",
+      "label": "RediMinds",
+      "type": "org",
+      "wikiPath": "orgs/rediminds.md",
+      "signalIds": [
+        "sig-rediminds-linkedin-2026",
+        "sig-rediminds-linkedin-2026"
+      ],
+      "degree": 5,
+      "community": 0
+    },
+    {
+      "id": "somi-ai",
+      "label": "Somi AI",
+      "type": "org",
+      "wikiPath": "orgs/somi-ai.md",
+      "signalIds": [
+        "sig-somi-ai-linkedin-2026",
+        "sig-somi-ai-linkedin-2026"
+      ],
+      "degree": 5,
+      "community": 0
+    },
+    {
+      "id": "reddit",
+      "label": "Reddit",
+      "type": "org",
+      "wikiPath": "orgs/reddit.md",
+      "signalIds": [
+        "sig-reddit-indiatech-2026",
+        "sig-reddit-indiatech-2026",
+        "sig-reddit-india-2026",
+        "sig-reddit-india-2026"
+      ],
+      "degree": 7,
+      "community": 0
+    },
+    {
+      "id": "startupg",
+      "label": "StartupG",
+      "type": "org",
+      "wikiPath": "orgs/startupg.md",
+      "signalIds": [
+        "sig-startupg-linkedin-2026",
+        "sig-startupg-linkedin-2026"
+      ],
+      "degree": 5,
+      "community": 0
+    },
+    {
+      "id": "ai-collective-hyderabad",
+      "label": "AI Collective Hyderabad",
+      "type": "org",
+      "wikiPath": "orgs/ai-collective-hyderabad.md",
+      "signalIds": [
+        "sig-ai-collective-pitch-2025"
+      ],
+      "degree": 4,
+      "community": 0
+    },
+    {
+      "id": "shark-tank-india",
+      "label": "Shark Tank India",
+      "type": "org",
+      "wikiPath": "orgs/shark-tank-india.md",
+      "signalIds": [
+        "sig-shark-tank-s5-2025",
+        "sig-shark-tank-s5-2025"
+      ],
+      "degree": 5,
+      "community": 0
+    },
+    {
+      "id": "sony-liv",
+      "label": "Sony LIV",
+      "type": "org",
+      "wikiPath": "orgs/sony-liv.md",
+      "signalIds": [
+        "sig-shark-tank-s5-2025"
+      ],
+      "degree": 5,
+      "community": 0
+    },
+    {
+      "id": "india-startup-festival",
+      "label": "India Startup Festival",
+      "type": "org",
+      "wikiPath": "orgs/india-startup-festival.md",
+      "signalIds": [
+        "sig-isf-junicorns-2025",
+        "sig-captvenk-yugantar-isf-tweets"
+      ],
+      "degree": 6,
+      "community": 0
+    },
+    {
+      "id": "junicorns",
+      "label": "Junicorns",
+      "type": "org",
+      "wikiPath": "orgs/junicorns.md",
+      "signalIds": [
+        "sig-isf-junicorns-2025",
+        "sig-isf-junicorns-2025"
+      ],
+      "degree": 5,
+      "community": 0
+    },
+    {
+      "id": "ai-grants-india",
+      "label": "AI Grants India",
+      "type": "org",
+      "wikiPath": "orgs/ai-grants-india.md",
+      "signalIds": [
+        "sig-ai-grants-india-2025",
+        "sig-ai-grants-india-2025",
+        "sig-0xbosky-endorsement",
+        "sig-0xbosky-endorsement"
+      ],
+      "degree": 7,
+      "community": 0
+    },
+    {
+      "id": "runtime-magazine",
+      "label": "Runtime Magazine",
+      "type": "org",
+      "wikiPath": "orgs/runtime-magazine.md",
+      "signalIds": [
+        "sig-runtime-magazine-2026",
+        "sig-runtime-magazine-2026"
+      ],
+      "degree": 6,
+      "community": 0
+    },
+    {
+      "id": "maverick-news",
+      "label": "Maverick News",
+      "type": "org",
+      "wikiPath": "orgs/maverick-news.md",
+      "signalIds": [
+        "sig-maverick-news-2026",
+        "sig-maverick-news-2026"
+      ],
+      "degree": 4,
+      "community": 0
+    },
+    {
+      "id": "yugantar",
+      "label": "Yugantar",
+      "type": "org",
+      "wikiPath": "orgs/yugantar.md",
+      "signalIds": [
+        "sig-yugantar-captvenk-2025",
+        "sig-yugantar-captvenk-2025",
+        "sig-captvenk-yugantar-isf-tweets"
+      ],
+      "degree": 3,
+      "community": 0
+    },
+    {
+      "id": "robu-in",
+      "label": "Robu.in",
+      "type": "org",
+      "wikiPath": "orgs/robu-in.md",
+      "signalIds": [
+        "sig-robu-founder-testimonial-2025",
+        "sig-robu-founder-testimonial-2025"
+      ],
+      "degree": 5,
+      "community": 0
+    },
+    {
+      "id": "aerolyte",
+      "label": "Aerolyte",
+      "type": "org",
+      "wikiPath": "orgs/aerolyte.md",
+      "signalIds": [
+        "sig-aerolyte-mentorship-2025",
+        "sig-aerolyte-mentorship-2025"
+      ],
+      "degree": 5,
+      "community": 0
+    },
+    {
+      "id": "hardvare",
+      "label": "Hardvare",
+      "type": "org",
+      "wikiPath": "orgs/hardvare.md",
+      "signalIds": [
+        "sig-hardvare-system-2026",
+        "sig-hardvare-system-2026"
+      ],
+      "degree": 6,
+      "community": 0
+    },
+    {
+      "id": "openclaw",
+      "label": "OpenClaw",
+      "type": "org",
+      "wikiPath": "orgs/openclaw.md",
+      "signalIds": [
+        "sig-openclaw-agent-2026",
+        "sig-openclaw-agent-2026",
+        "sig-autoclaw-system-2026"
+      ],
+      "degree": 5,
+      "community": 0
+    },
+    {
+      "id": "claw",
+      "label": "Claw",
+      "type": "org",
+      "wikiPath": "orgs/claw.md",
+      "signalIds": [
+        "sig-autoclaw-system-2026",
+        "sig-autoclaw-system-2026"
+      ],
+      "degree": 4,
+      "community": 0
+    },
+    {
+      "id": "circuit-heroes",
+      "label": "Circuit Heroes",
+      "type": "org",
+      "wikiPath": "orgs/circuit-heroes.md",
+      "signalIds": [
+        "sig-shantanugoel-circuitheroes-buy-2025",
+        "sig-shantanugoel-circuitheroes-buy-2025",
+        "sig-codidactic-weekly-feature-2025",
+        "sig-codidactic-weekly-feature-2025",
+        "sig-manchester-school-principal-2025"
+      ],
+      "degree": 6,
+      "community": 0
+    },
+    {
+      "id": "manchester-international-school",
+      "label": "Manchester International School",
+      "type": "org",
+      "wikiPath": "orgs/manchester-international-school.md",
+      "signalIds": [
+        "sig-manchester-school-principal-2025",
+        "sig-manchester-school-principal-2025"
+      ],
+      "degree": 5,
+      "community": 0
+    },
+    {
+      "id": "content",
+      "label": "content",
+      "type": "domain",
+      "wikiPath": "domains/content.md",
+      "signalIds": [
+        "sig-first-yt-upload-2022",
+        "sig-ebook-launch-2024",
+        "sig-youngest-founder-room-yt-2025",
+        "sig-yt-170-projects-2025",
+        "sig-yt-short-telegram-2026",
+        "sig-yt-short-2-2026",
+        "sig-yt-full-2026",
+        "sig-ramsri-microscholarship-2025"
+      ],
+      "degree": 3,
+      "community": 0
+    },
+    {
+      "id": "electronics",
+      "label": "electronics",
+      "type": "domain",
+      "wikiPath": "domains/electronics.md",
+      "signalIds": [
+        "sig-first-yt-upload-2022",
+        "sig-first-dc-motor-2022",
+        "sig-iit-hyd-iot-workshop-2025",
+        "sig-isro-meeting-2025",
+        "sig-isro-meeting-2025",
+        "sig-lion-circuits-hw1-2025",
+        "sig-polaris-vibehack-2025",
+        "sig-scaler-hackathon-2025",
+        "sig-param-award-2025",
+        "sig-lion-circuits-hw2-2025",
+        "sig-yt-170-projects-2025",
+        "sig-yt-170-projects-2025",
+        "sig-isro-somanath-yt-2026",
+        "sig-yt-short-telegram-2026",
+        "sig-yt-short-2-2026",
+        "sig-yt-full-2026",
+        "sig-thinktac-yt-2025",
+        "sig-lion-circuits-cocreation-2025",
+        "sig-robu-founder-testimonial-2025",
+        "sig-aerolyte-mentorship-2025",
+        "sig-hardvare-system-2026",
+        "sig-shantanugoel-circuitheroes-buy-2025",
+        "sig-muralisrinivasa-hwhackathon-2025",
+        "sig-muaddibayasser-hwhackathon-2025",
+        "sig-codidactic-weekly-feature-2025",
+        "sig-manchester-school-principal-2025",
+        "sig-ganeshsonawane-endorsement",
+        "sig-aakash-dudechillkar-endorsement",
+        "sig-hanumaditya-endorsement",
+        "sig-arnavbansal-endorsement",
+        "sig-arnavbansal-endorsement",
+        "sig-alyshal-endorsement",
+        "sig-vishaltejwani-endorsement",
+        "sig-rohitawasthi-endorsement",
+        "sig-rohitawasthi-endorsement",
+        "sig-kunalgupta-endorsement",
+        "sig-kirankumar-endorsement",
+        "sig-ramavenu-endorsement",
+        "sig-phpandya-endorsement",
+        "sig-harshalm-endorsement"
+      ],
+      "degree": 18,
+      "community": 0
+    },
+    {
+      "id": "teaching",
+      "label": "teaching",
+      "type": "domain",
+      "wikiPath": "domains/teaching.md",
+      "signalIds": [
+        "sig-first-yt-upload-2022",
+        "sig-iit-hyd-iot-workshop-2025",
+        "sig-iit-hyd-drone-workshop-2025",
+        "sig-yt-170-projects-2025",
+        "sig-yt-full-2026",
+        "sig-ramsri-microscholarship-2025",
+        "sig-thinktac-yt-2025"
+      ],
+      "degree": 4,
+      "community": 0
+    },
+    {
+      "id": "hardware",
+      "label": "hardware",
+      "type": "domain",
+      "wikiPath": "domains/hardware.md",
+      "signalIds": [
+        "sig-first-dc-motor-2022",
+        "sig-circuitheroes-launch-2024",
+        "sig-kids-carnival-hitex-2024",
+        "sig-iitex-2025",
+        "sig-iit-hyd-drone-workshop-2025",
+        "sig-malpani-grant-2025",
+        "sig-lion-circuits-hw1-2025",
+        "sig-spc-demo-2025",
+        "sig-beats-in-brief-2025",
+        "sig-shubham-kukreti-localhost-2025",
+        "sig-lion-circuits-hw2-2025",
+        "sig-drishtikon-2026",
+        "sig-motionx-launch-2026",
+        "sig-runable-runhq-tweet-2026",
+        "sig-startupnewsfyi-ig-2026",
+        "sig-somi-ai-linkedin-2026",
+        "sig-dileep-gupta-linkedin-2026",
+        "sig-dileep-gupta-linkedin-2026",
+        "sig-yt-short-2-2026",
+        "sig-yt-full-2026",
+        "sig-lion-circuits-cocreation-2025",
+        "sig-hardvare-system-2026",
+        "sig-aakash-dudechillkar-endorsement",
+        "sig-hanumaditya-endorsement",
+        "sig-vishaltejwani-endorsement",
+        "sig-kunalgupta-endorsement"
+      ],
+      "degree": 14,
+      "community": 0
+    },
+    {
+      "id": "entrepreneurship",
+      "label": "entrepreneurship",
+      "type": "domain",
+      "wikiPath": "domains/entrepreneurship.md",
+      "signalIds": [
+        "sig-first-pitch-2024",
+        "sig-circuitheroes-launch-2024",
+        "sig-ebook-launch-2024",
+        "sig-inav-param-endorsement-2024",
+        "sig-ttox-panel-2025",
+        "sig-thub-intro-2025",
+        "sig-malpani-grant-2025",
+        "sig-roohi-builder-spotlight-2025",
+        "sig-august-fest-speaker-2025",
+        "sig-spc-demo-2025",
+        "sig-vibehack-emergent-2025",
+        "sig-polaris-vibehack-2025",
+        "sig-scaler-hackathon-2025",
+        "sig-delta2-residency-2025",
+        "sig-param-award-2025",
+        "sig-youngest-founder-room-yt-2025",
+        "sig-aadityayuvraj-residency-2026",
+        "sig-gemini3-hackathon-2026",
+        "sig-startuppedia-2026",
+        "sig-reddit-india-2026",
+        "sig-startupg-linkedin-2026",
+        "sig-ai-collective-pitch-2025",
+        "sig-shark-tank-s5-2025",
+        "sig-isf-junicorns-2025",
+        "sig-ai-grants-india-2025",
+        "sig-runtime-magazine-2026",
+        "sig-maverick-news-2026",
+        "sig-yugantar-captvenk-2025",
+        "sig-lion-circuits-cocreation-2025",
+        "sig-malpani-tweet-endorsement",
+        "sig-adilmania-tweet-2026",
+        "sig-aerolyte-mentorship-2025",
+        "sig-hardvare-system-2026",
+        "sig-openclaw-agent-2026",
+        "sig-autoclaw-system-2026",
+        "sig-shantanugoel-circuitheroes-buy-2025",
+        "sig-karthikranga-mentorship-2025",
+        "sig-itsumeshk-runtogether-2026",
+        "sig-eshaanpawan-runtogether-2026",
+        "sig-codidactic-weekly-feature-2025",
+        "sig-nandinichilkam-educator-voice-2025",
+        "sig-premmirth-ebook-review-2025",
+        "sig-manchester-school-principal-2025",
+        "sig-bestaprem-endorsement",
+        "sig-msmihir-endorsement",
+        "sig-harishashok-hacker-house-2025",
+        "sig-namanc-endorsement",
+        "sig-vishaltejwani-endorsement",
+        "sig-nimishac-endorsement",
+        "sig-adityag-endorsement",
+        "sig-raunakmahajan-endorsement",
+        "sig-vivekshukla-endorsement",
+        "sig-mehulfanawala-endorsement",
+        "sig-fahdtumbi-endorsement",
+        "sig-kunalgupta-endorsement",
+        "sig-akashbnsal-endorsement",
+        "sig-khushhi-endorsement",
+        "sig-captvenk-yugantar-isf-tweets"
+      ],
+      "degree": 39,
+      "community": 0
+    },
+    {
+      "id": "public-speaking",
+      "label": "public-speaking",
+      "type": "domain",
+      "wikiPath": "domains/public-speaking.md",
+      "signalIds": [
+        "sig-first-pitch-2024",
+        "sig-kids-carnival-hitex-2024",
+        "sig-ttox-panel-2025",
+        "sig-iit-hyd-iot-workshop-2025",
+        "sig-thub-intro-2025",
+        "sig-iitex-2025",
+        "sig-august-fest-speaker-2025",
+        "sig-august-fest-panel-yt-2025",
+        "sig-spc-demo-2025",
+        "sig-polaris-vibehack-2025",
+        "sig-beats-in-brief-2025",
+        "sig-heyacpk-science-expo-2026",
+        "sig-sravya-interview-2026"
+      ],
+      "degree": 13,
+      "community": 0
+    },
+    {
+      "id": "education",
+      "label": "education",
+      "type": "domain",
+      "wikiPath": "domains/education.md",
+      "signalIds": [
+        "sig-circuitheroes-launch-2024",
+        "sig-ebook-launch-2024",
+        "sig-malpani-grant-2025",
+        "sig-think-tac-feature-2025",
+        "sig-ravirangan-endorsement",
+        "sig-reddy2go-endorsement",
+        "sig-ankurpandey-endorsement"
+      ],
+      "degree": 6,
+      "community": 0
+    },
+    {
+      "id": "achievement",
+      "label": "achievement",
+      "type": "domain",
+      "wikiPath": "domains/achievement.md",
+      "signalIds": [
+        "sig-inav-param-endorsement-2024",
+        "sig-ramsri-scholarship-2025",
+        "sig-iitex-2025",
+        "sig-lion-circuits-hw1-2025",
+        "sig-vibehack-emergent-2025",
+        "sig-polaris-vibehack-2025",
+        "sig-scaler-hackathon-2025",
+        "sig-jagran-josh-yugaantar-2025",
+        "sig-fe-scaler-2025",
+        "sig-delta2-residency-2025",
+        "sig-param-award-2025",
+        "sig-lion-circuits-hw2-2025"
+      ],
+      "degree": 14,
+      "community": 0
+    },
+    {
+      "id": "recognition",
+      "label": "recognition",
+      "type": "domain",
+      "wikiPath": "domains/recognition.md",
+      "signalIds": [
+        "sig-ramsri-scholarship-2025",
+        "sig-sharav-medium-2025",
+        "sig-roohi-builder-spotlight-2025",
+        "sig-shubham-kukreti-localhost-2025",
+        "sig-think-tac-feature-2025",
+        "sig-runable-runhq-tweet-2026",
+        "sig-scaletogether-tweet-2026",
+        "sig-heyacpk-science-expo-2026",
+        "sig-aadityayuvraj-residency-2026",
+        "sig-isro-somanath-yt-2026",
+        "sig-dileep-gupta-linkedin-2026",
+        "sig-brahmananda-swamiji-demo-2026",
+        "sig-shankara-bharathi-blessings-2026",
+        "sig-inav65-endorsement",
+        "sig-captvenk-yugantar-isf-tweets"
+      ],
+      "degree": 9,
+      "community": 0
+    },
+    {
+      "id": "media",
+      "label": "media",
+      "type": "domain",
+      "wikiPath": "domains/media.md",
+      "signalIds": [
+        "sig-sharav-medium-2025",
+        "sig-chekodi-telugu-2025",
+        "sig-beats-in-brief-2025",
+        "sig-jagran-josh-yugaantar-2025",
+        "sig-fe-scaler-2025",
+        "sig-think-tac-feature-2025",
+        "sig-sravya-interview-2026",
+        "sig-fe-mait-agent-2026",
+        "sig-startuppedia-2026",
+        "sig-startuppedia-instagram-2026",
+        "sig-startupnewsfyi-ig-2026",
+        "sig-rediminds-linkedin-2026",
+        "sig-somi-ai-linkedin-2026",
+        "sig-reddit-indiatech-2026",
+        "sig-reddit-india-2026",
+        "sig-startupg-linkedin-2026",
+        "sig-ramsri-microscholarship-2025",
+        "sig-runtime-magazine-2026",
+        "sig-maverick-news-2026",
+        "sig-thinktac-yt-2025",
+        "sig-malpani-tweet-endorsement",
+        "sig-adilmania-tweet-2026",
+        "sig-film-crew-interview-2025",
+        "sig-film-crew-interview-2025",
+        "sig-beatsinbrief-tweet-2026",
+        "sig-raunakmahajan-endorsement",
+        "sig-narrativenest-endorsement"
+      ],
+      "degree": 17,
+      "community": 0
+    },
+    {
+      "id": "brand",
+      "label": "brand",
+      "type": "domain",
+      "wikiPath": "domains/brand.md",
+      "signalIds": [
+        "sig-sharav-medium-2025",
+        "sig-chekodi-telugu-2025",
+        "sig-roohi-builder-spotlight-2025",
+        "sig-august-fest-speaker-2025",
+        "sig-august-fest-panel-yt-2025",
+        "sig-beats-in-brief-2025",
+        "sig-delta2-residency-2025",
+        "sig-youngest-founder-room-yt-2025",
+        "sig-runable-runhq-tweet-2026",
+        "sig-scaletogether-tweet-2026",
+        "sig-sravya-interview-2026",
+        "sig-fe-mait-agent-2026",
+        "sig-startuppedia-2026",
+        "sig-startuppedia-instagram-2026",
+        "sig-startupnewsfyi-ig-2026",
+        "sig-rediminds-linkedin-2026",
+        "sig-somi-ai-linkedin-2026",
+        "sig-dileep-gupta-linkedin-2026",
+        "sig-reddit-indiatech-2026",
+        "sig-reddit-india-2026",
+        "sig-startupg-linkedin-2026",
+        "sig-ai-collective-pitch-2025",
+        "sig-shark-tank-s5-2025",
+        "sig-isf-junicorns-2025",
+        "sig-ramsri-microscholarship-2025",
+        "sig-runtime-magazine-2026",
+        "sig-maverick-news-2026",
+        "sig-thinktac-yt-2025",
+        "sig-yugantar-captvenk-2025",
+        "sig-malpani-tweet-endorsement",
+        "sig-adilmania-tweet-2026",
+        "sig-robu-founder-testimonial-2025",
+        "sig-aerolyte-mentorship-2025",
+        "sig-shantanugoel-circuitheroes-buy-2025",
+        "sig-karthikranga-mentorship-2025",
+        "sig-itsumeshk-runtogether-2026",
+        "sig-eshaanpawan-runtogether-2026",
+        "sig-muralisrinivasa-hwhackathon-2025",
+        "sig-muaddibayasser-hwhackathon-2025",
+        "sig-codidactic-weekly-feature-2025",
+        "sig-nandinichilkam-educator-voice-2025",
+        "sig-premmirth-ebook-review-2025",
+        "sig-brahmananda-swamiji-demo-2026",
+        "sig-shankara-bharathi-blessings-2026",
+        "sig-film-crew-interview-2025",
+        "sig-manchester-school-principal-2025",
+        "sig-beatsinbrief-tweet-2026",
+        "sig-bestaprem-endorsement",
+        "sig-abhishekr-endorsement",
+        "sig-ganeshsonawane-endorsement",
+        "sig-aakash-dudechillkar-endorsement",
+        "sig-darshanSavaliya-endorsement",
+        "sig-ravirangan-endorsement",
+        "sig-hanumaditya-endorsement",
+        "sig-msmihir-endorsement",
+        "sig-harishashok-hacker-house-2025",
+        "sig-arnavbansal-endorsement",
+        "sig-joedaniel-endorsement",
+        "sig-namanc-endorsement",
+        "sig-alyshal-endorsement",
+        "sig-vishaltejwani-endorsement",
+        "sig-nimishac-endorsement",
+        "sig-adityag-endorsement",
+        "sig-reddy2go-endorsement",
+        "sig-rohitawasthi-endorsement",
+        "sig-raunakmahajan-endorsement",
+        "sig-vivekshukla-endorsement",
+        "sig-mehulfanawala-endorsement",
+        "sig-fahdtumbi-endorsement",
+        "sig-ankurpandey-endorsement",
+        "sig-amitsethi-endorsement",
+        "sig-kunalgupta-endorsement",
+        "sig-kirankumar-endorsement",
+        "sig-ramavenu-endorsement",
+        "sig-adityavellanki-endorsement",
+        "sig-phpandya-endorsement",
+        "sig-0xbosky-endorsement",
+        "sig-dotslash-tx-endorsement",
+        "sig-ronaldwilson-endorsement",
+        "sig-akashbnsal-endorsement",
+        "sig-khushhi-endorsement",
+        "sig-harshalm-endorsement",
+        "sig-inav65-endorsement",
+        "sig-narrativenest-endorsement"
+      ],
+      "degree": 34,
+      "community": 0
+    },
+    {
+      "id": "regional",
+      "label": "regional",
+      "type": "domain",
+      "wikiPath": "domains/regional.md",
+      "signalIds": [
+        "sig-chekodi-telugu-2025"
+      ],
+      "degree": 2,
+      "community": 0
+    },
+    {
+      "id": "robotics",
+      "label": "robotics",
+      "type": "domain",
+      "wikiPath": "domains/robotics.md",
+      "signalIds": [
+        "sig-isro-meeting-2025",
+        "sig-isro-meeting-2025",
+        "sig-iit-hyd-drone-workshop-2025",
+        "sig-yt-170-projects-2025",
+        "sig-yt-170-projects-2025",
+        "sig-isro-somanath-yt-2026",
+        "sig-yt-short-2-2026",
+        "sig-lion-circuits-cocreation-2025",
+        "sig-robu-founder-testimonial-2025",
+        "sig-robu-founder-testimonial-2025",
+        "sig-aerolyte-mentorship-2025",
+        "sig-hardvare-system-2026",
+        "sig-muralisrinivasa-hwhackathon-2025",
+        "sig-alyshal-endorsement",
+        "sig-alyshal-endorsement",
+        "sig-kirankumar-endorsement",
+        "sig-kirankumar-endorsement"
+      ],
+      "degree": 8,
+      "community": 0
+    },
+    {
+      "id": "space",
+      "label": "space",
+      "type": "domain",
+      "wikiPath": "domains/space.md",
+      "signalIds": [
+        "sig-isro-meeting-2025",
+        "sig-isro-somanath-yt-2026",
+        "sig-phpandya-endorsement"
+      ],
+      "degree": 2,
+      "community": 0
+    },
+    {
+      "id": "computer-vision",
+      "label": "computer-vision",
+      "type": "domain",
+      "wikiPath": "domains/computer-vision.md",
+      "signalIds": [
+        "sig-spc-demo-2025",
+        "sig-drishtikon-2026",
+        "sig-drishtikon-2026",
+        "sig-motionx-launch-2026",
+        "sig-motionx-launch-2026",
+        "sig-yt-short-telegram-2026"
+      ],
+      "degree": 9,
+      "community": 0
+    },
+    {
+      "id": "social-impact",
+      "label": "social-impact",
+      "type": "domain",
+      "wikiPath": "domains/social-impact.md",
+      "signalIds": [
+        "sig-param-award-2025",
+        "sig-drishtikon-2026"
+      ],
+      "degree": 5,
+      "community": 0
+    },
+    {
+      "id": "machine-learning",
+      "label": "machine-learning",
+      "type": "domain",
+      "wikiPath": "domains/machine-learning.md",
+      "signalIds": [
+        "sig-motionx-launch-2026",
+        "sig-gemini3-hackathon-2026",
+        "sig-reddit-indiatech-2026"
+      ],
+      "degree": 6,
+      "community": 0
+    },
+    {
+      "id": "ai-agents",
+      "label": "ai-agents",
+      "type": "domain",
+      "wikiPath": "domains/ai-agents.md",
+      "signalIds": [
+        "sig-motionx-launch-2026",
+        "sig-gemini3-hackathon-2026",
+        "sig-fe-mait-agent-2026",
+        "sig-startuppedia-2026",
+        "sig-startuppedia-instagram-2026",
+        "sig-rediminds-linkedin-2026",
+        "sig-somi-ai-linkedin-2026",
+        "sig-reddit-indiatech-2026",
+        "sig-yt-short-telegram-2026",
+        "sig-yt-full-2026",
+        "sig-startupg-linkedin-2026",
+        "sig-ai-collective-pitch-2025",
+        "sig-ai-grants-india-2025",
+        "sig-runtime-magazine-2026",
+        "sig-hardvare-system-2026",
+        "sig-openclaw-agent-2026",
+        "sig-autoclaw-system-2026",
+        "sig-itsumeshk-runtogether-2026",
+        "sig-adityag-endorsement",
+        "sig-adityag-endorsement",
+        "sig-amitsethi-endorsement",
+        "sig-adityavellanki-endorsement",
+        "sig-0xbosky-endorsement"
+      ],
+      "degree": 19,
+      "community": 0
+    },
+    {
+      "id": "funding",
+      "label": "funding",
+      "type": "domain",
+      "wikiPath": "domains/funding.md",
+      "signalIds": [
+        "sig-ai-grants-india-2025",
+        "sig-openclaw-agent-2026",
+        "sig-msmihir-endorsement",
+        "sig-0xbosky-endorsement"
+      ],
+      "degree": 3,
+      "community": 0
+    },
+    {
+      "id": "circuitheroes",
+      "label": "CircuitHeroes",
+      "type": "project",
+      "wikiPath": "projects/circuitheroes.md",
+      "signalIds": [
+        "sig-circuitheroes-launch-2024",
+        "sig-ebook-launch-2024",
+        "sig-malpani-grant-2025",
+        "sig-roohi-builder-spotlight-2025",
+        "sig-spc-demo-2025"
+      ],
+      "degree": 6,
+      "community": 0
+    },
+    {
+      "id": "drishtikon-yantra",
+      "label": "Drishtikon Yantra",
+      "type": "project",
+      "wikiPath": "projects/drishtikon-yantra.md",
+      "signalIds": [
+        "sig-spc-demo-2025",
+        "sig-param-award-2025",
+        "sig-drishtikon-2026"
+      ],
+      "degree": 8,
+      "community": 0
+    },
+    {
+      "id": "drishtikon",
+      "label": "Drishtikon",
+      "type": "project",
+      "wikiPath": "projects/drishtikon.md",
+      "signalIds": [],
+      "degree": 8,
+      "community": 0
+    },
+    {
+      "id": "motionx",
+      "label": "MotionX",
+      "type": "project",
+      "wikiPath": "projects/motionx.md",
+      "signalIds": [
+        "sig-motionx-launch-2026",
+        "sig-runable-runhq-tweet-2026",
+        "sig-scaletogether-tweet-2026"
+      ],
+      "degree": 7,
+      "community": 0
+    },
+    {
+      "id": "intentional-visibility-architecture",
+      "label": "The Intentional Visibility Architecture",
+      "type": "concept",
+      "wikiPath": "concepts/intentional-visibility-architecture.md",
+      "signalIds": [],
+      "degree": 9,
+      "community": 0
+    },
+    {
+      "id": "legitimacy-ladder-institutions",
+      "label": "The Legitimacy Ladder: From DIY to Institutions",
+      "type": "concept",
+      "wikiPath": "concepts/legitimacy-ladder-institutions.md",
+      "signalIds": [],
+      "degree": 13,
+      "community": 0
+    },
+    {
+      "id": "testimonial-network-infrastructure",
+      "label": "The Testimonial Network as Social Proof Infrastructure",
+      "type": "concept",
+      "wikiPath": "concepts/testimonial-network-infrastructure.md",
+      "signalIds": [],
+      "degree": 4,
+      "community": 0
+    },
+    {
+      "id": "hardware-ai-strategic-pivot",
+      "label": "Hardware-to-AI Pivot as Strategic Repositioning",
+      "type": "concept",
+      "wikiPath": "concepts/hardware-ai-strategic-pivot.md",
+      "signalIds": [],
+      "degree": 12,
+      "community": 0
+    },
+    {
+      "id": "circuitheroes-linchpin-asset",
+      "label": "The Minimum Viable Legitimacy Product: CircuitHeroes as Linchpin",
+      "type": "concept",
+      "wikiPath": "concepts/circuitheroes-linchpin-asset.md",
+      "signalIds": [],
+      "degree": 9,
+      "community": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": "lakshveer",
+      "target": "projects-by-laksh",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-first-yt-upload-2022"
+    },
+    {
+      "source": "lakshveer",
+      "target": "content",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-first-yt-upload-2022"
+    },
+    {
+      "source": "lakshveer",
+      "target": "electronics",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-first-yt-upload-2022"
+    },
+    {
+      "source": "lakshveer",
+      "target": "teaching",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-first-yt-upload-2022"
+    },
+    {
+      "source": "projects-by-laksh",
+      "target": "content",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-first-yt-upload-2022"
+    },
+    {
+      "source": "projects-by-laksh",
+      "target": "electronics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-first-yt-upload-2022"
+    },
+    {
+      "source": "projects-by-laksh",
+      "target": "teaching",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-first-yt-upload-2022"
+    },
+    {
+      "source": "lakshveer",
+      "target": "hardware",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-first-dc-motor-2022"
+    },
+    {
+      "source": "projects-by-laksh",
+      "target": "hardware",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-first-dc-motor-2022"
+    },
+    {
+      "source": "lakshveer",
+      "target": "legitimacy-ladder-institutions",
+      "relation": "exhibits",
+      "confidence": "INFERRED",
+      "signalId": "sig-first-dc-motor-2022"
+    },
+    {
+      "source": "legitimacy-ladder-institutions",
+      "target": "projects-by-laksh",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-first-dc-motor-2022"
+    },
+    {
+      "source": "lakshveer",
+      "target": "hardware-ai-strategic-pivot",
+      "relation": "exhibits",
+      "confidence": "INFERRED",
+      "signalId": "sig-first-dc-motor-2022"
+    },
+    {
+      "source": "hardware-ai-strategic-pivot",
+      "target": "projects-by-laksh",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-first-dc-motor-2022"
+    },
+    {
+      "source": "lakshveer",
+      "target": "entrepreneurship",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-first-pitch-2024"
+    },
+    {
+      "source": "lakshveer",
+      "target": "public-speaking",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-first-pitch-2024"
+    },
+    {
+      "source": "projects-by-laksh",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-first-pitch-2024"
+    },
+    {
+      "source": "projects-by-laksh",
+      "target": "public-speaking",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-first-pitch-2024"
+    },
+    {
+      "source": "lakshveer",
+      "target": "education",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-circuitheroes-launch-2024"
+    },
+    {
+      "source": "projects-by-laksh",
+      "target": "education",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-circuitheroes-launch-2024"
+    },
+    {
+      "source": "circuitheroes",
+      "target": "entrepreneurship",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-circuitheroes-launch-2024"
+    },
+    {
+      "source": "circuitheroes",
+      "target": "education",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-circuitheroes-launch-2024"
+    },
+    {
+      "source": "circuitheroes",
+      "target": "hardware",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-circuitheroes-launch-2024"
+    },
+    {
+      "source": "lakshveer",
+      "target": "circuitheroes",
+      "relation": "built",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-circuitheroes-launch-2024"
+    },
+    {
+      "source": "lakshveer",
+      "target": "circuitheroes-linchpin-asset",
+      "relation": "exhibits",
+      "confidence": "INFERRED",
+      "signalId": "sig-circuitheroes-launch-2024"
+    },
+    {
+      "source": "circuitheroes-linchpin-asset",
+      "target": "projects-by-laksh",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-circuitheroes-launch-2024"
+    },
+    {
+      "source": "lakshveer",
+      "target": "chhotacreator",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-ebook-launch-2024"
+    },
+    {
+      "source": "chhotacreator",
+      "target": "education",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-ebook-launch-2024"
+    },
+    {
+      "source": "chhotacreator",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-ebook-launch-2024"
+    },
+    {
+      "source": "chhotacreator",
+      "target": "content",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-ebook-launch-2024"
+    },
+    {
+      "source": "projects-by-laksh",
+      "target": "chhotacreator",
+      "relation": "co_appeared",
+      "confidence": "INFERRED",
+      "signalId": "sig-ebook-launch-2024"
+    },
+    {
+      "source": "circuitheroes-linchpin-asset",
+      "target": "chhotacreator",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-ebook-launch-2024"
+    },
+    {
+      "source": "lakshveer",
+      "target": "hitex",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-kids-carnival-hitex-2024"
+    },
+    {
+      "source": "hitex",
+      "target": "public-speaking",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-kids-carnival-hitex-2024"
+    },
+    {
+      "source": "hitex",
+      "target": "hardware",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-kids-carnival-hitex-2024"
+    },
+    {
+      "source": "legitimacy-ladder-institutions",
+      "target": "hitex",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-kids-carnival-hitex-2024"
+    },
+    {
+      "source": "lakshveer",
+      "target": "param-foundation",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-inav-param-endorsement-2024"
+    },
+    {
+      "source": "lakshveer",
+      "target": "achievement",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-inav-param-endorsement-2024"
+    },
+    {
+      "source": "param-foundation",
+      "target": "achievement",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-inav-param-endorsement-2024"
+    },
+    {
+      "source": "param-foundation",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-inav-param-endorsement-2024"
+    },
+    {
+      "source": "circuitheroes",
+      "target": "public-speaking",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-ttox-panel-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "iit-hyderabad",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-iit-hyd-iot-workshop-2025"
+    },
+    {
+      "source": "iit-hyderabad",
+      "target": "teaching",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-iit-hyd-iot-workshop-2025"
+    },
+    {
+      "source": "iit-hyderabad",
+      "target": "electronics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-iit-hyd-iot-workshop-2025"
+    },
+    {
+      "source": "iit-hyderabad",
+      "target": "public-speaking",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-iit-hyd-iot-workshop-2025"
+    },
+    {
+      "source": "legitimacy-ladder-institutions",
+      "target": "iit-hyderabad",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-iit-hyd-iot-workshop-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "recognition",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-ramsri-scholarship-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "media",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-sharav-medium-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "brand",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-sharav-medium-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "chekodi",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-chekodi-telugu-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "regional",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-chekodi-telugu-2025"
+    },
+    {
+      "source": "chekodi",
+      "target": "media",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-chekodi-telugu-2025"
+    },
+    {
+      "source": "chekodi",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-chekodi-telugu-2025"
+    },
+    {
+      "source": "chekodi",
+      "target": "regional",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-chekodi-telugu-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "t-hub",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-thub-intro-2025"
+    },
+    {
+      "source": "t-hub",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-thub-intro-2025"
+    },
+    {
+      "source": "t-hub",
+      "target": "public-speaking",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-thub-intro-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "isro",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-isro-meeting-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "robotics",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-isro-meeting-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "space",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-isro-meeting-2025"
+    },
+    {
+      "source": "isro",
+      "target": "electronics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-isro-meeting-2025"
+    },
+    {
+      "source": "isro",
+      "target": "robotics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-isro-meeting-2025"
+    },
+    {
+      "source": "isro",
+      "target": "space",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-isro-meeting-2025"
+    },
+    {
+      "source": "legitimacy-ladder-institutions",
+      "target": "isro",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-isro-meeting-2025"
+    },
+    {
+      "source": "hitex",
+      "target": "achievement",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-iitex-2025"
+    },
+    {
+      "source": "iit-hyderabad",
+      "target": "hardware",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-iit-hyd-drone-workshop-2025"
+    },
+    {
+      "source": "iit-hyderabad",
+      "target": "robotics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-iit-hyd-drone-workshop-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "malpani-foundation",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-malpani-grant-2025"
+    },
+    {
+      "source": "malpani-foundation",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-malpani-grant-2025"
+    },
+    {
+      "source": "malpani-foundation",
+      "target": "education",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-malpani-grant-2025"
+    },
+    {
+      "source": "malpani-foundation",
+      "target": "hardware",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-malpani-grant-2025"
+    },
+    {
+      "source": "legitimacy-ladder-institutions",
+      "target": "malpani-foundation",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-malpani-grant-2025"
+    },
+    {
+      "source": "circuitheroes-linchpin-asset",
+      "target": "malpani-foundation",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-malpani-grant-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "lion-circuits",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-lion-circuits-hw1-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "pcb-cupid",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-lion-circuits-hw1-2025"
+    },
+    {
+      "source": "lion-circuits",
+      "target": "hardware",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-lion-circuits-hw1-2025"
+    },
+    {
+      "source": "lion-circuits",
+      "target": "electronics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-lion-circuits-hw1-2025"
+    },
+    {
+      "source": "lion-circuits",
+      "target": "achievement",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-lion-circuits-hw1-2025"
+    },
+    {
+      "source": "pcb-cupid",
+      "target": "hardware",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-lion-circuits-hw1-2025"
+    },
+    {
+      "source": "pcb-cupid",
+      "target": "electronics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-lion-circuits-hw1-2025"
+    },
+    {
+      "source": "pcb-cupid",
+      "target": "achievement",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-lion-circuits-hw1-2025"
+    },
+    {
+      "source": "lion-circuits",
+      "target": "pcb-cupid",
+      "relation": "co_appeared",
+      "confidence": "INFERRED",
+      "signalId": "sig-lion-circuits-hw1-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "testimonial-network-infrastructure",
+      "relation": "exhibits",
+      "confidence": "INFERRED",
+      "signalId": "sig-roohi-builder-spotlight-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "august-fest",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-august-fest-speaker-2025"
+    },
+    {
+      "source": "august-fest",
+      "target": "public-speaking",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-august-fest-speaker-2025"
+    },
+    {
+      "source": "august-fest",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-august-fest-speaker-2025"
+    },
+    {
+      "source": "august-fest",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-august-fest-speaker-2025"
+    },
+    {
+      "source": "circuitheroes-linchpin-asset",
+      "target": "august-fest",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-august-fest-speaker-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "south-park-commons",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-spc-demo-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "computer-vision",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-spc-demo-2025"
+    },
+    {
+      "source": "south-park-commons",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-spc-demo-2025"
+    },
+    {
+      "source": "south-park-commons",
+      "target": "public-speaking",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-spc-demo-2025"
+    },
+    {
+      "source": "south-park-commons",
+      "target": "computer-vision",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-spc-demo-2025"
+    },
+    {
+      "source": "south-park-commons",
+      "target": "hardware",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-spc-demo-2025"
+    },
+    {
+      "source": "circuitheroes",
+      "target": "computer-vision",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-spc-demo-2025"
+    },
+    {
+      "source": "drishtikon-yantra",
+      "target": "entrepreneurship",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-spc-demo-2025"
+    },
+    {
+      "source": "drishtikon-yantra",
+      "target": "public-speaking",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-spc-demo-2025"
+    },
+    {
+      "source": "drishtikon-yantra",
+      "target": "computer-vision",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-spc-demo-2025"
+    },
+    {
+      "source": "drishtikon-yantra",
+      "target": "hardware",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-spc-demo-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "drishtikon-yantra",
+      "relation": "built",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-spc-demo-2025"
+    },
+    {
+      "source": "drishtikon",
+      "target": "entrepreneurship",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-spc-demo-2025"
+    },
+    {
+      "source": "drishtikon",
+      "target": "public-speaking",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-spc-demo-2025"
+    },
+    {
+      "source": "drishtikon",
+      "target": "computer-vision",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-spc-demo-2025"
+    },
+    {
+      "source": "drishtikon",
+      "target": "hardware",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-spc-demo-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "drishtikon",
+      "relation": "built",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-spc-demo-2025"
+    },
+    {
+      "source": "circuitheroes-linchpin-asset",
+      "target": "south-park-commons",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-spc-demo-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "emergent",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-vibehack-emergent-2025"
+    },
+    {
+      "source": "emergent",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-vibehack-emergent-2025"
+    },
+    {
+      "source": "emergent",
+      "target": "achievement",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-vibehack-emergent-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "polaris-school-of-technology",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-polaris-vibehack-2025"
+    },
+    {
+      "source": "polaris-school-of-technology",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-polaris-vibehack-2025"
+    },
+    {
+      "source": "polaris-school-of-technology",
+      "target": "electronics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-polaris-vibehack-2025"
+    },
+    {
+      "source": "polaris-school-of-technology",
+      "target": "achievement",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-polaris-vibehack-2025"
+    },
+    {
+      "source": "polaris-school-of-technology",
+      "target": "public-speaking",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-polaris-vibehack-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "beats-in-brief",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-beats-in-brief-2025"
+    },
+    {
+      "source": "beats-in-brief",
+      "target": "media",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-beats-in-brief-2025"
+    },
+    {
+      "source": "beats-in-brief",
+      "target": "public-speaking",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-beats-in-brief-2025"
+    },
+    {
+      "source": "beats-in-brief",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-beats-in-brief-2025"
+    },
+    {
+      "source": "beats-in-brief",
+      "target": "media",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-beats-in-brief-2025"
+    },
+    {
+      "source": "beats-in-brief",
+      "target": "public-speaking",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-beats-in-brief-2025"
+    },
+    {
+      "source": "beats-in-brief",
+      "target": "brand",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-beats-in-brief-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "beats-in-brief",
+      "relation": "built",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-beats-in-brief-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "scaler-innovation-lab",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-scaler-hackathon-2025"
+    },
+    {
+      "source": "scaler-innovation-lab",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-scaler-hackathon-2025"
+    },
+    {
+      "source": "scaler-innovation-lab",
+      "target": "electronics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-scaler-hackathon-2025"
+    },
+    {
+      "source": "scaler-innovation-lab",
+      "target": "achievement",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-scaler-hackathon-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "jagran-josh",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-jagran-josh-yugaantar-2025"
+    },
+    {
+      "source": "jagran-josh",
+      "target": "media",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-jagran-josh-yugaantar-2025"
+    },
+    {
+      "source": "jagran-josh",
+      "target": "achievement",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-jagran-josh-yugaantar-2025"
+    },
+    {
+      "source": "scaler-innovation-lab",
+      "target": "media",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-jagran-josh-yugaantar-2025"
+    },
+    {
+      "source": "jagran-josh",
+      "target": "scaler-innovation-lab",
+      "relation": "co_appeared",
+      "confidence": "INFERRED",
+      "signalId": "sig-jagran-josh-yugaantar-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "financial-express",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-fe-scaler-2025"
+    },
+    {
+      "source": "financial-express",
+      "target": "media",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-fe-scaler-2025"
+    },
+    {
+      "source": "financial-express",
+      "target": "achievement",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-fe-scaler-2025"
+    },
+    {
+      "source": "financial-express",
+      "target": "scaler-innovation-lab",
+      "relation": "co_appeared",
+      "confidence": "INFERRED",
+      "signalId": "sig-fe-scaler-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "the-residency",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-delta2-residency-2025"
+    },
+    {
+      "source": "the-residency",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-delta2-residency-2025"
+    },
+    {
+      "source": "the-residency",
+      "target": "achievement",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-delta2-residency-2025"
+    },
+    {
+      "source": "the-residency",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-delta2-residency-2025"
+    },
+    {
+      "source": "legitimacy-ladder-institutions",
+      "target": "the-residency",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-delta2-residency-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "vedanta",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-param-award-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "social-impact",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-param-award-2025"
+    },
+    {
+      "source": "param-foundation",
+      "target": "electronics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-param-award-2025"
+    },
+    {
+      "source": "param-foundation",
+      "target": "social-impact",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-param-award-2025"
+    },
+    {
+      "source": "vedanta",
+      "target": "achievement",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-param-award-2025"
+    },
+    {
+      "source": "vedanta",
+      "target": "electronics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-param-award-2025"
+    },
+    {
+      "source": "vedanta",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-param-award-2025"
+    },
+    {
+      "source": "vedanta",
+      "target": "social-impact",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-param-award-2025"
+    },
+    {
+      "source": "param-foundation",
+      "target": "vedanta",
+      "relation": "co_appeared",
+      "confidence": "INFERRED",
+      "signalId": "sig-param-award-2025"
+    },
+    {
+      "source": "drishtikon-yantra",
+      "target": "achievement",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-param-award-2025"
+    },
+    {
+      "source": "drishtikon-yantra",
+      "target": "electronics",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-param-award-2025"
+    },
+    {
+      "source": "drishtikon-yantra",
+      "target": "social-impact",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-param-award-2025"
+    },
+    {
+      "source": "drishtikon",
+      "target": "achievement",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-param-award-2025"
+    },
+    {
+      "source": "drishtikon",
+      "target": "electronics",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-param-award-2025"
+    },
+    {
+      "source": "drishtikon",
+      "target": "social-impact",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-param-award-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "thinktac",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-think-tac-feature-2025"
+    },
+    {
+      "source": "thinktac",
+      "target": "media",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-think-tac-feature-2025"
+    },
+    {
+      "source": "thinktac",
+      "target": "recognition",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-think-tac-feature-2025"
+    },
+    {
+      "source": "thinktac",
+      "target": "education",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-think-tac-feature-2025"
+    },
+    {
+      "source": "projects-by-laksh",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-youngest-founder-room-yt-2025"
+    },
+    {
+      "source": "projects-by-laksh",
+      "target": "robotics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-yt-170-projects-2025"
+    },
+    {
+      "source": "param-foundation",
+      "target": "computer-vision",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-drishtikon-2026"
+    },
+    {
+      "source": "param-foundation",
+      "target": "hardware",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-drishtikon-2026"
+    },
+    {
+      "source": "hardware-ai-strategic-pivot",
+      "target": "param-foundation",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-drishtikon-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "runable",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-motionx-launch-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "machine-learning",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-motionx-launch-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "ai-agents",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-motionx-launch-2026"
+    },
+    {
+      "source": "runable",
+      "target": "computer-vision",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-motionx-launch-2026"
+    },
+    {
+      "source": "runable",
+      "target": "machine-learning",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-motionx-launch-2026"
+    },
+    {
+      "source": "runable",
+      "target": "ai-agents",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-motionx-launch-2026"
+    },
+    {
+      "source": "runable",
+      "target": "hardware",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-motionx-launch-2026"
+    },
+    {
+      "source": "motionx",
+      "target": "computer-vision",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-motionx-launch-2026"
+    },
+    {
+      "source": "motionx",
+      "target": "machine-learning",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-motionx-launch-2026"
+    },
+    {
+      "source": "motionx",
+      "target": "ai-agents",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-motionx-launch-2026"
+    },
+    {
+      "source": "motionx",
+      "target": "hardware",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-motionx-launch-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "motionx",
+      "relation": "built",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-motionx-launch-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "intentional-visibility-architecture",
+      "relation": "exhibits",
+      "confidence": "INFERRED",
+      "signalId": "sig-motionx-launch-2026"
+    },
+    {
+      "source": "intentional-visibility-architecture",
+      "target": "runable",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-motionx-launch-2026"
+    },
+    {
+      "source": "hardware-ai-strategic-pivot",
+      "target": "runable",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-motionx-launch-2026"
+    },
+    {
+      "source": "runable",
+      "target": "recognition",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-runable-runhq-tweet-2026"
+    },
+    {
+      "source": "runable",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-runable-runhq-tweet-2026"
+    },
+    {
+      "source": "testimonial-network-infrastructure",
+      "target": "runable",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-runable-runhq-tweet-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "scaletogether",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-scaletogether-tweet-2026"
+    },
+    {
+      "source": "scaletogether",
+      "target": "recognition",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-scaletogether-tweet-2026"
+    },
+    {
+      "source": "scaletogether",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-scaletogether-tweet-2026"
+    },
+    {
+      "source": "motionx",
+      "target": "recognition",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-scaletogether-tweet-2026"
+    },
+    {
+      "source": "motionx",
+      "target": "brand",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-scaletogether-tweet-2026"
+    },
+    {
+      "source": "intentional-visibility-architecture",
+      "target": "scaletogether",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-scaletogether-tweet-2026"
+    },
+    {
+      "source": "the-residency",
+      "target": "recognition",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-aadityayuvraj-residency-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "cerebral-valley",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-gemini3-hackathon-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "google-deepmind",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-gemini3-hackathon-2026"
+    },
+    {
+      "source": "cerebral-valley",
+      "target": "ai-agents",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-gemini3-hackathon-2026"
+    },
+    {
+      "source": "cerebral-valley",
+      "target": "machine-learning",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-gemini3-hackathon-2026"
+    },
+    {
+      "source": "cerebral-valley",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-gemini3-hackathon-2026"
+    },
+    {
+      "source": "google-deepmind",
+      "target": "ai-agents",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-gemini3-hackathon-2026"
+    },
+    {
+      "source": "google-deepmind",
+      "target": "machine-learning",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-gemini3-hackathon-2026"
+    },
+    {
+      "source": "google-deepmind",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-gemini3-hackathon-2026"
+    },
+    {
+      "source": "cerebral-valley",
+      "target": "google-deepmind",
+      "relation": "co_appeared",
+      "confidence": "INFERRED",
+      "signalId": "sig-gemini3-hackathon-2026"
+    },
+    {
+      "source": "hardware-ai-strategic-pivot",
+      "target": "cerebral-valley",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-gemini3-hackathon-2026"
+    },
+    {
+      "source": "hardware-ai-strategic-pivot",
+      "target": "google-deepmind",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-gemini3-hackathon-2026"
+    },
+    {
+      "source": "isro",
+      "target": "recognition",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-isro-somanath-yt-2026"
+    },
+    {
+      "source": "financial-express",
+      "target": "ai-agents",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-fe-mait-agent-2026"
+    },
+    {
+      "source": "financial-express",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-fe-mait-agent-2026"
+    },
+    {
+      "source": "intentional-visibility-architecture",
+      "target": "financial-express",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-fe-mait-agent-2026"
+    },
+    {
+      "source": "hardware-ai-strategic-pivot",
+      "target": "financial-express",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-fe-mait-agent-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "startuppedia",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-startuppedia-2026"
+    },
+    {
+      "source": "startuppedia",
+      "target": "ai-agents",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-startuppedia-2026"
+    },
+    {
+      "source": "startuppedia",
+      "target": "media",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-startuppedia-2026"
+    },
+    {
+      "source": "startuppedia",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-startuppedia-2026"
+    },
+    {
+      "source": "startuppedia",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-startuppedia-2026"
+    },
+    {
+      "source": "startuppedia",
+      "target": "ai-agents",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-startuppedia-2026"
+    },
+    {
+      "source": "startuppedia",
+      "target": "media",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-startuppedia-2026"
+    },
+    {
+      "source": "startuppedia",
+      "target": "entrepreneurship",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-startuppedia-2026"
+    },
+    {
+      "source": "startuppedia",
+      "target": "brand",
+      "relation": "belongs_to",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-startuppedia-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "startuppedia",
+      "relation": "built",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-startuppedia-2026"
+    },
+    {
+      "source": "intentional-visibility-architecture",
+      "target": "startuppedia",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-startuppedia-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "startupnews-fyi",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-startupnewsfyi-ig-2026"
+    },
+    {
+      "source": "startupnews-fyi",
+      "target": "media",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-startupnewsfyi-ig-2026"
+    },
+    {
+      "source": "startupnews-fyi",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-startupnewsfyi-ig-2026"
+    },
+    {
+      "source": "circuitheroes-linchpin-asset",
+      "target": "startupnews-fyi",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-startupnewsfyi-ig-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "rediminds",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-rediminds-linkedin-2026"
+    },
+    {
+      "source": "rediminds",
+      "target": "ai-agents",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-rediminds-linkedin-2026"
+    },
+    {
+      "source": "rediminds",
+      "target": "media",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-rediminds-linkedin-2026"
+    },
+    {
+      "source": "rediminds",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-rediminds-linkedin-2026"
+    },
+    {
+      "source": "intentional-visibility-architecture",
+      "target": "rediminds",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-rediminds-linkedin-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "somi-ai",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-somi-ai-linkedin-2026"
+    },
+    {
+      "source": "somi-ai",
+      "target": "ai-agents",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-somi-ai-linkedin-2026"
+    },
+    {
+      "source": "somi-ai",
+      "target": "media",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-somi-ai-linkedin-2026"
+    },
+    {
+      "source": "somi-ai",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-somi-ai-linkedin-2026"
+    },
+    {
+      "source": "intentional-visibility-architecture",
+      "target": "somi-ai",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-somi-ai-linkedin-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "reddit",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-reddit-indiatech-2026"
+    },
+    {
+      "source": "reddit",
+      "target": "media",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-reddit-indiatech-2026"
+    },
+    {
+      "source": "reddit",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-reddit-indiatech-2026"
+    },
+    {
+      "source": "reddit",
+      "target": "ai-agents",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-reddit-indiatech-2026"
+    },
+    {
+      "source": "reddit",
+      "target": "machine-learning",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-reddit-indiatech-2026"
+    },
+    {
+      "source": "intentional-visibility-architecture",
+      "target": "reddit",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-reddit-indiatech-2026"
+    },
+    {
+      "source": "reddit",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-reddit-india-2026"
+    },
+    {
+      "source": "projects-by-laksh",
+      "target": "ai-agents",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-yt-short-telegram-2026"
+    },
+    {
+      "source": "projects-by-laksh",
+      "target": "computer-vision",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-yt-short-telegram-2026"
+    },
+    {
+      "source": "intentional-visibility-architecture",
+      "target": "projects-by-laksh",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-yt-short-telegram-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "startupg",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-startupg-linkedin-2026"
+    },
+    {
+      "source": "startupg",
+      "target": "ai-agents",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-startupg-linkedin-2026"
+    },
+    {
+      "source": "startupg",
+      "target": "media",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-startupg-linkedin-2026"
+    },
+    {
+      "source": "startupg",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-startupg-linkedin-2026"
+    },
+    {
+      "source": "startupg",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-startupg-linkedin-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "ai-collective-hyderabad",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-ai-collective-pitch-2025"
+    },
+    {
+      "source": "ai-collective-hyderabad",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-ai-collective-pitch-2025"
+    },
+    {
+      "source": "ai-collective-hyderabad",
+      "target": "ai-agents",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-ai-collective-pitch-2025"
+    },
+    {
+      "source": "ai-collective-hyderabad",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-ai-collective-pitch-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "shark-tank-india",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-shark-tank-s5-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "sony-liv",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-shark-tank-s5-2025"
+    },
+    {
+      "source": "shark-tank-india",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-shark-tank-s5-2025"
+    },
+    {
+      "source": "shark-tank-india",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-shark-tank-s5-2025"
+    },
+    {
+      "source": "sony-liv",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-shark-tank-s5-2025"
+    },
+    {
+      "source": "sony-liv",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-shark-tank-s5-2025"
+    },
+    {
+      "source": "shark-tank-india",
+      "target": "sony-liv",
+      "relation": "co_appeared",
+      "confidence": "INFERRED",
+      "signalId": "sig-shark-tank-s5-2025"
+    },
+    {
+      "source": "legitimacy-ladder-institutions",
+      "target": "shark-tank-india",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-shark-tank-s5-2025"
+    },
+    {
+      "source": "legitimacy-ladder-institutions",
+      "target": "sony-liv",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-shark-tank-s5-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "india-startup-festival",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-isf-junicorns-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "junicorns",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-isf-junicorns-2025"
+    },
+    {
+      "source": "india-startup-festival",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-isf-junicorns-2025"
+    },
+    {
+      "source": "india-startup-festival",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-isf-junicorns-2025"
+    },
+    {
+      "source": "junicorns",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-isf-junicorns-2025"
+    },
+    {
+      "source": "junicorns",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-isf-junicorns-2025"
+    },
+    {
+      "source": "india-startup-festival",
+      "target": "junicorns",
+      "relation": "co_appeared",
+      "confidence": "INFERRED",
+      "signalId": "sig-isf-junicorns-2025"
+    },
+    {
+      "source": "legitimacy-ladder-institutions",
+      "target": "india-startup-festival",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-isf-junicorns-2025"
+    },
+    {
+      "source": "legitimacy-ladder-institutions",
+      "target": "junicorns",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-isf-junicorns-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "ai-grants-india",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-ai-grants-india-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "funding",
+      "relation": "active_in",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-ai-grants-india-2025"
+    },
+    {
+      "source": "ai-grants-india",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-ai-grants-india-2025"
+    },
+    {
+      "source": "ai-grants-india",
+      "target": "ai-agents",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-ai-grants-india-2025"
+    },
+    {
+      "source": "ai-grants-india",
+      "target": "funding",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-ai-grants-india-2025"
+    },
+    {
+      "source": "legitimacy-ladder-institutions",
+      "target": "ai-grants-india",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-ai-grants-india-2025"
+    },
+    {
+      "source": "hardware-ai-strategic-pivot",
+      "target": "ai-grants-india",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-ai-grants-india-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "runtime-magazine",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-runtime-magazine-2026"
+    },
+    {
+      "source": "runtime-magazine",
+      "target": "media",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-runtime-magazine-2026"
+    },
+    {
+      "source": "runtime-magazine",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-runtime-magazine-2026"
+    },
+    {
+      "source": "runtime-magazine",
+      "target": "ai-agents",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-runtime-magazine-2026"
+    },
+    {
+      "source": "runtime-magazine",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-runtime-magazine-2026"
+    },
+    {
+      "source": "hardware-ai-strategic-pivot",
+      "target": "runtime-magazine",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-runtime-magazine-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "maverick-news",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-maverick-news-2026"
+    },
+    {
+      "source": "maverick-news",
+      "target": "media",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-maverick-news-2026"
+    },
+    {
+      "source": "maverick-news",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-maverick-news-2026"
+    },
+    {
+      "source": "maverick-news",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-maverick-news-2026"
+    },
+    {
+      "source": "thinktac",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-thinktac-yt-2025"
+    },
+    {
+      "source": "thinktac",
+      "target": "electronics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-thinktac-yt-2025"
+    },
+    {
+      "source": "thinktac",
+      "target": "teaching",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-thinktac-yt-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "yugantar",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-yugantar-captvenk-2025"
+    },
+    {
+      "source": "yugantar",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-yugantar-captvenk-2025"
+    },
+    {
+      "source": "yugantar",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-yugantar-captvenk-2025"
+    },
+    {
+      "source": "lion-circuits",
+      "target": "robotics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-lion-circuits-cocreation-2025"
+    },
+    {
+      "source": "lion-circuits",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-lion-circuits-cocreation-2025"
+    },
+    {
+      "source": "legitimacy-ladder-institutions",
+      "target": "lion-circuits",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-lion-circuits-cocreation-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "robu-in",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-robu-founder-testimonial-2025"
+    },
+    {
+      "source": "robu-in",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-robu-founder-testimonial-2025"
+    },
+    {
+      "source": "robu-in",
+      "target": "electronics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-robu-founder-testimonial-2025"
+    },
+    {
+      "source": "robu-in",
+      "target": "robotics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-robu-founder-testimonial-2025"
+    },
+    {
+      "source": "testimonial-network-infrastructure",
+      "target": "robu-in",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-robu-founder-testimonial-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "aerolyte",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-aerolyte-mentorship-2025"
+    },
+    {
+      "source": "aerolyte",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-aerolyte-mentorship-2025"
+    },
+    {
+      "source": "aerolyte",
+      "target": "electronics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-aerolyte-mentorship-2025"
+    },
+    {
+      "source": "aerolyte",
+      "target": "robotics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-aerolyte-mentorship-2025"
+    },
+    {
+      "source": "aerolyte",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-aerolyte-mentorship-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "hardvare",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-hardvare-system-2026"
+    },
+    {
+      "source": "hardvare",
+      "target": "ai-agents",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-hardvare-system-2026"
+    },
+    {
+      "source": "hardvare",
+      "target": "electronics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-hardvare-system-2026"
+    },
+    {
+      "source": "hardvare",
+      "target": "robotics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-hardvare-system-2026"
+    },
+    {
+      "source": "hardvare",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-hardvare-system-2026"
+    },
+    {
+      "source": "hardware-ai-strategic-pivot",
+      "target": "hardvare",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-hardvare-system-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "openclaw",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-openclaw-agent-2026"
+    },
+    {
+      "source": "openclaw",
+      "target": "ai-agents",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-openclaw-agent-2026"
+    },
+    {
+      "source": "openclaw",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-openclaw-agent-2026"
+    },
+    {
+      "source": "openclaw",
+      "target": "funding",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-openclaw-agent-2026"
+    },
+    {
+      "source": "hardware-ai-strategic-pivot",
+      "target": "openclaw",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-openclaw-agent-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "claw",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-autoclaw-system-2026"
+    },
+    {
+      "source": "claw",
+      "target": "ai-agents",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-autoclaw-system-2026"
+    },
+    {
+      "source": "claw",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-autoclaw-system-2026"
+    },
+    {
+      "source": "hardware-ai-strategic-pivot",
+      "target": "claw",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-autoclaw-system-2026"
+    },
+    {
+      "source": "lakshveer",
+      "target": "circuit-heroes",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-shantanugoel-circuitheroes-buy-2025"
+    },
+    {
+      "source": "circuit-heroes",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-shantanugoel-circuitheroes-buy-2025"
+    },
+    {
+      "source": "circuit-heroes",
+      "target": "electronics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-shantanugoel-circuitheroes-buy-2025"
+    },
+    {
+      "source": "circuit-heroes",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-shantanugoel-circuitheroes-buy-2025"
+    },
+    {
+      "source": "testimonial-network-infrastructure",
+      "target": "circuit-heroes",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-shantanugoel-circuitheroes-buy-2025"
+    },
+    {
+      "source": "circuitheroes-linchpin-asset",
+      "target": "circuit-heroes",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-shantanugoel-circuitheroes-buy-2025"
+    },
+    {
+      "source": "runable",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-itsumeshk-runtogether-2026"
+    },
+    {
+      "source": "lion-circuits",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-muralisrinivasa-hwhackathon-2025"
+    },
+    {
+      "source": "lakshveer",
+      "target": "manchester-international-school",
+      "relation": "associated_with",
+      "confidence": "EXTRACTED",
+      "signalId": "sig-manchester-school-principal-2025"
+    },
+    {
+      "source": "manchester-international-school",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-manchester-school-principal-2025"
+    },
+    {
+      "source": "manchester-international-school",
+      "target": "electronics",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-manchester-school-principal-2025"
+    },
+    {
+      "source": "manchester-international-school",
+      "target": "entrepreneurship",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-manchester-school-principal-2025"
+    },
+    {
+      "source": "circuitheroes-linchpin-asset",
+      "target": "manchester-international-school",
+      "relation": "manifested_via",
+      "confidence": "INFERRED",
+      "signalId": "sig-manchester-school-principal-2025"
+    },
+    {
+      "source": "ai-grants-india",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-0xbosky-endorsement"
+    },
+    {
+      "source": "param-foundation",
+      "target": "brand",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-inav65-endorsement"
+    },
+    {
+      "source": "param-foundation",
+      "target": "recognition",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-inav65-endorsement"
+    },
+    {
+      "source": "india-startup-festival",
+      "target": "recognition",
+      "relation": "operates_in",
+      "confidence": "INFERRED",
+      "signalId": "sig-captvenk-yugantar-isf-tweets"
+    }
+  ],
+  "meta": {
+    "compiledAt": "2026-04-06T17:22:56.072Z",
+    "totalSignals": 126,
+    "godNodes": [
+      "entrepreneurship",
+      "brand",
+      "ai-agents",
+      "electronics",
+      "projects-by-laksh",
+      "media",
+      "hardware",
+      "achievement"
+    ],
+    "communities": 2
+  }
+}
