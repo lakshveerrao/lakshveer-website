@@ -146,6 +146,20 @@ const toRgba = (color: string, alpha: number): string => {
 };
 
 // ============================================
+// QUOTES (outside component — stable ref)
+// ============================================
+const QUOTES = [
+  { text: "An 8-year-old showed up and built. That alone changed what we thought was possible.", author: "Runable HQ" },
+  { text: "Laksh knows more about hardware than I did during my entire engineering.", author: "Shubham Kukreti" },
+  { text: "4 founders I'm really bullish on... Laksh of CircuitHeroes.", author: "Roohi Kirit" },
+  { text: "If there were more kids like Lakshveer...", author: "Dr. Aniruddha Malpani" },
+  { text: "An 8-year-old just schooled us all at Hardware Hackathon.", author: "Lion Circuits" },
+  { text: "Youngest founder ever in our Delta cohort.", author: "The Residency" },
+  { text: "Curiosity doesn't have any age. Whenever I hesitate, I remember how fearless Laksh is.", author: "Besta Prem Sai" },
+  { text: "Laksh shows the mentee interest that makes mentorship work.", author: "Karthik Rangarajan" },
+];
+
+// ============================================
 // MAIN COMPONENT
 // ============================================
 
@@ -168,6 +182,15 @@ function Universe() {
   const [draggedNode, setDraggedNode] = useState<SimNode | null>(null);
   const [isPanning, setIsPanning] = useState(false);
   const [lastMouse, setLastMouse] = useState({ x: 0, y: 0 });
+  // Touch state for mobile
+  const [lastTouchDist, setLastTouchDist] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
   
   // Intelligence state
   const [viewMode, setViewMode] = useState<ViewMode>('explore');
@@ -825,7 +848,8 @@ function Universe() {
     const y = ((clientY - rect.top - pan.y - dimensions.height / 2) / zoom + dimensions.height / 2);
     
     let closest: SimNode | null = null;
-    let closestDist = 25 / zoom;
+    const hitRadius = ('ontouchstart' in window) ? 44 / zoom : 25 / zoom;
+    let closestDist = hitRadius;
     
     filteredNodes.forEach(node => {
       const dx = node.x - x;
@@ -896,6 +920,79 @@ function Universe() {
     const delta = e.deltaY > 0 ? 0.9 : 1.1;
     setZoom(z => Math.max(0.2, Math.min(3, z * delta)));
   }, []);
+
+  // Touch handlers for mobile
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    if (e.touches.length === 1) {
+      const t = e.touches[0];
+      const node = getNodeAtPosition(t.clientX, t.clientY);
+      if (node) {
+        setDraggedNode(node);
+        setIsDragging(true);
+        node.fx = node.x;
+        node.fy = node.y;
+      } else {
+        setIsPanning(true);
+      }
+      setLastMouse({ x: t.clientX, y: t.clientY });
+    } else if (e.touches.length === 2) {
+      const dx = e.touches[0].clientX - e.touches[1].clientX;
+      const dy = e.touches[0].clientY - e.touches[1].clientY;
+      setLastTouchDist(Math.sqrt(dx * dx + dy * dy));
+    }
+  }, [getNodeAtPosition]);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    e.preventDefault();
+    if (e.touches.length === 1) {
+      const t = e.touches[0];
+      if (isDragging && draggedNode) {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+        const rect = canvas.getBoundingClientRect();
+        draggedNode.fx = ((t.clientX - rect.left - pan.x - dimensions.width / 2) / zoom + dimensions.width / 2);
+        draggedNode.fy = ((t.clientY - rect.top - pan.y - dimensions.height / 2) / zoom + dimensions.height / 2);
+      } else if (isPanning) {
+        const dx = t.clientX - lastMouse.x;
+        const dy = t.clientY - lastMouse.y;
+        setPan(p => ({ x: p.x + dx, y: p.y + dy }));
+        setLastMouse({ x: t.clientX, y: t.clientY });
+      }
+    } else if (e.touches.length === 2) {
+      const dx = e.touches[0].clientX - e.touches[1].clientX;
+      const dy = e.touches[0].clientY - e.touches[1].clientY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (lastTouchDist > 0) {
+        const scale = dist / lastTouchDist;
+        setZoom(z => Math.max(0.2, Math.min(3, z * scale)));
+      }
+      setLastTouchDist(dist);
+    }
+  }, [isDragging, draggedNode, isPanning, lastMouse, lastTouchDist, pan, zoom, dimensions]);
+
+  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+    if (isDragging && draggedNode) {
+      const moveDistance = e.changedTouches.length > 0
+        ? Math.sqrt(
+            Math.pow(e.changedTouches[0].clientX - lastMouse.x, 2) +
+            Math.pow(e.changedTouches[0].clientY - lastMouse.y, 2)
+          )
+        : 99;
+      if (moveDistance < 10) {
+        setSelectedNode(draggedNode);
+        setRightPanelOpen(true);
+        const url = new URL(window.location.href);
+        url.searchParams.set('node', draggedNode.id);
+        window.history.pushState({}, '', url.toString());
+      }
+      draggedNode.fx = null;
+      draggedNode.fy = null;
+    }
+    setIsDragging(false);
+    setDraggedNode(null);
+    setIsPanning(false);
+    setLastTouchDist(0);
+  }, [isDragging, draggedNode, lastMouse]);
   
   // Timeline dates for slider
   const timelineDates = useMemo(() => {
@@ -927,16 +1024,6 @@ function Universe() {
   };
 
   // v5: Quote ticker auto-advance
-  const QUOTES = [
-    { text: "An 8-year-old showed up and built. That alone changed what we thought was possible.", author: "Runable HQ" },
-    { text: "Laksh knows more about hardware than I did during my entire engineering.", author: "Shubham Kukreti" },
-    { text: "4 founders I'm really bullish on... Laksh of CircuitHeroes.", author: "Roohi Kirit" },
-    { text: "If there were more kids like Lakshveer...", author: "Dr. Aniruddha Malpani" },
-    { text: "An 8-year-old just schooled us all at Hardware Hackathon.", author: "Lion Circuits" },
-    { text: "Youngest founder ever in our Delta cohort.", author: "The Residency" },
-    { text: "Curiosity doesn't have any age. Whenever I hesitate, I remember how fearless Laksh is.", author: "Besta Prem Sai" },
-    { text: "Laksh shows the mentee interest that makes mentorship work.", author: "Karthik Rangarajan" },
-  ];
   useEffect(() => {
     const t = setInterval(() => setQuoteIndex(i => (i + 1) % QUOTES.length), 5000);
     return () => clearInterval(t);
@@ -1018,24 +1105,24 @@ function Universe() {
       />
 
       {/* ── HERO STRIP ───────────────────────────── */}
-      <div className="flex-shrink-0 flex items-center justify-between px-5 py-2.5 border-b border-white/8 bg-[#050508]/95 backdrop-blur-sm z-50" style={{borderColor:'rgba(255,255,255,0.06)'}}>
+      <div className="flex-shrink-0 flex items-center justify-between px-3 sm:px-5 py-2 sm:py-2.5 border-b bg-[#050508]/95 backdrop-blur-sm z-50" style={{borderColor:'rgba(255,255,255,0.06)'}}>
 
         {/* Left: back + identity */}
-        <div className="flex items-center gap-4 min-w-0">
-          <a href="/" className="text-zinc-500 hover:text-white transition-colors flex-shrink-0">
+        <div className="flex items-center gap-2 sm:gap-4 min-w-0">
+          <a href="/" className="text-zinc-500 hover:text-white transition-colors flex-shrink-0 p-1 -ml-1">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
           </a>
-          <div className="flex items-center gap-3 min-w-0">
-            <div className="w-7 h-7 rounded-full bg-gradient-to-br from-cyan-400 to-purple-500 flex-shrink-0 flex items-center justify-center text-xs font-bold text-white">L</div>
+          <div className="flex items-center gap-2 min-w-0">
+            <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-gradient-to-br from-cyan-400 to-purple-500 flex-shrink-0 flex items-center justify-center text-xs font-bold text-white">L</div>
             <div className="min-w-0">
-              <span className="text-sm font-semibold text-white">Lakshveer</span>
-              <span className="text-zinc-500 text-xs ml-2 hidden sm:inline">8 · Hyderabad · Hardware + AI</span>
+              <span className="text-xs sm:text-sm font-semibold text-white">Lakshveer</span>
+              <span className="text-zinc-500 text-[10px] sm:text-xs ml-1.5 hidden sm:inline">8 · Hyderabad · Hardware + AI</span>
             </div>
           </div>
-          {/* Live stats pills */}
-          <div className="hidden md:flex items-center gap-1.5 ml-2">
+          {/* Stats pills — desktop only */}
+          <div className="hidden lg:flex items-center gap-1 ml-1">
             {[
               { v: '170+', l: 'builds' },
               { v: '126', l: 'signals' },
@@ -1043,33 +1130,31 @@ function Universe() {
               { v: '₹1.4L', l: 'grants' },
               { v: '13', l: 'press' },
             ].map(s => (
-              <span key={s.l} className="text-[10px] px-2 py-0.5 rounded-full bg-white/5 border border-white/8 text-zinc-400" style={{borderColor:'rgba(255,255,255,0.06)'}}>
+              <span key={s.l} className="text-[10px] px-1.5 py-0.5 rounded-full bg-white/5 border text-zinc-400" style={{borderColor:'rgba(255,255,255,0.06)'}}>
                 <span className="text-white font-medium">{s.v}</span> {s.l}
               </span>
             ))}
           </div>
         </div>
 
-        {/* Center: scrolling quote */}
-        <div className="hidden lg:flex flex-1 mx-6 overflow-hidden">
-          <div className="w-full text-center transition-all duration-700">
-            <span className="text-xs text-zinc-400 italic">
-              "{QUOTES[quoteIndex].text}"
-            </span>
+        {/* Center: scrolling quote — lg only */}
+        <div className="hidden lg:flex flex-1 mx-4 overflow-hidden">
+          <div className="w-full text-center">
+            <span className="text-xs text-zinc-400 italic">"{QUOTES[quoteIndex].text}"</span>
             <span className="text-[10px] text-zinc-600 ml-2">— {QUOTES[quoteIndex].author}</span>
           </div>
         </div>
 
         {/* Right: controls */}
-        <div className="flex items-center gap-2 flex-shrink-0">
-          {/* Search */}
+        <div className="flex items-center gap-1.5 flex-shrink-0">
+          {/* Search — sm+ */}
           <div className="relative hidden sm:block">
             <input
               type="text"
               placeholder="Search…"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              className="w-32 px-3 py-1.5 bg-white/5 border border-white/8 rounded-lg text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-cyan-500/50"
+              className="w-28 md:w-32 px-2.5 py-1 bg-white/5 border rounded-lg text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-cyan-500/50"
               style={{borderColor: searchQuery ? undefined : 'rgba(255,255,255,0.06)'}}
             />
             {searchQuery && (
@@ -1077,7 +1162,7 @@ function Universe() {
             )}
           </div>
 
-          {/* View mode */}
+          {/* View mode — md+ */}
           <div className="hidden md:flex items-center gap-0.5 bg-white/5 rounded-lg p-0.5">
             {(['explore','clusters','timeline'] as ViewMode[]).map(m => (
               <button
@@ -1090,18 +1175,28 @@ function Universe() {
             ))}
           </div>
 
+          {/* Left panel toggle on mobile */}
+          <button
+            onClick={() => setLeftPanelOpen(p => !p)}
+            className="md:hidden p-1.5 rounded-lg bg-white/5 text-zinc-400 hover:text-white transition-colors"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+
           {/* Private mode */}
           <button
             onClick={togglePrivateMode}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border transition-all ${
+            className={`flex items-center gap-1 px-2 sm:px-3 py-1.5 rounded-lg text-xs font-medium border transition-all ${
               privateMode
                 ? 'bg-purple-500/15 border-purple-500/30 text-purple-300'
-                : 'bg-white/5 border-white/8 text-zinc-500 hover:text-white'
+                : 'bg-white/5 text-zinc-500 hover:text-white'
             }`}
             style={!privateMode ? {borderColor:'rgba(255,255,255,0.06)'} : {}}
           >
-            <span className={`w-1.5 h-1.5 rounded-full ${privateMode ? 'bg-purple-400' : 'bg-zinc-600'}`} />
-            {privateMode ? 'Private' : 'Private'}
+            <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${privateMode ? 'bg-purple-400' : 'bg-zinc-600'}`} />
+            <span className="hidden sm:inline">{privateMode ? 'Private' : 'Private'}</span>
           </button>
         </div>
       </div>
@@ -1109,12 +1204,39 @@ function Universe() {
       {/* ── MAIN LAYOUT ──────────────────────────── */}
       <div className="flex flex-1 overflow-hidden relative">
 
+        {/* ── LEFT PANEL — mobile backdrop ── */}
+        {isMobile && leftPanelOpen && (
+          <div
+            className="fixed inset-0 bg-black/60 z-40"
+            onClick={() => setLeftPanelOpen(false)}
+          />
+        )}
+
         {/* ── LEFT PANEL (collapsed by default) ── */}
         <div
-          className={`${leftPanelOpen ? 'w-64' : 'w-0'} flex-shrink-0 transition-all duration-300 overflow-hidden border-r z-30 bg-[#050508]/90`}
+          className={`${
+            isMobile
+              ? `fixed inset-y-0 left-0 z-50 transition-transform duration-300 ${leftPanelOpen ? 'translate-x-0' : '-translate-x-full'} w-72`
+              : `${leftPanelOpen ? 'w-64' : 'w-0'} flex-shrink-0 transition-all duration-300`
+          } overflow-hidden border-r bg-[#050508]`}
           style={{borderColor:'rgba(255,255,255,0.06)'}}
         >
-          <div className="w-64 h-full overflow-y-auto p-3 space-y-4">
+          <div className={`${isMobile ? 'w-72' : 'w-64'} h-full overflow-y-auto p-3 space-y-4`}>
+
+            {/* Mobile close button */}
+            {isMobile && (
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs font-semibold text-white">Filters</span>
+                <button
+                  onClick={() => setLeftPanelOpen(false)}
+                  className="p-1.5 rounded-lg bg-white/5 text-zinc-400 hover:text-white transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            )}
 
             {/* Capability clusters */}
             <div>
@@ -1199,16 +1321,18 @@ function Universe() {
           </div>
         </div>
 
-        {/* ── LEFT PANEL TOGGLE ── */}
+        {/* ── LEFT PANEL TOGGLE (desktop only) ── */}
+        {!isMobile && (
         <button
           onClick={() => setLeftPanelOpen(p => !p)}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-40 w-5 h-10 flex items-center justify-center bg-zinc-900 border border-white/8 rounded-r-lg text-zinc-500 hover:text-white transition-all"
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-40 w-5 h-10 hidden md:flex items-center justify-center bg-zinc-900 border border-white/8 rounded-r-lg text-zinc-500 hover:text-white transition-all"
           style={{ left: leftPanelOpen ? '256px' : '0', borderColor:'rgba(255,255,255,0.06)' }}
         >
           <svg className={`w-3 h-3 transition-transform ${leftPanelOpen ? '' : 'rotate-180'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
+        )}
 
         {/* ── CANVAS (the hero) ── */}
         <div
@@ -1225,6 +1349,10 @@ function Universe() {
             onMouseUp={handleMouseUp}
             onMouseLeave={() => { setHoveredNode(null); setIsPanning(false); }}
             onWheel={handleWheel}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            style={{ touchAction: 'none' }}
             className="block"
           />
 
@@ -1246,7 +1374,7 @@ function Universe() {
           )}
 
           {/* ── STATS BADGE (top-right of canvas) ── */}
-          <div className="absolute top-3 right-3 flex items-center gap-2">
+          <div className="absolute top-3 right-3 hidden sm:flex items-center gap-2">
             <div className="flex items-center gap-1.5 px-2.5 py-1 bg-zinc-900/80 border border-white/8 rounded-lg text-[10px] text-zinc-500" style={{borderColor:'rgba(255,255,255,0.06)'}}>
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
               <span>{filteredNodes.length} nodes</span>
@@ -1264,15 +1392,18 @@ function Universe() {
             </button>
           </div>
 
-          {/* ── HOVER CARD ── */}
-          {hoveredNode && !selectedNode && (() => {
+          {/* ── HOVER CARD (desktop only) ── */}
+          {hoveredNode && !selectedNode && !isMobile && (() => {
             const card = getNodeCard(hoveredNode);
+            // Correct formula: translate(pan) then scale(zoom) around canvas center
+            const screenX = hoveredNode.x * zoom + pan.x + (dimensions.width / 2) * (1 - zoom);
+            const screenY = hoveredNode.y * zoom + pan.y + (dimensions.height / 2) * (1 - zoom);
             return (
               <div
                 className="absolute pointer-events-none z-20 max-w-[220px]"
                 style={{
-                  left: Math.min(hoveredNode.x * zoom + pan.x + dimensions.width / 2 * (1 - zoom) + 14, dimensions.width - 240),
-                  top: Math.max(hoveredNode.y * zoom + pan.y + dimensions.height / 2 * (1 - zoom) - 10, 10),
+                  left: Math.min(screenX + 14, dimensions.width - 240),
+                  top: Math.max(screenY - 10, 10),
                 }}
               >
                 <div className="bg-zinc-900/95 border rounded-xl p-3 shadow-xl backdrop-blur-sm" style={{borderColor: card.color + '40'}}>
@@ -1290,7 +1421,7 @@ function Universe() {
           })()}
 
           {/* ── ASK ANYTHING (floating, bottom center) ── */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 w-full max-w-md px-4">
+          <div className="absolute left-1/2 -translate-x-1/2 z-30 w-full max-w-md px-4" style={{ bottom: 'max(24px, env(safe-area-inset-bottom, 24px))' }}>
             <div
               className={`flex items-center gap-2 bg-zinc-900/95 border rounded-2xl px-4 py-2.5 shadow-2xl backdrop-blur-sm transition-all ${
                 askFocused ? 'border-cyan-500/50 shadow-cyan-500/10' : 'border-white/10'
@@ -1336,156 +1467,211 @@ function Universe() {
           </div>
         </div>
 
-        {/* ── RIGHT PANEL TOGGLE ── */}
-        <button
-          onClick={() => setRightPanelOpen(p => !p)}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-40 w-5 h-10 flex items-center justify-center bg-zinc-900 border border-white/8 rounded-l-lg text-zinc-500 hover:text-white transition-all"
-          style={{ right: rightPanelOpen ? '352px' : '0', borderColor:'rgba(255,255,255,0.06)' }}
-        >
-          <svg className={`w-3 h-3 transition-transform ${rightPanelOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
+        {/* ── RIGHT PANEL TOGGLE (desktop only) ── */}
+        {!isMobile && (
+          <button
+            onClick={() => setRightPanelOpen(p => !p)}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-40 w-5 h-10 hidden md:flex items-center justify-center bg-zinc-900 border border-white/8 rounded-l-lg text-zinc-500 hover:text-white transition-all"
+            style={{ right: rightPanelOpen ? '352px' : '0', borderColor:'rgba(255,255,255,0.06)' }}
+          >
+            <svg className={`w-3 h-3 transition-transform ${rightPanelOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+        )}
 
-        {/* ── RIGHT PANEL ── */}
-        <div
-          className={`flex-shrink-0 transition-all duration-300 overflow-hidden border-l z-30 bg-[#050508]/90`}
-          style={{ width: rightPanelOpen ? '352px' : '0', borderColor:'rgba(255,255,255,0.06)' }}
-        >
-          <div className="w-[352px] h-full flex flex-col overflow-hidden">
+        {/* ── RIGHT PANEL OPEN BUTTON (mobile — floating bottom-right) ── */}
+        {isMobile && !rightPanelOpen && (
+          <button
+            onClick={() => setRightPanelOpen(true)}
+            className="absolute bottom-24 right-3 z-40 w-10 h-10 flex items-center justify-center rounded-full bg-cyan-500/20 border border-cyan-500/40 text-cyan-400 shadow-lg"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </button>
+        )}
 
-            {/* Panel header tabs */}
-            {!selectedNode && (
-              <div className="flex-shrink-0 flex flex-col gap-1 px-3 pt-3 pb-2 border-b" style={{borderColor:'rgba(255,255,255,0.06)'}}>
-                {/* Row 1 — public */}
-                <div className="flex gap-1">
-                  {([
-                    { id: 'insights', label: askAnswer ? '✦ Answer' : '⚡ Insights' },
-                    { id: 'journey', label: '📖 Story' },
-                    { id: 'signal-timeline', label: '🕐 Timeline' },
-                    { id: 'participate', label: '🤝 Connect' },
-                  ] as {id: RightPanelMode, label: string}[]).map(tab => (
-                    <button
-                      key={tab.id}
-                      onClick={() => setRightPanelMode(tab.id)}
-                      className={`flex-1 py-1.5 text-[10px] font-medium rounded-lg transition-all ${
-                        rightPanelMode === tab.id ? 'bg-cyan-500/20 text-cyan-400' : 'text-zinc-500 hover:text-white hover:bg-white/5'
-                      }`}
-                    >{tab.label}</button>
-                  ))}
-                </div>
-                {/* Row 2 — private */}
-                {privateMode && (
+        {/* ── RIGHT PANEL (shared inner content as a helper) ── */}
+        {/* Mobile: bottom sheet | Desktop: side panel */}
+        {(() => {
+          const panelContent = (
+            <div className="w-full h-full flex flex-col overflow-hidden">
+              {/* Panel header tabs */}
+              {!selectedNode && (
+                <div className="flex-shrink-0 flex flex-col gap-1 px-3 pt-3 pb-2 border-b" style={{borderColor:'rgba(255,255,255,0.06)'}}>
+                  {/* Row 1 — public */}
                   <div className="flex gap-1">
                     {([
-                      { id: 'feed', label: '📡 Feed' },
-                      { id: 'surfaces', label: '🌐 Surfaces' },
-                      { id: 'health', label: '🩺 Health' },
-                      { id: 'wiki', label: '🧠 Wiki' },
+                      { id: 'insights', label: askAnswer ? '✦ Answer' : '⚡ Insights' },
+                      { id: 'journey', label: '📖 Story' },
+                      { id: 'signal-timeline', label: '🕐 Timeline' },
+                      { id: 'participate', label: '🤝 Connect' },
                     ] as {id: RightPanelMode, label: string}[]).map(tab => (
                       <button
                         key={tab.id}
                         onClick={() => setRightPanelMode(tab.id)}
                         className={`flex-1 py-1.5 text-[10px] font-medium rounded-lg transition-all ${
-                          rightPanelMode === tab.id ? 'bg-purple-500/20 text-purple-400' : 'text-zinc-600 hover:text-white hover:bg-white/5'
+                          rightPanelMode === tab.id ? 'bg-cyan-500/20 text-cyan-400' : 'text-zinc-500 hover:text-white hover:bg-white/5'
                         }`}
                       >{tab.label}</button>
                     ))}
                   </div>
-                )}
-              </div>
-            )}
-
-            {/* Panel body */}
-            <div className="flex-1 overflow-y-auto">
-              {selectedNode ? (
-                <>
-                  {nodeLoading && (
-                    <div className="flex items-center justify-center py-8">
-                      <div className="text-sm text-cyan-400">Loading…</div>
+                  {/* Row 2 — private */}
+                  {privateMode && (
+                    <div className="flex gap-1">
+                      {([
+                        { id: 'feed', label: '📡 Feed' },
+                        { id: 'surfaces', label: '🌐 Surfaces' },
+                        { id: 'health', label: '🩺 Health' },
+                        { id: 'wiki', label: '🧠 Wiki' },
+                      ] as {id: RightPanelMode, label: string}[]).map(tab => (
+                        <button
+                          key={tab.id}
+                          onClick={() => setRightPanelMode(tab.id)}
+                          className={`flex-1 py-1.5 text-[10px] font-medium rounded-lg transition-all ${
+                            rightPanelMode === tab.id ? 'bg-purple-500/20 text-purple-400' : 'text-zinc-600 hover:text-white hover:bg-white/5'
+                          }`}
+                        >{tab.label}</button>
+                      ))}
                     </div>
                   )}
-                  {!nodeLoading && nodeData?.success && (
-                    <NodeWorldPanel
-                      nodeData={nodeData}
-                      onNodeSelect={nodeId => {
-                        const sn = simNodes.find(n => n.id === nodeId);
-                        if (sn) setSelectedNode(sn);
-                      }}
-                      onClose={() => { setSelectedNode(null); window.history.pushState({}, '', '/universe'); }}
-                    />
-                  )}
-                  {!nodeLoading && (!nodeData?.success || !nodeData) && (
-                    <div className="-m-0 h-full">
-                      <NodeAgentPanel
-                        nodeId={selectedNode.id}
-                        nodeLabel={selectedNode.label}
-                        nodeType={selectedNode.type}
-                        nodeDescription={selectedNode.description}
-                        nodeTimestamp={selectedNode.year ? String(selectedNode.year) : undefined}
-                        privateMode={privateMode}
+                </div>
+              )}
+              {/* Panel body */}
+              <div className="flex-1 overflow-y-auto">
+                {selectedNode ? (
+                  <>
+                    {nodeLoading && (
+                      <div className="flex items-center justify-center py-8">
+                        <div className="text-sm text-cyan-400">Loading…</div>
+                      </div>
+                    )}
+                    {!nodeLoading && nodeData?.success && (
+                      <NodeWorldPanel
+                        nodeData={nodeData}
                         onNodeSelect={nodeId => {
                           const sn = simNodes.find(n => n.id === nodeId);
                           if (sn) setSelectedNode(sn);
                         }}
                         onClose={() => { setSelectedNode(null); window.history.pushState({}, '', '/universe'); }}
                       />
-                    </div>
-                  )}
-                </>
-              ) : (
-                <div className="h-full">
-                  {/* Ask answer replaces insights when active */}
-                  {rightPanelMode === 'insights' && askAnswer && (
-                    <div className="p-4">
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-                        <p className="text-xs font-medium text-cyan-400">Answer</p>
-                        <button
-                          onClick={() => { setAskAnswer(null); setAskHighlightedNodes(new Set()); setAskQuery(''); }}
-                          className="ml-auto text-[10px] text-zinc-600 hover:text-white"
-                        >clear</button>
+                    )}
+                    {!nodeLoading && (!nodeData?.success || !nodeData) && (
+                      <div className="-m-0 h-full">
+                        <NodeAgentPanel
+                          nodeId={selectedNode.id}
+                          nodeLabel={selectedNode.label}
+                          nodeType={selectedNode.type}
+                          nodeDescription={selectedNode.description}
+                          nodeTimestamp={selectedNode.year ? String(selectedNode.year) : undefined}
+                          privateMode={privateMode}
+                          onNodeSelect={nodeId => {
+                            const sn = simNodes.find(n => n.id === nodeId);
+                            if (sn) setSelectedNode(sn);
+                          }}
+                          onClose={() => { setSelectedNode(null); window.history.pushState({}, '', '/universe'); }}
+                        />
                       </div>
-                      <p className="text-xs text-zinc-500 mb-3 italic">"{askQuery}"</p>
-                      <div className="prose prose-invert prose-xs max-w-none">
-                        <pre className="whitespace-pre-wrap text-[12px] text-zinc-300 font-sans leading-relaxed">{askAnswer}</pre>
+                    )}
+                  </>
+                ) : (
+                  <div className="h-full">
+                    {rightPanelMode === 'insights' && askAnswer && (
+                      <div className="p-4">
+                        <div className="flex items-center gap-2 mb-3">
+                          <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                          <p className="text-xs font-medium text-cyan-400">Answer</p>
+                          <button
+                            onClick={() => { setAskAnswer(null); setAskHighlightedNodes(new Set()); setAskQuery(''); }}
+                            className="ml-auto text-[10px] text-zinc-600 hover:text-white"
+                          >clear</button>
+                        </div>
+                        <p className="text-xs text-zinc-500 mb-3 italic">"{askQuery}"</p>
+                        <div className="prose prose-invert prose-xs max-w-none">
+                          <pre className="whitespace-pre-wrap text-[12px] text-zinc-300 font-sans leading-relaxed">{askAnswer}</pre>
+                        </div>
                       </div>
-                    </div>
-                  )}
-                  {rightPanelMode === 'insights' && !askAnswer && (
-                    <IntelligenceInsights />
-                  )}
-                  {rightPanelMode === 'journey' && (
-                    <GuidedJourney
-                      onNodeHighlight={nodeIds => {
-                        setJourneyHighlightedNodes(nodeIds);
-                        const first = simNodes.find(n => nodeIds.includes(n.id));
-                        if (first) setPan({ x: dimensions.width / 2 - first.x * zoom, y: dimensions.height / 2 - first.y * zoom });
-                      }}
-                    />
-                  )}
-                  {rightPanelMode === 'participate' && <ParticipationGateway />}
-                  {rightPanelMode === 'signal-timeline' && (
-                    <div className="p-4"><SignalTimeline privateMode={privateMode} /></div>
-                  )}
-                  {rightPanelMode === 'feed' && privateMode && <IntelligenceFeed />}
-                  {rightPanelMode === 'surfaces' && privateMode && <SurfaceDashboard />}
-                  {rightPanelMode === 'health' && privateMode && <HealthMonitor />}
-                  {rightPanelMode === 'wiki' && privateMode && (
-                    <div>
-                      <div className="px-4 pt-3 pb-1">
-                        <a href="/wiki/graph" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-300 hover:bg-purple-500/20 transition-colors text-xs font-medium">
-                          <span>🕸</span><span>Open Graph Visualizer</span><span className="ml-auto text-purple-500">↗</span>
-                        </a>
+                    )}
+                    {rightPanelMode === 'insights' && !askAnswer && <IntelligenceInsights />}
+                    {rightPanelMode === 'journey' && (
+                      <GuidedJourney
+                        onNodeHighlight={nodeIds => {
+                          setJourneyHighlightedNodes(nodeIds);
+                          const first = simNodes.find(n => nodeIds.includes(n.id));
+                          if (first) setPan({ x: dimensions.width / 2 - first.x * zoom, y: dimensions.height / 2 - first.y * zoom });
+                        }}
+                      />
+                    )}
+                    {rightPanelMode === 'participate' && <ParticipationGateway />}
+                    {rightPanelMode === 'signal-timeline' && (
+                      <div className="p-4"><SignalTimeline privateMode={privateMode} /></div>
+                    )}
+                    {rightPanelMode === 'feed' && privateMode && <IntelligenceFeed />}
+                    {rightPanelMode === 'surfaces' && privateMode && <SurfaceDashboard />}
+                    {rightPanelMode === 'health' && privateMode && <HealthMonitor />}
+                    {rightPanelMode === 'wiki' && privateMode && (
+                      <div>
+                        <div className="px-4 pt-3 pb-1">
+                          <a href="/wiki/graph" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-300 hover:bg-purple-500/20 transition-colors text-xs font-medium">
+                            <span>🕸</span><span>Open Graph Visualizer</span><span className="ml-auto text-purple-500">↗</span>
+                          </a>
+                        </div>
+                        <WikiPanel />
                       </div>
-                      <WikiPanel />
-                    </div>
-                  )}
-                </div>
-              )}
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        </div>
+          );
+
+          if (isMobile) {
+            return (
+              <>
+                {/* Mobile backdrop */}
+                {rightPanelOpen && (
+                  <div className="fixed inset-0 bg-black/40 z-40" onClick={() => setRightPanelOpen(false)} />
+                )}
+                {/* Bottom sheet */}
+                <div
+                  className={`fixed bottom-0 left-0 right-0 z-50 bg-[#0c0c12] border-t rounded-t-2xl transition-transform duration-300 flex flex-col ${
+                    rightPanelOpen ? 'translate-y-0' : 'translate-y-full'
+                  }`}
+                  style={{ height: '72vh', borderColor: 'rgba(255,255,255,0.1)' }}
+                >
+                  {/* Drag handle */}
+                  <div className="flex justify-center pt-2.5 pb-1 flex-shrink-0">
+                    <div className="w-10 h-1 rounded-full bg-zinc-700" />
+                  </div>
+                  {/* Close button */}
+                  <button
+                    onClick={() => setRightPanelOpen(false)}
+                    className="absolute top-3 right-3 p-1.5 rounded-lg bg-white/5 text-zinc-400 hover:text-white transition-colors"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                  <div className="flex-1 overflow-hidden">
+                    {panelContent}
+                  </div>
+                </div>
+              </>
+            );
+          }
+
+          return (
+            <div
+              className="flex-shrink-0 transition-all duration-300 overflow-hidden border-l z-30 bg-[#050508]/90"
+              style={{ width: rightPanelOpen ? '352px' : '0', borderColor:'rgba(255,255,255,0.06)' }}
+            >
+              <div className="w-[352px] h-full">
+                {panelContent}
+              </div>
+            </div>
+          );
+        })()}
       </div>
 
       {/* ── QUOTE TICKER (bottom strip, mobile) ── */}
