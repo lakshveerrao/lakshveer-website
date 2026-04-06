@@ -4,6 +4,7 @@ import ogApp from './og-image';
 import universeApi from './universe-api';
 import { mentionRoutes } from './routes/mentions';
 import { wikiRoutes } from './routes/wiki';
+import { ingestRoutes } from './routes/ingest';
 
 interface ContactFormData {
   name: string;
@@ -35,6 +36,9 @@ app.route('/mentions', mentionRoutes);
 
 // Mount Wiki routes
 app.route('/wiki', wikiRoutes);
+
+// Mount Signal Ingest
+app.route('/signals', ingestRoutes);
 
 app.get('/ping', (c) => c.json({ message: `Pong! ${Date.now()}` }));
 

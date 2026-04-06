@@ -54,7 +54,7 @@ function slug(s: string) {
 }
 
 // ---- System prompt ----
-const SYSTEM = `You are compiling a personal knowledge wiki about Lakshveer Rao — a 16-year-old Indian maker and entrepreneur from Hyderabad.
+const SYSTEM = `You are compiling a personal knowledge wiki about Lakshveer Rao — an 8-year-old Indian hardware founder and maker from Hyderabad.
 
 This wiki is built FOR AGENTS to read, not humans. Dense, factual, structured markdown.
 Rules:
@@ -80,7 +80,7 @@ function extractEntities(sigs: any[]) {
       if ((s.title + s.rawText).includes(kw)) projects.add(kw);
     }
     for (const e of s.entities ?? []) {
-      if (['S. Somanath'].some(p => e.includes(p))) people.add(e);
+      if (['S. Somanath', 'Lakshveer'].some(p => e.includes(p))) people.add(e);
     }
   }
   return {
@@ -300,6 +300,50 @@ Format:
       writeWiki('meta/connections.md', content);
     })(),
   ]);
+
+  // ---- Central subject article ----
+  (async () => {
+    const content = await llm(
+      `Write the central wiki article for Lakshveer Rao himself. This is the most important article — the subject of this entire wiki.
+
+All signals:
+${SIGS_CTX}
+
+Format:
+# Lakshveer Rao
+*Person — Central Subject*
+
+## Identity
+(who he is: age, location, role, co-founder of what)
+
+## What He Builds
+(hardware, software, games — specific products with dates)
+
+## Key Numbers
+(170+ projects, 300+ decks, ₹1.4L+ grants, etc)
+
+## Institutional Recognition
+(ISRO, IIT, The Residency, Shark Tank, etc — with signal IDs)
+
+## Voice of the Ecosystem
+(what others say about him — with signal IDs)
+
+## Timeline
+(year-by-year milestones, dense)
+
+## Active Systems
+(Hardvare, OpenClaw, MotionX, etc)
+
+## Signals
+(list all signal IDs related to him)
+
+---
+*Compiled: ${COMPILED_AT}*`,
+      SYSTEM
+    );
+    writeWiki('people/lakshveer.md', content);
+    console.log('  ✓ people/lakshveer.md');
+  })();
 
   // ---- Index ----
   console.log('\n📋 Building index...');

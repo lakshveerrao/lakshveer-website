@@ -1,71 +1,98 @@
 // ============================================
-// SIGNAL CAPTURE PANEL — Universe v5.5
-// Admin-only quick entry for external signals
-// Only visible in private mode
+// SIGNAL CAPTURE PANEL — Real ingest pipeline
+// ============================================
+// Paste any URL → calls /api/signals/ingest →
+// LLM scrapes + extracts signal metadata →
+// Shows extracted JSON for review
 // ============================================
 
 import { useState } from 'react';
-import { quickCapture } from '../../../intelligence/universe-brain';
-import { nodes } from '../../data/universe-data';
-import type { SignalSource } from '../../../intelligence/signal-engine';
 
 interface SignalCapturePanelProps {
   onClose: () => void;
-  onSignalProcessed?: (result: { signalId: string; mappedNodeIds: string[]; opportunitiesFound: number }) => void;
 }
 
-const SOURCE_OPTIONS: { value: SignalSource; label: string; emoji: string }[] = [
-  { value: 'youtube', label: 'YouTube', emoji: '📺' },
-  { value: 'article', label: 'Article', emoji: '📰' },
-  { value: 'event', label: 'Event', emoji: '🎪' },
-  { value: 'website', label: 'Website', emoji: '🌐' },
-];
+interface ExtractedSignal {
+  id: string;
+  source: string;
+  url: string;
+  title: string;
+  date: string;
+  entities: string[];
+  domains: string[];
+  organizations: string[];
+  rawText: string;
+  confidence: string;
+  surface: string;
+}
 
-export function SignalCapturePanel({ onClose, onSignalProcessed }: SignalCapturePanelProps) {
+type Step = 'input' | 'loading' | 'review' | 'done' | 'error';
+
+export function SignalCapturePanel({ onClose }: SignalCapturePanelProps) {
   const [url, setUrl] = useState('');
-  const [title, setTitle] = useState('');
-  const [source, setSource] = useState<SignalSource>('website');
-  const [relatedNodeId, setRelatedNodeId] = useState('');
   const [notes, setNotes] = useState('');
-  const [result, setResult] = useState<{ signalId: string; mappedNodeIds: string[]; opportunitiesFound: number } | null>(null);
-  const [processing, setProcessing] = useState(false);
+  const [step, setStep] = useState<Step>('input');
+  const [signal, setSignal] = useState<ExtractedSignal | null>(null);
+  const [error, setError] = useState('');
+  const [copied, setCopied] = useState(false);
 
-  const handleSubmit = () => {
-    if (!title.trim()) return;
-
-    setProcessing(true);
+  async function handleIngest() {
+    if (!url.trim()) return;
+    setStep('loading');
+    setError('');
     try {
-      const res = quickCapture({
-        url: url.trim(),
-        source,
-        title: title.trim(),
-        relatedNodeId: relatedNodeId || undefined,
-        notes: notes.trim() || undefined,
+      const res = await fetch('/api/signals/ingest', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url: url.trim(), notes: notes.trim() || undefined }),
       });
-      setResult(res);
-      onSignalProcessed?.(res);
-    } finally {
-      setProcessing(false);
+      const data = await res.json();
+      if (!res.ok || data.error) {
+        setError(data.error || 'Ingest failed');
+        setStep('error');
+        return;
+      }
+      setSignal(data.signal);
+      setStep('review');
+    } catch (e) {
+      setError('Network error — check connection');
+      setStep('error');
     }
+  }
+
+  function copyJson() {
+    if (!signal) return;
+    navigator.clipboard.writeText(JSON.stringify(signal, null, 2));
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  }
+
+  function reset() {
+    setUrl('');
+    setNotes('');
+    setStep('input');
+    setSignal(null);
+    setError('');
+  }
+
+  const sourceEmoji: Record<string, string> = {
+    tweet: '🐦', youtube: '📺', instagram: '📸',
+    linkedin: '💼', article: '📰', github: '⚙️', website: '🌐',
   };
 
-  const handleReset = () => {
-    setUrl('');
-    setTitle('');
-    setSource('website');
-    setRelatedNodeId('');
-    setNotes('');
-    setResult(null);
+  const confColor: Record<string, string> = {
+    high: 'text-emerald-400', medium: 'text-amber-400', low: 'text-red-400',
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-      <div className="bg-[#0a0a0f] border border-white/10 rounded-xl w-[420px] max-h-[80vh] overflow-y-auto shadow-2xl">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
+      <div className="bg-[#0a0a0f] border border-white/10 rounded-xl w-[480px] max-h-[85vh] overflow-y-auto shadow-2xl">
+
         {/* Header */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-white/5">
           <div>
-            <h3 className="text-sm font-bold text-white">Capture Signal</h3>
-            <p className="text-xs text-white/30 mt-0.5">Feed intelligence into the Universe</p>
+            <h3 className="text-sm font-bold text-white">Ingest Signal</h3>
+            <p className="text-xs text-white/30 mt-0.5">URL → LLM extracts → signals.json</p>
           </div>
           <button onClick={onClose} className="p-1.5 hover:bg-white/10 rounded transition-colors">
             <svg className="w-4 h-4 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -74,138 +101,145 @@ export function SignalCapturePanel({ onClose, onSignalProcessed }: SignalCapture
           </button>
         </div>
 
-        {/* Form */}
-        {!result ? (
+        {/* STEP: Input */}
+        {step === 'input' && (
           <div className="px-5 py-4 space-y-4">
-            {/* Title */}
             <div>
-              <label className="text-xs font-medium text-white/50 mb-1.5 block">Title *</label>
-              <input
-                type="text"
-                value={title}
-                onChange={e => setTitle(e.target.value)}
-                placeholder="What happened? e.g. Won robotics hackathon"
-                className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-white placeholder-white/20 focus:outline-none focus:border-white/30"
-              />
-            </div>
-
-            {/* Source */}
-            <div>
-              <label className="text-xs font-medium text-white/50 mb-1.5 block">Source</label>
-              <div className="flex gap-1.5">
-                {SOURCE_OPTIONS.map(opt => (
-                  <button
-                    key={opt.value}
-                    onClick={() => setSource(opt.value)}
-                    className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                      source === opt.value
-                        ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30'
-                        : 'bg-white/5 text-white/40 border border-white/5 hover:text-white/60'
-                    }`}
-                  >
-                    <span>{opt.emoji}</span>
-                    <span>{opt.label}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* URL */}
-            <div>
-              <label className="text-xs font-medium text-white/50 mb-1.5 block">URL</label>
+              <label className="text-xs font-medium text-white/50 mb-1.5 block">URL *</label>
               <input
                 type="url"
                 value={url}
                 onChange={e => setUrl(e.target.value)}
-                placeholder="https://..."
+                onKeyDown={e => e.key === 'Enter' && handleIngest()}
+                autoFocus
+                placeholder="https://x.com/someone/status/... or article URL"
+                className="w-full px-3 py-2.5 rounded-lg bg-white/5 border border-white/10 text-sm text-white placeholder-white/20 focus:outline-none focus:border-white/30"
+              />
+              <p className="text-xs text-white/25 mt-1.5">Supports: Twitter/X, YouTube, Instagram, LinkedIn, articles, blogs</p>
+            </div>
+            <div>
+              <label className="text-xs font-medium text-white/50 mb-1.5 block">Notes <span className="text-white/25">(optional)</span></label>
+              <input
+                type="text"
+                value={notes}
+                onChange={e => setNotes(e.target.value)}
+                placeholder="e.g. endorsed Laksh at hardware hackathon"
                 className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-white placeholder-white/20 focus:outline-none focus:border-white/30"
               />
             </div>
-
-            {/* Related Node */}
-            <div>
-              <label className="text-xs font-medium text-white/50 mb-1.5 block">Related Node</label>
-              <select
-                value={relatedNodeId}
-                onChange={e => setRelatedNodeId(e.target.value)}
-                className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-white focus:outline-none focus:border-white/30"
-              >
-                <option value="">Auto-detect</option>
-                {nodes
-                  .filter(n => n.type !== 'possibility')
-                  .sort((a, b) => a.label.localeCompare(b.label))
-                  .map(n => (
-                    <option key={n.id} value={n.id}>{n.label}</option>
-                  ))
-                }
-              </select>
-            </div>
-
-            {/* Notes */}
-            <div>
-              <label className="text-xs font-medium text-white/50 mb-1.5 block">Notes</label>
-              <textarea
-                value={notes}
-                onChange={e => setNotes(e.target.value)}
-                placeholder="Additional context..."
-                rows={3}
-                className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-white placeholder-white/20 focus:outline-none focus:border-white/30 resize-none"
-              />
-            </div>
-
-            {/* Submit */}
             <button
-              onClick={handleSubmit}
-              disabled={!title.trim() || processing}
-              className={`w-full py-2.5 rounded-lg text-sm font-semibold transition-all ${
-                title.trim() && !processing
-                  ? 'bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500/30 border border-cyan-500/30'
-                  : 'bg-white/5 text-white/20 border border-white/5 cursor-not-allowed'
-              }`}
+              onClick={handleIngest}
+              disabled={!url.trim()}
+              className="w-full py-2.5 rounded-lg text-sm font-semibold transition-all disabled:opacity-30 disabled:cursor-not-allowed bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 border border-indigo-500/30"
             >
-              {processing ? 'Processing…' : '⚡ Process Signal'}
+              ⚡ Extract Signal
             </button>
+
+            {/* Quick examples */}
+            <div className="pt-2 border-t border-white/5">
+              <p className="text-xs text-white/25 mb-2">Quick examples</p>
+              <div className="space-y-1">
+                {[
+                  { label: 'Tweet mentioning Laksh', url: 'https://x.com/someone/status/...' },
+                  { label: 'YouTube video about Laksh', url: 'https://youtube.com/watch?v=...' },
+                  { label: 'Article / press coverage', url: 'https://medium.com/...' },
+                ].map(ex => (
+                  <button
+                    key={ex.label}
+                    onClick={() => setUrl(ex.url)}
+                    className="w-full text-left text-xs text-white/30 hover:text-white/60 px-2 py-1 rounded hover:bg-white/5 transition-colors"
+                  >
+                    {ex.label}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
-        ) : (
-          /* Result */
+        )}
+
+        {/* STEP: Loading */}
+        {step === 'loading' && (
+          <div className="px-5 py-12 flex flex-col items-center gap-4">
+            <div className="w-8 h-8 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+            <div className="text-center">
+              <p className="text-sm text-white">Scraping & extracting...</p>
+              <p className="text-xs text-white/30 mt-1">LLM reading the page content</p>
+            </div>
+          </div>
+        )}
+
+        {/* STEP: Review */}
+        {step === 'review' && signal && (
           <div className="px-5 py-4 space-y-4">
-            <div className="p-4 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
-              <p className="text-sm font-semibold text-emerald-400 mb-2">✓ Signal Processed</p>
-              <div className="space-y-1.5">
-                <p className="text-xs text-white/50">
-                  <span className="text-white/70">Mapped to:</span>{' '}
-                  {result.mappedNodeIds.length > 0
-                    ? result.mappedNodeIds.map(id => {
-                        const node = nodes.find(n => n.id === id);
-                        return node?.label || id;
-                      }).join(', ')
-                    : 'No nodes matched'
-                  }
-                </p>
-                <p className="text-xs text-white/50">
-                  <span className="text-white/70">Opportunities found:</span>{' '}
-                  {result.opportunitiesFound}
-                </p>
-                <p className="text-xs text-white/30 mt-2">
-                  Workspace caches invalidated. Changes visible on next node open.
-                </p>
+            <div className="flex items-center gap-2">
+              <span className="text-lg">{sourceEmoji[signal.source] ?? '📌'}</span>
+              <div>
+                <p className="text-sm font-semibold text-white">{signal.title}</p>
+                <p className="text-xs text-white/40">{signal.id}</p>
+              </div>
+              <span className={`ml-auto text-xs font-mono ${confColor[signal.confidence]}`}>
+                {signal.confidence}
+              </span>
+            </div>
+
+            <div className="bg-white/5 rounded-lg p-3 space-y-2 text-xs">
+              <div className="flex gap-2">
+                <span className="text-white/40 w-20 shrink-0">Date</span>
+                <span className="text-white/80">{signal.date}</span>
+              </div>
+              <div className="flex gap-2">
+                <span className="text-white/40 w-20 shrink-0">Domains</span>
+                <span className="text-white/80">{signal.domains.join(', ')}</span>
+              </div>
+              <div className="flex gap-2">
+                <span className="text-white/40 w-20 shrink-0">Entities</span>
+                <span className="text-white/80">{signal.entities.join(', ')}</span>
+              </div>
+              <div className="flex gap-2">
+                <span className="text-white/40 w-20 shrink-0">Summary</span>
+                <span className="text-white/80 leading-relaxed">{signal.rawText}</span>
               </div>
             </div>
 
-            <div className="flex gap-2">
+            {/* JSON block */}
+            <div className="relative">
+              <pre className="bg-slate-900/80 rounded-lg p-3 text-xs text-emerald-300 font-mono overflow-x-auto max-h-48 overflow-y-auto">
+                {JSON.stringify(signal, null, 2)}
+              </pre>
               <button
-                onClick={handleReset}
-                className="flex-1 py-2 rounded-lg text-xs font-medium bg-white/5 text-white/50 hover:text-white/80 border border-white/5 transition-all"
+                onClick={copyJson}
+                className="absolute top-2 right-2 px-2 py-1 rounded text-xs bg-white/10 hover:bg-white/20 text-white/60 transition-colors"
               >
-                Add Another
+                {copied ? '✓ copied' : 'copy'}
               </button>
-              <button
-                onClick={onClose}
-                className="flex-1 py-2 rounded-lg text-xs font-medium bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500/30 border border-cyan-500/30 transition-all"
-              >
+            </div>
+
+            <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-3 text-xs text-amber-300">
+              <p className="font-semibold mb-1">Next step</p>
+              <p className="text-amber-300/70">Copy the JSON above → paste into <code className="text-amber-300">src/raw/signals.json</code> → run <code className="text-amber-300">bun run wiki:compile</code></p>
+            </div>
+
+            <div className="flex gap-2 pt-1">
+              <button onClick={reset} className="flex-1 py-2 rounded-lg text-xs bg-white/5 text-white/50 hover:text-white border border-white/5 transition-colors">
+                Ingest Another
+              </button>
+              <button onClick={onClose} className="flex-1 py-2 rounded-lg text-xs bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 border border-indigo-500/30 transition-colors">
                 Done
               </button>
             </div>
+          </div>
+        )}
+
+        {/* STEP: Error */}
+        {step === 'error' && (
+          <div className="px-5 py-4 space-y-4">
+            <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4">
+              <p className="text-sm font-semibold text-red-400 mb-1">Extraction failed</p>
+              <p className="text-xs text-red-300/70">{error}</p>
+            </div>
+            <button onClick={reset} className="w-full py-2.5 rounded-lg text-sm bg-white/5 text-white/60 hover:text-white border border-white/10 transition-colors">
+              Try Again
+            </button>
           </div>
         )}
       </div>
