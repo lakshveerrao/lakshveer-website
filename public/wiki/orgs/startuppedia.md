@@ -2,24 +2,20 @@
 *Organization*
 
 ## Summary
-
-StartupPedia is an Indian media publication covering startups, entrepreneurship, and innovation. In March 2026, StartupPedia published a feature article about Lakshveer Rao and promoted it across their platforms, bringing his AI agent work to a broader audience of founders, educators, and the general public.
+StartupPedia is an Indian digital media publication covering startups, entrepreneurship, and innovation. The platform operates across web and social media (Instagram), producing feature articles and video content targeting founders, students, and the general public interested in startup ecosystems.
 
 ## Relationship with Lakshveer
-
-StartupPedia featured Lakshveer Rao in March 2026, publishing an article titled "Meet 8-year-old Lakshveer who created an AI agent to control devices via Telegram messaging." The article focused on his AI agent project that controls ESP32 hardware devices via Telegram messaging. StartupPedia amplified this coverage through social media, posting an Instagram reel about the project on their @startup.pedia account. Both the article and social content reached high to medium audience engagement across general public, founders, educators, and students.
+StartupPedia featured Lakshveer Rao in March 2026, publishing both a written article and Instagram Reel about his AI agent project that controls ESP32 hardware devices via Telegram messaging. The coverage identified Lakshveer as 8 years old at the time of publication — a factual discrepancy that conflicts with his actual age of 16 in 2026. The feature reached high audience penetration through StartupPedia's general public and founder-focused distribution channels [[sig-startuppedia-2026]], [[sig-startuppedia-instagram-2026]].
 
 ## Signals
-
-- [[sig-startuppedia-2026]]
-- [[sig-startuppedia-instagram-2026]]
+- [[sig-startuppedia-2026]] — Feature article on Lakshveer's Telegram-controlled AI agent (2026-03)
+- [[sig-startuppedia-instagram-2026]] — Instagram Reel featuring Lakshveer's project (2026-03)
 
 ## Related Articles
-
-- [[lakshveer-rao]]
-- [[ai-agents]]
-- [[telegram-bot-project]]
-- [[press-coverage]]
+- [[Lakshveer Rao]]
+- [[AI Agents]]
+- [[Telegram Projects]]
+- [[Press Coverage]]
 
 ---
-*Compiled: 2026-04-06T08:46:41.412Z*
+*Compiled: 2026-04-06T09:48:07.190Z*

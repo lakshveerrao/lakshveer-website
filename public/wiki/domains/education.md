@@ -2,21 +2,25 @@
 *Domain*
 
 ## Summary
-Education represents a core domain in Lakshveer Rao's work, where he functions both as a learner and educator. His approach centers on practical, hands-on learning through building projects, particularly in electronics and maker education. He has demonstrated commitment to democratizing technical education through initiatives like CircuitHeroes, which earned recognition from educational grant programs.
+Lakshveer Rao operates at the intersection of education and hardware, building products that teach electronics concepts through experiential learning. Primary work includes CircuitHeroes (2025), an educational electronics card game that has achieved commercial traction (300+ decks sold) and institutional recognition via the Malpani Foundation grant.
 
 ## Evidence
-Lakshveer received the Malpani Foundation Grant in June 2025 for CircuitHeroes innovation, indicating institutional validation of his educational impact. CircuitHeroes itself represents a pedagogical approach to electronics education, suggesting he has developed methodologies for teaching technical concepts. His self-identification as a "maker" and "builder" at age 16 signals learning through construction and experimentation rather than traditional academic pathways.
+- **CircuitHeroes**: Educational electronics card game designed to teach circuit concepts through gameplay mechanics. Achieved 300+ deck sales and secured Malpani Foundation grant funding (June 2025) [[sig-malpani-grant-2025]]
+- **Product-market fit indicators**: Commercial sales (300+ units) suggest demand validation in educational hardware/games segment
+- **Institutional validation**: Malpani Foundation grant award recognizes innovation in educational methodology
 
 ## Trajectory
-By age 16, Lakshveer had progressed from individual learning to creating educational products/platforms (CircuitHeroes) that serve others. The Malpani Foundation Grant (2025-06) marks a transition point where his educational work gained external recognition and likely funding for expansion. This suggests evolution from student to educational entrepreneur within the maker education space.
+Educational work follows maker-to-market pattern: build learning tool → validate through sales → secure institutional backing. CircuitHeroes demonstrates ability to productize educational concepts and achieve distribution at scale (300+ units notable for 16-year-old solo maker).
+
+Grant timing (June 2025) suggests continued expansion of educational product line. Unknown: curriculum partnerships, institutional sales channels, or follow-on educational products in development.
 
 ## Signals
-- [[sig-malpani-grant-2025]]
+- [[sig-malpani-grant-2025]] — Malpani Foundation grant for CircuitHeroes (2025-06)
 
 ## Related Articles
-- [[circuitheroes]]
-- [[malpani-foundation]]
-- [[maker-education]]
+- [[entrepreneurship]] — Grant funding and sales metrics
+- [[hardware]] — Physical product development (CircuitHeroes card deck)
+- [[circuitheroes]] — Product-specific details
 
 ---
-*Compiled: 2026-04-06T08:46:41.412Z*
+*Compiled: 2026-04-06T09:48:07.190Z*

@@ -2,22 +2,18 @@
 *Organization*
 
 ## Summary
-
-Somi AI is an organization that features and showcases AI agents and hardware projects on LinkedIn. In March 2026, Somi AI featured Lakshveer Rao's work, highlighting his AI agent that controls real hardware via Telegram. The organization appears to focus on promoting innovative AI and hardware integration projects to an audience of developers, researchers, and founders.
+Somi AI is an organization that features and amplifies work in AI agents and hardware integration. In March 2026, they publicly highlighted Lakshveer Rao's work on their LinkedIn, featuring his Telegram-controlled hardware AI agent project to a developer and founder audience.
 
 ## Relationship with Lakshveer
-
-Somi AI featured Lakshveer Rao on their LinkedIn profile in March 2026, describing him as "an 8-year-old [who] built an AI agent that controls real hardware via Telegram." This feature provided high-reach exposure for Lakshveer's work to a professional audience interested in AI agents, electronics, and emerging technology. The post positioned Lakshveer's project as a notable example of young builders working with AI and hardware integration.
+Somi AI featured Lakshveer Rao (age 8 at time of feature, March 2026) on their LinkedIn platform, showcasing his AI agent that controls real hardware via Telegram [sig-somi-ai-linkedin-2026]. This represents early external validation and press coverage of Lakshveer's work in the AI agents and electronics domains. The feature reached a high-reach audience of developers, researchers, and founders.
 
 ## Signals
-
-- [[sig-somi-ai-linkedin-2026]]
+- [sig-somi-ai-linkedin-2026] — LinkedIn post featuring Lakshveer's hardware AI agent (2026-03)
 
 ## Related Articles
-
-- [[lakshveer-rao]] — Main profile
-- [[ai-agents]] — Technology domain
-- [[press-coverage]] — Media appearances
+- [[Lakshveer Rao]] — Featured maker
+- [[AI Agents]] — Technical domain
+- [[Press Coverage]] — Media appearances
 
 ---
-*Compiled: 2026-04-06T08:46:41.412Z*
+*Compiled: 2026-04-06T09:48:07.190Z*

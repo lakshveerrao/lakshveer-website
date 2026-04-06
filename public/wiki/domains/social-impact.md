@@ -2,25 +2,23 @@
 *Domain*
 
 ## Summary
-Social impact represents Lakshveer Rao's commitment to building technology solutions that address real-world accessibility challenges. His work focuses on creating assistive devices for underserved populations, particularly the visually impaired community in India.
+Lakshveer Rao has built assistive technology for accessibility, specifically targeting visually impaired populations. His work in social impact combines hardware prototyping, computer vision, and real-world deployment considerations. Currently documented work spans accessibility devices using affordable computing platforms.
 
 ## Evidence
-Lakshveer's primary social impact initiative is the **Drishtikon Yantra**, an assistive vision device developed specifically for visually impaired individuals. Announced in January 2026, this project demonstrates a direct application of his technical skills toward solving accessibility problems faced by disabled communities. The device name combines "Drishtikon" (Sanskrit for vision/perspective) with "Yantra" (device/instrument), reflecting both cultural grounding and technical purpose.
-
-The project targets a significant population — India has one of the world's largest visually impaired populations, making assistive technology development both urgent and impactful.
+**Drishtikon Yantra (2026-01)** — Wearable assistive device built on Raspberry Pi that uses computer vision to interpret the physical environment and communicates descriptions via text-to-speech to visually impaired users. Demonstrates intersection of [[computer-vision]], [[hardware]] prototyping, and accessibility engineering. [[sig-drishtikon-2026]]
 
 ## Trajectory
-As of early 2026, social impact work appears to be an emerging but concrete focus area for Lakshveer. The Drishtikon Yantra represents his first documented foray into assistive technology and accessibility-focused product development. At age 16, launching a hardware project aimed at disability assistance signals early awareness of technology's potential for social good beyond commercial applications.
+Single data point limits trajectory analysis. Device suggests focus on **practical assistive technology** rather than purely theoretical or research-oriented work. Choice of Raspberry Pi indicates cost-consciousness and deployment feasibility — common in devices intended for underserved populations.
 
-The trajectory suggests evolution from pure maker/builder activities toward mission-driven product development with specific beneficiary communities in mind.
+Unknown: funding status, user testing results, distribution plans, regulatory clearances, ongoing development status.
 
 ## Signals
-- [[sig-drishtikon-2026]]
+- [[sig-drishtikon-2026]] — Drishtikon Yantra assistive vision device
 
 ## Related Articles
-- [[drishtikon-yantra]]
-- [[assistive-technology]]
-- [[accessibility]]
+- [[computer-vision]] — Technical domain used in Drishtikon
+- [[hardware]] — Implementation domain
+- [[accessibility]] — Related focus area
 
 ---
-*Compiled: 2026-04-06T08:46:41.412Z*
+*Compiled: 2026-04-06T09:48:07.190Z*

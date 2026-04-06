@@ -60,7 +60,8 @@
     "db:studio": "drizzle-kit studio",
     "wiki:compile": "bun scripts/compile-wiki.ts",
     "wiki:query": "bun scripts/query-wiki.ts",
-    "wiki:health": "bun scripts/health-wiki.ts"
+    "wiki:health": "bun scripts/health-wiki.ts",
+    "wiki:compile:dry": "bun scripts/compile-wiki.ts --dry-run"
   },
   "type": "module"
 }

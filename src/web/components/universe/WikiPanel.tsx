@@ -1,263 +1,320 @@
 // ============================================
-// WIKI PANEL — Universe v7
+// WIKI PANEL — Universe v8
 // ============================================
 // Renders the LLM-compiled personal knowledge wiki.
-// The wiki lives in public/wiki/ as markdown files.
-// This panel is the "agent's view" made readable.
+// public/wiki/ — markdown articles compiled from signals.
+//
+// Pattern: Karpathy (raw/ → wiki/) + Farza (built for agents)
+// Human adds to raw/. LLM owns wiki/. Agents navigate via index.md.
 // ============================================
 
 import { useState, useEffect } from 'react';
 
-interface WikiArticle {
+// ---- Markdown renderer (no dep) ----
+function md(text: string): string {
+  return text
+    .replace(/^# (.+)$/gm, '<h1 class="wh1">$1</h1>')
+    .replace(/^## (.+)$/gm, '<h2 class="wh2">$1</h2>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*([^*\n]+)\*/g, '<em class="wem">$1</em>')
+    .replace(/`([^`]+)`/g, '<code class="wcod">$1</code>')
+    .replace(/\[\[([^\]]+)\]\]/g, '<span class="wlnk">[[<a>$1</a>]]</span>')
+    .replace(/^- (.+)$/gm, '<li>$1</li>')
+    .replace(/(<li>[^<]*<\/li>\n?)+/g, m => `<ul class="wul">${m}</ul>`)
+    .replace(/^---$/gm, '<hr class="whr"/>')
+    .replace(/\n{2,}/g, '</p><p class="wp">')
+    .replace(/^(?!<[hpul]|<hr|<li)(.+)/gm, '<p class="wp">$1</p>');
+}
+
+const CSS = `
+.wh1{font-size:1.4rem;font-weight:700;color:#fff;margin-bottom:.5rem;line-height:1.3}
+.wh2{font-size:.95rem;font-weight:600;color:#64748b;margin-top:1.5rem;margin-bottom:.4rem;border-bottom:1px solid #1e293b;padding-bottom:.2rem;text-transform:uppercase;letter-spacing:.05em}
+.wem{color:#94a3b8}
+.wcod{background:#1e293b;color:#7dd3fc;padding:.1rem .3rem;border-radius:.2rem;font-size:.78rem;font-family:monospace}
+.wlnk{color:#6366f1;font-size:.78rem}
+.wlnk a{color:inherit;text-decoration:none}
+.wlnk a:hover{text-decoration:underline}
+.wul{color:#cbd5e1;font-size:.85rem;line-height:1.8;margin:.4rem 0 .8rem 1.2rem;list-style:disc}
+.wul li{margin-bottom:.15rem}
+.whr{border:none;border-top:1px solid #1e293b;margin:1.2rem 0}
+.wp{color:#cbd5e1;font-size:.85rem;line-height:1.75;margin-bottom:.6rem}
+`;
+
+// ---- Types ----
+interface WikiMeta { totalSignals: number; compiledAt: string; totalArticles: number }
+
+interface Article {
   path: string;
   title: string;
   category: 'people' | 'projects' | 'orgs' | 'domains' | 'concepts' | 'meta' | 'queries';
-  summary: string;
 }
 
-interface WikiIndex {
-  articles: WikiArticle[];
-  totalSignals: number;
-  compiledAt: string;
-}
+const CAT_COLOR: Record<string, string> = {
+  people:   'bg-blue-500/15 text-blue-300 border-blue-500/25',
+  projects: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/25',
+  orgs:     'bg-purple-500/15 text-purple-300 border-purple-500/25',
+  domains:  'bg-amber-500/15 text-amber-300 border-amber-500/25',
+  concepts: 'bg-pink-500/15 text-pink-300 border-pink-500/25',
+  meta:     'bg-slate-500/15 text-slate-300 border-slate-500/25',
+};
 
-// Simple markdown → HTML renderer (no dependency)
-function renderMarkdown(md: string): string {
-  return md
-    .replace(/^# (.+)$/gm, '<h1 class="wiki-h1">$1</h1>')
-    .replace(/^## (.+)$/gm, '<h2 class="wiki-h2">$1</h2>')
-    .replace(/^### (.+)$/gm, '<h3 class="wiki-h3">$1</h3>')
-    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*(.+?)\*/g, '<em>$1</em>')
-    .replace(/`(.+?)`/g, '<code class="wiki-code">$1</code>')
-    .replace(/\[\[([^\]]+)\]\]/g, '<span class="wiki-backlink">[[<a href="#">$1</a>]]</span>')
-    .replace(/^- (.+)$/gm, '<li>$1</li>')
-    .replace(/(<li>.*<\/li>\n?)+/g, '<ul class="wiki-list">$&</ul>')
-    .replace(/^---$/gm, '<hr class="wiki-hr" />')
-    .replace(/\n\n/g, '</p><p class="wiki-p">')
-    .replace(/^(?!<[hpul]|<hr|<li)(.*)/gm, '<p class="wiki-p">$1</p>');
-}
-
-// Parse index.md to extract article list
-function parseIndex(indexContent: string): WikiIndex {
-  const articles: WikiArticle[] = [];
-
-  const categories: Array<WikiArticle['category']> = ['people', 'projects', 'orgs', 'domains', 'concepts', 'meta'];
-  for (const cat of categories) {
-    const sectionMatch = indexContent.match(new RegExp(`## (?:${cat.charAt(0).toUpperCase() + cat.slice(1)}[^\n]*)\n((?:- \\[\\[[^\\n]+\\n?)+)`, 'i'));
-    if (sectionMatch) {
-      const lines = sectionMatch[1].split('\n').filter(l => l.trim().startsWith('- [['));
-      for (const line of lines) {
-        const match = line.match(/\[\[([^\]]+)\]\]\s*(?:—\s*(.+))?/);
-        if (match) {
-          const path = match[1].endsWith('.md') ? match[1] : `${match[1]}.md`;
-          const namePart = match[1].split('/').pop() ?? match[1];
-          const title = namePart.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-          articles.push({
-            path,
-            title,
-            category: cat,
-            summary: match[2]?.trim() ?? '',
-          });
-        }
-      }
+function parseIndexArticles(indexMd: string): Article[] {
+  const articles: Article[] = [];
+  const cats: Array<Article['category']> = ['people', 'projects', 'orgs', 'domains', 'concepts', 'meta'];
+  for (const cat of cats) {
+    const re = new RegExp(`## (?:${cat}|organizations|concepts \\(emergent[^)]*\\)|meta)[^\n]*\n((?:- \\[\\[[^\\n]+\n?)+)`, 'i');
+    const sec = indexMd.match(re);
+    if (!sec) continue;
+    for (const line of sec[1].split('\n')) {
+      const m = line.match(/\[\[([^\]]+)\]\]/);
+      if (!m) continue;
+      const p = m[1].endsWith('.md') ? m[1] : `${m[1]}.md`;
+      const name = m[1].split('/').pop()!.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+      articles.push({ path: p, title: name, category: cat });
     }
   }
+  return articles;
+}
 
-  const signalsMatch = indexContent.match(/Total signals: (\d+)/);
-  const compiledMatch = indexContent.match(/Last compiled: (.+)/);
-
+function parseWikiMeta(indexMd: string): WikiMeta {
+  const sigs = indexMd.match(/Signals:\s*(\d+)/)?.[1];
+  const arts = indexMd.match(/Articles:\s*(\d+)/)?.[1];
+  const comp = indexMd.match(/Compiled:\s*([^\n]+)/)?.[1];
   return {
-    articles,
-    totalSignals: signalsMatch ? parseInt(signalsMatch[1]) : 0,
-    compiledAt: compiledMatch ? compiledMatch[1].trim() : '',
+    totalSignals: sigs ? parseInt(sigs) : 0,
+    totalArticles: arts ? parseInt(arts) : 0,
+    compiledAt: comp?.trim() ?? '',
   };
 }
 
-const CATEGORY_COLORS: Record<string, string> = {
-  people: 'bg-blue-500/20 text-blue-300 border-blue-500/30',
-  projects: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
-  orgs: 'bg-purple-500/20 text-purple-300 border-purple-500/30',
-  domains: 'bg-amber-500/20 text-amber-300 border-amber-500/30',
-  concepts: 'bg-pink-500/20 text-pink-300 border-pink-500/30',
-  meta: 'bg-slate-500/20 text-slate-300 border-slate-500/30',
-  queries: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30',
-};
-
+// ---- Component ----
 export function WikiPanel() {
-  const [wikiIndex, setWikiIndex] = useState<WikiIndex | null>(null);
-  const [selectedPath, setSelectedPath] = useState<string | null>('index.md');
-  const [articleContent, setArticleContent] = useState<string>('');
-  const [loading, setLoading] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<string>('all');
+  const [indexContent, setIndexContent] = useState('');
+  const [articles, setArticles] = useState<Article[]>([]);
+  const [meta, setMeta] = useState<WikiMeta | null>(null);
+  const [selected, setSelected] = useState('meta/narrative.md');
+  const [articleContent, setArticleContent] = useState('');
+  const [loadingArticle, setLoadingArticle] = useState(false);
+  const [catFilter, setCatFilter] = useState('all');
   const [notCompiled, setNotCompiled] = useState(false);
 
-  // Load index on mount
+  // Query state
+  const [query, setQuery] = useState('');
+  const [querying, setQuerying] = useState(false);
+  const [queryResult, setQueryResult] = useState('');
+  const [view, setView] = useState<'wiki' | 'query'>('wiki');
+
   useEffect(() => {
     fetch('/wiki/index.md')
-      .then(r => {
-        if (!r.ok) throw new Error('not compiled');
-        return r.text();
-      })
+      .then(r => { if (!r.ok) throw new Error('not compiled'); return r.text(); })
       .then(content => {
-        setWikiIndex(parseIndex(content));
-        setArticleContent(content);
+        setIndexContent(content);
+        setArticles(parseIndexArticles(content));
+        setMeta(parseWikiMeta(content));
       })
       .catch(() => setNotCompiled(true));
   }, []);
 
-  // Load article when selected
   useEffect(() => {
-    if (!selectedPath) return;
-    setLoading(true);
-    fetch(`/wiki/${selectedPath}`)
-      .then(r => r.ok ? r.text() : Promise.reject('not found'))
-      .then(content => setArticleContent(content))
-      .catch(() => setArticleContent('*Article not found*'))
-      .finally(() => setLoading(false));
-  }, [selectedPath]);
+    if (!selected) return;
+    setLoadingArticle(true);
+    fetch(`/wiki/${selected}`)
+      .then(r => r.ok ? r.text() : Promise.reject())
+      .then(c => setArticleContent(c))
+      .catch(() => setArticleContent('*Article not found. Run `bun run wiki:compile` to regenerate.*'))
+      .finally(() => setLoadingArticle(false));
+  }, [selected]);
 
+  async function runQuery() {
+    if (!query.trim()) return;
+    setQuerying(true);
+    setView('query');
+    setQueryResult('');
+    try {
+      const res = await fetch('/api/wiki/query', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: query }),
+      });
+      const { answer } = await res.json();
+      setQueryResult(answer ?? 'No answer returned.');
+    } catch {
+      setQueryResult('Query failed. Check that the wiki is compiled and the API route is available.');
+    } finally {
+      setQuerying(false);
+    }
+  }
+
+  // ---- Not compiled state ----
   if (notCompiled) {
     return (
-      <div className="flex flex-col items-center justify-center h-full gap-6 p-8 text-center">
-        <div className="w-16 h-16 rounded-2xl bg-slate-800 flex items-center justify-center text-3xl">🧠</div>
+      <div className="flex flex-col items-center justify-center h-full gap-5 p-8 text-center">
+        <div className="text-4xl">🧠</div>
         <div>
-          <h3 className="text-white font-semibold text-lg mb-2">Wiki Not Compiled Yet</h3>
-          <p className="text-slate-400 text-sm max-w-sm">
-            The personal knowledge wiki hasn't been compiled from signals yet.
-          </p>
+          <h3 className="text-white font-semibold text-lg mb-1">Wiki not compiled</h3>
+          <p className="text-slate-400 text-sm max-w-xs">No wiki articles found. Compile from signals first.</p>
         </div>
-        <div className="bg-slate-900 rounded-xl p-4 font-mono text-sm text-emerald-400 w-full max-w-md text-left">
+        <div className="bg-slate-900 rounded-xl p-4 font-mono text-sm text-emerald-400 text-left w-full max-w-sm">
           <p className="text-slate-500 mb-1"># compile from signals</p>
-          <p>bun scripts/compile-wiki.ts</p>
+          <p>bun run wiki:compile</p>
           <p className="mt-2 text-slate-500"># then query it</p>
-          <p>bun scripts/query-wiki.ts "your question"</p>
+          <p>bun run wiki:query "your question"</p>
         </div>
-        <p className="text-slate-600 text-xs max-w-sm">
-          Inspired by Karpathy's LLM Knowledge Base and Farza's Farzapedia.
-          Raw signals → LLM compiles → filesystem wiki → agent navigates.
+        <p className="text-slate-600 text-xs max-w-xs">
+          raw/ → LLM compiler → wiki/ → agent navigates via index.md
         </p>
       </div>
     );
   }
 
-  const categories = ['all', 'people', 'projects', 'orgs', 'domains', 'concepts', 'meta'];
-
-  const filteredArticles = wikiIndex?.articles.filter(
-    a => activeCategory === 'all' || a.category === activeCategory
-  ) ?? [];
+  const filtered = articles.filter(a => catFilter === 'all' || a.category === catFilter);
+  const cats = ['all', 'people', 'projects', 'orgs', 'domains', 'concepts', 'meta'];
 
   return (
     <div className="flex h-full overflow-hidden">
-      {/* Sidebar */}
-      <div className="w-64 flex-shrink-0 border-r border-slate-800 flex flex-col overflow-hidden">
+      <style>{CSS}</style>
+
+      {/* ---- Sidebar ---- */}
+      <div className="w-56 flex-shrink-0 border-r border-slate-800 flex flex-col overflow-hidden">
+
         {/* Header */}
-        <div className="p-4 border-b border-slate-800">
-          <div className="flex items-center gap-2 mb-1">
-            <span className="text-lg">🧠</span>
+        <div className="p-3 border-b border-slate-800">
+          <div className="flex items-center gap-2 mb-0.5">
+            <span className="text-base">🧠</span>
             <span className="text-white font-semibold text-sm">Knowledge Wiki</span>
           </div>
-          {wikiIndex && (
-            <p className="text-slate-500 text-xs">
-              {wikiIndex.articles.length} articles · {wikiIndex.totalSignals} signals
+          {meta && (
+            <p className="text-slate-600 text-xs">
+              {meta.totalArticles} articles · {meta.totalSignals} signals
             </p>
           )}
-          <p className="text-slate-600 text-xs mt-1">LLM-compiled · agent-native</p>
+          <p className="text-slate-700 text-xs">LLM-compiled · agent-native</p>
         </div>
 
-        {/* Category filter */}
-        <div className="p-3 border-b border-slate-800 flex flex-wrap gap-1">
-          {categories.map(cat => (
+        {/* Query box */}
+        <div className="p-2 border-b border-slate-800">
+          <div className="flex gap-1">
+            <input
+              value={query}
+              onChange={e => setQuery(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && runQuery()}
+              placeholder="Ask the wiki..."
+              className="flex-1 bg-slate-900 text-slate-200 text-xs rounded-lg px-2.5 py-2 border border-slate-700 placeholder-slate-600 focus:outline-none focus:border-slate-500 min-w-0"
+            />
             <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`text-xs px-2 py-1 rounded-md capitalize transition-colors ${
-                activeCategory === cat
-                  ? 'bg-white/10 text-white'
-                  : 'text-slate-500 hover:text-slate-300'
+              onClick={runQuery}
+              disabled={querying || !query.trim()}
+              className="px-2 py-2 bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40 text-white rounded-lg text-xs transition-colors flex-shrink-0"
+            >
+              {querying ? '…' : '↵'}
+            </button>
+          </div>
+        </div>
+
+        {/* View toggle */}
+        <div className="flex border-b border-slate-800">
+          {(['wiki', 'query'] as const).map(v => (
+            <button
+              key={v}
+              onClick={() => setView(v)}
+              className={`flex-1 py-1.5 text-xs capitalize transition-colors ${
+                view === v ? 'text-white bg-white/5' : 'text-slate-500 hover:text-slate-300'
               }`}
             >
-              {cat}
+              {v === 'wiki' ? '📖 Wiki' : '💬 Answer'}
             </button>
           ))}
         </div>
 
-        {/* Meta articles quick access */}
-        <div className="p-3 border-b border-slate-800">
-          {[
-            { path: 'index.md', label: '📋 Index' },
-            { path: 'meta/narrative.md', label: '📖 Narrative' },
-            { path: 'meta/gaps.md', label: '⚠️ Gaps' },
-            { path: 'meta/connections.md', label: '🔗 Connections' },
-          ].map(item => (
-            <button
-              key={item.path}
-              onClick={() => setSelectedPath(item.path)}
-              className={`w-full text-left text-xs px-2 py-1.5 rounded-md transition-colors ${
-                selectedPath === item.path
-                  ? 'bg-white/10 text-white'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
-              }`}
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
+        {view === 'wiki' && (
+          <>
+            {/* Meta quick links */}
+            <div className="p-2 border-b border-slate-800 space-y-0.5">
+              {[
+                { path: 'meta/narrative.md', label: '📖 Narrative' },
+                { path: 'meta/connections.md', label: '🔗 Connections' },
+                { path: 'meta/gaps.md', label: '⚠️ Gaps' },
+                { path: 'index.md', label: '📋 Index' },
+              ].map(item => (
+                <button
+                  key={item.path}
+                  onClick={() => { setSelected(item.path); setView('wiki'); }}
+                  className={`w-full text-left text-xs px-2 py-1.5 rounded-md transition-colors ${
+                    selected === item.path ? 'bg-white/10 text-white' : 'text-slate-400 hover:text-white hover:bg-white/5'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
 
-        {/* Article list */}
-        <div className="flex-1 overflow-y-auto p-2">
-          {filteredArticles.map(article => (
-            <button
-              key={article.path}
-              onClick={() => setSelectedPath(article.path)}
-              className={`w-full text-left p-2 rounded-lg mb-1 transition-colors group ${
-                selectedPath === article.path
-                  ? 'bg-white/10'
-                  : 'hover:bg-white/5'
-              }`}
-            >
-              <div className="flex items-center gap-2 mb-1">
-                <span className={`text-xs px-1.5 py-0.5 rounded border capitalize ${CATEGORY_COLORS[article.category]}`}>
-                  {article.category}
-                </span>
-              </div>
-              <p className={`text-xs font-medium leading-tight ${
-                selectedPath === article.path ? 'text-white' : 'text-slate-300 group-hover:text-white'
-              }`}>
-                {article.title}
-              </p>
-              {article.summary && (
-                <p className="text-slate-600 text-xs mt-0.5 leading-tight line-clamp-2">{article.summary}</p>
-              )}
-            </button>
-          ))}
-        </div>
+            {/* Category filter */}
+            <div className="px-2 py-2 border-b border-slate-800 flex flex-wrap gap-1">
+              {cats.map(c => (
+                <button
+                  key={c}
+                  onClick={() => setCatFilter(c)}
+                  className={`text-xs px-1.5 py-0.5 rounded capitalize transition-colors ${
+                    catFilter === c ? 'bg-white/10 text-white' : 'text-slate-600 hover:text-slate-300'
+                  }`}
+                >
+                  {c}
+                </button>
+              ))}
+            </div>
+
+            {/* Article list */}
+            <div className="flex-1 overflow-y-auto p-1.5 space-y-0.5">
+              {filtered.map(a => (
+                <button
+                  key={a.path}
+                  onClick={() => { setSelected(a.path); setView('wiki'); }}
+                  className={`w-full text-left px-2 py-1.5 rounded-lg transition-colors group ${
+                    selected === a.path ? 'bg-white/10' : 'hover:bg-white/5'
+                  }`}
+                >
+                  <div className="flex items-center gap-1.5 mb-0.5">
+                    <span className={`text-xs px-1 py-0 rounded border capitalize leading-4 ${CAT_COLOR[a.category]}`}>
+                      {a.category}
+                    </span>
+                  </div>
+                  <p className={`text-xs font-medium leading-tight ${
+                    selected === a.path ? 'text-white' : 'text-slate-300 group-hover:text-white'
+                  }`}>
+                    {a.title}
+                  </p>
+                </button>
+              ))}
+            </div>
+          </>
+        )}
       </div>
 
-      {/* Article viewer */}
+      {/* ---- Main content ---- */}
       <div className="flex-1 overflow-y-auto">
-        {loading ? (
-          <div className="flex items-center justify-center h-full">
-            <div className="text-slate-500 text-sm">Loading...</div>
+        {view === 'query' ? (
+          <div className="p-6 max-w-3xl">
+            {querying ? (
+              <div className="flex items-center gap-3 text-slate-400 text-sm mt-8">
+                <div className="w-4 h-4 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+                Agent reading wiki...
+              </div>
+            ) : queryResult ? (
+              <>
+                <div className="mb-4 text-xs text-slate-600">Query: <span className="text-slate-400 italic">{query}</span></div>
+                <div dangerouslySetInnerHTML={{ __html: md(queryResult) }} />
+              </>
+            ) : (
+              <div className="text-slate-600 text-sm mt-8">Type a question and press ↵</div>
+            )}
           </div>
         ) : (
           <div className="p-6 max-w-3xl">
-            <style>{`
-              .wiki-h1 { font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 0.5rem; }
-              .wiki-h2 { font-size: 1.1rem; font-weight: 600; color: #94a3b8; margin-top: 1.5rem; margin-bottom: 0.5rem; border-bottom: 1px solid #1e293b; padding-bottom: 0.25rem; }
-              .wiki-h3 { font-size: 0.95rem; font-weight: 600; color: #64748b; margin-top: 1rem; }
-              .wiki-p { color: #cbd5e1; font-size: 0.875rem; line-height: 1.7; margin-bottom: 0.75rem; }
-              .wiki-list { color: #cbd5e1; font-size: 0.875rem; line-height: 1.7; margin: 0.5rem 0 0.75rem 1rem; list-style: disc; }
-              .wiki-list li { margin-bottom: 0.25rem; }
-              .wiki-code { background: #1e293b; color: #7dd3fc; padding: 0.1rem 0.3rem; border-radius: 0.25rem; font-size: 0.8rem; font-family: monospace; }
-              .wiki-backlink { color: #818cf8; font-size: 0.8rem; }
-              .wiki-backlink a { color: inherit; text-decoration: none; }
-              .wiki-backlink a:hover { text-decoration: underline; }
-              .wiki-hr { border: none; border-top: 1px solid #1e293b; margin: 1.5rem 0; }
-            `}</style>
-            <div
-              dangerouslySetInnerHTML={{ __html: renderMarkdown(articleContent) }}
-            />
+            {loadingArticle ? (
+              <div className="text-slate-500 text-sm mt-8">Loading...</div>
+            ) : (
+              <div dangerouslySetInnerHTML={{ __html: md(articleContent) }} />
+            )}
           </div>
         )}
       </div>

@@ -3,6 +3,7 @@ import { cors } from "hono/cors"
 import ogApp from './og-image';
 import universeApi from './universe-api';
 import { mentionRoutes } from './routes/mentions';
+import { wikiRoutes } from './routes/wiki';
 
 interface ContactFormData {
   name: string;
@@ -28,6 +29,9 @@ app.route('/universe', universeApi);
 
 // Mount Mention Agent
 app.route('/mentions', mentionRoutes);
+
+// Mount Wiki routes
+app.route('/wiki', wikiRoutes);
 
 app.get('/ping', (c) => c.json({ message: `Pong! ${Date.now()}` }));
 

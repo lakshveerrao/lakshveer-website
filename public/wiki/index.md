@@ -2,22 +2,24 @@
 *Agent entry point. Start here.*
 
 ## About
-This wiki is compiled by an LLM from raw signal data about Lakshveer Rao.
-It is built for agents to navigate, not for humans to read.
-Source of truth: `signals.json` (20 signals as of 2026-04-06T08:46:41.412Z)
+This wiki is LLM-compiled from `src/raw/signals.json`.
+Built for agents to navigate — not for humans to read.
+Human adds to raw/. LLM owns wiki/. Never the other way around.
+
+Source: `signals.json` — 20 signals — compiled 2026-04-06T09:48:07.190Z
 
 ## How to Navigate
 1. Read this index
-2. Follow backlinks into specific article directories
-3. Meta articles in /meta/ provide compiled analysis
+2. Follow [[backlinks]] into article directories
+3. /meta/ articles have compiled analysis
 
 ## People
 - [[people/s-somanath]] — S. Somanath
 
 ## Projects
 - [[projects/circuitheroes]] — CircuitHeroes
-- [[projects/drishtikon]] — Drishtikon
 - [[projects/drishtikon-yantra]] — Drishtikon Yantra
+- [[projects/drishtikon]] — Drishtikon
 - [[projects/motionx]] — MotionX
 - [[projects/beats-in-brief]] — Beats in Brief
 - [[projects/startuppedia]] — StartupPedia
@@ -55,22 +57,23 @@ Source of truth: `signals.json` (20 signals as of 2026-04-06T08:46:41.412Z)
 - [[domains/brand]] — brand
 
 ## Concepts (Emergent Patterns)
-- [[concepts/the-prodigy-paradox-age-as-both-barrier-and-amplifier]] — The Prodigy Paradox: Age as Both Barrier and Amplifier
-- [[concepts/documentation-as-product-philosophy]] — Documentation as Product Philosophy
-- [[concepts/hardware-to-ai-pipeline-the-embodied-intelligence-trajectory]] — Hardware-to-AI Pipeline: The Embodied Intelligence Trajectory
-- [[concepts/institutional-validation-cascade-from-makers-to-gatekeepers]] — Institutional Validation Cascade: From Makers to Gatekeepers
-- [[concepts/impact-arbitrage-social-good-as-technical-challenge]] — Impact Arbitrage: Social Good as Technical Challenge
+- [[concepts/builder-to-brand-inflection]] — The Builder-to-Brand Inflection Point
+- [[concepts/cross-domain-convergence]] — Cross-Domain Convergence Architecture
+- [[concepts/prodigy-narrative-distribution]] — The Prodigy Narrative as Distribution Channel
+- [[concepts/demonstration-driven-validation]] — Demonstration-Driven Validation Strategy
+- [[concepts/ai-native-timing-arbitrage]] — AI-Native Pivot and Timing Arbitrage
 
-## Meta Articles
-- [[meta/narrative]] — Full compiled narrative + timeline
-- [[meta/gaps]] — Information gaps, health check
-- [[meta/connections]] — Non-obvious entity connections
+## Meta
+- [[meta/narrative]] — Full narrative + timeline
+- [[meta/gaps]] — Gaps, health check
+- [[meta/connections]] — Non-obvious connections + predictions
 
 ## Stats
-- Total signals: 20
-- Last compiled: 2026-04-06T08:46:41.412Z
+- Signals: 20
 - Articles: 43
+- Compiled: 2026-04-06T09:48:07.190Z
 
 ---
-*This wiki is LLM-owned. Do not edit manually.*
-*To update: add signals to signals.json, then run `bun scripts/compile-wiki.ts`*
+*LLM-owned. Do not edit manually.*
+*Update: edit `src/raw/signals.json` → `bun run wiki:compile`*
+*Query: `bun run wiki:query "your question"`*

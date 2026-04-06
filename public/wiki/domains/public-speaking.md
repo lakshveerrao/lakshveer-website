@@ -2,37 +2,34 @@
 *Domain*
 
 ## Summary
-
-Lakshveer has demonstrated public speaking abilities through formal pitch presentations and media engagements. His speaking experience includes pitching hardware projects to technical audiences and being featured in maker-focused media coverage. At age 16, he has already presented at notable venues including South Park Commons.
+Lakshveer has presented at conferences and hackathons since age 7, demoing hardware projects and pitching ventures to technical and entrepreneurial audiences. His speaking engagements span Bangalore and Hyderabad tech communities, focusing on electronics education and assistive technology. Media coverage amplifies his maker narrative beyond live audiences.
 
 ## Evidence
+**Conference Presentations**
+- South Park Commons (Bangalore, 2025-08): Pitched CircuitHeroes card game and Drishtikon Yantra assistive vision device at SPC demo day [sig-spc-demo-2025]
+- Polaris School of Technology VibeHack (2025-08): Participated as hackathon speaker/demonstrator at age 7, featured on LinkedIn by organizers [sig-polaris-vibehack-2025]
 
-**South Park Commons Demo Day (August 2025)**
-Lakshveer presented two hardware projects — CircuitHeroes and Drishtikon Yantra — at South Park Commons Pitch Demo event. This represents formal pitch experience in front of a technical audience at a recognized innovation space. [sig-spc-demo-2025]
+**Media Appearances**
+- Beats in Brief (2025-09): Featured profile tracing hardware-building journey from age 4 to CircuitHeroes entrepreneur [sig-beats-in-brief-2025]
 
-**Beats in Brief Media Feature (September 2025)**
-Media coverage of Lakshveer's maker journey, indicating public profile and ability to articulate his work to broader audiences. [sig-beats-in-brief-2025]
-
-**Polaris VibeHack Context (August 2025)**
-Referenced in Polaris School of Technology materials during VibeHack event. Notably described as "7-year-old hacker Lakshveer" which appears to be referring to an earlier period, suggesting public speaking or presentation experience dates back multiple years. [sig-polaris-vibehack-2025]
+**Audience Types**
+- Developers, students, educators (VibeHack) [sig-polaris-vibehack-2025]
+- Entrepreneur/founder community (South Park Commons) [sig-spc-demo-2025]
+- General tech media consumers (Beats in Brief) [sig-beats-in-brief-2025]
 
 ## Trajectory
-
-Evidence suggests public speaking activity emerged early — the Polaris reference to "7-year-old hacker" indicates presentation or public engagement began around age 7. By August 2025 (age 16), Lakshveer had progressed to formal pitch presentations at South Park Commons, demonstrating evolution from early maker showcases to structured technical pitches. Media coverage in September 2025 indicates growing public profile and ability to communicate maker narrative effectively.
+Progressed from hackathon participant (age 7) to product demo presenter (age 16) within 9 years. Venues escalated from local tech schools to recognized startup accelerator spaces. Messaging evolved from "young hacker" positioning to founder/entrepreneur framing.
 
 ## Signals
-
-- [sig-spc-demo-2025]
-- [sig-beats-in-brief-2025]
-- [sig-polaris-vibehack-2025]
+- [sig-spc-demo-2025] — South Park Commons pitch demo
+- [sig-polaris-vibehack-2025] — VibeHack 7-year-old hacker feature
+- [sig-beats-in-brief-2025] — Beats in Brief media coverage
 
 ## Related Articles
-
-- [[circuitheroes]]
-- [[drishtikon-yantra]]
-- [[south-park-commons]]
-- [[polaris-school-of-technology]]
-- [[maker-journey]]
+- [[entrepreneurship]] — CircuitHeroes and Drishtikon Yantra ventures
+- [[computer-vision]] — Drishtikon Yantra technical domain
+- [[hardware]] — Physical product demonstrations
+- [[brand]] — Public narrative construction
 
 ---
-*Compiled: 2026-04-06T08:46:41.412Z*
+*Compiled: 2026-04-06T09:48:07.190Z*

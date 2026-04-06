@@ -2,22 +2,16 @@
 *Organization*
 
 ## Summary
-
-PARAM is an organization that administers a national award recognizing young innovators in STEM and hardware fields in India. The PARAM Award specifically targets early-stage makers and builders working in electronics and technology entrepreneurship.
+PARAM is an organization that provides national recognition awards for young innovators in India, specifically targeting STEM and hardware domains. The PARAM Award acknowledges contributions from youth working in science, technology, engineering, and mathematics fields.
 
 ## Relationship with Lakshveer
-
-Lakshveer Rao received the PARAM Award in October 2025, marking national recognition for his work as a young innovator. The award acknowledged his contributions to STEM and hardware innovation at age 16.
+Lakshveer Rao received the PARAM Award in October 2025, earning national recognition for his work as a young innovator in electronics and hardware [[sig-param-award-2025]]. This marks a significant milestone in his entrepreneurial and maker journey at age 16.
 
 ## Signals
-
-- [[sig-param-award-2025]]
+- [[sig-param-award-2025]] — Lakshveer received PARAM Award for young innovation (2025-10)
 
 ## Related Articles
-
-- [[awards]]
-- [[achievements]]
-- [[recognition]]
+*[No related wiki articles yet]*
 
 ---
-*Compiled: 2026-04-06T08:46:41.412Z*
+*Compiled: 2026-04-06T09:48:07.190Z*

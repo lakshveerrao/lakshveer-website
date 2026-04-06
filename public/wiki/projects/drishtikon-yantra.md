@@ -2,32 +2,30 @@
 *Project*
 
 ## Summary
-Drishtikon Yantra is a Raspberry Pi-based wearable assistive device that uses computer vision and text-to-speech to describe the surrounding world to visually impaired users. Lakshveer designed and built this accessibility-focused hardware project as a social impact initiative combining computer vision, embedded systems, and assistive technology.
+Drishtikon Yantra is a Raspberry Pi-based wearable assistive device that uses computer vision and text-to-speech to describe the visual world to visually impaired users. Lakshveer pitched the project at South Park Commons in Bangalore (2025-08), positioning it as a hardware social-impact initiative in the accessibility domain.
 
 ## Status & Timeline
-- **2025-08**: Lakshveer presented Drishtikon Yantra at South Park Commons pitch demo in Bangalore alongside CircuitHeroes
-- **2026-01**: Project documented as active Raspberry Pi-based wearable device
+- **2025-08**: Publicly demoed at South Park Commons pitch event alongside [[CircuitHeroes]] [[sig-spc-demo-2025]]
+- **2026-01**: Referenced as active project in press materials [[sig-drishtikon-2026]]
 
 ## Technical Architecture
-- **Platform**: Raspberry Pi-based embedded system
-- **Core Technologies**: Computer vision, text-to-speech synthesis
-- **Form Factor**: Wearable device
-- **Function**: Real-time scene description for visually impaired users
+- **Hardware**: Raspberry Pi compute platform, wearable form factor
+- **Software Stack**: Computer vision pipeline, text-to-speech synthesis
+- **Function**: Real-time scene description for blind/low-vision users
 
 ## Impact
-Presented at South Park Commons, a technology community event in Bangalore, indicating validation from the startup/maker community. Project demonstrates Lakshveer's ability to build hardware solutions addressing accessibility challenges.
+- **Domain**: Accessibility technology, social impact hardware
+- **Target Users**: Visually impaired individuals
+- **Distribution**: Unknown (research/prototype phase implied)
 
 ## Signals
-- [[sig-spc-demo-2025]]
-- [[sig-drishtikon-2026]]
+- [[sig-spc-demo-2025]] — South Park Commons pitch demo (2025-08)
+- [[sig-drishtikon-2026]] — Project description in press materials (2026-01)
 
 ## Related Articles
-- [[lakshveer-rao]]
-- [[circuitheroes]]
-- [[south-park-commons]]
-- [[computer-vision]]
-- [[hardware-projects]]
-- [[social-impact]]
+- [[CircuitHeroes]] — Co-presented at same SPC event
+- [[South Park Commons]] — Demo venue and community
+- [[Lakshveer Rao#Hardware Projects]] — Portfolio context
 
 ---
-*Compiled: 2026-04-06T08:46:41.412Z*
+*Compiled: 2026-04-06T09:48:07.190Z*

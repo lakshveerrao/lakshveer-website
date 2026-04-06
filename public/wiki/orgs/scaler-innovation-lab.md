@@ -2,22 +2,17 @@
 *Organization*
 
 ## Summary
-
-Scaler Innovation Lab is an innovation and entrepreneurship organization that hosts competitive hackathons and technology events. In September 2025, they organized a major hackathon that attracted 200 teams, with only 8 teams reaching the finals — demonstrating highly selective competition standards.
+Scaler Innovation Lab is a technology organization that hosts competitive hackathons and innovation challenges. In September 2025, they ran a major hackathon event with 200 participating teams, filtering down to only 8 finalists — representing a ~4% selection rate.
 
 ## Relationship with Lakshveer
-
-Lakshveer Rao competed in Scaler Innovation Lab's September 2025 hackathon and was selected as one of 8 finalists out of 200 participating teams (a 4% selection rate). This achievement represents a significant competitive validation of his technical and innovation capabilities in a high-stakes entrepreneurial environment.
+Lakshveer Rao qualified as one of 8 finalists (out of 200 teams) at a Scaler Innovation Lab hackathon in September 2025. This marked a top-4% placement in a competitive developer/maker competition. [[sig-scaler-hackathon-2025]]
 
 ## Signals
-
-- [[sig-scaler-hackathon-2025]]
+- [[sig-scaler-hackathon-2025]] — Hackathon finals appearance (2025-09)
 
 ## Related Articles
-
-- [[lakshveer-rao]] — Main profile
-- [[achievements]] — Competition and recognition record
-- [[hackathons]] — Hackathon participation history
+- [[Lakshveer Rao]] — Main profile
+- [[Hackathons]] — Competition format context
 
 ---
-*Compiled: 2026-04-06T08:46:41.412Z*
+*Compiled: 2026-04-06T09:48:07.190Z*
