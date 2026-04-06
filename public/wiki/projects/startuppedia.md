@@ -1,25 +1,24 @@
 # StartupPedia
-*Media Coverage — Press Feature*
+*Press Coverage — Media Feature*
 
 ## Summary
-Indian startup media publication that featured Lakshveer's AI agent project in March 2026. Published both written article and Instagram reel showcasing his Telegram-controlled ESP32 device system. Notably mislabeled Lakshveer as 8 years old when he was actually 16 at time of publication.
+StartupPedia is an Indian startup media publication that featured Lakshveer's AI agent project in March 2026. The publication covered his Telegram-controlled ESP32 device system across both web article and Instagram social media formats, marking one of the first mainstream press mentions of his work.
 
 ## Status & Timeline
-- **2026-03**: Published feature article and Instagram reel about Lakshveer's AI agent [[sig-startuppedia-2026]], [[sig-startuppedia-instagram-2026]]
+- **2026-03**: Published feature article on Lakshveer's AI agent controlling hardware via Telegram [sig-startuppedia-2026]
+- **2026-03**: Published Instagram Reel featuring the same project [sig-startuppedia-instagram-2026]
 
 ## Impact
-- **Media reach**: Article + Instagram distribution via @startup.pedia account
-- **Age error**: Publication stated "8-year-old Lakshveer" (factually incorrect — Lakshveer born 2009/2010, making him 16 in 2026)
-- **Technical focus**: Highlighted AI agent + Telegram messaging + ESP32 hardware control integration
+First known press coverage of Lakshveer's work as an 8-year-old hardware founder. Multi-platform distribution (web + Instagram) amplified reach beyond technical maker communities into startup/entrepreneurship audience. Positioned Lakshveer's work within narrative of young Indian founders and AI innovation.
 
 ## Signals
-- [[sig-startuppedia-2026]] — Primary feature article (March 2026)
-- [[sig-startuppedia-instagram-2026]] — Instagram reel distribution (March 2026)
+- [sig-startuppedia-2026] — Primary feature article
+- [sig-startuppedia-instagram-2026] — Instagram Reel amplification
 
 ## Related Articles
-- [[Press Coverage]] — Other media features
-- [[AI Agents]] — Technical domain of featured project
-- [[Telegram Bot Projects]] — Related work
+- [[AI Agent Project]] — The featured project (Telegram-controlled ESP32 system)
+- [[Press Coverage]] — Media mentions and brand signals
+- [[ESP32 Hardware Work]] — Technical foundation of featured work
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

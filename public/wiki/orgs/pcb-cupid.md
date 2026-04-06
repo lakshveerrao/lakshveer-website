@@ -2,18 +2,19 @@
 *Organization*
 
 ## Summary
-PCB Cupid is a hardware/electronics organization that co-organized Hardware Hackathon 2.0 with Lion Circuits in July 2025. The organization focuses on PCB design and hardware development, creating platforms for makers and electronics enthusiasts to showcase projects.
+PCB Cupid is a hardware electronics organization that co-organized Hardware Hackathon 2.0 with Lion Circuits in July 2025. The organization focuses on hardware development and maker events in the Indian electronics community.
 
 ## Relationship with Lakshveer
-Lakshveer Rao participated in Hardware Hackathon 2.0 co-organized by PCB Cupid and Lion Circuits in July 2025, where he was a Top-5 Finalist and the youngest participant [[sig-lion-circuits-hw2-2025]]. The hackathon provided a platform for Lakshveer to demonstrate hardware design and electronics skills in a competitive environment.
+Lakshveer Rao competed in Hardware Hackathon 2.0, co-organized by PCB Cupid and Lion Circuits, where he placed in the Top-5 as the youngest participant at age 8. [[sig-lion-circuits-hw2-2025]]
 
 ## Signals
-- [[sig-lion-circuits-hw2-2025]] — Hardware Hackathon 2.0 collaboration with Lion Circuits (2025-07)
+- [[sig-lion-circuits-hw2-2025]] — Co-organized Hardware Hackathon 2.0 where Lakshveer was Top-5 Finalist (2025-07)
 
 ## Related Articles
-- [[Lion Circuits]] — Primary co-organizer of hackathon events
-- [[Hardware Projects]] — Context for Lakshveer's hardware work
-- [[Achievements]] — Competition results and recognition
+- [[Lion Circuits]]
+- [[Hardware Hackathon 1.0]]
+- [[Hardware Hackathon 2.0]]
+- [[Lakshveer Rao]]
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

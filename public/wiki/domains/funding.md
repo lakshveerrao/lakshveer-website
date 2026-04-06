@@ -2,36 +2,40 @@
 *Domain*
 
 ## Summary
-
-Lakshveer has demonstrated capability in securing and building systems around grant funding. He received a grant from AI Grants India in September 2025 and subsequently built OpenClaw, an autonomous AI agent designed to identify and apply for grants. This trajectory suggests evolution from grant recipient to infrastructure builder in the funding space.
+Lakshveer secured grant funding from AI Grants India (2025-09) and built OpenClaw, an autonomous AI agent system for discovering and applying to grants (2026-06). Received endorsements from funding ecosystem players including Bhasker Kode (AI Grants India) and M S Mihir (VC/founder community) in mid-2025.
 
 ## Evidence
+**Grant Recipient**
+- AI Grants India grant awarded 2025-09 [[sig-ai-grants-india-2025]]
+- Program supports AI builders in India
 
-**Grant Reception**
-- September 2025: Received grant from AI Grants India, a program supporting AI builders in India [[sig-ai-grants-india-2025]]
+**Autonomous Funding Infrastructure**
+- OpenClaw: AI agent system for grant discovery/application [[sig-openclaw-agent-2026]]
+- Announced 2026-06 via CaptVenk
+- Meta-layer: building tools to automate funding acquisition
 
-**Infrastructure Development**
-- June 2026: Built OpenClaw, an autonomous grant agent system that automates grant discovery and application processes [[sig-openclaw-agent-2026]]
-- Public recognition via CaptVenk tweet validates technical approach to automating funding acquisition
+**Ecosystem Validation**
+- Bhasker Kode endorsement 2025-06 [[sig-0xbosky-endorsement]] — AI Grants India ecosystem
+- M S Mihir endorsement 2025-06 [[sig-msmihir-endorsement]] — VC/founder network
+- Signals early investor/funder awareness
 
 ## Trajectory
+2025-06: Endorsements from funding gatekeepers (Kode, Mihir)  
+2025-09: AI Grants India recipient  
+2026-06: OpenClaw launch — recursive funding automation
 
-**Phase 1 (2025)**: Grant recipient — successfully secured institutional funding from AI Grants India
-
-**Phase 2 (2026)**: System builder — transitioned from beneficiary to creator of grant automation infrastructure, suggesting meta-level understanding of funding mechanisms
-
-Time delta between receiving grant and shipping OpenClaw: ~9 months. This compressed timeline indicates rapid iteration from domain learner to infrastructure provider.
+Pattern: Grant recipient → grant infrastructure builder. Self-sustaining funding loop via agent tooling.
 
 ## Signals
-
-- [[sig-ai-grants-india-2025]] — AI Grants India recipient (2025-09)
-- [[sig-openclaw-agent-2026]] — OpenClaw autonomous grant agent (2026-06)
+- [[sig-ai-grants-india-2025]] — Grant recipient
+- [[sig-openclaw-agent-2026]] — Autonomous grant agent
+- [[sig-msmihir-endorsement]] — VC network endorsement
+- [[sig-0xbosky-endorsement]] — AI Grants India endorsement
 
 ## Related Articles
-
-- [[ai-agents]] — OpenClaw represents applied agent architecture
-- [[entrepreneurship]] — Funding acquisition as core entrepreneurial competency
-- [[openclaw]] — Dedicated article on the grant automation system
+- [[entrepreneurship]] — Venture building context
+- [[ai-agents]] — OpenClaw technical domain
+- [[brand]] — Funder endorsements impact
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

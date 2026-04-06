@@ -2,18 +2,18 @@
 *Organization*
 
 ## Summary
-T-Hub is one of India's largest startup incubators, based in Hyderabad. It serves as a hub for entrepreneurs, startups, and innovators to present projects, access resources, and connect with the broader startup ecosystem.
+T-Hub is one of India's largest startup incubators, based in Hyderabad. It serves as a venue for entrepreneurship events, project showcases, and founder networking in the Telangana startup ecosystem.
 
 ## Relationship with Lakshveer
-In April 2025, Lakshveer presented an introduction of his projects at T-Hub Hyderabad [[sig-thub-intro-2025]]. This marked his engagement with India's institutional startup infrastructure at age 16, positioning him within the formal entrepreneurship ecosystem beyond independent maker activities.
+Lakshveer presented his hardware projects at T-Hub in April 2025 [[sig-thub-intro-2025]]. This marked a significant milestone as an 8-year-old founder engaging with India's institutional startup infrastructure. The presentation occurred at the physical T-Hub campus in Hyderabad.
 
 ## Signals
 - [[sig-thub-intro-2025]] — Introduction at T-Hub Hyderabad (2025-04)
 
 ## Related Articles
-- [[lakshveer-rao]] — Main profile
-- [[entrepreneurship]] — Domain context
-- [[hyderabad]] — Geographic location
+- [[Lakshveer Rao]]
+- [[Hyderabad]]
+- [[Public Speaking]]
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

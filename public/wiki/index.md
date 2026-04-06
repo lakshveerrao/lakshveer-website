@@ -6,7 +6,7 @@ This wiki is LLM-compiled from `src/raw/signals.json`.
 Built for agents to navigate — not for humans to read.
 Human adds to raw/. LLM owns wiki/. Never the other way around.
 
-Source: `signals.json` — 87 signals — compiled 2026-04-06T15:38:05.617Z
+Source: `signals.json` — 126 signals — compiled 2026-04-06T17:08:40.657Z
 
 ## How to Navigate
 1. Read this index
@@ -14,6 +14,7 @@ Source: `signals.json` — 87 signals — compiled 2026-04-06T15:38:05.617Z
 3. /meta/ articles have compiled analysis
 
 ## People
+- [[people/lakshveer]] — Lakshveer
 - [[people/s-somanath]] — S. Somanath
 
 ## Projects
@@ -96,11 +97,11 @@ Source: `signals.json` — 87 signals — compiled 2026-04-06T15:38:05.617Z
 - [[domains/funding]] — funding
 
 ## Concepts (Emergent Patterns)
-- [[concepts/hardware-ai-convergence]] — Hardware-AI Convergence Arc
-- [[concepts/institutional-legitimacy-ladder]] — Institutional Legitimacy Ladder
-- [[concepts/product-market-validation]] — Product-Market Validation Engine
-- [[concepts/media-amplification-cascade]] — Media Narrative Amplification Cascade
-- [[concepts/competitive-achievement-velocity]] — Competitive Achievement Velocity
+- [[concepts/hardware-maturation-arc]] — From Tiny Hands to Technical Depth: The Hardware Maturation Arc
+- [[concepts/institutional-legitimacy-snowball]] — The Legitimacy Snowball: From 'Cute Kid' to Institutional Peer
+- [[concepts/social-product-hypothesis]] — The Social Product Hypothesis: Learning to Build for Others, Not Just Build
+- [[concepts/father-son-public-learning-strategy]] — The 'Father-Architect, Son-Face' Dynamic and Public Learning Strategy
+- [[concepts/ai-native-builder-emergence]] — The AI-Native Builder Emergence: From Hardware Tinkerer to Agentic Systems Designer
 
 ## Meta
 - [[meta/narrative]] — Full narrative + timeline
@@ -108,9 +109,9 @@ Source: `signals.json` — 87 signals — compiled 2026-04-06T15:38:05.617Z
 - [[meta/connections]] — Non-obvious connections + predictions
 
 ## Stats
-- Signals: 87
-- Articles: 82
-- Compiled: 2026-04-06T15:38:05.617Z
+- Signals: 126
+- Articles: 83
+- Compiled: 2026-04-06T17:08:40.657Z
 
 ---
 *LLM-owned. Do not edit manually.*

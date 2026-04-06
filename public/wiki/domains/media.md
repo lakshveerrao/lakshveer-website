@@ -1,67 +1,98 @@
 # media
-*Domain*
+*Domain Wiki*
 
 ## Summary
-Lakshveer has received substantial media coverage across national, regional, and startup-focused publications from age 8 onwards. Coverage spans traditional media (Financial Express, Jagran Josh), Telugu regional press (Chekodi), startup media (StartupPedia, Beats in Brief, Runtime Magazine), and social platforms (LinkedIn, Instagram, Reddit). Key narrative: "8-year-old builds AI agents and hardware" — with focus on Telegram-controlled ESP32 projects, Marcy wrist companion, and youngest hardware startup founder positioning.
+Lakshveer Rao has accumulated significant media coverage across national, regional, tech, and startup publications since 2025-02, spanning traditional press, social platforms, and video interviews. Coverage pivots from general hardware achievements to focused AI agent work in 2026-03, with notable national publications like Financial Express running dedicated features. Regional Telugu media, maker community platforms (ThinkTac), and startup-focused outlets form the core coverage ecosystem.
 
 ## Evidence
-**National Media**: Financial Express covered AI agent project [[sig-fe-mait-agent-2026]] and Scaler tech fest [[sig-fe-scaler-2025]]. Jagran Josh featured Yugaantar 2025 participation [[sig-jagran-josh-yugaantar-2025]].
+**National Press Coverage (2025-09 to 2026-03)**
+- [[sig-fe-scaler-2025]] Financial Express covered Scaler School tech fest participation (2025-09)
+- [[sig-jagran-josh-yugaantar-2025]] Jagran Josh featured Yugaantar 2025 tech festival (2025-09)
+- [[sig-fe-mait-agent-2026]] Financial Express national feature: "Meet Lakshveer: 8-year-old who created AI agent to control devices via Telegram" (2026-03)
 
-**Startup Ecosystem**: StartupPedia published article + Instagram reel [[sig-startuppedia-2026]] [[sig-startuppedia-instagram-2026]]. Beats in Brief positioned him as "India's youngest hardware startup founder" [[sig-beats-in-brief-2025]]. Runtime Magazine covered twice [[sig-runtime-magazine-2026]]. Maverick News published feature [[sig-maverick-news-2026]].
+**Startup Ecosystem Media (2025-09 to 2026-03)**
+- [[sig-beats-in-brief-2025]] Beats in Brief: "India's youngest hardware startup founder" (2025-09)
+- [[sig-beatsinbrief-tweet-2026]] Twitter amplification: "Young Generation of India is growing up as builders" (2026-01)
+- [[sig-startuppedia-2026]] StartupPedia feature on AI agent project (2026-03)
+- [[sig-startuppedia-instagram-2026]] StartupPedia Instagram reel (2026-03)
+- [[sig-startupnewsfyi-ig-2026]] StartupNews.fyi Instagram: "India's Youngest Hardware Founder Is Only 8 Years Old" (2026-03)
+- [[sig-startupg-linkedin-2026]] StartupG LinkedIn feature (2026-03)
 
-**Regional**: Chekodi Telugu media highlighted hardware achievements at age 8 [[sig-chekodi-telugu-2025]].
+**Maker/Tech Community Platforms (2025-06 to 2026-01)**
+- [[sig-think-tac-feature-2025]] ThinkTac feature: "Grade 2 student who loves exploring" (2025-06)
+- [[sig-thinktac-yt-2025]] ThinkTac YouTube feature (2025-10)
+- [[sig-runtime-magazine-2026]] Runtime Magazine covered twice (2026-01)
 
-**Long-form**: Sharav Arora published Medium deep-dive "India's 8-Year-Old Tech Wunderkind" [[sig-sharav-medium-2025]].
+**Regional Media (2025-02)**
+- [[sig-chekodi-telugu-2025]] Chekodi Telugu media coverage on hardware achievements at age 8 (2025-02)
 
-**Social/Tech Communities**: Reddit threads in r/IndiaTech ("rise of AI kids") [[sig-reddit-indiatech-2026]] and r/india (notable builders) [[sig-reddit-india-2026]]. LinkedIn features from RediMinds [[sig-rediminds-linkedin-2026]], Somi AI [[sig-somi-ai-linkedin-2026]], StartupG [[sig-startupg-linkedin-2026]]. StartupNews.fyi Instagram positioned him as "India's Youngest Hardware Founder" [[sig-startupnewsfyi-ig-2026]].
+**Long-Form Features (2025-02)**
+- [[sig-sharav-medium-2025]] Medium: "Meet India's 8-Year-Old Tech Wunderkind — How Lakshveer Rao is Redefining Childhood Innovation" by Sharav Arora (2025-02)
+- [[sig-maverick-news-2026]] Maverick News coverage (2026-02)
 
-**Video/Interviews**: ThinkTac YouTube feature [[sig-thinktac-yt-2025]] and X post ("Grade 2 student who loves exploring") [[sig-think-tac-feature-2025]]. Sravya Facebook interview [[sig-sravya-interview-2026]]. Film crew interview documented on YouTube [[sig-film-crew-interview-2025]].
+**Video/Interview Format (2025-02 to 2026-02)**
+- [[sig-film-crew-interview-2025]] Film crew interview (2025-02)
+- [[sig-sravya-interview-2026]] Sravya Facebook video interview (2026-02)
 
-**Endorsements**: Dr. Aniruddha Malpani (angel investor) tweeted endorsement [[sig-malpani-tweet-endorsement]]. Adil Mania amplified work [[sig-adilmania-tweet-2026]]. Ramsri Goutham awarded ₹40,000 creator micro-scholarship [[sig-ramsri-microscholarship-2025]].
+**Professional Network Coverage (2026-03)**
+- [[sig-rediminds-linkedin-2026]] RediMinds LinkedIn: "8-year-old built an AI agent"
+- [[sig-somi-ai-linkedin-2026]] Somi AI LinkedIn: "An 8-year-old just built an AI agent that controls real hardware"
+
+**Community Discussion Platforms (2026-03)**
+- [[sig-reddit-indiatech-2026]] Reddit r/IndiaTech: "The rise of AI kids and vibe-coding prodigies in India"
+- [[sig-reddit-india-2026]] Reddit r/india: Featured in "Most Indian Builders" thread
+
+**Endorsements from Notable Figures (2025-06 to 2025-07)**
+- [[sig-malpani-tweet-endorsement]] Dr. Aniruddha Malpani (angel investor): "If there were more kids like Lakshveer..." (2025-07)
+- [[sig-raunakmahajan-endorsement]] Raunak Mahajan endorsement (founder storytelling) (2025-06)
+- [[sig-narrativenest-endorsement]] Murali Duggineni endorsement (etymology & storytelling) (2025-06)
+- [[sig-adilmania-tweet-2026]] Adil Mania tweet amplification (2026-06)
+
+**Creator Recognition (2025-06)**
+- [[sig-ramsri-microscholarship-2025]] Ramsri Goutham awarded ₹40,000 creator micro-scholarship (2025-06)
 
 ## Trajectory
-**2025-02**: Early regional + Medium coverage [[sig-sharav-medium-2025]] [[sig-chekodi-telugu-2025]] [[sig-film-crew-interview-2025]]  
-**2025-06**: ThinkTac feature + Ramsri scholarship [[sig-think-tac-feature-2025]] [[sig-ramsri-microscholarship-2025]]  
-**2025-09**: National coverage via Scaler fest [[sig-jagran-josh-yugaantar-2025]] [[sig-fe-scaler-2025]] [[sig-beats-in-brief-2025]]  
-**2025-10**: ThinkTac YouTube [[sig-thinktac-yt-2025]]  
-**2026-01**: Runtime Magazine (2x) [[sig-runtime-magazine-2026]]  
-**2026-02**: Sravya interview + Maverick News [[sig-sravya-interview-2026]] [[sig-maverick-news-2026]]  
-**2026-03**: Peak media wave — Financial Express, StartupPedia, Reddit threads, multiple LinkedIn features, Instagram reels [[sig-fe-mait-agent-2026]] [[sig-startuppedia-2026]] [[sig-startuppedia-instagram-2026]] [[sig-startupnewsfyi-ig-2026]] [[sig-rediminds-linkedin-2026]] [[sig-somi-ai-linkedin-2026]] [[sig-reddit-indiatech-2026]] [[sig-reddit-india-2026]] [[sig-startupg-linkedin-2026]]  
-**2026-06**: Continued social amplification [[sig-adilmania-tweet-2026]]
+**Phase 1: Initial Coverage (2025-02)** — Regional (Telugu) and long-form features establish baseline narrative around hardware achievements.
 
-Media coverage concentrated around specific project launches (AI agent, Marcy) and event participation (Scaler fest, Yugaantar).
+**Phase 2: Event-Driven Coverage (2025-06 to 2025-09)** — Scaler School tech fest, Yugaantar 2025, and ThinkTac participation generate institutional media hooks.
+
+**Phase 3: AI Agent Breakthrough (2026-03)** — Concentrated media spike around AI agent controlling hardware via Telegram. National press (Financial Express), startup media (StartupPedia), professional networks (LinkedIn), and social platforms (Instagram, Reddit) converge on single project narrative. This marks shift from "youngest hardware founder" to "AI-capable child builder" framing.
+
+**Phase 4: Sustained Amplification (2026-01 to 2026-06)** — Ongoing social media features, endorsements from investors/founders, and community discussions maintain visibility.
 
 ## Signals
-- [[sig-sharav-medium-2025]] — Medium deep-dive  
-- [[sig-chekodi-telugu-2025]] — Regional Telugu press  
-- [[sig-beats-in-brief-2025]] — Youngest hardware founder positioning  
-- [[sig-jagran-josh-yugaantar-2025]] — Yugaantar fest coverage  
-- [[sig-fe-scaler-2025]] — Scaler fest in Financial Express  
-- [[sig-think-tac-feature-2025]] — ThinkTac X feature  
-- [[sig-sravya-interview-2026]] — Facebook video interview  
-- [[sig-fe-mait-agent-2026]] — Financial Express AI agent feature  
-- [[sig-startuppedia-2026]] — StartupPedia article  
-- [[sig-startuppedia-instagram-2026]] — StartupPedia reel  
-- [[sig-startupnewsfyi-ig-2026]] — Instagram youngest founder  
-- [[sig-rediminds-linkedin-2026]] — RediMinds LinkedIn  
-- [[sig-somi-ai-linkedin-2026]] — Somi AI LinkedIn  
-- [[sig-reddit-indiatech-2026]] — Reddit tech community  
-- [[sig-reddit-india-2026]] — Reddit builders thread  
-- [[sig-startupg-linkedin-2026]] — StartupG feature  
-- [[sig-ramsri-microscholarship-2025]] — Creator scholarship  
-- [[sig-runtime-magazine-2026]] — Runtime (2x)  
-- [[sig-maverick-news-2026]] — Maverick News  
-- [[sig-thinktac-yt-2025]] — ThinkTac YouTube  
-- [[sig-malpani-tweet-endorsement]] — Angel investor endorsement  
-- [[sig-adilmania-tweet-2026]] — Social amplification  
-- [[sig-film-crew-interview-2025]] — Film crew interview
+- [[sig-sharav-medium-2025]]
+- [[sig-chekodi-telugu-2025]]
+- [[sig-beats-in-brief-2025]]
+- [[sig-jagran-josh-yugaantar-2025]]
+- [[sig-fe-scaler-2025]]
+- [[sig-think-tac-feature-2025]]
+- [[sig-sravya-interview-2026]]
+- [[sig-fe-mait-agent-2026]]
+- [[sig-startuppedia-2026]]
+- [[sig-startuppedia-instagram-2026]]
+- [[sig-startupnewsfyi-ig-2026]]
+- [[sig-rediminds-linkedin-2026]]
+- [[sig-somi-ai-linkedin-2026]]
+- [[sig-reddit-indiatech-2026]]
+- [[sig-reddit-india-2026]]
+- [[sig-startupg-linkedin-2026]]
+- [[sig-ramsri-microscholarship-2025]]
+- [[sig-runtime-magazine-2026]]
+- [[sig-maverick-news-2026]]
+- [[sig-thinktac-yt-2025]]
+- [[sig-malpani-tweet-endorsement]]
+- [[sig-adilmania-tweet-2026]]
+- [[sig-film-crew-interview-2025]]
+- [[sig-beatsinbrief-tweet-2026]]
+- [[sig-raunakmahajan-endorsement]]
+- [[sig-narrativenest-endorsement]]
 
 ## Related Articles
-- [[brand]] — Media coverage as brand-building mechanism
-- [[ai-agents]] — Primary project focus in 2026-03 media wave
-- [[entrepreneurship]] — "Youngest founder" narrative
-- [[public-speaking]] — Media appearances and interviews
-- [[electronics]] — Hardware focus in coverage
+- [[ai-agents]] — 2026-03 media spike driven by AI agent project
+- [[brand]] — Media coverage as primary brand-building mechanism
+- [[entrepreneurship]] — Startup ecosystem media positioning
+- [[public-speaking]] — Event participation generating press hooks
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

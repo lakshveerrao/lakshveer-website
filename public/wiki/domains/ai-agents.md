@@ -3,76 +3,71 @@
 
 ## Summary
 
-Lakshveer has built multiple autonomous AI agent systems since 2025, including hardware control agents, grant discovery agents (OpenClaw/ZeroClaw), and conversational agents (Kyabol). His work spans Telegram-controlled ESP32 systems, full autonomous grant applications, and real-time hardware intelligence platforms. National press coverage (Financial Express, StartupPedia) and AI community recognition followed his agent demos in early 2026.
+Lakshveer builds autonomous AI agent systems that bridge digital intelligence with physical hardware control. His agent work spans Telegram-controlled IoT devices (ESP32), autonomous grant discovery systems (OpenClaw/ZeroClaw), conversational AI (Kyabol), and hardware intelligence platforms (Hardvare). National media coverage positioned him as an 8-year-old AI agent builder [[sig-fe-mait-agent-2026]] [[sig-startuppedia-2026]]. Work recognized by AI Grants India [[sig-ai-grants-india-2025]] and industry endorsements from AI research/product community [[sig-adityag-endorsement]] [[sig-amitsethi-endorsement]].
 
 ## Evidence
 
-**Hardware Control Agents (2026-03)**
-- Built AI agent controlling ESP32 hardware via Telegram messaging [[sig-fe-mait-agent-2026]] [[sig-startuppedia-2026]]
-- System integrated natural language commands with physical device control [[sig-yt-short-telegram-2026]] [[sig-yt-full-2026]]
-- Demonstrated real-time hardware manipulation through conversational interface
+**Agent Systems Built:**
+- **Telegram IoT Controller** (2026-03): AI agent controlling ESP32 hardware via messaging interface [[sig-fe-mait-agent-2026]] [[sig-yt-short-telegram-2026]] [[sig-yt-full-2026]]
+- **Claw System** (2026-02): OpenClaw + ZeroClaw autonomous agents for grant discovery/application [[sig-autoclaw-system-2026]] [[sig-openclaw-agent-2026]]
+- **Kyabol** (2026-02): AI conversational agent demoed at Gemini 3 Hackathon (Cerebral Valley × Google DeepMind) [[sig-gemini3-hackathon-2026]]
+- **Hardvare Platform** (2026-01): Hardware intelligence system combining physical devices with AI agents [[sig-hardvare-system-2026]]
 
-**Autonomous Grant Agents (2025-09 → 2026-06)**
-- Received AI Grants India funding for agent work [[sig-ai-grants-india-2025]]
-- Built OpenClaw — autonomous grant discovery and application agent [[sig-openclaw-agent-2026]]
-- Developed ZeroClaw as part of Claw AI system for grant automation [[sig-autoclaw-system-2026]]
-- CaptVenk documented the autonomous grant agent system on X [[sig-openclaw-agent-2026]]
-
-**Conversational & Platform Agents (2026-01 → 2026-02)**
-- Demoed Kyabol conversational AI at Gemini 3 Hackathon (Cerebral Valley × Google DeepMind) [[sig-gemini3-hackathon-2026]]
-- Built Hardvare — hardware intelligence platform combining physical devices with AI agents [[sig-hardvare-system-2026]]
-- MotionX system used AI for full-body gesture recognition and game control [[sig-motionx-launch-2026]]
-
-**Community Recognition**
+**Recognition:**
+- AI Grants India recipient (2025-09) [[sig-ai-grants-india-2025]]
 - Pitched at AI Collective Hyderabad (2025-07) [[sig-ai-collective-pitch-2025]]
-- Featured by RediMinds, Somi AI, StartupG on LinkedIn for agent work [[sig-rediminds-linkedin-2026]] [[sig-somi-ai-linkedin-2026]] [[sig-startupg-linkedin-2026]]
-- Runtime Magazine covered agent projects twice [[sig-runtime-magazine-2026]]
-- Reddit r/IndiaTech discussion on "AI kids" featured Lakshveer's agent work [[sig-reddit-indiatech-2026]]
+- Endorsements: Aditya G (AI agents/product) [[sig-adityag-endorsement]], Amit Sethi (deep learning) [[sig-amitsethi-endorsement]], Bhasker Kode (AI Grants India) [[sig-0xbosky-endorsement]]
+
+**Media Coverage (2026-03):**
+- Financial Express national feature [[sig-fe-mait-agent-2026]]
+- StartupPedia article + Instagram reel [[sig-startuppedia-2026]] [[sig-startuppedia-instagram-2026]]
+- LinkedIn features: RediMinds [[sig-rediminds-linkedin-2026]], Somi AI [[sig-somi-ai-linkedin-2026]], StartupG [[sig-startupg-linkedin-2026]]
+- Reddit r/IndiaTech discussion thread [[sig-reddit-indiatech-2026]]
+- Runtime Magazine (2× coverage) [[sig-runtime-magazine-2026]]
 
 ## Trajectory
 
-**2025**
-- 2025-07: Public pitch at AI Collective Hyderabad [[sig-ai-collective-pitch-2025]]
-- 2025-09: AI Grants India recipient [[sig-ai-grants-india-2025]]
+**2025:** Foundation — AI Collective pitch [[sig-ai-collective-pitch-2025]] → AI Grants India [[sig-ai-grants-india-2025]]  
+**2026 Q1:** Hardvare platform launch [[sig-hardvare-system-2026]] + Runtime coverage [[sig-runtime-magazine-2026]]  
+**2026 Q1:** MotionX hackathon (AI-driven motion control) [[sig-motionx-launch-2026]]  
+**2026 Q2:** Claw autonomous agent system [[sig-autoclaw-system-2026]] + Gemini 3 Hackathon [[sig-gemini3-hackathon-2026]]  
+**2026 Q2:** National media wave (Telegram IoT agent) [[sig-fe-mait-agent-2026]] [[sig-startuppedia-2026]]  
+**2026 Q2:** OpenClaw social validation [[sig-openclaw-agent-2026]] [[sig-itsumeshk-runtogether-2026]]
 
-**2026**
-- 2026-01: Hardvare platform launch, Runtime Magazine coverage [[sig-hardvare-system-2026]] [[sig-runtime-magazine-2026]]
-- 2026-02: Gemini 3 Hackathon demo, ZeroClaw system [[sig-gemini3-hackathon-2026]] [[sig-autoclaw-system-2026]]
-- 2026-03: National press wave (Financial Express, StartupPedia, viral social) [[sig-fe-mait-agent-2026]] [[sig-startuppedia-2026]] [[sig-startuppedia-instagram-2026]]
-- 2026-05: Umesh Kumar testimonial on motion-control agent work [[sig-itsumeshk-runtogether-2026]]
-- 2026-06: OpenClaw autonomous agent documented [[sig-openclaw-agent-2026]]
-
-Pattern: Early grant-funded agent R&D → hardware-AI integration → conversational interfaces → autonomous task agents → national media recognition.
+**Pattern:** Progressed from single-purpose agents (Telegram IoT) → multi-agent systems (Claw) → infrastructure platform (Hardvare). Media positioned him as "8-year-old AI agent builder" archetype.
 
 ## Signals
 
-- [[sig-motionx-launch-2026]] — MotionX motion-control gaming with AI gesture recognition
-- [[sig-gemini3-hackathon-2026]] — Kyabol conversational AI demo at Google DeepMind hackathon
-- [[sig-fe-mait-agent-2026]] — Financial Express national feature on Telegram-controlled AI agent
-- [[sig-startuppedia-2026]] — StartupPedia article on ESP32 hardware control agent
-- [[sig-startuppedia-instagram-2026]] — StartupPedia Instagram reel featuring AI agent
-- [[sig-rediminds-linkedin-2026]] — RediMinds LinkedIn coverage of agent work
-- [[sig-somi-ai-linkedin-2026]] — Somi AI LinkedIn post on hardware-controlling agent
-- [[sig-reddit-indiatech-2026]] — Reddit r/IndiaTech discussion featuring Lakshveer's agent work
-- [[sig-yt-short-telegram-2026]] — YouTube Short demo of Telegram agent controlling hardware
-- [[sig-yt-full-2026]] — Full YouTube walkthrough of AI agent hardware project
-- [[sig-startupg-linkedin-2026]] — StartupG LinkedIn feature on AI work
-- [[sig-ai-collective-pitch-2025]] — AI Collective Hyderabad pitch
-- [[sig-ai-grants-india-2025]] — AI Grants India recipient
-- [[sig-runtime-magazine-2026]] — Runtime Magazine double coverage
-- [[sig-hardvare-system-2026]] — Hardvare hardware intelligence platform launch
-- [[sig-openclaw-agent-2026]] — OpenClaw autonomous grant agent (CaptVenk tweet)
-- [[sig-autoclaw-system-2026]] — Claw AI system (OpenClaw/ZeroClaw)
-- [[sig-itsumeshk-runtogether-2026]] — Umesh Kumar testimonial on motion-control agent
+- [[sig-ai-grants-india-2025]] — AI Grants India recognition (2025-09)
+- [[sig-ai-collective-pitch-2025]] — AI Collective Hyderabad pitch (2025-07)
+- [[sig-hardvare-system-2026]] — Hardvare platform (2026-01)
+- [[sig-runtime-magazine-2026]] — Runtime Magazine coverage (2026-01)
+- [[sig-motionx-launch-2026]] — MotionX hackathon (2026-01)
+- [[sig-autoclaw-system-2026]] — Claw AI system (2026-02)
+- [[sig-gemini3-hackathon-2026]] — Gemini 3 Hackathon demo (2026-02)
+- [[sig-fe-mait-agent-2026]] — Financial Express feature (2026-03)
+- [[sig-startuppedia-2026]] — StartupPedia article (2026-03)
+- [[sig-startuppedia-instagram-2026]] — StartupPedia Instagram (2026-03)
+- [[sig-rediminds-linkedin-2026]] — RediMinds LinkedIn (2026-03)
+- [[sig-somi-ai-linkedin-2026]] — Somi AI LinkedIn (2026-03)
+- [[sig-reddit-indiatech-2026]] — Reddit r/IndiaTech (2026-03)
+- [[sig-yt-short-telegram-2026]] — YouTube Short demo (2026-03)
+- [[sig-yt-full-2026]] — YouTube full walkthrough (2026-03)
+- [[sig-startupg-linkedin-2026]] — StartupG LinkedIn (2026-03)
+- [[sig-itsumeshk-runtogether-2026]] — Umesh Kumar testimonial (2026-05)
+- [[sig-openclaw-agent-2026]] — CaptVenk OpenClaw tweet (2026-06)
+- [[sig-adityag-endorsement]] — Aditya G endorsement (2025-06)
+- [[sig-amitsethi-endorsement]] — Amit Sethi endorsement (2025-06)
+- [[sig-adityavellanki-endorsement]] — Aditya Vellanki endorsement (2025-06)
+- [[sig-0xbosky-endorsement]] — Bhasker Kode endorsement (2025-06)
 
 ## Related Articles
 
-- [[hardware]] — Hardware-AI integration projects (ESP32, Hardvare platform)
-- [[machine-learning]] — ML models powering agent decision-making
-- [[entrepreneurship]] — Grant-funded agent startups and pitch activity
-- [[computer-vision]] — Vision-based agents (MotionX gesture recognition)
-- [[media]] — National press coverage of agent demonstrations
-- [[funding]] — AI Grants India support for agent research
+- [[hardware]] — IoT agent integration (ESP32, Telegram control)
+- [[entrepreneurship]] — Grant systems (OpenClaw/ZeroClaw), AI Collective pitch
+- [[machine-learning]] — Conversational AI (Kyabol), hardware intelligence (Hardvare)
+- [[brand]] — Media positioning as "8-year-old AI agent builder"
+- [[funding]] — AI Grants India recipient
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

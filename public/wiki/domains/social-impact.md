@@ -2,24 +2,26 @@
 *Domain*
 
 ## Summary
-Lakshveer Rao builds assistive technology for accessibility and social good. His flagship project, Drishtikon Yantra, is a Raspberry Pi-based wearable vision device for visually impaired users. This work earned him recognition as Youngest Innovator at the Param Foundation × Vedanta Makeathon in October 2025.
+Lakshveer Rao applies hardware engineering to accessibility challenges, building assistive devices for underserved populations. His flagship project — Drishtikon Yantra, a Raspberry Pi-based wearable vision aid for the visually impaired — earned recognition at the Param Foundation × Vedanta Makeathon (2025-10) where he received Youngest Innovator and Special Mention awards at age 8.
 
 ## Evidence
-- **Drishtikon Yantra** (2026-01) — Raspberry Pi wearable assistive vision device using computer vision to aid visually impaired users [[sig-drishtikon-2026]]
-- **Param Foundation × Vedanta Makeathon** (2025-10) — Awarded "Youngest Innovator" and "Special Mention" for presenting Drishtikon Yantra [[sig-param-award-2025]]
+- **Drishtikon Yantra (2026-01)**: Raspberry Pi wearable assistive vision device using computer vision for visually impaired users [[sig-drishtikon-2026]]
+- **Param Foundation × Vedanta Makeathon (2025-10)**: Youngest Innovator & Special Mention for presenting Drishtikon Yantra [[sig-param-award-2025]]
+- Recognized by Param Foundation and Vedanta for accessibility innovation at national maker event
 
 ## Trajectory
-Social impact appears as applied domain knowledge rather than primary focus. Lakshveer channels hardware and computer vision skills ([[computer-vision]], [[hardware]]) into accessibility tech. Recognition from Param Foundation and Vedanta positions him within India's maker-for-good ecosystem. At 16, winning "Youngest Innovator" suggests early-stage work — unknown if Drishtikon Yantra reached deployment or remains prototype.
+2025-10 → 2026-01: Transition from award recognition to documented project deployment. Focus remains on accessibility hardware. Signal gap suggests iterative development between competition (Oct 2025) and published documentation (Jan 2026).
 
 ## Signals
-- [[sig-drishtikon-2026]]
-- [[sig-param-award-2025]]
+- [[sig-param-award-2025]] — Param Foundation × Vedanta Makeathon — Youngest Innovator & Special Mention (2025-10)
+- [[sig-drishtikon-2026]] — Drishtikon Yantra — Raspberry Pi wearable assistive vision device (2026-01)
 
 ## Related Articles
-- [[computer-vision]]
-- [[hardware]]
-- [[achievement]]
-- [[entrepreneurship]]
+- [[domains/computer-vision]]
+- [[domains/hardware]]
+- [[domains/achievement]]
+- [[projects/drishtikon-yantra]]
+- [[organizations/param-foundation]]
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

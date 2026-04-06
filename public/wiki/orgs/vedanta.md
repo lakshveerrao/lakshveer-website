@@ -2,19 +2,19 @@
 *Organization*
 
 ## Summary
-Vedanta is a corporate partner organization that co-hosted the Param Foundation × Vedanta Makeathon in October 2025, where Lakshveer Rao received dual recognition. The organization appears connected to spiritual and educational initiatives in India, evidenced by Lakshveer's February 2026 demonstration to Sri Sri Brahmananda Bharati Swamiji under Vedanta's context.
+Vedanta is a corporate partner that co-sponsored the Param Foundation Makeathon in October 2025, where Lakshveer Rao won Youngest Innovator and Special Mention awards for [[Drishtikon Yantra]]. Vedanta maintained engagement with Lakshveer through February 2026, facilitating a demonstration to Sri Sri Brahmananda Bharati Swamiji.
 
 ## Relationship with Lakshveer
-Lakshveer presented [[Drishtikon Yantra]] at the Param Foundation × Vedanta Makeathon (October 2025), winning "Youngest Innovator" and "Special Mention" awards [sig-param-award-2025]. This marked his first documented interaction with Vedanta as an institutional entity. Four months later (February 2026), Lakshveer demonstrated projects to His Holiness Sri Sri Brahmananda Bharati Swamiji in a context associated with Vedanta [sig-brahmananda-swamiji-demo-2026], suggesting ongoing organizational relationship beyond the initial competition.
+Vedanta co-organized the makeathon where Lakshveer presented his assistive vision device in October 2025 [[sig-param-award-2025]]. Four months later, in February 2026, Vedanta arranged or facilitated Lakshveer's demonstration to His Holiness Sri Sri Brahmananda Bharati Swamiji [[sig-brahmananda-swamiji-demo-2026]], indicating sustained organizational support beyond the initial event.
 
 ## Signals
-- [sig-param-award-2025] — Co-hosted makeathon with Param Foundation (2025-10)
-- [sig-brahmananda-swamiji-demo-2026] — Context for spiritual leader demonstration (2026-02)
+- [[sig-param-award-2025]] — Co-sponsored Param Foundation Makeathon where Lakshveer won dual recognition (2025-10)
+- [[sig-brahmananda-swamiji-demo-2026]] — Associated with or facilitated demo to spiritual leader (2026-02)
 
 ## Related Articles
-- [[Param Foundation]]
-- [[Drishtikon Yantra]]
-- [[Awards and Recognition]]
+- [[Param Foundation]] — Co-organizer of makeathon
+- [[Drishtikon Yantra]] — Device showcased at Vedanta-sponsored event
+- [[Awards and Recognition]] — Youngest Innovator title from this partnership
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

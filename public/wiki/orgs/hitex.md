@@ -2,19 +2,19 @@
 *Organization*
 
 ## Summary
-Hitex is an exhibition and convention center in Hyderabad, India where Lakshveer has participated in multiple events. It serves as a venue for technology exhibitions, trade shows, and public events including youth-focused innovation showcases.
+Hitex (Hyderabad International Trade Expositions Limited) is a major convention and exhibition center in Hyderabad, India. Lakshveer Rao has participated in multiple events at this venue, including demonstrating hardware projects and receiving recognition for his work.
 
 ## Relationship with Lakshveer
-Lakshveer has demonstrated projects and received recognition at Hitex-hosted events on at least two occasions between 2024-2025. In December 2024, he participated in Kids Carnival at Hitex, demoing hardware projects [[sig-kids-carnival-hitex-2024]]. In June 2025, he was recognized at IITEX 2025 held at the same venue [[sig-iitex-2025]]. Both events positioned him as a young maker in public-facing technical demonstrations.
+Lakshveer has used Hitex as a platform for public engagement and recognition. In December 2024, he demonstrated hardware projects at the Kids Carnival event [[sig-kids-carnival-hitex-2024]]. Six months later, in June 2025, he received recognition at IITEX 2025 (India International Trade Exhibition) held at the same venue [[sig-iitex-2025]]. Both appearances involved hardware demonstrations and public speaking.
 
 ## Signals
-- [[sig-kids-carnival-hitex-2024]] — Kids Carnival demo (2024-12)
-- [[sig-iitex-2025]] — IITEX 2025 recognition (2025-06)
+- [[sig-kids-carnival-hitex-2024]] — Demo appearance at Kids Carnival (2024-12)
+- [[sig-iitex-2025]] — Recognition at IITEX 2025 (2025-06)
 
 ## Related Articles
-- [[hyderabad]] — Home city, event location
-- [[public-speaking]] — Domain demonstrated at Hitex events
-- [[hardware]] — Technical focus of demonstrations
+- [[public-speaking]] — Domain covering Lakshveer's presentation activities
+- [[hardware]] — Core technical domain of demonstrated projects
+- [[Hyderabad]] — Geographic location of venue
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

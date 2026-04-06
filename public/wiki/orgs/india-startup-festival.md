@@ -2,17 +2,19 @@
 *Organization*
 
 ## Summary
-India Startup Festival (ISF) is an Indian organization that runs programs for young entrepreneurs. They operate the Junicorns competition, which identifies and supports founders under 18. As of August 2025, ISF was actively running multi-level selection processes for early-stage founders.
+India Startup Festival (ISF) is an Indian entrepreneurship platform that runs programs for young founders, including the Junicorns competition for junior entrepreneurs. Lakshveer Rao engaged with ISF in 2025 through their Junicorns track.
 
 ## Relationship with Lakshveer
-Lakshveer advanced to Level 3 of the ISF Junicorns competition in August 2025 [[sig-isf-junicorns-2025]]. This placed him among a select group of young founders being evaluated by the organization. The competition appears to be ISF's primary interface with teenage entrepreneurs in India.
+Lakshveer was shortlisted to Level 3 of the ISF Junicorns competition in August 2025 [sig-isf-junicorns-2025]. Industry figure CaptVenk publicly tweeted about Lakshveer's ISF progress in November 2025 [sig-captvenk-yugantar-isf-tweets].
 
 ## Signals
-- [[sig-isf-junicorns-2025]] — Lakshveer shortlisted to Level 3 of Junicorns (2025-08)
+- [sig-isf-junicorns-2025] — Level 3 Shortlist, August 2025
+- [sig-captvenk-yugantar-isf-tweets] — CaptVenk social recognition, November 2025
 
 ## Related Articles
 - [[Junicorns]]
-- [[Lakshveer Rao]]
+- [[CaptVenk]]
+- [[Yugantar]]
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

@@ -2,18 +2,18 @@
 *Organization*
 
 ## Summary
-Aerolyte is a drone and aerospace startup that collaborated with Lakshveer Rao in a mentorship capacity as of October 2025. The organization operates in the robotics and electronics space, focusing on drone technology development.
+Aerolyte is a drone and aerospace startup that has engaged with Lakshveer Rao for mentorship or collaboration purposes. The organization operates in the unmanned aerial vehicle (UAV) sector and published documentation of their work with Lakshveer in October 2025.
 
 ## Relationship with Lakshveer
-Lakshveer served as a mentor or collaborator to Aerolyte, documented through a public-facing video published by the organization in October 2025. The nature of the collaboration suggests Lakshveer provided technical or entrepreneurial guidance in drone development and aerospace applications [[sig-aerolyte-mentorship-2025]].
+Aerolyte featured Lakshveer in a mentorship/collaboration video published to YouTube in October 2025 [[sig-aerolyte-mentorship-2025]]. The nature of the engagement suggests Aerolyte sought expertise or partnership with Lakshveer in drone-related development, positioning an 8-year-old as a technical resource for a commercial aerospace entity.
 
 ## Signals
-- [[sig-aerolyte-mentorship-2025]] — Aerolyte published mentorship/collaboration video featuring Lakshveer (2025-10)
+- [[sig-aerolyte-mentorship-2025]] — Aerolyte publishes mentorship/collaboration video featuring Lakshveer (2025-10)
 
 ## Related Articles
 - [[Lakshveer Rao]] — Primary subject
-- [[Mentorship]] — Related activities
-- [[Robotics]] — Domain expertise
+- [[Drones]] — Technical domain
+- [[Mentorship]] — Relationship type
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

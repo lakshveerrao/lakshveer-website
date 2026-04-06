@@ -3,153 +3,187 @@
 
 ## Information Gaps
 
-### Critical Missing Data
-- **Birth year unclear** — Age stated as 8 in 2025 signals, 16 in 2026 prompt. Math doesn't work. [[sig-first-yt-upload-2022]] says "age 4" in 2022-07, which would make him ~8 in 2026. **Reconcile birth year.**
-- **Father's role undefined** — CaptVenk (@CaptVenk) appears in 15+ signals but never formally introduced. Co-founder? Collaborator? [[sig-codidactic-weekly-feature-2025]] calls them "father-son duo."
-- **Revenue/business metrics** — [[sig-ebook-launch-2024]] mentions "100+ sales," [[sig-malpani-grant-2025]] mentions "300+ decks sold" and ₹1,00,000 grant. No other financials.
-- **Education status** — [[sig-think-tac-feature-2025]] says "Grade 2 student" in 2025-06. Current school unknown. Homeschooled? Traditional?
-- **Team structure** — Is "Projects by Laksh" solo or team? Father involved operationally?
-- **Marcy project undefined** — [[sig-startupnewsfyi-ig-2026]] mentions "Marcy, a wrist companion for astronauts" but no signal documents this project.
+### **Personal Context**
+- **Birth year unclear**: Multiple signals reference age 4 (2022), age 7 (2025), age 8 (2025-2026). Birth year ~2018 but needs confirmation.
+- **Education**: Only one mention of "Grade 2 student" [[sig-think-tac-feature-2025]]. Current school unknown. Homeschooled? Unschooled?
+- **Family structure**: Father is CaptVenk (Venkatesh Rao). Mother? Siblings? Family context missing.
+- **Location granularity**: "Hyderabad" confirmed, but neighborhood/area unknown.
 
-### Product Gaps
-- **CircuitHeroes** — Launched [[sig-circuitheroes-launch-2024]], grant [[sig-malpani-grant-2025]], bought on Amazon [[sig-shantanugoel-circuitheroes-buy-2025]]. But no: pricing, distribution channels, manufacturing partner, curriculum design.
-- **Drishtikon Yantra** — [[sig-drishtikon-2026]], [[sig-param-award-2025]]. Tech stack? Hardware specs? User testing? Accessibility partnership?
-- **MotionX** — [[sig-motionx-launch-2026]]. One hackathon mention. Productized? Open source?
-- **Hardvare platform** — [[sig-hardvare-system-2026]] says "hardware intelligence platform" but GitHub link gives no detail. Vaporware or real?
-- **Claw/OpenClaw/ZeroClaw** — [[sig-openclaw-agent-2026]], [[sig-autoclaw-system-2026]]. Grant agent system. But: what grants applied to? Success rate? Tech stack?
+### **Product/Project Lifecycle**
+- **CircuitHeroes financials**: "300+ decks sold" [[sig-malpani-grant-2025]], "100+ sales" for ebook [[sig-ebook-launch-2024]]. Revenue? Pricing? Distribution channels beyond Amazon?
+- **Drishtikon Yantra status**: Won awards [[sig-param-award-2025]], demoed at SPC [[sig-spc-demo-2025]]. Is it shipping? Beta? Prototype?
+- **MotionX**: Built at hackathon [[sig-motionx-launch-2026]]. Is this a one-off or continuing project?
+- **Hardvare platform**: Mentioned [[sig-hardvare-system-2026]] but zero technical detail. Architecture? Status?
+- **Claw/OpenClaw/ZeroClaw**: Multiple agent systems mentioned [[sig-openclaw-agent-2026]], [[sig-autoclaw-system-2026]]. How do they differ? Tech stack?
 
-### Timeline Conflicts
-- Multiple "first" claims need reconciliation.
+### **Technical Skills**
+- **Programming languages**: Arduino/C++ implied. Python for AI agents? What about web dev, app dev?
+- **Hardware stack**: ESP32, Raspberry Pi, DC motors confirmed. PCB design skills? CAD tools? Soldering proficiency?
+- **AI/ML depth**: Using LLMs (Gemini mentioned [[sig-gemini3-hackathon-2026]]). Training models? Fine-tuning? Or just API calls?
+
+### **Business Model**
+- **Revenue streams**: Card game sales, ebook sales, grants. Any consulting? Workshops?
+- **Team structure**: "Projects by Laksh" — is this solo or does CaptVenk co-found? Legal entity status?
+- **Manufacturing**: Who manufactures CircuitHeroes cards? Print-on-demand? Inventory model?
+
+### **Competitive Context**
+- **Peers**: Who are other young hardware founders in India? How does Lakshveer compare?
+- **Market positioning**: "India's youngest hardware founder" claimed but never benchmarked against global examples.
+
+### **Growth Metrics**
+- **YouTube**: "170+ projects" [[sig-yt-170-projects-2025]] but subscriber count, view counts, engagement metrics missing.
+- **Social proof**: Heavy media coverage but conversion metrics unclear. How many paying customers from press?
 
 ---
 
 ## Inconsistencies
 
-### Age Contradictions
-- **2022-07**: "age 4" [[sig-first-yt-upload-2022]]
-- **2024-12**: "8 year old" [[sig-inav-param-endorsement-2024]]
+### **Age Timeline**
+- **2022-07**: "Age 4" [[sig-first-yt-upload-2022]]
 - **2025-02**: "7 yr old" [[sig-ramsri-scholarship-2025]]
-- **2025-04**: "8-year-old" [[sig-sharav-medium-2025]]
-- **2026-01**: "8-year-old" [[sig-fe-mait-agent-2026]]
-- **Prompt header**: "16-year-old"
+- **2025-06**: "8 years old" [[sig-lion-circuits-hw1-2025]]
+- **2026-01**: Still "8-year-old" [[sig-runable-runhq-tweet-2026]]
 
-**Math**: If 4 in July 2022, then 7 in mid-2025, 8 by late 2025, 9 in 2026. Signals align better than prompt.
+**Issue**: If born ~2018, he'd be 6-7 in 2025, not 8. OR the 2022 "age 4" is wrong. Birth year needs pinning.
 
-### Geographic Signals
-- All events in Hyderabad or Bangalore except [[sig-spc-demo-2025]] (Bangalore explicit).
-- No international presence. US/EU builder communities untapped.
+### **Organization Names**
+- "Projects by Laksh" appears as both YouTube channel and company entity.
+- "Circuit Heroes" vs "CircuitHeroes" — inconsistent capitalization.
+- "Drishtikon Yantra" only appears in late 2025/2026 but seems like a major project — why no earlier mentions?
 
-### Title Inconsistencies
-- "India's youngest hardware startup founder" [[sig-beats-in-brief-2025]]
-- "India's youngest card game designer" [[sig-circuitheroes-launch-2024]]
-- "Youngest innovator" [[sig-param-award-2025]]
-- Which is canonical?
+### **Grant/Award Amounts**
+- Malpani Foundation: "₹1,00,000 grant" [[sig-malpani-grant-2025]]
+- Ramsri micro-scholarship: "₹40,000" [[sig-ramsri-microscholarship-2025]]
+- AI Grants India: Amount unknown [[sig-ai-grants-india-2025]]
+
+**Issue**: Total funding unclear. Are these separate or overlapping?
+
+### **Hackathon Results**
+- Hardware Hackathon 1.0: "youngest participant" [[sig-lion-circuits-hw1-2025]]
+- Hardware Hackathon 2.0: "Top-5 Finalist (youngest)" [[sig-lion-circuits-hw2-2025]]
+- Scaler Hackathon: "Top 8 of 200 teams" [[sig-scaler-hackathon-2025]]
+
+**Issue**: Unclear if "youngest" is a category or just descriptive. Did he win awards or just recognition?
 
 ---
 
 ## Underrepresented Domains
 
-### Strong Coverage
-- **Electronics** (28 signals) — YouTube builds, hackathons, workshops
-- **Entrepreneurship** (31 signals) — CircuitHeroes, grants, pitches
-- **Public speaking** (15 signals) — IIT Hyd, T-Hub, August Fest, panels
-- **Brand/Recognition** (23 signals) — Press, testimonials, endorsements
+### **1. Education Philosophy**
+- Signals show public speaking, workshops, teaching — but zero detail on HOW he learned.
+- Homeschooling? Self-directed? Montessori? Unschooling?
+- Only one mention: "Grade 2 student" [[sig-think-tac-feature-2025]].
 
-### Weak Coverage
-- **AI agents** (10 signals) — Recent focus but underexplained. [[sig-fe-mait-agent-2026]] (Telegram agent), [[sig-motionx-launch-2026]] (CV gaming), [[sig-openclaw-agent-2026]] (grant agent). What's the unifying vision?
-- **Computer vision** (4 signals) — Drishtikon + MotionX only. No robotics vision, no drones with CV.
-- **Social impact** (2 signals) — Drishtikon Yantra only explicit. Where's the "why"?
-- **Content strategy** (5 signals) — 170+ YouTube videos but no content thesis documented. [[sig-yt-170-projects-2025]]
-- **Teaching methodology** (3 signals) — Workshops at IIT but pedagogy undefined.
+### **2. Content Creation Strategy**
+- 170+ YouTube videos [[sig-yt-170-projects-2025]] but no analysis of:
+  - Audience demographics
+  - Content formats (tutorials? vlogs? product demos?)
+  - Editing workflow
+  - Equipment used
 
-### Missing Entirely
-- **Supply chain** — Who manufactures CircuitHeroes? PCB sourcing?
-- **Community** — Does he have mentees? A Discord? Followers building with him?
-- **Failures** — Zero documented failures. Unrealistic.
-- **Daily routine** — How does a Grade 2 student ship this much?
-- **Influences** — Who does he look up to? What does he read/watch?
-- **Long-term vision** — What does he want to build in 5 years?
+### **3. Manufacturing & Supply Chain**
+- CircuitHeroes sold 300+ decks — who prints them? Fulfillment partner? Inventory management?
+- Lion Circuits co-creation agreement [[sig-lion-circuits-cocreation-2025]] — what does this entail?
+
+### **4. Mentorship & Support Network**
+- Father (CaptVenk) clearly central but:
+  - Other mentors? Teachers? Advisors?
+  - Peer network? Other kid builders?
+  - How does he access resources (components, tools, software)?
+
+### **5. Failures & Pivots**
+- Only success stories in signals. What projects failed? What mistakes? What pivots?
+- Shark Tank Level 2 shortlist [[sig-shark-tank-s5-2025]] — did it proceed further?
+
+### **6. Community Building**
+- Heavy media presence but:
+  - Discord/Slack communities?
+  - Newsletter subscribers?
+  - How does he engage with audience beyond demos?
+
+### **7. Social Impact Measurement**
+- Drishtikon Yantra is assistive tech [[sig-drishtikon-2026]] — but:
+  - User testing with visually impaired individuals?
+  - Distribution plans?
+  - Partnership with disability orgs?
 
 ---
 
 ## Suggested Articles
 
-### High Priority
-1. **[[CaptVenk]]** — Father/collaborator. Appears in 15+ signals. Needs standalone article.
-2. **[[CircuitHeroes]]** — Anchor product. Revenue generator. Needs full article: design, manufacturing, pedagogy, sales channels.
-3. **[[Projects-by-Laksh]]** — Organization. Is it a company? Brand? Community?
-4. **[[Timeline-2022-2026]]** — Chronological build log. Reconcile age conflicts.
-5. **[[AI-Agent-Thesis]]** — What's his unifying AI vision? [[sig-fe-mait-agent-2026]], [[sig-openclaw-agent-2026]], [[sig-motionx-launch-2026]] need synthesis.
+### **High Priority**
+1. **[[Timeline of Lakshveer]]** — Chronological build log from 2022-2026.
+2. **[[CircuitHeroes]]** — Deep dive: product specs, sales data, manufacturing, distribution.
+3. **[[Drishtikon Yantra]]** — Full technical breakdown, use cases, impact.
+4. **[[Projects by Laksh]]** — Organization structure, business model, team.
+5. **[[CaptVenk]]** — Father's role, philosophy, co-building approach.
+6. **[[Lakshveer's Tech Stack]]** — Tools, languages, platforms, hardware.
+7. **[[Grants & Awards]]** — Complete funding history with amounts and terms.
 
-### Medium Priority
-6. **[[Drishtikon-Yantra]]** — Assistive tech. Social impact angle. Param award winner.
-7. **[[Hardware-Hackathons]]** — Lion Circuits 1.0 + 2.0, Scaler, others. Pattern of participation.
-8. **[[Media-Strategy]]** — How does press coverage happen? Inbound? Outbound?
-9. **[[Mentors-and-Endorsers]]** — Ramsri, Roohi, Malpani, Inav. Network map.
-10. **[[YouTube-Content-Strategy]]** — 170+ videos. What's working? Audience demographics?
+### **Medium Priority**
+8. **[[Hackathon History]]** — All competitions with outcomes and learnings.
+9. **[[Media Coverage]]** — Press mentions categorized by tier (national vs regional, tech vs general).
+10. **[[YouTube Strategy]]** — Content analysis, audience insights, growth tactics.
+11. **[[Claw AI System]]** — Technical architecture of OpenClaw/ZeroClaw.
+12. **[[Hardvare Platform]]** — Vision, roadmap, current status.
+13. **[[Mentors & Advisors]]** — Network map beyond family.
+14. **[[Education Model]]** — How Lakshveer learns (formal vs informal).
 
-### Exploratory
-11. **[[Marcy-Wrist-Companion]]** — Mentioned in [[sig-startupnewsfyi-ig-2026]] but no signal documents it.
-12. **[[Lion-Circuits-Partnership]]** — Co-creation agreement [[sig-lion-circuits-cocreation-2025]]. What's being co-created?
-13. **[[Grant-Stack]]** — Malpani (₹1L), AI Grants India, Ramsri (₹40k). Total funding? Terms?
-14. **[[Education-Philosophy]]** — Grade 2 + shipping products. Homeschool? Unschool?
+### **Low Priority (But Useful)**
+15. **[[Lakshveer's Workspace]]** — Tools, setup, equipment list.
+16. **[[Failures & Pivots]]** — Projects that didn't work, lessons learned.
+17. **[[Speaking Engagements]]** — All conferences/events with talk titles and recordings.
+18. **[[Collaborations]]** — Lion Circuits, Aerolyte, Robu.in partnerships.
+19. **[[Community Engagement]]** — How he interacts with followers, email lists, forums.
 
 ---
 
 ## Questions to Answer
 
-### Identity
-- What year was Lakshveer born?
-- What is CaptVenk's full name and role?
-- Where does Lakshveer go to school?
-- Does he have siblings?
+### **Identity & Context**
+- What is Lakshveer's exact birth date?
+- What school does he attend (if any)?
+- What's the legal structure of "Projects by Laksh"?
+- Is CaptVenk a co-founder or just supportive parent?
 
-### Business
-- What is the legal structure of "Projects by Laksh"?
-- Total revenue to date across all products?
-- Who are the top 3 customers/users?
-- What's the burn rate?
+### **Product & Business**
+- How many units of CircuitHeroes have sold? Revenue to date?
+- What is the pricing model for each product?
+- Who manufactures CircuitHeroes cards?
+- Is Drishtikon Yantra available for purchase or still in R&D?
+- What is the go-to-market strategy for Hardvare?
 
-### Product
-- What happened to the eBook after launch? [[sig-ebook-launch-2024]]
-- Is CircuitHeroes still sold on Amazon? Link?
-- What does the Hardvare platform actually do? [[sig-hardvare-system-2026]]
-- Is MotionX open source? Repo link?
+### **Technical Depth**
+- What programming languages does Lakshveer use?
+- Does he design PCBs? If so, which tools?
+- What CAD software for mechanical design?
+- Does he train ML models or only use APIs?
+- What's the architecture of the Claw AI agent system?
 
-### Strategy
-- Why hardware + AI? What's the thesis?
-- Why India-focused? Plans to go global?
-- What's the 5-year vision?
-- Who are his competitors (if any)?
+### **Growth & Impact**
+- YouTube subscriber count and view metrics?
+- Email list size?
+- How many workshop attendees to date?
+- How many visually impaired users have tested Drishtikon Yantra?
 
-### Process
-- How many hours/week does he work?
-- How does he balance school + building?
-- Who helps with manufacturing/logistics?
-- Does he code? Design PCBs? Or just assemble?
+### **Learning & Process**
+- How does Lakshveer learn new skills (courses, books, videos, mentors)?
+- What's his daily/weekly routine?
+- How does he balance school and building?
+- What tools does he use for project management?
 
-### Community
-- Does he have a community of young builders?
-- Does he mentor others?
-- What platforms does he use to share (beyond YouTube)?
+### **Network & Influence**
+- Who are his closest mentors beyond CaptVenk?
+- What communities is he active in (Discord, Slack, forums)?
+- Has he mentored other kids?
+- What's his relationship with Lion Circuits, Aerolyte, Robu.in?
 
----
-
-## Meta Notes
-
-**Signal Quality**: High. 80+ signals, mostly primary sources (YouTube, tweets, LinkedIn). Confidence ratings all "high."
-
-**Temporal Density**: Exponential growth. 2 signals in 2022, 10 in 2024, 50+ in 2025-2026. Peak activity = last 6 months.
-
-**Source Diversity**: YouTube (25%), Twitter (20%), Press (30%), Events (25%). Good mix.
-
-**Red Flags**: 
-- Age contradiction (minor — reconcilable).
-- Marcy project mentioned but undocumented.
-- No failure signals (survivorship bias?).
-
-**Strengths**: Rich event participation, strong testimonial network, clear product artifacts.
+### **Future Plans**
+- What's next after CircuitHeroes and Drishtikon Yantra?
+- Plans for Hardvare platform?
+- Will he pursue formal engineering education?
+- Long-term vision: startup founder, researcher, educator?
 
 ---
 
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

@@ -2,17 +2,17 @@
 *Organization*
 
 ## Summary
-StartupG is an organization that featured Lakshveer Rao's AI agent work on their LinkedIn in March 2026. The organization operates in the startup/entrepreneurship media space, providing visibility to emerging makers and their projects.
+StartupG is an organization that has featured Lakshveer Rao's work in AI agents. The organization operates across media, brand, and entrepreneurship domains, with active presence on LinkedIn as of March 2026.
 
 ## Relationship with Lakshveer
-StartupG showcased Lakshveer's AI agent project on their LinkedIn platform in March 2026, providing external validation and press coverage for his work in the AI agent domain. This represents third-party recognition of Lakshveer's technical capabilities in AI development.
+StartupG featured Lakshveer's AI agent project on their LinkedIn platform in March 2026, providing visibility for his work in artificial intelligence [[sig-startupg-linkedin-2026]].
 
 ## Signals
-- [[sig-startupg-linkedin-2026]] — StartupG LinkedIn feature (2026-03)
+- [[sig-startupg-linkedin-2026]] — LinkedIn post featuring Lakshveer's AI agent project (2026-03, high confidence)
 
 ## Related Articles
 - [[lakshveer-rao]] — Main profile
-- [[ai-agents]] — Domain context
+- [[ai-agents]] — Domain area
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

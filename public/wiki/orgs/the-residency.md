@@ -2,18 +2,18 @@
 *Organization*
 
 ## Summary
-The Residency is a startup accelerator/incubator program that runs cohort-based programs for young founders. Notable for selecting exceptionally young entrepreneurs into their Delta chapter cohorts. Operates primarily in India with focus on technical builder community.
+The Residency is a startup accelerator program that runs cohort-based programs for founders. Lakshveer Rao was selected for their Delta Chapter II cohort in September 2025, becoming the youngest founder ever accepted into the program at age 8.
 
 ## Relationship with Lakshveer
-Lakshveer Rao accepted into Delta-2 cohort (September 2025) as youngest founder ever selected by the organization [sig-delta2-residency-2025]. At time of selection, he was 8 years old with portfolio spanning hardware, software, and games [sig-aadityayuvraj-residency-2026]. The Residency publicly highlighted this achievement via LinkedIn announcing him as youngest founder in Delta Chapter II cohort [sig-delta2-residency-2025].
+Lakshveer was admitted to The Residency's Delta-2 cohort in 2025-09, marking a milestone as the youngest founder in the program's history. The organization publicly highlighted this achievement via LinkedIn, recognizing Lakshveer's work across hardware, software, and games. In January 2026, Yuvraj Aaditya (associated with The Residency) met with Lakshveer and publicly acknowledged his builder credentials on social media.
 
 ## Signals
-- [sig-delta2-residency-2025] — Official announcement of Lakshveer as youngest Delta-2 founder (2025-09)
-- [sig-aadityayuvraj-residency-2026] — Yuvraj Aaditya confirmation of youngest status in delta cohort (2026-01)
+- [[sig-delta2-residency-2025]] — The Residency announces Lakshveer as youngest founder in Delta-2 cohort (2025-09)
+- [[sig-aadityayuvraj-residency-2026]] — Yuvraj Aaditya tweets about meeting Lakshveer, referencing Delta cohort (2026-01)
 
 ## Related Articles
-- [[lakshveer-rao]] — Primary subject
-- [[timeline-2025]] — Delta-2 selection event
+- [[lakshveer-rao]] — Main profile
+- [[timeline]] — 2025-09 Delta-2 selection event
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

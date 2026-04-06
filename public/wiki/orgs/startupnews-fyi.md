@@ -2,19 +2,17 @@
 *Organization*
 
 ## Summary
-StartupNews.fyi is an Indian media organization covering the startup and entrepreneurship ecosystem. The organization operates an Instagram account where it profiles founders and emerging ventures. As of March 2026, it has featured Lakshveer Rao as a hardware founder.
+StartupNews.fyi is an Indian media organization focused on covering startup ecosystem news. In March 2026, they featured Lakshveer Rao on their Instagram platform, describing him as "India's Youngest Hardware Founder" at age 8 and highlighting his Marcy project—a wrist companion device designed for astronauts.
 
 ## Relationship with Lakshveer
-StartupNews.fyi published content about Lakshveer Rao in March 2026, describing him as "India's Youngest Hardware Founder" and highlighting his work on Marcy, a wrist companion device for astronauts. The feature appeared as an Instagram Reel. [sig-startupnewsfyi-ig-2026]
-
-**Note:** The signal describes Lakshveer as 8 years old in this feature, which conflicts with the established fact that he is 16 years old as of 2026. This discrepancy suggests either an error in the original coverage or a misattribution in the signal data.
+StartupNews.fyi provided media coverage of Lakshveer Rao's work in March 2026, positioning him as a notable figure in India's hardware startup landscape. Their Instagram feature specifically highlighted his Marcy project and his status as India's youngest hardware founder [[sig-startupnewsfyi-ig-2026]].
 
 ## Signals
-- [sig-startupnewsfyi-ig-2026] — Instagram feature on Lakshveer as hardware founder (2026-03)
+- [[sig-startupnewsfyi-ig-2026]] — Instagram feature describing Lakshveer as India's youngest hardware founder, highlighting Marcy project (2026-03)
 
 ## Related Articles
-- [[Marcy]] — Wrist companion device mentioned in coverage
-- [[Lakshveer-Rao]] — Featured founder
+- [[Lakshveer Rao]] — Featured subject
+- [[Marcy]] — Hardware project covered in feature
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

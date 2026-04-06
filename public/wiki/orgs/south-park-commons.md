@@ -2,18 +2,19 @@
 *Organization*
 
 ## Summary
-South Park Commons (SPC) is a community and startup incubator that hosts pitch events and supports early-stage founders. Lakshveer participated in an SPC demo event in Bangalore, India in August 2025, presenting two hardware projects to the community.
+South Park Commons (SPC) is a technology entrepreneurship community with presence in Bangalore, India. Hosts pitch demos and networking events for founders and makers working on technical products.
 
 ## Relationship with Lakshveer
-Lakshveer presented at a South Park Commons pitch demo event in Bangalore in August 2025 [[sig-spc-demo-2025]]. He showcased two projects: **CircuitHeroes** (an electronics card game) and **Drishtikon Yantra** (an assistive vision device for the visually impaired). The presentation was recorded and published on YouTube, indicating a formal demo day format.
+Lakshveer presented at South Park Commons Bangalore in August 2025, demoing two hardware projects: [[CircuitHeroes]] (educational electronics card game) and [[Drishtikon Yantra]] (assistive vision device for visually impaired). This represented one of his early entrepreneurial presentations to a technical founder community at age 8.
 
 ## Signals
-- [[sig-spc-demo-2025]] — SPC Pitch Demo presentation (2025-08)
+- [[sig-spc-demo-2025]] — Pitch demo presentation, August 2025
 
 ## Related Articles
 - [[CircuitHeroes]]
 - [[Drishtikon Yantra]]
 - [[Public Speaking]]
+- [[Entrepreneurship Journey]]
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

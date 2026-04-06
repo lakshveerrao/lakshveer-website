@@ -2,20 +2,37 @@
 *Organization*
 
 ## Summary
-Indian nonprofit organization focused on youth innovation and maker education. Known for organizing hackathons and makeathons targeting young inventors. Active in recognizing and supporting underage technical talent across India.
+
+Param Foundation is a Hyderabad-based science and innovation organization that runs maker competitions and youth development programs. The foundation partners with corporate sponsors like Vedanta to host makeathons focused on hardware innovation and social impact. Lakshveer Rao won awards at their flagship event in October 2025.
 
 ## Relationship with Lakshveer
-First documented contact December 2024 when Inav Amsi (Param Foundation leadership) met 8-year-old Lakshveer at a Param-organized hackathon [sig-inav-param-endorsement-2024]. Lakshveer later won dual awards at Param Foundation × Vedanta Makeathon (October 2025): **Youngest Innovator** and **Special Mention** for [[Drishtikon Yantra]] [sig-param-award-2025]. Foundation provided platform for debut of Lakshveer's Raspberry Pi-based assistive vision device [sig-drishtikon-2026].
+
+**First Contact**: December 2024 — Inav Amsi (Param Foundation leadership) met 8-year-old Lakshveer at a Param-hosted hackathon [sig-inav-param-endorsement-2024].
+
+**Major Recognition**: October 2025 — Lakshveer won **Youngest Innovator** and **Special Mention** at Param Foundation × Vedanta Makeathon for [[Drishtikon Yantra]], a Raspberry Pi wearable assistive vision device [sig-param-award-2025].
+
+**Ongoing Support**: Inavamsi B Enaganti (science & innovation lead at Param) publicly endorsed Lakshveer in June 2025 [sig-inav65-endorsement].
+
+## Key Personnel
+
+- **Inav Amsi / Inavamsi B Enaganti** — Science & innovation leadership. Direct mentor/advocate for Lakshveer's work [sig-inav-param-endorsement-2024] [sig-inav65-endorsement].
+
+## Programs & Events
+
+- **Param × Vedanta Makeathon** (Oct 2025) — Hardware innovation competition with corporate partnership. Featured youth categories and social impact focus [sig-param-award-2025].
 
 ## Signals
-- [sig-inav-param-endorsement-2024] — Inav Amsi recognition post (2024-12)
-- [sig-param-award-2025] — Vedanta Makeathon awards (2025-10)
-- [sig-drishtikon-2026] — Drishtikon demo platform (2026-01)
+
+- [sig-inav-param-endorsement-2024] — First documented contact with Lakshveer
+- [sig-param-award-2025] — Youngest Innovator & Special Mention award
+- [sig-drishtikon-2026] — Award-winning project context
+- [sig-inav65-endorsement] — Ongoing institutional support
 
 ## Related Articles
+
 - [[Drishtikon Yantra]]
+- [[Awards and Recognition]]
 - [[Vedanta]]
-- [[Inav Amsi]]
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

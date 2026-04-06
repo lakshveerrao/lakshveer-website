@@ -2,20 +2,20 @@
 *Organization*
 
 ## Summary
-StartupPedia is an Indian digital media platform covering startup ecosystem, entrepreneurship, and emerging technology. Featured Lakshveer's AI agent project in March 2026 across article and Instagram channels when he was identified as 8 years old (note: actual age 16, publication error).
+StartupPedia is an Indian media platform covering startup and entrepreneurship stories. In March 2026, they featured Lakshveer Rao's AI agent project that controls ESP32 hardware via Telegram messaging across both their website and Instagram channel.
 
 ## Relationship with Lakshveer
-Published feature coverage of Lakshveer's Telegram-controlled AI agent project in March 2026. Article focused on ESP32 hardware control implementation via Telegram messaging interface. Content distributed through primary website and Instagram (@startup.pedia) as video reel format. Publication incorrectly stated Lakshveer's age as 8 years old; he was 16 at time of coverage.
+StartupPedia published a feature article about Lakshveer's AI agent system in March 2026, highlighting his work as an 8-year-old hardware founder. The story was distributed through their main website and amplified via an Instagram reel on their @startup.pedia account. This represents early press coverage of Lakshveer's work in Indian entrepreneurship media.
 
 ## Signals
-- [[sig-startuppedia-2026]] — Feature article on AI agent project (2026-03)
-- [[sig-startuppedia-instagram-2026]] — Instagram reel coverage (2026-03)
+- [[sig-startuppedia-2026]] — Feature article on Lakshveer's Telegram-controlled AI agent (2026-03)
+- [[sig-startuppedia-instagram-2026]] — Instagram reel featuring Lakshveer's project (2026-03)
 
 ## Related Articles
-- [[lakshveer-rao]] — Main profile
-- [[ai-agents]] — Project domain
-- [[telegram]] — Platform integration
-- [[media-coverage]] — Press appearances
+- [[Lakshveer Rao]]
+- [[AI Agent Projects]]
+- [[Press Coverage]]
+- [[Telegram Bot]]
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

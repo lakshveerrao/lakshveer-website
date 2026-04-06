@@ -3,46 +3,54 @@
 
 ## Summary
 
-**Projects by Laksh** is Lakshveer Rao's hardware startup and content brand, founded when he was 4 years old. The organization ships physical products (CircuitHeroes card game, DIY eBooks) and operates a YouTube channel documenting 170+ electronics, robotics, and AI builds. Recognized in 2025–2026 as India's youngest hardware startup, led by an 8-year-old founder.
+**Projects by Laksh** is Lakshveer Rao's hardware startup and content brand, founded in 2022 when he was 4 years old. The organization operates as both a YouTube-based educational platform documenting 170+ electronics and robotics builds, and a product company shipping physical goods including the CircuitHeroes card game and DIY eBooks. As of 2025-2026, it is recognized as India's youngest hardware startup.
 
 ## Relationship with Lakshveer
 
-Lakshveer is the co-founder and public face of Projects by Laksh. The organization serves as the vehicle for his maker education, entrepreneurship, and product distribution. All documented builds, pitches, and product launches occur under this brand. The YouTube channel `@ProjectsByLaksh` is the primary content surface.
+Lakshveer Rao is the co-founder and primary operator of Projects by Laksh. He uses the organization as the umbrella entity for all commercial and educational activities — from YouTube content production to product launches. The brand operates across multiple surfaces: YouTube (@ProjectsByLaksh), physical product sales (CircuitHeroes card game), and digital products (DIY eBook on ChhotaCreator.com). Lakshveer's identity as "India's youngest hardware startup founder" is tied directly to this organization [[sig-beats-in-brief-2025]] [[sig-dileep-gupta-linkedin-2026]].
 
 ## Signals
 
-**Origins (2022)**
-- [[sig-first-yt-upload-2022]] — First YouTube upload at age 4: "How to Fix Drill Bits" (July 2022)
-- [[sig-first-dc-motor-2022]] — First hardware build documented: DC motor fan (August 2022)
+**2022: Foundation Phase**
+- [[sig-first-yt-upload-2022]] — First YouTube upload (2022-07): "How to Fix Drill Bits" at age 4. Marks public launch of content strategy.
+- [[sig-first-dc-motor-2022]] — First documented hardware build: DC motor fan (2022-08). Establishes technical credibility at age 4.
 
-**Product Launches (2024)**
-- [[sig-first-pitch-2024]] — First business pitch about DIY Cars project (March 2024)
-- [[sig-ebook-launch-2024]] — Launch of *The Kids Book of Creative Ideas* eBook; 100+ sales via ChhotaCreator.com (September 2024)
-- [[sig-circuitheroes-launch-2024]] — CircuitHeroes educational electronics card game teaser (October 2024)
+**2024: Product Diversification**
+- [[sig-first-pitch-2024]] — First formal business pitch about DIY Cars project (2024-03). Signals shift toward entrepreneurship.
+- [[sig-ebook-launch-2024]] — Launch of "The Kids Book of Creative Ideas" DIY eBook (2024-09). 100+ sales via ChhotaCreator.com. First digital product.
+- [[sig-circuitheroes-launch-2024]] — CircuitHeroes card game teaser launch (2024-10). Educational electronics card game. Lakshveer positioned as "India's youngest card game designer."
 
-**Recognition & Scale (2025–2026)**
-- [[sig-beats-in-brief-2025]] — Beats in Brief declares Lakshveer "India's youngest hardware startup founder" (September 2025)
-- [[sig-youngest-founder-room-yt-2025]] — YouTube documentary: "The Youngest Founder in the Room" (November 2025)
-- [[sig-yt-170-projects-2025]] — YouTube channel reaches 170+ documented projects (December 2025)
-- [[sig-dileep-gupta-linkedin-2026]] — Dileep Gupta LinkedIn post confirms "co-founder of Projects by Laksh and creator of Circuit Heroes" (March 2026)
+**2025-2026: Brand Recognition & Technical Evolution**
+- [[sig-beats-in-brief-2025]] — Beats in Brief article: "India's youngest hardware startup founder" (2025-09). First major press coverage.
+- [[sig-youngest-founder-room-yt-2025]] — YouTube documentary: "The Youngest Founder in the Room" (2025-11). Brand narrative video.
+- [[sig-yt-170-projects-2025]] — YouTube channel documents 170+ projects (2025-12). Growing maker audience.
+- [[sig-dileep-gupta-linkedin-2026]] — Dileep Gupta LinkedIn endorsement: "India's youngest hardware startup founder" (2026-03). External validation.
+- [[sig-yt-short-telegram-2026]] — AI agent controlling ESP32 via Telegram (2026-03). Signals shift toward AI-hardware integration.
+- [[sig-yt-short-2-2026]] — Hardware + AI build short (2026-03).
+- [[sig-yt-full-2026]] — Full AI agent hardware walkthrough (2026-03). Technical depth on AI-agents domain.
 
-**AI + Hardware Phase (2026)**
-- [[sig-yt-short-telegram-2026]] — YouTube Short: AI agent controlling ESP32 hardware via Telegram (March 2026)
-- [[sig-yt-short-2-2026]] — YouTube Short: Hardware + AI build (March 2026)
-- [[sig-yt-full-2026]] — Full YouTube walkthrough of AI agent hardware project (March 2026)
+## Products & Offerings
 
-## Products
+**Physical Products:**
+- CircuitHeroes card game (2024-10) — educational electronics game
 
-- **CircuitHeroes** — Educational electronics card game (launched October 2024)
-- **The Kids Book of Creative Ideas** — DIY eBook with 100+ sales (launched September 2024)
-- **YouTube Content** — 170+ project tutorials covering Arduino, Raspberry Pi, robotics, AI agents, and hardware hacking
+**Digital Products:**
+- "The Kids Book of Creative Ideas" DIY eBook (2024-09) — 100+ sales on ChhotaCreator.com
+
+**Content/Education:**
+- YouTube channel (@ProjectsByLaksh) — 170+ project tutorials covering electronics, robotics, Arduino, Raspberry Pi, AI-agents
+- Projects span: DC motors, DIY cars, AI-controlled hardware via Telegram, ESP32 builds
+
+## Business Model
+
+Hybrid model: content-driven (YouTube) + product sales (physical card games, digital eBooks). Content operates as both educational resource and marketing funnel. Revenue streams include product sales and potential YouTube monetization (not confirmed in signals).
 
 ## Related Articles
 
-- [[Lakshveer Rao]]
-- [[CircuitHeroes]]
-- [[ChhotaCreator]]
-- [[YouTube Strategy]]
+- [[Lakshveer Rao]] — founder
+- [[CircuitHeroes]] — flagship card game product
+- [[YouTube Channel Strategy]] — content distribution
+- [[ChhotaCreator]] — eBook distribution partner
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

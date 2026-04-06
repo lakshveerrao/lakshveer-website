@@ -3,85 +3,95 @@
 
 ## Summary
 
-Lakshveer Rao has been building hardware projects since age 4, starting with a DC motor fan in August 2022 [[sig-first-dc-motor-2022]]. By age 8, he was recognized as India's youngest hardware startup founder, shipping commercial products through Projects by Laksh and securing a co-creation agreement with Lion Circuits [[sig-lion-circuits-cocreation-2025]]. His hardware work spans educational electronics (CircuitHeroes card game), assistive devices (Drishtikon Yantra), AI-controlled systems (Hardvare platform), and motion-control gaming (MotionX).
+Lakshveer Rao began building hardware at age 4 with a DC motor fan [[sig-first-dc-motor-2022]] and has since established himself as India's youngest hardware startup founder. His work spans electronics, robotics, PCB design, AI-integrated hardware, and assistive devices — shipping commercial products, competing in hackathons, and collaborating with established manufacturers by age 8.
 
 ## Evidence
 
-**First documented build:** DC motor fan (August 2022, age 4) [[sig-first-dc-motor-2022]]
+**First documented build:** DC motor fan (Aug 2022, age 4) [[sig-first-dc-motor-2022]]
 
 **Commercial products:**
-- CircuitHeroes educational electronics card game — launched October 2024 [[sig-circuitheroes-launch-2024]], awarded Malpani Foundation ₹1,00,000 grant June 2025 [[sig-malpani-grant-2025]], 300+ decks sold
-- Co-creation agreement with Lion Circuits PCB manufacturing (November 2025) [[sig-lion-circuits-cocreation-2025]]
-
-**Public demonstrations:**
-- Kids Carnival at Hitex Hyderabad (December 2024) [[sig-kids-carnival-hitex-2024]]
-- IITEX 2025 at Hitex Hyderabad (June 2025) [[sig-iitex-2025]]
-- IIT Hyderabad drone workshop (June 2025) [[sig-iit-hyd-drone-workshop-2025]]
-- South Park Commons demo — CircuitHeroes + Drishtikon Yantra (August 2025) [[sig-spc-demo-2025]]
+- **CircuitHeroes** — Educational electronics card game; 300+ decks sold; ₹1,00,000 Malpani Foundation grant recipient [[sig-circuitheroes-launch-2024]] [[sig-malpani-grant-2025]]
+- **Drishtikon Yantra** — Raspberry Pi-based wearable assistive vision device for visually impaired users; Special Mention at Param × Vedanta Makeathon [[sig-drishtikon-2026]]
+- **MotionX** — Full-body motion-control gaming system; Special Mention Winner at RunTogether Hackathon [[sig-motionx-launch-2026]]
+- **Hardvare** — Hardware intelligence platform combining physical devices with AI agents [[sig-hardvare-system-2026]]
 
 **Hackathon achievements:**
-- Hardware Hackathon 1.0 by Lion Circuits × PCB Cupid — youngest participant, built hydration assistant using Glyph board + sensor (July 2025) [[sig-lion-circuits-hw1-2025]]
-- Hardware Hackathon 2.0 — Top-5 Finalist, youngest participant (July 2025) [[sig-lion-circuits-hw2-2025]]
-- RunTogether Hackathon — MotionX full-body motion-control gaming, Special Mention Winner (January 2026) [[sig-motionx-launch-2026]]
+- Lion Circuits Hardware Hackathon 1.0 — youngest participant; built hydration assistant using Glyph board + sensor (Jul 2025) [[sig-lion-circuits-hw1-2025]]
+- Lion Circuits Hardware Hackathon 2.0 — Top-5 Finalist, youngest participant (Jul 2025) [[sig-lion-circuits-hw2-2025]]
 
-**Platform projects:**
-- Drishtikon Yantra — Raspberry Pi wearable assistive vision device for visually impaired users, Special Mention at Param × Vedanta Makeathon (January 2026) [[sig-drishtikon-2026]]
-- Hardvare — hardware intelligence platform combining physical devices with AI agents (January 2026) [[sig-hardvare-system-2026]]
-- AI agent controlling ESP32 hardware via Telegram messaging (March 2026) [[sig-startuppedia-2026]] [[sig-yt-short-telegram-2026]]
+**Industry recognition:**
+- Co-creation agreement with Lion Circuits (PCB manufacturer) (Nov 2025) [[sig-lion-circuits-cocreation-2025]]
+- Drone workshop participant at IIT Hyderabad (Jun 2025) [[sig-iit-hyd-drone-workshop-2025]]
+- Recognition at IITEX 2025, Hitex Hyderabad [[sig-iitex-2025]]
+- Kids Carnival demo at Hitex Hyderabad (Dec 2024) [[sig-kids-carnival-hitex-2024]]
+
+**Media coverage:**
+- "India's youngest hardware startup founder" — Beats in Brief, StartupNews.fyi, Dileep Gupta [[sig-beats-in-brief-2025]] [[sig-startupnewsfyi-ig-2026]] [[sig-dileep-gupta-linkedin-2026]]
+- Featured in Telugu regional media (Chekodi) for hardware achievements at age 8 [[sig-chekodi-telugu-2025]]
+- AI agent controlling ESP32 via Telegram featured by StartupPedia, RediMinds, Somi AI [[sig-startuppedia-2026]] [[sig-rediminds-linkedin-2026]] [[sig-somi-ai-linkedin-2026]]
+
+**Community testimonials:**
+- "Laksh knows more about hardware than I did during my entire engineering" — Shubham Kukreti [[sig-shubham-kukreti-localhost-2025]]
+- "An 8-year-old showed up and built. That alone changed what we thought was possible." — Runable HQ [[sig-runable-runhq-tweet-2026]]
+- "An 8-year-old just schooled us all" — Lion Circuits [[sig-lion-circuits-hw1-2025]]
+- Endorsed by hardware builders: Aakash, Hanuma Aditya (EV/hardware startups), Alysha Lobo (robotics), Vishal Tejwani, Kunal Gupta, Kiran Kumar [[sig-aakash-dudechillkar-endorsement]] [[sig-hanumaditya-endorsement]] [[sig-alyshal-endorsement]] [[sig-vishaltejwani-endorsement]] [[sig-kunalgupta-endorsement]] [[sig-kirankumar-endorsement]]
 
 ## Trajectory
 
-**2022:** First hardware build at age 4 — DC motor fan [[sig-first-dc-motor-2022]]
+**2022 (age 4):** First hardware build — DC motor fan  
+**2024 (age 6):** CircuitHeroes card game launch; public demos begin  
+**2025 (age 7-8):** Grant recipient, hackathon finalist, manufacturer partnership, national media coverage, AI-hardware integration  
+**2026 (age 8):** Multiple AI-integrated hardware projects, viral media features, wearable assistive tech, motion-control systems
 
-**2024:** CircuitHeroes card game teaser launch (October) [[sig-circuitheroes-launch-2024]], public demo at Hitex Kids Carnival (December) [[sig-kids-carnival-hitex-2024]]
-
-**2025:** Regional Telugu media coverage (February) [[sig-chekodi-telugu-2025]], IITEX recognition (June) [[sig-iitex-2025]], IIT Hyderabad drone workshop (June) [[sig-iit-hyd-drone-workshop-2025]], Malpani Foundation grant (June) [[sig-malpani-grant-2025]], Hardware Hackathon 1.0 youngest participant (July) [[sig-lion-circuits-hw1-2025]], Hardware Hackathon 2.0 Top-5 Finalist (July) [[sig-lion-circuits-hw2-2025]], South Park Commons demo (August) [[sig-spc-demo-2025]], national media recognition as youngest hardware founder (September) [[sig-beats-in-brief-2025]], Lion Circuits co-creation agreement (November) [[sig-lion-circuits-cocreation-2025]]
-
-**2026:** Drishtikon Yantra assistive vision device (January) [[sig-drishtikon-2026]], MotionX motion-control gaming (January) [[sig-motionx-launch-2026]], Hardvare platform launch (January) [[sig-hardvare-system-2026]], viral AI agent + Telegram demo (March) [[sig-startuppedia-2026]] [[sig-startupnewsfyi-ig-2026]] [[sig-rediminds-linkedin-2026]] [[sig-somi-ai-linkedin-2026]] [[sig-dileep-gupta-linkedin-2026]]
-
-**Skill progression:** DC motors → PCB design → sensor integration → Raspberry Pi → AI agents → motion-control systems → commercial manufacturing partnerships
+Pattern: Progression from motor assemblies → educational products → AI-integrated devices → commercial partnerships within 4 years.
 
 ## Signals
 
-- [[sig-first-dc-motor-2022]] — First Build: DC Motor Fan (2022-08)
-- [[sig-circuitheroes-launch-2024]] — CircuitHeroes Card Game Teaser Launch (2024-10)
-- [[sig-kids-carnival-hitex-2024]] — Kids Carnival Demo at Hitex Hyderabad (2024-12)
-- [[sig-chekodi-telugu-2025]] — Chekodi Telugu Media Coverage (2025-02)
-- [[sig-iitex-2025]] — IITEX 2025 Recognition at Hitex Hyderabad (2025-06)
-- [[sig-iit-hyd-drone-workshop-2025]] — Drone Workshop at IIT Hyderabad (2025-06)
-- [[sig-malpani-grant-2025]] — Malpani Foundation Grant ₹1,00,000 (2025-06)
-- [[sig-shubham-kukreti-localhost-2025]] — Localhost Meetup Testimonial (2025-06)
-- [[sig-lion-circuits-hw1-2025]] — Hardware Hackathon 1.0, Youngest Participant (2025-07)
-- [[sig-lion-circuits-hw2-2025]] — Hardware Hackathon 2.0, Top-5 Finalist (2025-07)
-- [[sig-muralisrinivasa-hwhackathon-2025]] — Murali Srinivasa Hackathon Testimonial (2025-07)
-- [[sig-muaddibayasser-hwhackathon-2025]] — Yasser MuadDib Hackathon Testimonial (2025-07)
-- [[sig-spc-demo-2025]] — South Park Commons Pitch Demo (2025-08)
-- [[sig-beats-in-brief-2025]] — Beats in Brief: Youngest Hardware Founder (2025-09)
-- [[sig-lion-circuits-cocreation-2025]] — Lion Circuits Co-Creation Agreement (2025-11)
-- [[sig-drishtikon-2026]] — Drishtikon Yantra Assistive Vision Device (2026-01)
-- [[sig-motionx-launch-2026]] — MotionX Motion-Control Gaming (2026-01)
-- [[sig-runable-runhq-tweet-2026]] — Runable HQ Feature Tweet (2026-01)
-- [[sig-aadityayuvraj-residency-2026]] — The Residency Delta-2 Testimonial (2026-01)
-- [[sig-hardvare-system-2026]] — Hardvare Hardware Intelligence Platform (2026-01)
-- [[sig-startuppedia-2026]] — StartupPedia AI Agent Feature (2026-03)
-- [[sig-startupnewsfyi-ig-2026]] — StartupNews.fyi Instagram Feature (2026-03)
-- [[sig-rediminds-linkedin-2026]] — RediMinds LinkedIn Post (2026-03)
-- [[sig-somi-ai-linkedin-2026]] — Somi AI LinkedIn Post (2026-03)
-- [[sig-dileep-gupta-linkedin-2026]] — Dileep Gupta LinkedIn Post (2026-03)
-- [[sig-yt-short-telegram-2026]] — YouTube Short: AI Agent via Telegram (2026-03)
-- [[sig-yt-short-2-2026]] — YouTube Short: Hardware + AI Build (2026-03)
-- [[sig-yt-full-2026]] — YouTube Full Video: AI Agent Walkthrough (2026-03)
+[[sig-first-dc-motor-2022]]  
+[[sig-circuitheroes-launch-2024]]  
+[[sig-kids-carnival-hitex-2024]]  
+[[sig-chekodi-telugu-2025]]  
+[[sig-iitex-2025]]  
+[[sig-iit-hyd-drone-workshop-2025]]  
+[[sig-malpani-grant-2025]]  
+[[sig-lion-circuits-hw1-2025]]  
+[[sig-spc-demo-2025]]  
+[[sig-beats-in-brief-2025]]  
+[[sig-shubham-kukreti-localhost-2025]]  
+[[sig-lion-circuits-hw2-2025]]  
+[[sig-drishtikon-2026]]  
+[[sig-motionx-launch-2026]]  
+[[sig-runable-runhq-tweet-2026]]  
+[[sig-aadityayuvraj-residency-2026]]  
+[[sig-startuppedia-2026]]  
+[[sig-startupnewsfyi-ig-2026]]  
+[[sig-rediminds-linkedin-2026]]  
+[[sig-somi-ai-linkedin-2026]]  
+[[sig-dileep-gupta-linkedin-2026]]  
+[[sig-yt-short-telegram-2026]]  
+[[sig-yt-short-2-2026]]  
+[[sig-yt-full-2026]]  
+[[sig-lion-circuits-cocreation-2025]]  
+[[sig-hardvare-system-2026]]  
+[[sig-muralisrinivasa-hwhackathon-2025]]  
+[[sig-muaddibayasser-hwhackathon-2025]]  
+[[sig-beatsinbrief-tweet-2026]]  
+[[sig-aakash-dudechillkar-endorsement]]  
+[[sig-hanumaditya-endorsement]]  
+[[sig-alyshal-endorsement]]  
+[[sig-vishaltejwani-endorsement]]  
+[[sig-kunalgupta-endorsement]]  
+[[sig-kirankumar-endorsement]]
 
 ## Related Articles
 
-- [[electronics]] — overlapping technical domain
-- [[robotics]] — motion-control and automation work
-- [[ai-agents]] — Hardvare platform, Telegram-controlled systems
-- [[entrepreneurship]] — Projects by Laksh, CircuitHeroes commercial sales
-- [[computer-vision]] — Drishtikon Yantra, MotionX gesture recognition
-- [[social-impact]] — assistive technology for visually impaired users
-- [[education]] — CircuitHeroes educational card game
-- [[teaching]] — workshops and public demos
+[[entrepreneurship]]  
+[[electronics]]  
+[[robotics]]  
+[[ai-agents]]  
+[[computer-vision]]  
+[[education]]  
+[[projects-by-laksh]]
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

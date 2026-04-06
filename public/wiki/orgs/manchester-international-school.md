@@ -2,17 +2,18 @@
 *Organization*
 
 ## Summary
-Manchester International School is an educational institution whose principal engaged with Lakshveer Rao in March 2025 to learn about Circuit Heroes, Laksh's electronics education venture. The interaction represents institutional interest in Laksh's entrepreneurial work from established educational organizations.
+Manchester International School is an educational institution whose principal engaged with Lakshveer Rao in March 2025. The principal learned about Circuit Heroes directly from Laksh during this interaction, which was documented on YouTube.
 
 ## Relationship with Lakshveer
-The principal of Manchester International School connected with Lakshveer in March 2025 to understand Circuit Heroes, his electronics education initiative. This interaction was documented on YouTube, indicating the school's interest in Laksh's approach to electronics education and youth entrepreneurship. The engagement suggests potential institutional adoption or partnership discussions around Circuit Heroes' educational methodology.
+The principal of Manchester International School met with Lakshveer in March 2025 to learn about Circuit Heroes, Laksh's electronics education venture. This meeting represents institutional interest in Laksh's work from educational leadership, suggesting potential collaboration or adoption of Circuit Heroes materials within the school's curriculum.
 
 ## Signals
 - [[sig-manchester-school-principal-2025]] — Principal learns about Circuit Heroes from Laksh (2025-03)
 
 ## Related Articles
-- [[Circuit Heroes]] — Electronics education venture that attracted institutional interest
-- [[Lakshveer Rao]] — Main article
+- [[Circuit Heroes]]
+- [[Lakshveer Rao]]
+- [[Education Partnerships]]
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*

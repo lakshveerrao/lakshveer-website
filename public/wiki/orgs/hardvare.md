@@ -2,16 +2,18 @@
 *Organization*
 
 ## Summary
-Hardware intelligence platform combining physical devices with AI agents. Founded/built by Lakshveer Rao circa January 2026. Operates at the intersection of robotics, electronics, and AI agent systems.
+Hardvare is a hardware intelligence platform that combines physical devices with AI agents. Founded and built by Lakshveer Rao in early 2026, the platform represents an integration of electronics, robotics, and artificial intelligence systems designed to enable intelligent hardware interactions.
 
 ## Relationship with Lakshveer
-Lakshveer is the builder/founder of Hardvare. The platform represents his work in hardware-AI integration, bridging physical electronics/robotics with autonomous agent systems. Active development as of 2026-01.
+Lakshveer Rao is the founder and builder of Hardvare. He developed the platform as an 8-year-old hardware maker, demonstrating early-stage technical execution in AI-enabled physical computing. The project serves as his primary organizational vehicle for hardware entrepreneurship.
 
 ## Signals
-- [[sig-hardvare-system-2026]] — Hardware Intelligence Platform announcement (2026-01)
+- [[sig-hardvare-system-2026]] — Initial platform documentation and system architecture (2026-01)
 
 ## Related Articles
-*No cross-referenced articles yet. Related domains: [[AI Agents]], [[Robotics]], [[Electronics]], [[Entrepreneurship]]*
+- [[Lakshveer Rao]] — Founder profile
+- [[AI Agents]] — Technical domain
+- [[Hardware Projects]] — Related work category
 
 ---
-*Compiled: 2026-04-06T15:38:05.617Z*
+*Compiled: 2026-04-06T17:08:40.657Z*
