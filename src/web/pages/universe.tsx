@@ -437,7 +437,8 @@ function Universe() {
       setSimNodes(prevNodes => {
         const nodes = [...prevNodes];
         const centerX = dimensions.width / 2;
-        const centerY = dimensions.height / 2;
+        const effectiveH = dimensions.height;
+        const centerY = effectiveH / 2;
         
         nodes.forEach((node, i) => {
           if (node.fx != null) {
@@ -503,7 +504,7 @@ function Universe() {
           
           const padding = 50;
           node.x = Math.max(padding, Math.min(dimensions.width - padding, node.x));
-          node.y = Math.max(padding, Math.min(dimensions.height - padding, node.y));
+          node.y = Math.max(padding, Math.min(effectiveH - padding, node.y));
         });
         
         return nodes;
@@ -1599,90 +1600,6 @@ function Universe() {
             </div>
           )}
 
-          {/* ── MOBILE: bottom toolbar — single clean bar ── */}
-          {isMobile && (
-            <div
-              className="absolute left-0 right-0 bottom-0 z-20 flex flex-col"
-              style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}
-            >
-              {/* Ask box row */}
-              <div className="px-3 pb-2 pt-1">
-                <div className={`flex items-center gap-2 bg-zinc-950/98 border rounded-xl px-3 py-2 shadow-lg transition-all ${
-                  askFocused ? 'border-cyan-500/40' : 'border-white/8'
-                }`}>
-                  <span className="text-zinc-600 text-xs flex-shrink-0 select-none">✦</span>
-                  <input
-                    ref={askInputRef}
-                    type="text"
-                    value={askQuery}
-                    onChange={e => setAskQuery(e.target.value)}
-                    onFocus={() => setAskFocused(true)}
-                    onBlur={() => setAskFocused(false)}
-                    onKeyDown={e => { if (e.key === 'Enter' && askQuery.trim()) { handleAsk(askQuery); setRightPanelOpen(true); } }}
-                    placeholder="Ask anything…"
-                    className="flex-1 bg-transparent text-sm text-white placeholder-zinc-700 focus:outline-none min-w-0"
-                  />
-                  {askLoading
-                    ? <div className="w-3.5 h-3.5 border border-cyan-500/30 border-t-cyan-500 rounded-full animate-spin flex-shrink-0" />
-                    : <button onClick={() => { if (askQuery.trim()) { handleAsk(askQuery); setRightPanelOpen(true); } }} className="text-xs text-zinc-600 hover:text-cyan-400 transition-colors flex-shrink-0">ask →</button>
-                  }
-                </div>
-                {askHighlightedNodes.size > 0 && (
-                  <div className="flex items-center justify-center gap-1 mt-1">
-                    <span className="w-1 h-1 rounded-full bg-cyan-400 animate-pulse" />
-                    <span className="text-[10px] text-cyan-500">{askHighlightedNodes.size} nodes highlighted</span>
-                    <button onClick={() => { setAskHighlightedNodes(new Set()); setAskAnswer(null); setAskQuery(''); }} className="text-[10px] text-zinc-700 hover:text-white ml-1">clear</button>
-                  </div>
-                )}
-              </div>
-              {/* Action bar: view modes + zoom + story */}
-              <div className="flex items-center gap-1 px-3 pb-3 border-t pt-2" style={{borderColor:'rgba(255,255,255,0.04)', background:'rgba(5,5,8,0.97)'}}>
-                {/* View mode toggles */}
-                <div className="flex items-center gap-0.5 bg-white/5 rounded-lg p-0.5 flex-shrink-0">
-                  {([
-                    { id: 'explore' as ViewMode,  label: 'All' },
-                    { id: 'clusters' as ViewMode, label: 'Clusters' },
-                    { id: 'timeline' as ViewMode, label: 'Time' },
-                  ]).map(m => (
-                    <button
-                      key={m.id}
-                      onClick={() => { setViewMode(m.id); if (m.id !== 'clusters') setActiveCluster(null); }}
-                      className={`px-2 py-1 text-[10px] font-medium rounded-md transition-all ${
-                        viewMode === m.id ? 'bg-white/10 text-white' : 'text-zinc-600'
-                      }`}
-                    >{m.label}</button>
-                  ))}
-                </div>
-                {/* Zoom */}
-                <div className="flex items-center gap-0.5 ml-auto flex-shrink-0">
-                  <button onClick={() => setZoom(z => Math.min(3, z * 1.2))} className="w-7 h-7 rounded-md bg-white/5 text-zinc-400 text-sm flex items-center justify-center">+</button>
-                  <button onClick={() => setZoom(z => Math.max(0.2, z * 0.8))} className="w-7 h-7 rounded-md bg-white/5 text-zinc-400 text-sm flex items-center justify-center">−</button>
-                  <button onClick={() => { setZoom(1); setPan({x:0,y:0}); }} className="w-7 h-7 rounded-md bg-white/5 text-zinc-500 text-xs flex items-center justify-center">⌂</button>
-                </div>
-                {/* Story / panel toggle */}
-                <button
-                  onClick={() => { setRightPanelMode('journey'); setRightPanelOpen(true); }}
-                  className="ml-1 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-cyan-500/15 border border-cyan-500/25 text-cyan-400 text-[10px] font-medium flex-shrink-0"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-                  Explore
-                </button>
-              </div>
-              {/* Timeline slider — mobile, shown inline when timeline mode active */}
-              {viewMode === 'timeline' && (
-                <div className="px-4 pb-2 flex items-center gap-2" style={{background:'rgba(5,5,8,0.97)'}}>
-                  <span className="text-[10px] text-zinc-600 w-8">Jul 22</span>
-                  <input
-                    type="range" min={0} max={timelineDates.length - 1}
-                    value={timelineDates.indexOf(timelineDate)}
-                    onChange={e => setTimelineDate(timelineDates[parseInt(e.target.value)])}
-                    className="flex-1 accent-cyan-500"
-                  />
-                  <span className="text-[10px] font-mono text-cyan-400 w-12 text-right">{timelineDate}</span>
-                </div>
-              )}
-            </div>
-          )}
         </div>
 
         {/* ── RIGHT PANEL TOGGLE (desktop) ── */}
@@ -1741,7 +1658,80 @@ function Universe() {
         )}
       </div>
 
-      {/* ── QUOTE STRIP — desktop only (mobile has bottom toolbar instead) ── */}
+      {/* ── MOBILE BOTTOM TOOLBAR — flex-shrink-0 so canvas gets exact remaining height ── */}
+      {isMobile && (
+        <div className="flex-shrink-0 flex flex-col bg-[#050508] border-t" style={{borderColor:'rgba(255,255,255,0.06)', paddingBottom:'env(safe-area-inset-bottom,0px)'}}>
+          {/* Ask row */}
+          <div className="px-3 pt-2 pb-1.5">
+            <div className={`flex items-center gap-2 bg-zinc-900/95 border rounded-xl px-3 py-2 transition-all ${askFocused ? 'border-cyan-500/40' : 'border-white/8'}`}>
+              <span className="text-zinc-600 text-xs flex-shrink-0">✦</span>
+              <input
+                ref={askInputRef}
+                type="text"
+                value={askQuery}
+                onChange={e => setAskQuery(e.target.value)}
+                onFocus={() => setAskFocused(true)}
+                onBlur={() => setAskFocused(false)}
+                onKeyDown={e => { if (e.key === 'Enter' && askQuery.trim()) { handleAsk(askQuery); setRightPanelOpen(true); } }}
+                placeholder="Ask anything about Lakshveer…"
+                className="flex-1 bg-transparent text-sm text-white placeholder-zinc-700 focus:outline-none min-w-0"
+              />
+              {askLoading
+                ? <div className="w-3.5 h-3.5 border border-cyan-500/30 border-t-cyan-500 rounded-full animate-spin flex-shrink-0" />
+                : <button onClick={() => { if (askQuery.trim()) { handleAsk(askQuery); setRightPanelOpen(true); } }} className="text-xs text-zinc-600 hover:text-cyan-400 transition-colors flex-shrink-0">ask →</button>
+              }
+            </div>
+            {askHighlightedNodes.size > 0 && (
+              <div className="flex items-center justify-center gap-1 mt-1">
+                <span className="w-1 h-1 rounded-full bg-cyan-400 animate-pulse" />
+                <span className="text-[10px] text-cyan-500">{askHighlightedNodes.size} nodes highlighted</span>
+                <button onClick={() => { setAskHighlightedNodes(new Set()); setAskAnswer(null); setAskQuery(''); }} className="text-[10px] text-zinc-700 hover:text-white ml-1">clear</button>
+              </div>
+            )}
+          </div>
+          {/* Action row */}
+          <div className="flex items-center gap-1.5 px-3 pb-2.5">
+            {/* View modes */}
+            <div className="flex items-center gap-0.5 bg-white/5 rounded-lg p-0.5">
+              {([
+                { id: 'explore' as ViewMode,  label: 'All' },
+                { id: 'clusters' as ViewMode, label: 'Clusters' },
+                { id: 'timeline' as ViewMode, label: 'Time' },
+              ]).map(m => (
+                <button
+                  key={m.id}
+                  onClick={() => { setViewMode(m.id); if (m.id !== 'clusters') setActiveCluster(null); }}
+                  className={`px-2.5 py-1 text-[10px] font-medium rounded-md transition-all ${viewMode === m.id ? 'bg-white/12 text-white' : 'text-zinc-500'}`}
+                >{m.label}</button>
+              ))}
+            </div>
+            {/* Zoom */}
+            <div className="flex items-center gap-0.5 ml-auto">
+              <button onClick={() => setZoom(z => Math.min(3, z * 1.2))} className="w-7 h-7 rounded-md bg-white/5 text-zinc-400 text-sm flex items-center justify-center active:bg-white/10">+</button>
+              <button onClick={() => setZoom(z => Math.max(0.2, z * 0.8))} className="w-7 h-7 rounded-md bg-white/5 text-zinc-400 text-sm flex items-center justify-center active:bg-white/10">−</button>
+              <button onClick={() => { setZoom(1); setPan({x:0,y:0}); }} className="w-7 h-7 rounded-md bg-white/5 text-zinc-500 text-xs flex items-center justify-center active:bg-white/10">⌂</button>
+            </div>
+            {/* Explore button */}
+            <button
+              onClick={() => { setRightPanelMode('journey'); setRightPanelOpen(true); }}
+              className="ml-0.5 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-500/15 border border-cyan-500/20 text-cyan-400 text-[10px] font-medium"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0" />
+              Explore
+            </button>
+          </div>
+          {/* Timeline slider when active */}
+          {viewMode === 'timeline' && (
+            <div className="flex items-center gap-2 px-3 pb-2">
+              <span className="text-[10px] text-zinc-600 w-8 flex-shrink-0">Jul 22</span>
+              <input type="range" min={0} max={timelineDates.length - 1} value={timelineDates.indexOf(timelineDate)} onChange={e => setTimelineDate(timelineDates[parseInt(e.target.value)])} className="flex-1 accent-cyan-500" />
+              <span className="text-[10px] font-mono text-cyan-400 w-12 text-right flex-shrink-0">{timelineDate}</span>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* ── QUOTE STRIP — desktop only ── */}
       <div className="hidden md:block flex-shrink-0 border-t px-4 py-1.5 bg-[#050508]/98 overflow-hidden" style={{borderColor:'rgba(255,255,255,0.04)'}}>
         <p className="text-[10px] text-zinc-600 italic truncate text-center">
           "{QUOTES[quoteIndex].text}" <span className="text-zinc-700 not-italic">— {QUOTES[quoteIndex].author}</span>
