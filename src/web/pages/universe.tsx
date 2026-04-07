@@ -583,15 +583,21 @@ function Universe() {
           node.y += node.vy;
           
           if (isMobileRef.current) {
-            // Soft radial boundary on mobile — push back toward center if too far out
+            // Hard radial clamp on mobile — nodes cannot leave this radius
             const dx = node.x - centerX;
             const dy = node.y - centerY;
-            const distFromCenter = Math.sqrt(dx * dx + dy * dy);
-            const maxRadius = Math.min(dimW, dimH) * 0.38; // 38% of smaller dimension
+            const distFromCenter = Math.sqrt(dx * dx + dy * dy) || 1;
+            const maxRadius = Math.min(dimW, dimH) * 0.42;
             if (distFromCenter > maxRadius) {
-              const over = distFromCenter - maxRadius;
-              node.vx -= (dx / distFromCenter) * over * 0.08;
-              node.vy -= (dy / distFromCenter) * over * 0.08;
+              // Hard clamp: snap to boundary and kill outward velocity
+              node.x = centerX + (dx / distFromCenter) * maxRadius;
+              node.y = centerY + (dy / distFromCenter) * maxRadius;
+              // Kill velocity component pointing outward
+              const vDotD = node.vx * (dx/distFromCenter) + node.vy * (dy/distFromCenter);
+              if (vDotD > 0) {
+                node.vx -= vDotD * (dx/distFromCenter);
+                node.vy -= vDotD * (dy/distFromCenter);
+              }
             }
           } else {
             const padding = 50;
