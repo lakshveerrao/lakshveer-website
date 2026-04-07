@@ -362,15 +362,16 @@ function Universe() {
     }
   }, []);
   
-  // Initialize nodes with positions — use compact fixed layout, sim will settle them
+  // Initialize nodes with positions — spread evenly around center, sim will refine
   const [simNodes, setSimNodes] = useState<SimNode[]>(() => {
-    // Start everything near center; simulation + fit-to-screen will arrange them properly
     const cx = 500;
     const cy = 400;
     return allNodes.map((node, i) => {
-      const angle = (i / allNodes.length) * Math.PI * 2 * 3;
-      // Tighter initial radius — sim spreads them out from here
-      const radius = node.type === 'core' ? 0 : 30 + i * 2.5;
+      // Spread across multiple rings so sim has a good starting layout
+      const ring = node.type === 'core' ? 0 : Math.floor(i / 12) + 1;
+      const angleStep = (Math.PI * 2) / Math.min(12, allNodes.length);
+      const angle = (i % 12) * angleStep + ring * 0.3;
+      const radius = node.type === 'core' ? 0 : ring * 80 + 40;
       return {
         ...node,
         x: cx + Math.cos(angle) * radius,
