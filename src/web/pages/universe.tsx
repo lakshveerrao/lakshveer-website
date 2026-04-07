@@ -438,6 +438,8 @@ function Universe() {
   // Force simulation
   useEffect(() => {
     let running = true;
+    // On mobile, stop simulation after 2.5s to let zoom-to-fit lock in
+    const stopTimer = isMobile ? setTimeout(() => { running = false; }, 2500) : null;
     
     const simulate = () => {
       if (!running) return;
@@ -524,9 +526,10 @@ function Universe() {
     simulate();
     return () => {
       running = false;
+      if (stopTimer) clearTimeout(stopTimer);
       cancelAnimationFrame(animationRef.current);
     };
-  }, [dimensions]);
+  }, [dimensions, isMobile]);
 
   // Mobile: auto zoom-to-fit after simulation settles
   useEffect(() => {
@@ -559,9 +562,9 @@ function Universe() {
         return current;
       });
     };
-    const t1 = setTimeout(doFit, 1800);
-    const t2 = setTimeout(doFit, 3500); // second pass after more settling
-    return () => { clearTimeout(t1); clearTimeout(t2); };
+    // Fire after sim stops (2.5s) + a little buffer
+    const t1 = setTimeout(doFit, 3000);
+    return () => { clearTimeout(t1); };
   }, [isMobile, dimensions]);
 
   // Render canvas
