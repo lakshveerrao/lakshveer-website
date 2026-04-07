@@ -165,6 +165,8 @@ function Universe() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const animationRef = useRef<number>(0);
+  const dimensionsRef = useRef({ width: 390, height: 600 });
+  const isMobileRef = useRef(false);
   const [, setLocation] = useLocation();
   
   // Core state
@@ -189,6 +191,7 @@ function Universe() {
   useEffect(() => {
     const check = () => {
       const mobile = window.innerWidth < 768;
+      isMobileRef.current = mobile;
       setIsMobile(mobile);
       // Panel open by default on desktop only
       setRightPanelOpen(!mobile);
@@ -427,7 +430,9 @@ function Universe() {
     const handleResize = () => {
       if (containerRef.current) {
         const rect = containerRef.current.getBoundingClientRect();
-        setDimensions({ width: rect.width, height: rect.height });
+        const d = { width: rect.width, height: rect.height };
+        dimensionsRef.current = d;
+        setDimensions(d);
       }
     };
     handleResize();
@@ -435,20 +440,55 @@ function Universe() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   
+  // Helper: compute fit-to-screen zoom+pan from node positions
+  const fitToScreen = useCallback((nodes: SimNode[]) => {
+    const { width: w, height: h } = dimensionsRef.current;
+    if (!w || !h || nodes.length === 0) return;
+    const xs = nodes.map(n => n.x);
+    const ys = nodes.map(n => n.y);
+    const minX = Math.min(...xs);
+    const maxX = Math.max(...xs);
+    const minY = Math.min(...ys);
+    const maxY = Math.max(...ys);
+    const pad = 60;
+    const graphW = maxX - minX + pad * 2;
+    const graphH = maxY - minY + pad * 2;
+    const scaleX = w / graphW;
+    const scaleY = h / graphH;
+    const newZoom = Math.min(scaleX, scaleY, 0.9);
+    const centerX = (minX + maxX) / 2;
+    const centerY = (minY + maxY) / 2;
+    // Canvas transform: screenX = (worldX - w/2)*zoom + pan.x + w/2
+    // To put centerX at screen center: pan.x = -(centerX - w/2)*zoom
+    setZoom(newZoom);
+    setPan({
+      x: -(centerX - w / 2) * newZoom,
+      y: -(centerY - h / 2) * newZoom,
+    });
+  }, []);
+
   // Force simulation
   useEffect(() => {
     let running = true;
-    // On mobile, stop simulation after 2.5s to let zoom-to-fit lock in
-    const stopTimer = isMobile ? setTimeout(() => { running = false; }, 2500) : null;
+    // On mobile, stop simulation after 2s then immediately fit
+    const stopTimer = isMobile ? setTimeout(() => {
+      running = false;
+      // Fit using latest node positions via setSimNodes read trick
+      setSimNodes(current => {
+        fitToScreen(current);
+        return current;
+      });
+    }, 2000) : null;
     
     const simulate = () => {
       if (!running) return;
       
       setSimNodes(prevNodes => {
         const nodes = [...prevNodes];
-        const centerX = dimensions.width / 2;
-        const effectiveH = dimensions.height;
-        const centerY = effectiveH / 2;
+        // Use ref so we always have current dimensions (no stale closure)
+        const { width: dimW, height: dimH } = dimensionsRef.current;
+        const centerX = dimW / 2;
+        const centerY = dimH / 2;
         
         nodes.forEach((node, i) => {
           if (node.fx != null) {
@@ -504,7 +544,7 @@ function Universe() {
           }
         });
         
-        // Apply velocity
+        // Apply velocity — use ref dimensions
         nodes.forEach(node => {
           if (node.fx != null || node.fy != null) return;
           node.vx *= 0.9;
@@ -513,8 +553,8 @@ function Universe() {
           node.y += node.vy;
           
           const padding = 50;
-          node.x = Math.max(padding, Math.min(dimensions.width - padding, node.x));
-          node.y = Math.max(padding, Math.min(effectiveH - padding, node.y));
+          node.x = Math.max(padding, Math.min(dimW - padding, node.x));
+          node.y = Math.max(padding, Math.min(dimH - padding, node.y));
         });
         
         return nodes;
@@ -529,43 +569,7 @@ function Universe() {
       if (stopTimer) clearTimeout(stopTimer);
       cancelAnimationFrame(animationRef.current);
     };
-  }, [dimensions, isMobile]);
-
-  // Mobile: auto zoom-to-fit after simulation settles
-  useEffect(() => {
-    if (!isMobile) return;
-    const doFit = () => {
-      setSimNodes(current => {
-        const xs = current.map(n => n.x);
-        const ys = current.map(n => n.y);
-        const minX = Math.min(...xs);
-        const maxX = Math.max(...xs);
-        const minY = Math.min(...ys);
-        const maxY = Math.max(...ys);
-        const pad = 70;
-        const graphW = maxX - minX + pad * 2;
-        const graphH = maxY - minY + pad * 2;
-        const w = dimensions.width;
-        const h = dimensions.height;
-        const scaleX = w / graphW;
-        const scaleY = h / graphH;
-        const newZoom = Math.min(scaleX, scaleY, 0.85);
-        const centerX = (minX + maxX) / 2;
-        const centerY = (minY + maxY) / 2;
-        setZoom(newZoom);
-        // Canvas transform: screenX = (worldX - w/2)*zoom + pan.x + w/2
-        // To center (centerX, centerY): pan.x = -(centerX - w/2)*zoom
-        setPan({
-          x: -(centerX - w / 2) * newZoom,
-          y: -(centerY - h / 2) * newZoom,
-        });
-        return current;
-      });
-    };
-    // Fire after sim stops (2.5s) + a little buffer
-    const t1 = setTimeout(doFit, 3000);
-    return () => { clearTimeout(t1); };
-  }, [isMobile, dimensions]);
+  }, [dimensions, isMobile, fitToScreen]);
 
   // Render canvas
   useEffect(() => {
@@ -753,8 +757,13 @@ function Universe() {
         ctx.fill();
       }
       
-      // Label
-      if (isHighlighted && (zoom > 0.6 || isSelected || isHovered || node.type === 'core')) {
+      // Label — on mobile only show for core/selected/hovered or when zoomed in enough
+      const showLabel = isHighlighted && (
+        isSelected || isHovered || node.type === 'core'
+          ? true
+          : zoom > (isMobile ? 0.7 : 0.6)
+      );
+      if (showLabel) {
         ctx.fillStyle = node.type === 'possibility'
           ? `rgba(167,139,250,${alpha * 0.8})`
           : `rgba(255,255,255,${alpha})`;
@@ -887,7 +896,7 @@ function Universe() {
 
     ctx.restore();
     
-  }, [simNodes, filteredNodes, filteredEdges, dimensions, zoom, pan, selectedNode, hoveredNode, viewMode, activeCluster, showIntelligenceEdges, privateMode, nodeOpportunities, journeyHighlightedNodes, askHighlightedNodes]);
+  }, [simNodes, filteredNodes, filteredEdges, dimensions, zoom, pan, selectedNode, hoveredNode, viewMode, activeCluster, showIntelligenceEdges, privateMode, nodeOpportunities, journeyHighlightedNodes, askHighlightedNodes, isMobile]);
   
   // Mouse handlers
   const getNodeAtPosition = useCallback((clientX: number, clientY: number): SimNode | null => {
@@ -1756,7 +1765,7 @@ function Universe() {
             <div className="flex items-center gap-0.5 ml-auto">
               <button onClick={() => setZoom(z => Math.min(3, z * 1.2))} className="w-7 h-7 rounded-md bg-white/5 text-zinc-400 text-sm flex items-center justify-center active:bg-white/10">+</button>
               <button onClick={() => setZoom(z => Math.max(0.2, z * 0.8))} className="w-7 h-7 rounded-md bg-white/5 text-zinc-400 text-sm flex items-center justify-center active:bg-white/10">−</button>
-              <button onClick={() => { setZoom(1); setPan({x:0,y:0}); }} className="w-7 h-7 rounded-md bg-white/5 text-zinc-500 text-xs flex items-center justify-center active:bg-white/10">⌂</button>
+              <button onClick={() => { setSimNodes(cur => { fitToScreen(cur); return cur; }); }} className="w-7 h-7 rounded-md bg-white/5 text-zinc-500 text-xs flex items-center justify-center active:bg-white/10">⊡</button>
             </div>
             {/* Explore button */}
             <button
