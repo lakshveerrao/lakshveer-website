@@ -168,7 +168,10 @@ function Universe() {
   const [, setLocation] = useLocation();
   
   // Core state
-  const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
+  const [dimensions, setDimensions] = useState(() => ({
+    width: typeof window !== 'undefined' ? window.innerWidth : 800,
+    height: typeof window !== 'undefined' ? Math.max(window.innerHeight - 120, 400) : 600,
+  }));
   const [selectedNode, setSelectedNode] = useState<SimNode | null>(null);
   const [hoveredNode, setHoveredNode] = useState<SimNode | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -524,7 +527,36 @@ function Universe() {
       cancelAnimationFrame(animationRef.current);
     };
   }, [dimensions]);
-  
+
+  // Mobile: auto zoom-to-fit after simulation settles
+  useEffect(() => {
+    if (!isMobile) return;
+    const timer = setTimeout(() => {
+      setSimNodes(current => {
+        const xs = current.map(n => n.x);
+        const ys = current.map(n => n.y);
+        const minX = Math.min(...xs);
+        const maxX = Math.max(...xs);
+        const minY = Math.min(...ys);
+        const maxY = Math.max(...ys);
+        const graphW = maxX - minX + 80;
+        const graphH = maxY - minY + 80;
+        const scaleX = dimensions.width / graphW;
+        const scaleY = dimensions.height / graphH;
+        const newZoom = Math.min(scaleX, scaleY, 1) * 0.9;
+        const centerX = (minX + maxX) / 2;
+        const centerY = (minY + maxY) / 2;
+        setZoom(newZoom);
+        setPan({
+          x: (dimensions.width / 2 - centerX) * newZoom,
+          y: (dimensions.height / 2 - centerY) * newZoom,
+        });
+        return current;
+      });
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, [isMobile, dimensions]);
+
   // Render canvas
   useEffect(() => {
     const canvas = canvasRef.current;
