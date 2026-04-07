@@ -450,12 +450,15 @@ function Universe() {
     const maxX = Math.max(...xs);
     const minY = Math.min(...ys);
     const maxY = Math.max(...ys);
-    const pad = 60;
+    // generous padding so nothing clips at edges
+    const pad = isMobileRef.current ? 80 : 60;
     const graphW = maxX - minX + pad * 2;
     const graphH = maxY - minY + pad * 2;
     const scaleX = w / graphW;
     const scaleY = h / graphH;
-    const newZoom = Math.min(scaleX, scaleY, 0.9);
+    // cap zoom at 0.75 on mobile so it's never too zoomed in
+    const maxZ = isMobileRef.current ? 0.75 : 0.9;
+    const newZoom = Math.min(scaleX, scaleY, maxZ);
     const centerX = (minX + maxX) / 2;
     const centerY = (minY + maxY) / 2;
     // Canvas transform: screenX = (worldX - w/2)*zoom + pan.x + w/2
@@ -470,7 +473,7 @@ function Universe() {
   // Force simulation
   useEffect(() => {
     let running = true;
-    // On mobile, stop simulation after 2s then immediately fit
+    // On mobile, stop simulation after 3s then immediately fit
     const stopTimer = isMobile ? setTimeout(() => {
       running = false;
       // Fit using latest node positions via setSimNodes read trick
@@ -478,7 +481,7 @@ function Universe() {
         fitToScreen(current);
         return current;
       });
-    }, 2000) : null;
+    }, 3000) : null;
     
     const simulate = () => {
       if (!running) return;
@@ -761,7 +764,7 @@ function Universe() {
       const showLabel = isHighlighted && (
         isSelected || isHovered || node.type === 'core'
           ? true
-          : zoom > (isMobile ? 0.7 : 0.6)
+          : zoom > (isMobile ? 1.0 : 0.6)
       );
       if (showLabel) {
         ctx.fillStyle = node.type === 'possibility'
