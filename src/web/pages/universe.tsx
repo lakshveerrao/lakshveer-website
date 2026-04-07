@@ -337,13 +337,18 @@ function Universe() {
   
   // Initialize nodes with positions
   const [simNodes, setSimNodes] = useState<SimNode[]>(() => {
+    // Use screen dimensions if available, else sensible defaults
+    const initW = typeof window !== 'undefined' ? window.innerWidth : 800;
+    const initH = typeof window !== 'undefined' ? window.innerHeight - 120 : 600;
+    const cx = initW / 2;
+    const cy = initH / 2;
     return allNodes.map((node, i) => {
       const angle = (i / allNodes.length) * Math.PI * 2 * 3;
       const radius = node.type === 'core' ? 0 : 100 + i * 2;
       return {
         ...node,
-        x: 400 + Math.cos(angle) * radius,
-        y: 300 + Math.sin(angle) * radius,
+        x: cx + Math.cos(angle) * radius,
+        y: cy + Math.sin(angle) * radius,
         vx: 0,
         vy: 0,
         visible: true,
