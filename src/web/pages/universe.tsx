@@ -577,9 +577,11 @@ function Universe() {
           node.x += node.vx;
           node.y += node.vy;
           
-          const padding = isMobileRef.current ? 70 : 50;
-          node.x = Math.max(padding, Math.min(dimW - padding, node.x));
-          node.y = Math.max(padding, Math.min(dimH - padding, node.y));
+          // On mobile: constrain nodes to 75% of canvas area (centered) so fit-to-screen always has margin
+          const padX = isMobileRef.current ? dimW * 0.18 : 50;
+          const padY = isMobileRef.current ? dimH * 0.14 : 50;
+          node.x = Math.max(padX, Math.min(dimW - padX, node.x));
+          node.y = Math.max(padY, Math.min(dimH - padY, node.y));
         });
         
         return nodes;
