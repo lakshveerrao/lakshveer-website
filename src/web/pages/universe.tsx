@@ -252,7 +252,7 @@ function Universe() {
   // Hide hint after 6s or first canvas tap
   useEffect(() => {
     if (!isMobile) return;
-    const t = setTimeout(() => setHintVisible(false), 6000);
+    const t = setTimeout(() => setHintVisible(false), 4000);
     return () => clearTimeout(t);
   }, [isMobile]);
 
@@ -473,7 +473,7 @@ function Universe() {
     const minY = Math.min(...ys);
     const maxY = Math.max(...ys);
     // generous padding so nothing clips at edges
-    const pad = isMobileRef.current ? 80 : 60;
+    const pad = isMobileRef.current ? 100 : 60;
     const graphW = maxX - minX + pad * 2;
     const graphH = maxY - minY + pad * 2;
     const scaleX = w / graphW;
@@ -577,7 +577,7 @@ function Universe() {
           node.x += node.vx;
           node.y += node.vy;
           
-          const padding = 50;
+          const padding = isMobileRef.current ? 70 : 50;
           node.x = Math.max(padding, Math.min(dimW - padding, node.x));
           node.y = Math.max(padding, Math.min(dimH - padding, node.y));
         });
@@ -1572,8 +1572,8 @@ function Universe() {
           {/* ── MOBILE: Hint strip ── */}
           {isMobile && hintVisible && (
             <div
-              className="absolute top-2 left-1/2 -translate-x-1/2 z-20 px-3 py-1.5 rounded-full text-[11px] text-zinc-500 pointer-events-none transition-opacity duration-1000"
-              style={{background: 'rgba(10,10,20,0.85)', border: '1px solid rgba(255,255,255,0.07)'}}
+              className="absolute top-3 left-1/2 -translate-x-1/2 z-20 px-3.5 py-1.5 rounded-full text-[11px] text-zinc-400 pointer-events-none"
+              style={{background: 'rgba(8,8,18,0.90)', border: '1px solid rgba(255,255,255,0.09)', whiteSpace: 'nowrap'}}
             >
               Tap any node to explore · pinch to zoom
             </div>
