@@ -531,7 +531,7 @@ function Universe() {
   // Mobile: auto zoom-to-fit after simulation settles
   useEffect(() => {
     if (!isMobile) return;
-    const timer = setTimeout(() => {
+    const doFit = () => {
       setSimNodes(current => {
         const xs = current.map(n => n.x);
         const ys = current.map(n => n.y);
@@ -539,27 +539,29 @@ function Universe() {
         const maxX = Math.max(...xs);
         const minY = Math.min(...ys);
         const maxY = Math.max(...ys);
-        const padding = 60;
-        const graphW = maxX - minX + padding * 2;
-        const graphH = maxY - minY + padding * 2;
-        const scaleX = dimensions.width / graphW;
-        const scaleY = dimensions.height / graphH;
-        const newZoom = Math.min(scaleX, scaleY, 0.9) * 0.85;
-        const centerX = (minX + maxX) / 2;
-        const centerY = (minY + maxY) / 2;
+        const pad = 70;
+        const graphW = maxX - minX + pad * 2;
+        const graphH = maxY - minY + pad * 2;
         const w = dimensions.width;
         const h = dimensions.height;
+        const scaleX = w / graphW;
+        const scaleY = h / graphH;
+        const newZoom = Math.min(scaleX, scaleY, 0.85);
+        const centerX = (minX + maxX) / 2;
+        const centerY = (minY + maxY) / 2;
         setZoom(newZoom);
-        // Canvas transform: screenPos = (worldPos - w/2) * zoom + pan + w/2
-        // To center (centerX, centerY) on screen: pan = -(centerX - w/2) * zoom
+        // Canvas transform: screenX = (worldX - w/2)*zoom + pan.x + w/2
+        // To center (centerX, centerY): pan.x = -(centerX - w/2)*zoom
         setPan({
           x: -(centerX - w / 2) * newZoom,
           y: -(centerY - h / 2) * newZoom,
         });
         return current;
       });
-    }, 1500);
-    return () => clearTimeout(timer);
+    };
+    const t1 = setTimeout(doFit, 1800);
+    const t2 = setTimeout(doFit, 3500); // second pass after more settling
+    return () => { clearTimeout(t1); clearTimeout(t2); };
   }, [isMobile, dimensions]);
 
   // Render canvas
