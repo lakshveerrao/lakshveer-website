@@ -184,7 +184,12 @@ function Universe() {
   const [lastTouchDist, setLastTouchDist] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
+    const check = () => {
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      // Panel open by default on desktop only
+      setRightPanelOpen(!mobile);
+    };
     check();
     window.addEventListener('resize', check);
     return () => window.removeEventListener('resize', check);
@@ -196,7 +201,7 @@ function Universe() {
   const [timelineDate, setTimelineDate] = useState('2026-02');
   const [showIntelligenceEdges, setShowIntelligenceEdges] = useState(true);
   const [leftPanelOpen, setLeftPanelOpen] = useState(false);
-  const [rightPanelOpen, setRightPanelOpen] = useState(true); // open by default — Story is the landing experience
+  const [rightPanelOpen, setRightPanelOpen] = useState(false); // set correctly after isMobile resolves
   const [linkCopied, setLinkCopied] = useState(false);
   
   // Phase 2: API State
