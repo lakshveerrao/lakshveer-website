@@ -529,20 +529,23 @@ function Universe() {
           
           if (node.fx != null || node.fy != null) return;
           
-          // Center gravity
-          const gravityStrength = node.type === 'core' ? 0.05 : 0.002;
+          // Center gravity — stronger on mobile to keep cluster tight
+          const isMob = isMobileRef.current;
+          const gravityStrength = node.type === 'core' ? 0.05 : (isMob ? 0.006 : 0.002);
           node.vx += (centerX - node.x) * gravityStrength;
           node.vy += (centerY - node.y) * gravityStrength;
           
-          // Repulsion
+          // Repulsion — wider radius on mobile so nodes don't pile up
+          const repulsionRadius = isMob ? 4 : 3;
+          const repulsionStrength = isMob ? 0.8 : 0.5;
           nodes.forEach((other, j) => {
             if (i === j) return;
             const dx = node.x - other.x;
             const dy = node.y - other.y;
             const dist = Math.sqrt(dx * dx + dy * dy) || 1;
             const minDist = 50;
-            if (dist < minDist * 3) {
-              const force = (minDist * minDist) / (dist * dist) * 0.5;
+            if (dist < minDist * repulsionRadius) {
+              const force = (minDist * minDist) / (dist * dist) * repulsionStrength;
               node.vx += (dx / dist) * force;
               node.vy += (dy / dist) * force;
             }
@@ -579,11 +582,22 @@ function Universe() {
           node.x += node.vx;
           node.y += node.vy;
           
-          // On mobile: constrain nodes to 75% of canvas area (centered) so fit-to-screen always has margin
-          const padX = isMobileRef.current ? dimW * 0.18 : 50;
-          const padY = isMobileRef.current ? dimH * 0.14 : 50;
-          node.x = Math.max(padX, Math.min(dimW - padX, node.x));
-          node.y = Math.max(padY, Math.min(dimH - padY, node.y));
+          if (isMobileRef.current) {
+            // Soft radial boundary on mobile — push back toward center if too far out
+            const dx = node.x - centerX;
+            const dy = node.y - centerY;
+            const distFromCenter = Math.sqrt(dx * dx + dy * dy);
+            const maxRadius = Math.min(dimW, dimH) * 0.38; // 38% of smaller dimension
+            if (distFromCenter > maxRadius) {
+              const over = distFromCenter - maxRadius;
+              node.vx -= (dx / distFromCenter) * over * 0.08;
+              node.vy -= (dy / distFromCenter) * over * 0.08;
+            }
+          } else {
+            const padding = 50;
+            node.x = Math.max(padding, Math.min(dimW - padding, node.x));
+            node.y = Math.max(padding, Math.min(dimH - padding, node.y));
+          }
         });
         
         return nodes;
