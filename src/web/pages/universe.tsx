@@ -543,13 +543,17 @@ function Universe() {
         const graphH = maxY - minY + 80;
         const scaleX = dimensions.width / graphW;
         const scaleY = dimensions.height / graphH;
-        const newZoom = Math.min(scaleX, scaleY, 1) * 0.9;
+        const newZoom = Math.min(scaleX, scaleY, 1) * 0.88;
         const centerX = (minX + maxX) / 2;
         const centerY = (minY + maxY) / 2;
+        const w = dimensions.width;
+        const h = dimensions.height;
         setZoom(newZoom);
+        // Canvas transform: screenPos = (worldPos - w/2) * zoom + pan + w/2
+        // To center (centerX, centerY) on screen: pan = -(centerX - w/2) * zoom
         setPan({
-          x: (dimensions.width / 2 - centerX) * newZoom,
-          y: (dimensions.height / 2 - centerY) * newZoom,
+          x: -(centerX - w / 2) * newZoom,
+          y: -(centerY - h / 2) * newZoom,
         });
         return current;
       });
