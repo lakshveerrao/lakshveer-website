@@ -539,11 +539,12 @@ function Universe() {
         const maxX = Math.max(...xs);
         const minY = Math.min(...ys);
         const maxY = Math.max(...ys);
-        const graphW = maxX - minX + 80;
-        const graphH = maxY - minY + 80;
+        const padding = 60;
+        const graphW = maxX - minX + padding * 2;
+        const graphH = maxY - minY + padding * 2;
         const scaleX = dimensions.width / graphW;
         const scaleY = dimensions.height / graphH;
-        const newZoom = Math.min(scaleX, scaleY, 1) * 0.88;
+        const newZoom = Math.min(scaleX, scaleY, 0.9) * 0.85;
         const centerX = (minX + maxX) / 2;
         const centerY = (minY + maxY) / 2;
         const w = dimensions.width;
