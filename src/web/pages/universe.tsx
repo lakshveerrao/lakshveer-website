@@ -178,7 +178,7 @@ function Universe() {
   const [hoveredNode, setHoveredNode] = useState<SimNode | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeFilters, setActiveFilters] = useState<Set<NodeType>>(new Set());
-  const [showPossibilities, setShowPossibilities] = useState(false); // hidden by default, cleaner graph
+  const [showPossibilities, setShowPossibilities] = useState(false); // hidden on mobile; desktop shows after isMobile resolves
   const [zoom, setZoom] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
@@ -195,6 +195,8 @@ function Universe() {
       setIsMobile(mobile);
       // Panel open by default on desktop only
       setRightPanelOpen(!mobile);
+      // Possibilities visible on desktop, hidden on mobile
+      setShowPossibilities(!mobile);
     };
     check();
     window.addEventListener('resize', check);
@@ -360,16 +362,15 @@ function Universe() {
     }
   }, []);
   
-  // Initialize nodes with positions
+  // Initialize nodes with positions — use compact fixed layout, sim will settle them
   const [simNodes, setSimNodes] = useState<SimNode[]>(() => {
-    // Use screen dimensions if available, else sensible defaults
-    const initW = typeof window !== 'undefined' ? window.innerWidth : 800;
-    const initH = typeof window !== 'undefined' ? window.innerHeight - 120 : 600;
-    const cx = initW / 2;
-    const cy = initH / 2;
+    // Start everything near center; simulation + fit-to-screen will arrange them properly
+    const cx = 500;
+    const cy = 400;
     return allNodes.map((node, i) => {
       const angle = (i / allNodes.length) * Math.PI * 2 * 3;
-      const radius = node.type === 'core' ? 0 : 100 + i * 2;
+      // Tighter initial radius — sim spreads them out from here
+      const radius = node.type === 'core' ? 0 : 30 + i * 2.5;
       return {
         ...node,
         x: cx + Math.cos(angle) * radius,
