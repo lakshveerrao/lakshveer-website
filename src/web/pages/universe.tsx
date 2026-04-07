@@ -178,7 +178,7 @@ function Universe() {
   const [hoveredNode, setHoveredNode] = useState<SimNode | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeFilters, setActiveFilters] = useState<Set<NodeType>>(new Set());
-  const [showPossibilities, setShowPossibilities] = useState(true);
+  const [showPossibilities, setShowPossibilities] = useState(false); // hidden by default, cleaner graph
   const [zoom, setZoom] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
@@ -236,6 +236,25 @@ function Universe() {
   const [askHighlightedNodes, setAskHighlightedNodes] = useState<Set<string>>(new Set());
   const [askFocused, setAskFocused] = useState(false);
   const askInputRef = useRef<HTMLInputElement>(null);
+
+  // Mobile UX state
+  const [showOnboarding, setShowOnboarding] = useState(false);
+  const [hintVisible, setHintVisible] = useState(true);
+  const [mobileTapCard, setMobileTapCard] = useState<SimNode | null>(null);
+
+  // Show onboarding once per device
+  useEffect(() => {
+    if (!isMobile) return;
+    const seen = localStorage.getItem('lk_universe_seen');
+    if (!seen) setShowOnboarding(true);
+  }, [isMobile]);
+
+  // Hide hint after 6s or first canvas tap
+  useEffect(() => {
+    if (!isMobile) return;
+    const t = setTimeout(() => setHintVisible(false), 6000);
+    return () => clearTimeout(t);
+  }, [isMobile]);
 
   // v5: Quote ticker
   const [quoteIndex, setQuoteIndex] = useState(0);
@@ -404,6 +423,9 @@ function Universe() {
       
       // Possibility filter
       if (!showPossibilities && node.type === 'possibility') return false;
+      
+      // On mobile hide 'concept' nodes by default — too abstract for first-timers
+      if (isMobile && node.type === 'concept' && !searchQuery && activeFilters.size === 0) return false;
       
       // Search filter
       if (searchQuery) {
@@ -1043,7 +1065,13 @@ function Universe() {
         : 99;
       if (moveDistance < 10) {
         setSelectedNode(draggedNode);
-        setRightPanelOpen(true);
+        setHintVisible(false);
+        // On mobile: show mini tap-card first, not full panel
+        if (isMobileRef.current) {
+          setMobileTapCard(draggedNode);
+        } else {
+          setRightPanelOpen(true);
+        }
         const url = new URL(window.location.href);
         url.searchParams.set('node', draggedNode.id);
         window.history.pushState({}, '', url.toString());
@@ -1286,37 +1314,29 @@ function Universe() {
 
       {/* ── HEADER ────────────────────────────────── */}
       <div
-        className="flex-shrink-0 flex items-center justify-between px-3 sm:px-5 py-2 border-b bg-[#050508]/95 backdrop-blur-sm z-50"
-        style={{borderColor:'rgba(255,255,255,0.06)'}}
+        className="flex-shrink-0 flex items-center justify-between px-4 sm:px-5 border-b bg-[#050508]/95 backdrop-blur-sm z-50"
+        style={{borderColor:'rgba(255,255,255,0.07)', paddingTop: isMobile ? '10px' : '8px', paddingBottom: isMobile ? '10px' : '8px'}}
       >
         {/* Left: back + identity */}
-        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
-          {/* Mobile: hamburger for left panel */}
-          <button
-            onClick={() => setLeftPanelOpen(p => !p)}
-            className="p-1.5 -ml-0.5 rounded-lg text-zinc-500 hover:text-white transition-colors md:hidden"
-            aria-label="Filters"
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-          {/* Desktop: back arrow */}
-          <a href="/" className="text-zinc-500 hover:text-white transition-colors flex-shrink-0 p-1 -ml-1 hidden md:block">
+        <div className="flex items-center gap-3 min-w-0">
+          {/* Back arrow — both mobile + desktop */}
+          <a href="/" className="text-zinc-500 hover:text-white transition-colors flex-shrink-0 p-1 -ml-1">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
           </a>
-          <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-gradient-to-br from-cyan-400 to-purple-500 flex-shrink-0 flex items-center justify-center text-xs font-bold text-white">L</div>
+          <div className={`rounded-full bg-gradient-to-br from-cyan-400 to-purple-500 flex-shrink-0 flex items-center justify-center font-bold text-white ${isMobile ? 'w-9 h-9 text-sm' : 'w-7 h-7 text-xs'}`}>L</div>
           <div className="min-w-0">
-            <span className="text-xs sm:text-sm font-semibold text-white">Lakshveer</span>
-            <span className="text-zinc-600 text-[10px] ml-1.5 hidden sm:inline">8 · Hardware + AI</span>
+            <div className={`font-bold text-white leading-tight ${isMobile ? 'text-base' : 'text-sm'}`}>Lakshveer</div>
+            <div className={`text-zinc-500 leading-tight ${isMobile ? 'text-xs' : 'text-[10px]'}`}>
+              {isMobile ? "8 yo · Builder · 170+ projects" : "8 · Hardware + AI"}
+            </div>
           </div>
         </div>
 
-        {/* Right: search + private */}
+        {/* Right */}
         <div className="flex items-center gap-2 flex-shrink-0">
-          {/* Search */}
+          {/* Search — desktop only */}
           <div className="relative hidden sm:block">
             <input
               type="text"
@@ -1330,6 +1350,18 @@ function Universe() {
               <button onClick={() => setSearchQuery('')} className="absolute right-2 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-white text-xs">✕</button>
             )}
           </div>
+          {/* Filter hamburger — mobile only */}
+          {isMobile && (
+            <button
+              onClick={() => setLeftPanelOpen(p => !p)}
+              className="p-2 rounded-lg text-zinc-500 hover:text-white transition-colors"
+              aria-label="Filters"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          )}
           {/* Private mode dot */}
           <button
             onClick={togglePrivateMode}
@@ -1537,6 +1569,101 @@ function Universe() {
             className="block"
           />
 
+          {/* ── MOBILE: Hint strip ── */}
+          {isMobile && hintVisible && (
+            <div
+              className="absolute top-2 left-1/2 -translate-x-1/2 z-20 px-3 py-1.5 rounded-full text-[11px] text-zinc-500 pointer-events-none transition-opacity duration-1000"
+              style={{background: 'rgba(10,10,20,0.85)', border: '1px solid rgba(255,255,255,0.07)'}}
+            >
+              Tap any node to explore · pinch to zoom
+            </div>
+          )}
+
+          {/* ── MOBILE: Node legend bottom-left ── */}
+          {isMobile && !mobileTapCard && (
+            <div
+              className="absolute bottom-3 left-3 z-10 flex flex-col gap-1 px-2.5 py-2 rounded-xl"
+              style={{background: 'rgba(5,5,10,0.80)', border: '1px solid rgba(255,255,255,0.06)'}}
+            >
+              {[
+                { color: '#3b82f6', label: 'Projects' },
+                { color: '#8b5cf6', label: 'Skills' },
+                { color: '#f59e0b', label: 'Tools' },
+                { color: '#ec4899', label: 'People' },
+              ].map(({color, label}) => (
+                <div key={label} className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full flex-shrink-0" style={{background: color}} />
+                  <span className="text-[10px] text-zinc-500">{label}</span>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* ── MOBILE: Onboarding overlay (first visit only) ── */}
+          {isMobile && showOnboarding && (
+            <div
+              className="absolute inset-0 z-30 flex flex-col"
+              style={{background: 'rgba(3,3,8,0.93)', backdropFilter: 'blur(2px)'}}
+              onClick={() => { setShowOnboarding(false); localStorage.setItem('lk_universe_seen', '1'); }}
+            >
+              {/* Subtle graph still visible underneath */}
+              <div className="flex-1 flex flex-col items-center justify-center px-7 text-center gap-0">
+                {/* Identity */}
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-400 to-purple-500 flex items-center justify-center text-2xl font-bold text-white mb-5 shadow-lg shadow-cyan-500/20">L</div>
+                <h1 className="text-2xl font-bold text-white tracking-tight mb-1">Lakshveer's Universe</h1>
+                <p className="text-sm text-zinc-400 mb-6 leading-relaxed">
+                  8 years old. 170+ builds. 4 years of creating hardware, AI tools, and products from scratch.
+                </p>
+
+                {/* 3 facts */}
+                <div className="flex gap-4 mb-8">
+                  {[
+                    { num: '170+', label: 'Projects' },
+                    { num: '4 yrs', label: 'Building' },
+                    { num: '126', label: 'Signals' },
+                  ].map(f => (
+                    <div key={f.label} className="flex flex-col items-center">
+                      <span className="text-xl font-bold text-white">{f.num}</span>
+                      <span className="text-[11px] text-zinc-500 mt-0.5">{f.label}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* How to use */}
+                <div className="w-full rounded-xl border p-4 mb-7 text-left" style={{background: 'rgba(255,255,255,0.03)', borderColor: 'rgba(255,255,255,0.07)'}}>
+                  <p className="text-[11px] text-zinc-600 uppercase tracking-widest font-medium mb-3">How to navigate</p>
+                  {[
+                    { icon: '👆', text: 'Tap a node to see what it is' },
+                    { icon: '🤏', text: 'Pinch to zoom · drag to pan' },
+                    { icon: '✦', text: 'Ask anything about Lakshveer below' },
+                    { icon: '📖', text: 'Tap "His Story" to read the journey' },
+                  ].map(h => (
+                    <div key={h.icon} className="flex items-center gap-2.5 mb-2 last:mb-0">
+                      <span className="text-sm">{h.icon}</span>
+                      <span className="text-xs text-zinc-400">{h.text}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTAs */}
+                <button
+                  onClick={e => { e.stopPropagation(); setShowOnboarding(false); localStorage.setItem('lk_universe_seen', '1'); }}
+                  className="w-full py-3.5 rounded-xl text-sm font-semibold text-[#050508] transition-all active:scale-95 mb-3"
+                  style={{background: 'linear-gradient(135deg, #22d3ee, #a855f7)'}}
+                >
+                  Explore the Universe
+                </button>
+                <button
+                  onClick={e => { e.stopPropagation(); setShowOnboarding(false); localStorage.setItem('lk_universe_seen', '1'); setRightPanelMode('journey'); setRightPanelOpen(true); }}
+                  className="w-full py-3 rounded-xl text-sm font-medium text-cyan-400 border transition-all"
+                  style={{borderColor: 'rgba(34,211,238,0.25)', background: 'rgba(34,211,238,0.06)'}}
+                >
+                  Read his story first →
+                </button>
+              </div>
+            </div>
+          )}
+
           {/* ── DESKTOP ONLY: view mode pill bottom-left ── */}
           {!isMobile && (
             <div
@@ -1717,12 +1844,39 @@ function Universe() {
         )}
       </div>
 
-      {/* ── MOBILE BOTTOM TOOLBAR — flex-shrink-0 so canvas gets exact remaining height ── */}
+      {/* ── MOBILE BOTTOM TOOLBAR ── */}
       {isMobile && (
-        <div className="flex-shrink-0 flex flex-col bg-[#050508] border-t" style={{borderColor:'rgba(255,255,255,0.06)', paddingBottom:'env(safe-area-inset-bottom,0px)'}}>
+        <div className="flex-shrink-0 flex flex-col bg-[#070710] border-t" style={{borderColor:'rgba(255,255,255,0.08)', paddingBottom:'env(safe-area-inset-bottom,0px)'}}>
+
+          {/* Mobile tap-card — shows when a node is tapped */}
+          {mobileTapCard && (() => {
+            const card = getNodeCard(mobileTapCard);
+            return (
+              <div className="mx-3 mt-2.5 mb-1 rounded-xl border bg-zinc-900/98 p-3.5 flex items-start gap-3" style={{borderColor: card.color + '40'}}>
+                <span className="w-3 h-3 rounded-full flex-shrink-0 mt-0.5" style={{background: card.color}} />
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2">
+                    <span className="text-white font-semibold text-sm leading-tight">{card.label}</span>
+                    <span className="text-[9px] px-1.5 py-0.5 rounded-full font-medium uppercase tracking-wide" style={{background: card.color + '22', color: card.color}}>{card.type}</span>
+                  </div>
+                  {card.desc && <p className="text-zinc-400 text-xs mt-0.5 leading-snug line-clamp-2">{card.desc}</p>}
+                  {card.stat && <p className="text-xs mt-1 font-medium" style={{color: card.color}}>{card.stat}</p>}
+                </div>
+                <div className="flex flex-col gap-1.5 flex-shrink-0">
+                  <button
+                    onClick={() => { setRightPanelOpen(true); setMobileTapCard(null); }}
+                    className="text-[10px] font-medium px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap"
+                    style={{background: card.color + '20', color: card.color}}
+                  >More →</button>
+                  <button onClick={() => { setMobileTapCard(null); setSelectedNode(null); }} className="text-[10px] text-zinc-600 hover:text-white text-center">dismiss</button>
+                </div>
+              </div>
+            );
+          })()}
+
           {/* Ask row */}
           <div className="px-3 pt-2 pb-1.5">
-            <div className={`flex items-center gap-2 bg-zinc-900/95 border rounded-xl px-3 py-2 transition-all ${askFocused ? 'border-cyan-500/40' : 'border-white/8'}`}>
+            <div className={`flex items-center gap-2 bg-zinc-900/90 border rounded-xl px-3 py-2.5 transition-all ${askFocused ? 'border-cyan-500/40' : 'border-white/8'}`}>
               <span className="text-zinc-600 text-xs flex-shrink-0">✦</span>
               <input
                 ref={askInputRef}
@@ -1733,11 +1887,11 @@ function Universe() {
                 onBlur={() => setAskFocused(false)}
                 onKeyDown={e => { if (e.key === 'Enter' && askQuery.trim()) { handleAsk(askQuery); setRightPanelOpen(true); } }}
                 placeholder="Ask anything about Lakshveer…"
-                className="flex-1 bg-transparent text-sm text-white placeholder-zinc-700 focus:outline-none min-w-0"
+                className="flex-1 bg-transparent text-sm text-white placeholder-zinc-600 focus:outline-none min-w-0"
               />
               {askLoading
                 ? <div className="w-3.5 h-3.5 border border-cyan-500/30 border-t-cyan-500 rounded-full animate-spin flex-shrink-0" />
-                : <button onClick={() => { if (askQuery.trim()) { handleAsk(askQuery); setRightPanelOpen(true); } }} className="text-xs text-zinc-600 hover:text-cyan-400 transition-colors flex-shrink-0">ask →</button>
+                : <button onClick={() => { if (askQuery.trim()) { handleAsk(askQuery); setRightPanelOpen(true); } }} className="text-xs font-medium text-cyan-500 hover:text-cyan-300 transition-colors flex-shrink-0">Ask →</button>
               }
             </div>
             {askHighlightedNodes.size > 0 && (
@@ -1748,43 +1902,50 @@ function Universe() {
               </div>
             )}
           </div>
+
           {/* Action row */}
-          <div className="flex items-center gap-1.5 px-3 pb-2.5">
+          <div className="flex items-center gap-2 px-3 pb-3">
             {/* View modes */}
-            <div className="flex items-center gap-0.5 bg-white/5 rounded-lg p-0.5">
+            <div className="flex items-center gap-0.5 bg-white/5 rounded-lg p-0.5 flex-shrink-0">
               {([
                 { id: 'explore' as ViewMode,  label: 'All' },
                 { id: 'clusters' as ViewMode, label: 'Clusters' },
-                { id: 'timeline' as ViewMode, label: 'Time' },
+                { id: 'timeline' as ViewMode, label: 'Timeline' },
               ]).map(m => (
                 <button
                   key={m.id}
                   onClick={() => { setViewMode(m.id); if (m.id !== 'clusters') setActiveCluster(null); }}
-                  className={`px-2.5 py-1 text-[10px] font-medium rounded-md transition-all ${viewMode === m.id ? 'bg-white/12 text-white' : 'text-zinc-500'}`}
+                  className={`px-2.5 py-1.5 text-[10px] font-medium rounded-md transition-all ${viewMode === m.id ? 'bg-white/12 text-white' : 'text-zinc-500'}`}
                 >{m.label}</button>
               ))}
             </div>
-            {/* Zoom */}
-            <div className="flex items-center gap-0.5 ml-auto">
-              <button onClick={() => setZoom(z => Math.min(3, z * 1.2))} className="w-7 h-7 rounded-md bg-white/5 text-zinc-400 text-sm flex items-center justify-center active:bg-white/10">+</button>
-              <button onClick={() => setZoom(z => Math.max(0.2, z * 0.8))} className="w-7 h-7 rounded-md bg-white/5 text-zinc-400 text-sm flex items-center justify-center active:bg-white/10">−</button>
-              <button onClick={() => { setSimNodes(cur => { fitToScreen(cur); return cur; }); }} className="w-7 h-7 rounded-md bg-white/5 text-zinc-500 text-xs flex items-center justify-center active:bg-white/10">⊡</button>
-            </div>
-            {/* Explore button */}
+            {/* Fit */}
             <button
-              onClick={() => { setRightPanelMode('journey'); setRightPanelOpen(true); }}
-              className="ml-0.5 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-500/15 border border-cyan-500/20 text-cyan-400 text-[10px] font-medium"
+              onClick={() => { setSimNodes(cur => { fitToScreen(cur); return cur; }); }}
+              className="w-8 h-8 rounded-lg bg-white/5 text-zinc-500 text-xs flex items-center justify-center active:bg-white/10 flex-shrink-0"
+              title="Fit to screen"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+              </svg>
+            </button>
+            {/* Story button — primary CTA */}
+            <button
+              onClick={() => { setRightPanelMode('journey'); setRightPanelOpen(true); setMobileTapCard(null); }}
+              className="ml-auto flex items-center gap-2 px-4 py-2 rounded-xl font-medium text-sm transition-all"
+              style={{background: 'linear-gradient(135deg, rgba(34,211,238,0.18), rgba(168,85,247,0.14))', border: '1px solid rgba(34,211,238,0.25)', color: '#67e8f9'}}
             >
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0" />
-              Explore
+              His Story
             </button>
           </div>
+
           {/* Timeline slider when active */}
           {viewMode === 'timeline' && (
-            <div className="flex items-center gap-2 px-3 pb-2">
+            <div className="flex items-center gap-2 px-3 pb-3">
               <span className="text-[10px] text-zinc-600 w-8 flex-shrink-0">Jul 22</span>
               <input type="range" min={0} max={timelineDates.length - 1} value={timelineDates.indexOf(timelineDate)} onChange={e => setTimelineDate(timelineDates[parseInt(e.target.value)])} className="flex-1 accent-cyan-500" />
-              <span className="text-[10px] font-mono text-cyan-400 w-12 text-right flex-shrink-0">{timelineDate}</span>
+              <span className="text-[10px] font-mono text-cyan-400 w-14 text-right flex-shrink-0">{timelineDate}</span>
             </div>
           )}
         </div>

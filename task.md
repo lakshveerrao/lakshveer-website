@@ -1,98 +1,61 @@
-# Universe Page — Killer Rebuild
+# Universe Mobile UX Redesign
 
-## Goal
-A stranger (journalist, investor, mentor) lands, feels something, learns the story, and reaches out.
+## Problems to solve
+1. **Zero context** — visitor sees a blob of lines with no idea what they're looking at
+2. **Header too small** — "Lakshveer" in 12px with nothing explaining who he is
+3. **Graph is unnavigable** — 111 nodes, all visible, tangled, no entry point
+4. **No onboarding** — no hint what nodes are, what to tap, what to do
+5. **Toolbar is cryptic** — All/Clusters/Time, +/−/⊡ icons with zero explanation
+6. **Node tap does nothing visible on mobile** — no card, no feedback
 
-## What we're keeping
-- Force simulation engine (works fine)
-- Private mode toggle + intelligence layers
-- All existing components (WikiPanel, SignalTimeline, etc.)
-- `universe-data.ts` nodes (skills, tools, possibilities) — too rich to lose
-- `universe-intelligence.ts` clusters, arcs, momentum
+## Plan
 
-## What we're changing
-- The full page layout and first-impression
-- Node hover cards — real content, not just labels
-- Click experience — story card, not panel tabs
-- Add "Ask Lakshveer" floating input → /api/wiki/query
-- Add social proof strip (live numbers)
-- Make possibilities feel alive (pulsing, labeled as futures)
-- Full-bleed canvas by default, panels collapse
+### A. Header — make it a proper identity bar
+- Bigger avatar (32px → 40px)
+- "Lakshveer" in 16px bold
+- Subtitle always visible on mobile: "8 · Builder · 170+ projects" 
+- Back arrow on mobile too (go home)
 
-## Layout (new)
+### B. First-visit onboarding overlay (localStorage gated)
+- Shows once, covers canvas
+- Title: "Lakshveer's Universe"
+- 3 lines: what this is, how to navigate, what to expect
+- Two CTAs: "Explore the graph" + "Read his story →"
+- Dismisses on tap anywhere / button
+- Key facts: 8yo · 170+ builds · 4 years · Hardware+AI
 
-```
-┌─────────────────────────────────────────────────────┐
-│ HERO STRIP (fixed top, 56px)                        │
-│ "Lakshveer · 8 · 170+ builds · 126 signals · Ask ↗"│
-├──────────┬──────────────────────────┬───────────────┤
-│ LEFT     │                          │ RIGHT         │
-│ (w-64)   │   FULL BLEED CANVAS      │ (w-80)        │
-│ collapse │   (graph, the hero)      │ context panel │
-│ by def   │                          │ slides in     │
-│          │                          │ on node click │
-│          │   floating ASK box       │ or tab switch │
-│          │   bottom center          │               │
-└──────────┴──────────────────────────┴───────────────┘
-│ QUOTE TICKER (bottom, scrolling endorsements)       │
-└─────────────────────────────────────────────────────┘
-```
+### C. Hint strip (persistent, subtle)
+- Below header, above canvas: single line "Tap any node to explore · pinch to zoom"
+- Fades after 5s or on first tap
+- Color: zinc-600, tiny text
 
-## Key UX moments
+### D. Graph — show fewer nodes by default on mobile
+- Default: hide 'possibility' nodes (they clutter without adding context)
+- Hide 'concept' nodes too (abstract, not meaningful to first-timer)
+- Show: core, project, product, skill, tool, person, company, event, media, achievement
+- This drops from 111 → ~90 nodes, much cleaner
 
-1. **Landing** — Hero strip tells the story in one line. Graph fades in with nodes settling.
-2. **Hover node** — Rich tooltip: name, one-line story, key stat. NOT just label.
-3. **Click node** — Right panel slides in: wiki article or capability card. Human, scannable.
-4. **Ask anything** — Floating input bottom-center. User types → graph highlights matching nodes → answer in right panel.
-5. **Possibilities** — Pulsing differently, labeled "What's next →", tooltip explains why it's plausible.
-6. **Quote ticker** — Bottom scrolling strip: real quotes from endorsers. Rotating.
-7. **Stats badge** — Top right: "78 nodes · 334 edges · centralized" from tweet inspiration.
+### E. Node tap → bottom mini-card (mobile)
+- Tapping a node shows a mini info card ABOVE the toolbar (not the full sheet)
+- Shows: colored dot + name (18px) + type badge + 1-line description + stat
+- Two buttons: "Learn more →" (opens full right panel) + "×" dismiss
+- This is the KEY missing interaction — tap feedback
 
-## Node hover card format
-```
-[icon] CircuitHeroes
-Trading card game · 300+ decks sold
-₹1,00,000 grant · Trademark registered
-```
+### F. Toolbar redesign
+- Remove the cryptic ⊡ button
+- Label the view modes properly: "All nodes" / "Clusters" / "Timeline"
+- Make "Explore →" button more prominent (it's the main CTA)
+- Add a color legend: 4 key node types with colored dots
 
-## Right panel modes (simplified from 9 tabs to 3)
-- NODE (default when node selected) — wiki/capability card
-- STORY (when no node) — narrative arc, timeline
-- ASK (when query active) — query result + highlighted nodes
+### G. Legend overlay (bottom-left, always visible, compact)
+- 4 dots with labels: 🔵 Projects  🟣 Skills  🟡 Tools  🩷 People
+- Tiny, 10px, fades to 40% opacity after 3s
 
-## Social proof numbers (hardcoded from signals)
-- 170+ builds documented
-- 126 signals captured  
-- 39 endorsers
-- ₹1,40,000 in grants
-- 13 press features
-- 7 hackathons
-
-## Rotating quotes (from signals)
-1. "An 8-year-old showed up and built. That alone changed what we thought was possible." — Runable
-2. "Laksh knows more about hardware than I did during my entire engineering." — Shubham Kukreti
-3. "4 founders I'm really bullish on... Laksh of CircuitHeroes." — Roohi Kirit
-4. "If there were more kids like Lakshveer..." — Dr. Aniruddha Malpani
-5. "An 8-year-old just schooled us all at Hardware Hackathon." — Lion Circuits
-6. "Huge influence on me re-thinking how curiosity doesn't have any age." — Besta Prem Sai
-7. "Youngest founder ever in our Delta cohort" — The Residency
-
-## Implementation plan
-1. Rewrite universe.tsx top section (hero strip + quote ticker)
-2. Refactor right panel: 3 modes, slide-in animation
-3. Upgrade hover card: rich tooltip component
-4. Add Ask box: floating input, POST /api/wiki/query, highlight nodes
-5. Possibility nodes: pulsing animation + "What's next" label
-6. Stats badge overlay on canvas
-7. Left panel: collapsed by default, toggle
-8. Keep ALL existing private mode / intelligence / wiki tabs intact
-
-## Status
-[ ] Hero strip
-[ ] Quote ticker  
-[ ] Rich hover cards
-[ ] Right panel refactor (3 modes)
-[ ] Ask anything box
-[ ] Possibility node pulse
-[ ] Stats badge
-[ ] Left panel collapsed default
+## Implementation order
+1. Header fix (quick)
+2. Node tap mini-card (highest impact)  
+3. Onboarding overlay
+4. Graph default filter (hide possibility + concept on mobile)
+5. Hint strip
+6. Legend
+7. Toolbar labels
