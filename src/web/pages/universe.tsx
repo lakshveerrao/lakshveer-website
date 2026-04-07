@@ -1415,10 +1415,12 @@ function Universe() {
           className={`${
             isMobile
               ? `fixed inset-y-0 left-0 z-50 transition-transform duration-300 ${leftPanelOpen ? 'translate-x-0' : '-translate-x-full'} w-64`
-              : `${leftPanelOpen ? 'w-56' : 'w-0'} flex-shrink-0 transition-all duration-300`
+              : `flex-shrink-0 transition-all duration-300 ${leftPanelOpen ? 'w-56' : 'w-0'}`
           } overflow-hidden border-r bg-[#050508]`}
-          style={{borderColor:'rgba(255,255,255,0.06)'}}
+          style={{borderColor:'rgba(255,255,255,0.06)', minWidth: 0}}
         >
+          {/* Only render inner content when visible — prevents bleed-through */}
+          {(isMobile || leftPanelOpen) && (
           <div className={`${isMobile ? 'w-64' : 'w-56'} h-full overflow-y-auto`}>
             {/* Panel header */}
             <div className="flex items-center justify-between px-3 pt-3 pb-2 border-b" style={{borderColor:'rgba(255,255,255,0.06)'}}>
@@ -1556,16 +1558,17 @@ function Universe() {
               )}
             </div>
           </div>
+          )} {/* end conditional render guard */}
         </div>
 
-        {/* ── LEFT PANEL TOGGLE (desktop) ── */}
+        {/* ── LEFT PANEL TOGGLE (desktop) — sits at left edge of canvas ── */}
         {!isMobile && (
           <button
             onClick={() => setLeftPanelOpen(p => !p)}
-            className="absolute top-1/2 -translate-y-1/2 z-40 w-4 h-9 hidden md:flex items-center justify-center bg-[#0a0a10] border border-white/6 rounded-r-md text-zinc-600 hover:text-white transition-all"
-            style={{ left: leftPanelOpen ? '224px' : '0', borderColor:'rgba(255,255,255,0.06)' }}
+            className="absolute top-1/2 -translate-y-1/2 z-40 w-5 h-10 flex items-center justify-center bg-[#0d0d18] border rounded-r-lg text-zinc-500 hover:text-white hover:bg-[#14142a] transition-all"
+            style={{ left: leftPanelOpen ? '224px' : '0', borderColor:'rgba(255,255,255,0.09)', borderLeft: 'none' }}
           >
-            <svg className={`w-2.5 h-2.5 transition-transform ${leftPanelOpen ? '' : 'rotate-180'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className={`w-3 h-3 transition-transform ${leftPanelOpen ? '' : 'rotate-180'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
